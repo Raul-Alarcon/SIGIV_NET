@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SIGIV.GUI
+namespace SIGIV.GUI.Clientes
 {
-    public partial class Clientes : Form
+    public partial class GestionCliente : Form
     {
-        public Clientes()
+        public GestionCliente()
         {
             InitializeComponent();
         }

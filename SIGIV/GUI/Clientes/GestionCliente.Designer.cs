@@ -1,6 +1,6 @@
-﻿namespace SIGIV.GUI
+﻿namespace SIGIV.GUI.Clientes
 {
-    partial class Clientes
+    partial class GestionCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // Clientes
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Clientes";
-            this.Text = "GestionClientes";
-            this.ResumeLayout(false);
-
+            this.Text = "GestionCliente";
         }
 
         #endregion
