@@ -154,6 +154,12 @@
     <Compile Include="GUI\Cargos\GestionCargo.Designer.cs">
       <DependentUpon>GestionCargo.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\CategoriaProductos\GestionCategoriaProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CategoriaProductos\GestionCategoriaProductos.Designer.cs">
+      <DependentUpon>GestionCategoriaProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Clientes\AgregarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,10 +208,19 @@
     <Compile Include="GUI\Paises\GestionPaises.Designer.cs">
       <DependentUpon>GestionPaises.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Proveedores\GestionProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Proveedores\GestionProveedores.Designer.cs">
+      <DependentUpon>GestionProveedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\Cargos\GestionCargo.resx">
       <DependentUpon>GestionCargo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CategoriaProductos\GestionCategoriaProductos.resx">
+      <DependentUpon>GestionCategoriaProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Departamentos\GestionDepartamentos.resx">
       <DependentUpon>GestionDepartamentos.cs</DependentUpon>
@@ -224,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Paises\GestionPaises.resx">
       <DependentUpon>GestionPaises.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Proveedores\GestionProveedores.resx">
+      <DependentUpon>GestionProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
