@@ -166,6 +166,18 @@
     <Compile Include="GUI\Clientes\GestionCliente.Designer.cs">
       <DependentUpon>GestionCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Departamentos\GestionDepartamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Departamentos\GestionDepartamentos.Designer.cs">
+      <DependentUpon>GestionDepartamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Distritos\GestionDistritos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Distritos\GestionDistritos.Designer.cs">
+      <DependentUpon>GestionDistritos.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Empleados\AgregarEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,16 +190,40 @@
     <Compile Include="GUI\Empleados\GestionEmpleados.Designer.cs">
       <DependentUpon>GestionEmpleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Municipios\GestionMunicipios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Municipios\GestionMunicipios.Designer.cs">
+      <DependentUpon>GestionMunicipios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Paises\GestionPaises.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Paises\GestionPaises.Designer.cs">
+      <DependentUpon>GestionPaises.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\Cargos\GestionCargo.resx">
       <DependentUpon>GestionCargo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Departamentos\GestionDepartamentos.resx">
+      <DependentUpon>GestionDepartamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Distritos\GestionDistritos.resx">
+      <DependentUpon>GestionDistritos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Empleados\AgregarEmpleado.resx">
       <DependentUpon>AgregarEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Empleados\GestionEmpleados.resx">
       <DependentUpon>GestionEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Municipios\GestionMunicipios.resx">
+      <DependentUpon>GestionMunicipios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Paises\GestionPaises.resx">
+      <DependentUpon>GestionPaises.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
