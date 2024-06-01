@@ -58,7 +58,9 @@
     <Compile Include="CLS\CargosCLS.cs" />
     <Compile Include="CLS\CategoriaProuctoCLS.cs" />
     <Compile Include="CLS\DTO\EmpleadoDTO.cs" />
+    <Compile Include="CLS\DTO\MunicipiosDTO.cs" />
     <Compile Include="CLS\EmpleadoCLS.cs" />
+    <Compile Include="CLS\MunicipiosCLS.cs" />
     <Compile Include="CLS\PaisesCLS.cs" />
     <Compile Include="DataLayer\AsignacionRolesOpciones.cs">
       <DependentUpon>SIGIVModels.tt</DependentUpon>
