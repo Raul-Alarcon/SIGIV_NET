@@ -292,6 +292,8 @@
       <DependentUpon>SIGIVModels.edmx</DependentUpon>
       <LastGenOutput>SIGIVModels.cs</LastGenOutput>
     </Content>
+    <Content Include="Recursos\SIGIVLogo.jpeg" />
+    <Content Include="Recursos\SIGIVLogo2.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,6 +1,7 @@
 ﻿using SIGIV.GUI.Cargos;
 using SIGIV.GUI.CategoriaProductos;
 using SIGIV.GUI.Empleados;
+using SIGIV.GUI.Municipios;
 using SIGIV.GUI.Paises;
 using System;
 using System.Collections.Generic;
@@ -20,7 +21,7 @@ namespace SIGIV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GestionPaises());
+            Application.Run(new GestionMunicipios());
         }
     }
 }
