@@ -22,7 +22,7 @@ namespace SIGIV.DataLayer
             this.Departamentos2 = new HashSet<Departamentos>();
         }
     
-        public string idPais { get; set; }
+        public int idPais { get; set; }
         public string Pais { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

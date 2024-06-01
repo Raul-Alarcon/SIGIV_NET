@@ -56,97 +56,99 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CLS\CargosCLS.cs" />
+    <Compile Include="CLS\CategoriaProuctoCLS.cs" />
     <Compile Include="CLS\DTO\EmpleadoDTO.cs" />
     <Compile Include="CLS\EmpleadoCLS.cs" />
+    <Compile Include="CLS\PaisesCLS.cs" />
     <Compile Include="DataLayer\AsignacionRolesOpciones.cs">
-      <DependentUpon>SigivModel.tt</DependentUpon>
+      <DependentUpon>SIGIVModels.tt</DependentUpon>
     </Compile>
     <Compile Include="DataLayer\Cargos.cs">
-      <DependentUpon>SigivModel.tt</DependentUpon>
+      <DependentUpon>SIGIVModels.tt</DependentUpon>
     </Compile>
     <Compile Include="DataLayer\CategoriasProductos.cs">
-      <DependentUpon>SigivModel.tt</DependentUpon>
+      <DependentUpon>SIGIVModels.tt</DependentUpon>
     </Compile>
     <Compile Include="DataLayer\ClienteDireccion.cs">
-      <DependentUpon>SigivModel.tt</DependentUpon>
+      <DependentUpon>SIGIVModels.tt</DependentUpon>
     </Compile>
     <Compile Include="DataLayer\Clientes.cs">
-      <DependentUpon>SigivModel.tt</DependentUpon>
+      <DependentUpon>SIGIVModels.tt</DependentUpon>
     </Compile>
     <Compile Include="DataLayer\ContactosProveedor.cs">
-      <DependentUpon>SigivModel.tt</DependentUpon>
+      <DependentUpon>SIGIVModels.tt</DependentUpon>
     </Compile>
     <Compile Include="DataLayer\Departamentos.cs">
-      <DependentUpon>SigivModel.tt</DependentUpon>
+      <DependentUpon>SIGIVModels.tt</DependentUpon>
     </Compile>
     <Compile Include="DataLayer\DetallesFacturas.cs">
-      <DependentUpon>SigivModel.tt</DependentUpon>
+      <DependentUpon>SIGIVModels.tt</DependentUpon>
     </Compile>
     <Compile Include="DataLayer\DetallesPedidos.cs">
-      <DependentUpon>SigivModel.tt</DependentUpon>
+      <DependentUpon>SIGIVModels.tt</DependentUpon>
     </Compile>
     <Compile Include="DataLayer\DetallesStok.cs">
-      <DependentUpon>SigivModel.tt</DependentUpon>
+      <DependentUpon>SIGIVModels.tt</DependentUpon>
     </Compile>
     <Compile Include="DataLayer\Direcciones.cs">
-      <DependentUpon>SigivModel.tt</DependentUpon>
+      <DependentUpon>SIGIVModels.tt</DependentUpon>
     </Compile>
     <Compile Include="DataLayer\Distritos.cs">
-      <DependentUpon>SigivModel.tt</DependentUpon>
+      <DependentUpon>SIGIVModels.tt</DependentUpon>
     </Compile>
     <Compile Include="DataLayer\EmpleadoDireccion.cs">
-      <DependentUpon>SigivModel.tt</DependentUpon>
+      <DependentUpon>SIGIVModels.tt</DependentUpon>
     </Compile>
     <Compile Include="DataLayer\Empleados.cs">
-      <DependentUpon>SigivModel.tt</DependentUpon>
+      <DependentUpon>SIGIVModels.tt</DependentUpon>
     </Compile>
     <Compile Include="DataLayer\Facturas.cs">
-      <DependentUpon>SigivModel.tt</DependentUpon>
+      <DependentUpon>SIGIVModels.tt</DependentUpon>
     </Compile>
     <Compile Include="DataLayer\Municipios.cs">
-      <DependentUpon>SigivModel.tt</DependentUpon>
+      <DependentUpon>SIGIVModels.tt</DependentUpon>
     </Compile>
     <Compile Include="DataLayer\Opciones.cs">
-      <DependentUpon>SigivModel.tt</DependentUpon>
+      <DependentUpon>SIGIVModels.tt</DependentUpon>
     </Compile>
     <Compile Include="DataLayer\Paises.cs">
-      <DependentUpon>SigivModel.tt</DependentUpon>
+      <DependentUpon>SIGIVModels.tt</DependentUpon>
     </Compile>
     <Compile Include="DataLayer\Pedidos.cs">
-      <DependentUpon>SigivModel.tt</DependentUpon>
+      <DependentUpon>SIGIVModels.tt</DependentUpon>
     </Compile>
     <Compile Include="DataLayer\Productos.cs">
-      <DependentUpon>SigivModel.tt</DependentUpon>
+      <DependentUpon>SIGIVModels.tt</DependentUpon>
     </Compile>
     <Compile Include="DataLayer\ProductosNuevos.cs">
-      <DependentUpon>SigivModel.tt</DependentUpon>
+      <DependentUpon>SIGIVModels.tt</DependentUpon>
     </Compile>
     <Compile Include="DataLayer\Proveedores.cs">
-      <DependentUpon>SigivModel.tt</DependentUpon>
+      <DependentUpon>SIGIVModels.tt</DependentUpon>
     </Compile>
     <Compile Include="DataLayer\ProveedoresDireccion.cs">
-      <DependentUpon>SigivModel.tt</DependentUpon>
+      <DependentUpon>SIGIVModels.tt</DependentUpon>
     </Compile>
     <Compile Include="DataLayer\Roles.cs">
-      <DependentUpon>SigivModel.tt</DependentUpon>
+      <DependentUpon>SIGIVModels.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataLayer\SigivModel.Context.cs">
+    <Compile Include="DataLayer\SIGIVModels.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SigivModel.Context.tt</DependentUpon>
+      <DependentUpon>SIGIVModels.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataLayer\SigivModel.cs">
+    <Compile Include="DataLayer\SIGIVModels.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SigivModel.tt</DependentUpon>
+      <DependentUpon>SIGIVModels.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataLayer\SigivModel.Designer.cs">
+    <Compile Include="DataLayer\SIGIVModels.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SigivModel.edmx</DependentUpon>
+      <DependentUpon>SIGIVModels.edmx</DependentUpon>
     </Compile>
     <Compile Include="DataLayer\Usuarios.cs">
-      <DependentUpon>SigivModel.tt</DependentUpon>
+      <DependentUpon>SIGIVModels.tt</DependentUpon>
     </Compile>
     <Compile Include="GUI\Cargos\GestionCargo.cs">
       <SubType>Form</SubType>
@@ -252,12 +254,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EntityDeploy Include="DataLayer\SigivModel.edmx">
+    <EntityDeploy Include="DataLayer\SIGIVModels.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>SigivModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>SIGIVModels.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="DataLayer\SigivModel.edmx.diagram">
-      <DependentUpon>SigivModel.edmx</DependentUpon>
+    <None Include="DataLayer\SIGIVModels.edmx.diagram">
+      <DependentUpon>SIGIVModels.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -274,20 +276,20 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DataLayer\SigivModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>SigivModel.Context.cs</LastGenOutput>
-      <DependentUpon>SigivModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="DataLayer\SigivModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SigivModel.edmx</DependentUpon>
-      <LastGenOutput>SigivModel.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Content Include="DataLayer\SIGIVModels.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SIGIVModels.edmx</DependentUpon>
+      <LastGenOutput>SIGIVModels.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DataLayer\SIGIVModels.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SIGIVModels.edmx</DependentUpon>
+      <LastGenOutput>SIGIVModels.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

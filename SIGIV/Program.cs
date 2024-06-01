@@ -1,4 +1,7 @@
-﻿using SIGIV.GUI.Empleados;
+﻿using SIGIV.GUI.Cargos;
+using SIGIV.GUI.CategoriaProductos;
+using SIGIV.GUI.Empleados;
+using SIGIV.GUI.Paises;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +20,7 @@ namespace SIGIV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GestionEmpleados());
+            Application.Run(new GestionPaises());
         }
     }
 }

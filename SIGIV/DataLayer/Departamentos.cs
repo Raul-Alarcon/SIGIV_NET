@@ -22,9 +22,9 @@ namespace SIGIV.DataLayer
             this.Municipios2 = new HashSet<Municipios>();
         }
     
-        public string idDepartamento { get; set; }
+        public int idDepartamento { get; set; }
         public string Departamento { get; set; }
-        public string idPais { get; set; }
+        public int idPais { get; set; }
     
         public virtual Paises Paises { get; set; }
         public virtual Paises Paises1 { get; set; }

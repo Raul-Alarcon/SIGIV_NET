@@ -66,9 +66,9 @@
           <Key>
             <PropertyRef Name="idDepartamento" />
           </Key>
-          <Property Name="idDepartamento" Type="char" MaxLength="3" Nullable="false" />
+          <Property Name="idDepartamento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Departamento" Type="varchar" MaxLength="60" Nullable="false" />
-          <Property Name="idPais" Type="char" MaxLength="3" Nullable="false" />
+          <Property Name="idPais" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="DetallesFacturas">
           <Key>
@@ -106,16 +106,16 @@
             <PropertyRef Name="idDireccion" />
           </Key>
           <Property Name="idDireccion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="idDistrito" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="idDistrito" Type="int" Nullable="false" />
           <Property Name="CodigoPostal" Type="int" />
         </EntityType>
         <EntityType Name="Distritos">
           <Key>
             <PropertyRef Name="idDistrito" />
           </Key>
-          <Property Name="idDistrito" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="idDistrito" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Distrito" Type="varchar" MaxLength="60" Nullable="false" />
-          <Property Name="idMunicipio" Type="char" MaxLength="3" Nullable="false" />
+          <Property Name="idMunicipio" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="EmpleadoDireccion">
           <Key>
@@ -155,9 +155,9 @@
           <Key>
             <PropertyRef Name="idMunicipio" />
           </Key>
-          <Property Name="idMunicipio" Type="char" MaxLength="3" Nullable="false" />
+          <Property Name="idMunicipio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Municipio" Type="varchar" MaxLength="60" Nullable="false" />
-          <Property Name="idDepartamento" Type="char" MaxLength="3" Nullable="false" />
+          <Property Name="idDepartamento" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Opciones">
           <Key>
@@ -170,7 +170,7 @@
           <Key>
             <PropertyRef Name="idPais" />
           </Key>
-          <Property Name="idPais" Type="char" MaxLength="3" Nullable="false" />
+          <Property Name="idPais" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Pais" Type="varchar" MaxLength="60" Nullable="false" />
         </EntityType>
         <EntityType Name="Pedidos">
@@ -244,7 +244,7 @@
           <Property Name="usuario" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="clave" Type="nchar" MaxLength="40" Nullable="false" />
         </EntityType>
-        <Association Name="FK__Asignacio__idOpc__04E4BC85">
+        <Association Name="FK__Asignacio__idOpc__656C112C">
           <End Role="Opciones" Type="Self.Opciones" Multiplicity="1" />
           <End Role="AsignacionRolesOpciones" Type="Self.AsignacionRolesOpciones" Multiplicity="*" />
           <ReferentialConstraint>
@@ -256,7 +256,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Asignacio__idOpc__778AC167">
+        <Association Name="FK__Asignacio__idOpc__66603565">
           <End Role="Opciones" Type="Self.Opciones" Multiplicity="1" />
           <End Role="AsignacionRolesOpciones" Type="Self.AsignacionRolesOpciones" Multiplicity="*" />
           <ReferentialConstraint>
@@ -268,7 +268,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Asignacio__idRol__03F0984C">
+        <Association Name="FK__Asignacio__idRol__6754599E">
           <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
           <End Role="AsignacionRolesOpciones" Type="Self.AsignacionRolesOpciones" Multiplicity="*" />
           <ReferentialConstraint>
@@ -280,7 +280,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Asignacio__idRol__76969D2E">
+        <Association Name="FK__Asignacio__idRol__68487DD7">
           <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
           <End Role="AsignacionRolesOpciones" Type="Self.AsignacionRolesOpciones" Multiplicity="*" />
           <ReferentialConstraint>
@@ -292,24 +292,12 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ClienteDi__idDir__00200768">
+        <Association Name="FK__ClienteDi__idDir__693CA210">
           <End Role="Clientes" Type="Self.Clientes" Multiplicity="0..1" />
           <End Role="ClienteDireccion" Type="Self.ClienteDireccion" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Clientes">
               <PropertyRef Name="IDCliente" />
-            </Principal>
-            <Dependent Role="ClienteDireccion">
-              <PropertyRef Name="idDireccion" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__ClienteDi__idDir__693CA210">
-          <End Role="Direcciones" Type="Self.Direcciones" Multiplicity="0..1" />
-          <End Role="ClienteDireccion" Type="Self.ClienteDireccion" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Direcciones">
-              <PropertyRef Name="idDireccion" />
             </Principal>
             <Dependent Role="ClienteDireccion">
               <PropertyRef Name="idDireccion" />
@@ -317,18 +305,6 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__ClienteDi__idDir__6A30C649">
-          <End Role="Clientes" Type="Self.Clientes" Multiplicity="0..1" />
-          <End Role="ClienteDireccion" Type="Self.ClienteDireccion" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Clientes">
-              <PropertyRef Name="IDCliente" />
-            </Principal>
-            <Dependent Role="ClienteDireccion">
-              <PropertyRef Name="idDireccion" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__ClienteDi__idDir__71D1E811">
           <End Role="Direcciones" Type="Self.Direcciones" Multiplicity="0..1" />
           <End Role="ClienteDireccion" Type="Self.ClienteDireccion" Multiplicity="*" />
           <ReferentialConstraint>
@@ -340,7 +316,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ClienteDi__idDir__72C60C4A">
+        <Association Name="FK__ClienteDi__idDir__6B24EA82">
           <End Role="Clientes" Type="Self.Clientes" Multiplicity="0..1" />
           <End Role="ClienteDireccion" Type="Self.ClienteDireccion" Multiplicity="*" />
           <ReferentialConstraint>
@@ -352,7 +328,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ClienteDi__idDir__7F2BE32F">
+        <Association Name="FK__ClienteDi__idDir__6C190EBB">
           <End Role="Direcciones" Type="Self.Direcciones" Multiplicity="0..1" />
           <End Role="ClienteDireccion" Type="Self.ClienteDireccion" Multiplicity="*" />
           <ReferentialConstraint>
@@ -364,7 +340,31 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Contactos__idPro__07C12930">
+        <Association Name="FK__ClienteDi__idDir__6D0D32F4">
+          <End Role="Clientes" Type="Self.Clientes" Multiplicity="0..1" />
+          <End Role="ClienteDireccion" Type="Self.ClienteDireccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clientes">
+              <PropertyRef Name="IDCliente" />
+            </Principal>
+            <Dependent Role="ClienteDireccion">
+              <PropertyRef Name="idDireccion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ClienteDi__idDir__6E01572D">
+          <End Role="Direcciones" Type="Self.Direcciones" Multiplicity="0..1" />
+          <End Role="ClienteDireccion" Type="Self.ClienteDireccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Direcciones">
+              <PropertyRef Name="idDireccion" />
+            </Principal>
+            <Dependent Role="ClienteDireccion">
+              <PropertyRef Name="idDireccion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Contactos__idPro__6EF57B66">
           <End Role="Proveedores" Type="Self.Proveedores" Multiplicity="1" />
           <End Role="ContactosProveedor" Type="Self.ContactosProveedor" Multiplicity="*" />
           <ReferentialConstraint>
@@ -376,7 +376,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Contactos__idPro__08B54D69">
+        <Association Name="FK__Contactos__idPro__6FE99F9F">
           <End Role="Proveedores" Type="Self.Proveedores" Multiplicity="1" />
           <End Role="ContactosProveedor" Type="Self.ContactosProveedor" Multiplicity="*" />
           <ReferentialConstraint>
@@ -388,7 +388,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Contactos__idPro__09A971A2">
+        <Association Name="FK__Contactos__idPro__70DDC3D8">
           <End Role="Proveedores" Type="Self.Proveedores" Multiplicity="1" />
           <End Role="ContactosProveedor" Type="Self.ContactosProveedor" Multiplicity="*" />
           <ReferentialConstraint>
@@ -400,7 +400,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Contactos__idPro__0A9D95DB">
+        <Association Name="FK__Contactos__idPro__71D1E811">
           <End Role="Proveedores" Type="Self.Proveedores" Multiplicity="1" />
           <End Role="ContactosProveedor" Type="Self.ContactosProveedor" Multiplicity="*" />
           <ReferentialConstraint>
@@ -412,7 +412,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Contactos__idPro__7A672E12">
+        <Association Name="FK__Contactos__idPro__72C60C4A">
           <End Role="Proveedores" Type="Self.Proveedores" Multiplicity="1" />
           <End Role="ContactosProveedor" Type="Self.ContactosProveedor" Multiplicity="*" />
           <ReferentialConstraint>
@@ -424,7 +424,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Departame__idPai__656C112C">
+        <Association Name="FK__Departame__idPai__73BA3083">
           <End Role="Paises" Type="Self.Paises" Multiplicity="1" />
           <End Role="Departamentos" Type="Self.Departamentos" Multiplicity="*" />
           <ReferentialConstraint>
@@ -436,7 +436,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Departame__idPai__6E01572D">
+        <Association Name="FK__Departame__idPai__74AE54BC">
           <End Role="Paises" Type="Self.Paises" Multiplicity="1" />
           <End Role="Departamentos" Type="Self.Departamentos" Multiplicity="*" />
           <ReferentialConstraint>
@@ -448,7 +448,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Departame__idPai__7B5B524B">
+        <Association Name="FK__Departame__idPai__75A278F5">
           <End Role="Paises" Type="Self.Paises" Multiplicity="1" />
           <End Role="Departamentos" Type="Self.Departamentos" Multiplicity="*" />
           <ReferentialConstraint>
@@ -460,7 +460,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DetallesF__idFac__151B244E">
+        <Association Name="FK__DetallesF__idFac__76969D2E">
           <End Role="Facturas" Type="Self.Facturas" Multiplicity="1" />
           <End Role="DetallesFacturas" Type="Self.DetallesFacturas" Multiplicity="*" />
           <ReferentialConstraint>
@@ -472,7 +472,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DetallesF__idPro__14270015">
+        <Association Name="FK__DetallesF__idPro__778AC167">
           <End Role="Productos" Type="Self.Productos" Multiplicity="1" />
           <End Role="DetallesFacturas" Type="Self.DetallesFacturas" Multiplicity="*" />
           <ReferentialConstraint>
@@ -484,7 +484,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DetallesP__idPed__114A936A">
+        <Association Name="FK__DetallesP__idPed__787EE5A0">
           <End Role="Pedidos" Type="Self.Pedidos" Multiplicity="1" />
           <End Role="DetallesPedidos" Type="Self.DetallesPedidos" Multiplicity="*" />
           <ReferentialConstraint>
@@ -496,7 +496,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DetallesP__idPro__10566F31">
+        <Association Name="FK__DetallesP__idPro__797309D9">
           <End Role="ProductosNuevos" Type="Self.ProductosNuevos" Multiplicity="1" />
           <End Role="DetallesPedidos" Type="Self.DetallesPedidos" Multiplicity="*" />
           <ReferentialConstraint>
@@ -508,7 +508,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Direccion__idDis__68487DD7">
+        <Association Name="FK__Direccion__idDis__7A672E12">
           <End Role="Distritos" Type="Self.Distritos" Multiplicity="1" />
           <End Role="Direcciones" Type="Self.Direcciones" Multiplicity="*" />
           <ReferentialConstraint>
@@ -520,7 +520,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Direccion__idDis__70DDC3D8">
+        <Association Name="FK__Direccion__idDis__7B5B524B">
           <End Role="Distritos" Type="Self.Distritos" Multiplicity="1" />
           <End Role="Direcciones" Type="Self.Direcciones" Multiplicity="*" />
           <ReferentialConstraint>
@@ -532,7 +532,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Direccion__idDis__7E37BEF6">
+        <Association Name="FK__Direccion__idDis__7C4F7684">
           <End Role="Distritos" Type="Self.Distritos" Multiplicity="1" />
           <End Role="Direcciones" Type="Self.Direcciones" Multiplicity="*" />
           <ReferentialConstraint>
@@ -541,30 +541,6 @@
             </Principal>
             <Dependent Role="Direcciones">
               <PropertyRef Name="idDistrito" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Distritos__idMun__6754599E">
-          <End Role="Municipios" Type="Self.Municipios" Multiplicity="1" />
-          <End Role="Distritos" Type="Self.Distritos" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Municipios">
-              <PropertyRef Name="idMunicipio" />
-            </Principal>
-            <Dependent Role="Distritos">
-              <PropertyRef Name="idMunicipio" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Distritos__idMun__6FE99F9F">
-          <End Role="Municipios" Type="Self.Municipios" Multiplicity="1" />
-          <End Role="Distritos" Type="Self.Distritos" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Municipios">
-              <PropertyRef Name="idMunicipio" />
-            </Principal>
-            <Dependent Role="Distritos">
-              <PropertyRef Name="idMunicipio" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -580,31 +556,55 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__Distritos__idMun__7E37BEF6">
+          <End Role="Municipios" Type="Self.Municipios" Multiplicity="1" />
+          <End Role="Distritos" Type="Self.Distritos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Municipios">
+              <PropertyRef Name="idMunicipio" />
+            </Principal>
+            <Dependent Role="Distritos">
+              <PropertyRef Name="idMunicipio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Distritos__idMun__7F2BE32F">
+          <End Role="Municipios" Type="Self.Municipios" Multiplicity="1" />
+          <End Role="Distritos" Type="Self.Distritos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Municipios">
+              <PropertyRef Name="idMunicipio" />
+            </Principal>
+            <Dependent Role="Distritos">
+              <PropertyRef Name="idMunicipio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EmpleadoD__idDir__00200768">
+          <End Role="Direcciones" Type="Self.Direcciones" Multiplicity="0..1" />
+          <End Role="EmpleadoDireccion" Type="Self.EmpleadoDireccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Direcciones">
+              <PropertyRef Name="idDireccion" />
+            </Principal>
+            <Dependent Role="EmpleadoDireccion">
+              <PropertyRef Name="idDireccion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EmpleadoD__idDir__01142BA1">
+          <End Role="Direcciones" Type="Self.Direcciones" Multiplicity="0..1" />
+          <End Role="EmpleadoDireccion" Type="Self.EmpleadoDireccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Direcciones">
+              <PropertyRef Name="idDireccion" />
+            </Principal>
+            <Dependent Role="EmpleadoDireccion">
+              <PropertyRef Name="idDireccion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__EmpleadoD__idDir__02084FDA">
-          <End Role="Direcciones" Type="Self.Direcciones" Multiplicity="0..1" />
-          <End Role="EmpleadoDireccion" Type="Self.EmpleadoDireccion" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Direcciones">
-              <PropertyRef Name="idDireccion" />
-            </Principal>
-            <Dependent Role="EmpleadoDireccion">
-              <PropertyRef Name="idDireccion" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__EmpleadoD__idDir__6C190EBB">
-          <End Role="Direcciones" Type="Self.Direcciones" Multiplicity="0..1" />
-          <End Role="EmpleadoDireccion" Type="Self.EmpleadoDireccion" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Direcciones">
-              <PropertyRef Name="idDireccion" />
-            </Principal>
-            <Dependent Role="EmpleadoDireccion">
-              <PropertyRef Name="idDireccion" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__EmpleadoD__idDir__74AE54BC">
           <End Role="Direcciones" Type="Self.Direcciones" Multiplicity="0..1" />
           <End Role="EmpleadoDireccion" Type="Self.EmpleadoDireccion" Multiplicity="*" />
           <ReferentialConstraint>
@@ -628,7 +628,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__EmpleadoD__idEmp__75A278F5">
+        <Association Name="FK__EmpleadoD__idEmp__03F0984C">
           <End Role="Empleados" Type="Self.Empleados" Multiplicity="0..1" />
           <End Role="EmpleadoDireccion" Type="Self.EmpleadoDireccion" Multiplicity="*" />
           <ReferentialConstraint>
@@ -640,7 +640,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Empleados__idCar__01142BA1">
+        <Association Name="FK__Empleados__idCar__04E4BC85">
           <End Role="Cargos" Type="Self.Cargos" Multiplicity="1" />
           <End Role="Empleados" Type="Self.Empleados" Multiplicity="*" />
           <ReferentialConstraint>
@@ -652,7 +652,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Empleados__idCar__6B24EA82">
+        <Association Name="FK__Empleados__idCar__05D8E0BE">
           <End Role="Cargos" Type="Self.Cargos" Multiplicity="1" />
           <End Role="Empleados" Type="Self.Empleados" Multiplicity="*" />
           <ReferentialConstraint>
@@ -664,7 +664,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Empleados__idCar__73BA3083">
+        <Association Name="FK__Empleados__idCar__06CD04F7">
           <End Role="Cargos" Type="Self.Cargos" Multiplicity="1" />
           <End Role="Empleados" Type="Self.Empleados" Multiplicity="*" />
           <ReferentialConstraint>
@@ -676,7 +676,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Facturas__idclie__1332DBDC">
+        <Association Name="FK__Facturas__idclie__07C12930">
           <End Role="Clientes" Type="Self.Clientes" Multiplicity="1" />
           <End Role="Facturas" Type="Self.Facturas" Multiplicity="*" />
           <ReferentialConstraint>
@@ -688,7 +688,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Facturas__idempl__123EB7A3">
+        <Association Name="FK__Facturas__idempl__08B54D69">
           <End Role="Empleados" Type="Self.Empleados" Multiplicity="1" />
           <End Role="Facturas" Type="Self.Facturas" Multiplicity="*" />
           <ReferentialConstraint>
@@ -700,7 +700,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Municipio__idDep__66603565">
+        <Association Name="FK__Municipio__idDep__09A971A2">
           <End Role="Departamentos" Type="Self.Departamentos" Multiplicity="1" />
           <End Role="Municipios" Type="Self.Municipios" Multiplicity="*" />
           <ReferentialConstraint>
@@ -712,7 +712,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Municipio__idDep__6EF57B66">
+        <Association Name="FK__Municipio__idDep__0A9D95DB">
           <End Role="Departamentos" Type="Self.Departamentos" Multiplicity="1" />
           <End Role="Municipios" Type="Self.Municipios" Multiplicity="*" />
           <ReferentialConstraint>
@@ -724,7 +724,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Municipio__idDep__7C4F7684">
+        <Association Name="FK__Municipio__idDep__0B91BA14">
           <End Role="Departamentos" Type="Self.Departamentos" Multiplicity="1" />
           <End Role="Municipios" Type="Self.Municipios" Multiplicity="*" />
           <ReferentialConstraint>
@@ -736,7 +736,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Pedidos__idProve__0F624AF8">
+        <Association Name="FK__Pedidos__idProve__0C85DE4D">
           <End Role="Proveedores" Type="Self.Proveedores" Multiplicity="1" />
           <End Role="Pedidos" Type="Self.Pedidos" Multiplicity="*" />
           <ReferentialConstraint>
@@ -772,7 +772,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Proveedor__idDir__0B91BA14">
+        <Association Name="FK__Proveedor__idDir__0F624AF8">
           <End Role="Direcciones" Type="Self.Direcciones" Multiplicity="0..1" />
           <End Role="ProveedoresDireccion" Type="Self.ProveedoresDireccion" Multiplicity="*" />
           <ReferentialConstraint>
@@ -784,7 +784,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Proveedor__idPro__0C85DE4D">
+        <Association Name="FK__Proveedor__idPro__10566F31">
           <End Role="Proveedores" Type="Self.Proveedores" Multiplicity="0..1" />
           <End Role="ProveedoresDireccion" Type="Self.ProveedoresDireccion" Multiplicity="*" />
           <ReferentialConstraint>
@@ -796,7 +796,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Usuarios__idEmpl__06CD04F7">
+        <Association Name="FK__Usuarios__idEmpl__114A936A">
           <End Role="Empleados" Type="Self.Empleados" Multiplicity="1" />
           <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
           <ReferentialConstraint>
@@ -808,7 +808,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Usuarios__idEmpl__797309D9">
+        <Association Name="FK__Usuarios__idEmpl__123EB7A3">
           <End Role="Empleados" Type="Self.Empleados" Multiplicity="1" />
           <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
           <ReferentialConstraint>
@@ -820,7 +820,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Usuarios__idRol__05D8E0BE">
+        <Association Name="FK__Usuarios__idRol__1332DBDC">
           <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
           <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
           <ReferentialConstraint>
@@ -832,7 +832,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Usuarios__idRol__787EE5A0">
+        <Association Name="FK__Usuarios__idRol__14270015">
           <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
           <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
           <ReferentialConstraint>
@@ -870,127 +870,127 @@
           <EntitySet Name="ProveedoresDireccion" EntityType="Self.ProveedoresDireccion" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Asignacio__idOpc__04E4BC85" Association="Self.FK__Asignacio__idOpc__04E4BC85">
+          <AssociationSet Name="FK__Asignacio__idOpc__656C112C" Association="Self.FK__Asignacio__idOpc__656C112C">
             <End Role="Opciones" EntitySet="Opciones" />
             <End Role="AsignacionRolesOpciones" EntitySet="AsignacionRolesOpciones" />
           </AssociationSet>
-          <AssociationSet Name="FK__Asignacio__idOpc__778AC167" Association="Self.FK__Asignacio__idOpc__778AC167">
+          <AssociationSet Name="FK__Asignacio__idOpc__66603565" Association="Self.FK__Asignacio__idOpc__66603565">
             <End Role="Opciones" EntitySet="Opciones" />
             <End Role="AsignacionRolesOpciones" EntitySet="AsignacionRolesOpciones" />
           </AssociationSet>
-          <AssociationSet Name="FK__Asignacio__idRol__03F0984C" Association="Self.FK__Asignacio__idRol__03F0984C">
+          <AssociationSet Name="FK__Asignacio__idRol__6754599E" Association="Self.FK__Asignacio__idRol__6754599E">
             <End Role="Roles" EntitySet="Roles" />
             <End Role="AsignacionRolesOpciones" EntitySet="AsignacionRolesOpciones" />
           </AssociationSet>
-          <AssociationSet Name="FK__Asignacio__idRol__76969D2E" Association="Self.FK__Asignacio__idRol__76969D2E">
+          <AssociationSet Name="FK__Asignacio__idRol__68487DD7" Association="Self.FK__Asignacio__idRol__68487DD7">
             <End Role="Roles" EntitySet="Roles" />
             <End Role="AsignacionRolesOpciones" EntitySet="AsignacionRolesOpciones" />
-          </AssociationSet>
-          <AssociationSet Name="FK__ClienteDi__idDir__00200768" Association="Self.FK__ClienteDi__idDir__00200768">
-            <End Role="Clientes" EntitySet="Clientes" />
-            <End Role="ClienteDireccion" EntitySet="ClienteDireccion" />
           </AssociationSet>
           <AssociationSet Name="FK__ClienteDi__idDir__693CA210" Association="Self.FK__ClienteDi__idDir__693CA210">
-            <End Role="Direcciones" EntitySet="Direcciones" />
+            <End Role="Clientes" EntitySet="Clientes" />
             <End Role="ClienteDireccion" EntitySet="ClienteDireccion" />
           </AssociationSet>
           <AssociationSet Name="FK__ClienteDi__idDir__6A30C649" Association="Self.FK__ClienteDi__idDir__6A30C649">
-            <End Role="Clientes" EntitySet="Clientes" />
-            <End Role="ClienteDireccion" EntitySet="ClienteDireccion" />
-          </AssociationSet>
-          <AssociationSet Name="FK__ClienteDi__idDir__71D1E811" Association="Self.FK__ClienteDi__idDir__71D1E811">
             <End Role="Direcciones" EntitySet="Direcciones" />
             <End Role="ClienteDireccion" EntitySet="ClienteDireccion" />
           </AssociationSet>
-          <AssociationSet Name="FK__ClienteDi__idDir__72C60C4A" Association="Self.FK__ClienteDi__idDir__72C60C4A">
+          <AssociationSet Name="FK__ClienteDi__idDir__6B24EA82" Association="Self.FK__ClienteDi__idDir__6B24EA82">
             <End Role="Clientes" EntitySet="Clientes" />
             <End Role="ClienteDireccion" EntitySet="ClienteDireccion" />
           </AssociationSet>
-          <AssociationSet Name="FK__ClienteDi__idDir__7F2BE32F" Association="Self.FK__ClienteDi__idDir__7F2BE32F">
+          <AssociationSet Name="FK__ClienteDi__idDir__6C190EBB" Association="Self.FK__ClienteDi__idDir__6C190EBB">
             <End Role="Direcciones" EntitySet="Direcciones" />
             <End Role="ClienteDireccion" EntitySet="ClienteDireccion" />
           </AssociationSet>
-          <AssociationSet Name="FK__Contactos__idPro__07C12930" Association="Self.FK__Contactos__idPro__07C12930">
+          <AssociationSet Name="FK__ClienteDi__idDir__6D0D32F4" Association="Self.FK__ClienteDi__idDir__6D0D32F4">
+            <End Role="Clientes" EntitySet="Clientes" />
+            <End Role="ClienteDireccion" EntitySet="ClienteDireccion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ClienteDi__idDir__6E01572D" Association="Self.FK__ClienteDi__idDir__6E01572D">
+            <End Role="Direcciones" EntitySet="Direcciones" />
+            <End Role="ClienteDireccion" EntitySet="ClienteDireccion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Contactos__idPro__6EF57B66" Association="Self.FK__Contactos__idPro__6EF57B66">
             <End Role="Proveedores" EntitySet="Proveedores" />
             <End Role="ContactosProveedor" EntitySet="ContactosProveedor" />
           </AssociationSet>
-          <AssociationSet Name="FK__Contactos__idPro__08B54D69" Association="Self.FK__Contactos__idPro__08B54D69">
+          <AssociationSet Name="FK__Contactos__idPro__6FE99F9F" Association="Self.FK__Contactos__idPro__6FE99F9F">
             <End Role="Proveedores" EntitySet="Proveedores" />
             <End Role="ContactosProveedor" EntitySet="ContactosProveedor" />
           </AssociationSet>
-          <AssociationSet Name="FK__Contactos__idPro__09A971A2" Association="Self.FK__Contactos__idPro__09A971A2">
+          <AssociationSet Name="FK__Contactos__idPro__70DDC3D8" Association="Self.FK__Contactos__idPro__70DDC3D8">
             <End Role="Proveedores" EntitySet="Proveedores" />
             <End Role="ContactosProveedor" EntitySet="ContactosProveedor" />
           </AssociationSet>
-          <AssociationSet Name="FK__Contactos__idPro__0A9D95DB" Association="Self.FK__Contactos__idPro__0A9D95DB">
+          <AssociationSet Name="FK__Contactos__idPro__71D1E811" Association="Self.FK__Contactos__idPro__71D1E811">
             <End Role="Proveedores" EntitySet="Proveedores" />
             <End Role="ContactosProveedor" EntitySet="ContactosProveedor" />
           </AssociationSet>
-          <AssociationSet Name="FK__Contactos__idPro__7A672E12" Association="Self.FK__Contactos__idPro__7A672E12">
+          <AssociationSet Name="FK__Contactos__idPro__72C60C4A" Association="Self.FK__Contactos__idPro__72C60C4A">
             <End Role="Proveedores" EntitySet="Proveedores" />
             <End Role="ContactosProveedor" EntitySet="ContactosProveedor" />
           </AssociationSet>
-          <AssociationSet Name="FK__Departame__idPai__656C112C" Association="Self.FK__Departame__idPai__656C112C">
+          <AssociationSet Name="FK__Departame__idPai__73BA3083" Association="Self.FK__Departame__idPai__73BA3083">
             <End Role="Paises" EntitySet="Paises" />
             <End Role="Departamentos" EntitySet="Departamentos" />
           </AssociationSet>
-          <AssociationSet Name="FK__Departame__idPai__6E01572D" Association="Self.FK__Departame__idPai__6E01572D">
+          <AssociationSet Name="FK__Departame__idPai__74AE54BC" Association="Self.FK__Departame__idPai__74AE54BC">
             <End Role="Paises" EntitySet="Paises" />
             <End Role="Departamentos" EntitySet="Departamentos" />
           </AssociationSet>
-          <AssociationSet Name="FK__Departame__idPai__7B5B524B" Association="Self.FK__Departame__idPai__7B5B524B">
+          <AssociationSet Name="FK__Departame__idPai__75A278F5" Association="Self.FK__Departame__idPai__75A278F5">
             <End Role="Paises" EntitySet="Paises" />
             <End Role="Departamentos" EntitySet="Departamentos" />
           </AssociationSet>
-          <AssociationSet Name="FK__DetallesF__idFac__151B244E" Association="Self.FK__DetallesF__idFac__151B244E">
+          <AssociationSet Name="FK__DetallesF__idFac__76969D2E" Association="Self.FK__DetallesF__idFac__76969D2E">
             <End Role="Facturas" EntitySet="Facturas" />
             <End Role="DetallesFacturas" EntitySet="DetallesFacturas" />
           </AssociationSet>
-          <AssociationSet Name="FK__DetallesF__idPro__14270015" Association="Self.FK__DetallesF__idPro__14270015">
+          <AssociationSet Name="FK__DetallesF__idPro__778AC167" Association="Self.FK__DetallesF__idPro__778AC167">
             <End Role="Productos" EntitySet="Productos" />
             <End Role="DetallesFacturas" EntitySet="DetallesFacturas" />
           </AssociationSet>
-          <AssociationSet Name="FK__DetallesP__idPed__114A936A" Association="Self.FK__DetallesP__idPed__114A936A">
+          <AssociationSet Name="FK__DetallesP__idPed__787EE5A0" Association="Self.FK__DetallesP__idPed__787EE5A0">
             <End Role="Pedidos" EntitySet="Pedidos" />
             <End Role="DetallesPedidos" EntitySet="DetallesPedidos" />
           </AssociationSet>
-          <AssociationSet Name="FK__DetallesP__idPro__10566F31" Association="Self.FK__DetallesP__idPro__10566F31">
+          <AssociationSet Name="FK__DetallesP__idPro__797309D9" Association="Self.FK__DetallesP__idPro__797309D9">
             <End Role="ProductosNuevos" EntitySet="ProductosNuevos" />
             <End Role="DetallesPedidos" EntitySet="DetallesPedidos" />
           </AssociationSet>
-          <AssociationSet Name="FK__Direccion__idDis__68487DD7" Association="Self.FK__Direccion__idDis__68487DD7">
+          <AssociationSet Name="FK__Direccion__idDis__7A672E12" Association="Self.FK__Direccion__idDis__7A672E12">
             <End Role="Distritos" EntitySet="Distritos" />
             <End Role="Direcciones" EntitySet="Direcciones" />
           </AssociationSet>
-          <AssociationSet Name="FK__Direccion__idDis__70DDC3D8" Association="Self.FK__Direccion__idDis__70DDC3D8">
+          <AssociationSet Name="FK__Direccion__idDis__7B5B524B" Association="Self.FK__Direccion__idDis__7B5B524B">
             <End Role="Distritos" EntitySet="Distritos" />
             <End Role="Direcciones" EntitySet="Direcciones" />
           </AssociationSet>
-          <AssociationSet Name="FK__Direccion__idDis__7E37BEF6" Association="Self.FK__Direccion__idDis__7E37BEF6">
+          <AssociationSet Name="FK__Direccion__idDis__7C4F7684" Association="Self.FK__Direccion__idDis__7C4F7684">
             <End Role="Distritos" EntitySet="Distritos" />
             <End Role="Direcciones" EntitySet="Direcciones" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Distritos__idMun__6754599E" Association="Self.FK__Distritos__idMun__6754599E">
-            <End Role="Municipios" EntitySet="Municipios" />
-            <End Role="Distritos" EntitySet="Distritos" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Distritos__idMun__6FE99F9F" Association="Self.FK__Distritos__idMun__6FE99F9F">
-            <End Role="Municipios" EntitySet="Municipios" />
-            <End Role="Distritos" EntitySet="Distritos" />
           </AssociationSet>
           <AssociationSet Name="FK__Distritos__idMun__7D439ABD" Association="Self.FK__Distritos__idMun__7D439ABD">
             <End Role="Municipios" EntitySet="Municipios" />
             <End Role="Distritos" EntitySet="Distritos" />
           </AssociationSet>
+          <AssociationSet Name="FK__Distritos__idMun__7E37BEF6" Association="Self.FK__Distritos__idMun__7E37BEF6">
+            <End Role="Municipios" EntitySet="Municipios" />
+            <End Role="Distritos" EntitySet="Distritos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Distritos__idMun__7F2BE32F" Association="Self.FK__Distritos__idMun__7F2BE32F">
+            <End Role="Municipios" EntitySet="Municipios" />
+            <End Role="Distritos" EntitySet="Distritos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EmpleadoD__idDir__00200768" Association="Self.FK__EmpleadoD__idDir__00200768">
+            <End Role="Direcciones" EntitySet="Direcciones" />
+            <End Role="EmpleadoDireccion" EntitySet="EmpleadoDireccion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EmpleadoD__idDir__01142BA1" Association="Self.FK__EmpleadoD__idDir__01142BA1">
+            <End Role="Direcciones" EntitySet="Direcciones" />
+            <End Role="EmpleadoDireccion" EntitySet="EmpleadoDireccion" />
+          </AssociationSet>
           <AssociationSet Name="FK__EmpleadoD__idDir__02084FDA" Association="Self.FK__EmpleadoD__idDir__02084FDA">
-            <End Role="Direcciones" EntitySet="Direcciones" />
-            <End Role="EmpleadoDireccion" EntitySet="EmpleadoDireccion" />
-          </AssociationSet>
-          <AssociationSet Name="FK__EmpleadoD__idDir__6C190EBB" Association="Self.FK__EmpleadoD__idDir__6C190EBB">
-            <End Role="Direcciones" EntitySet="Direcciones" />
-            <End Role="EmpleadoDireccion" EntitySet="EmpleadoDireccion" />
-          </AssociationSet>
-          <AssociationSet Name="FK__EmpleadoD__idDir__74AE54BC" Association="Self.FK__EmpleadoD__idDir__74AE54BC">
             <End Role="Direcciones" EntitySet="Direcciones" />
             <End Role="EmpleadoDireccion" EntitySet="EmpleadoDireccion" />
           </AssociationSet>
@@ -998,43 +998,43 @@
             <End Role="Empleados" EntitySet="Empleados" />
             <End Role="EmpleadoDireccion" EntitySet="EmpleadoDireccion" />
           </AssociationSet>
-          <AssociationSet Name="FK__EmpleadoD__idEmp__75A278F5" Association="Self.FK__EmpleadoD__idEmp__75A278F5">
+          <AssociationSet Name="FK__EmpleadoD__idEmp__03F0984C" Association="Self.FK__EmpleadoD__idEmp__03F0984C">
             <End Role="Empleados" EntitySet="Empleados" />
             <End Role="EmpleadoDireccion" EntitySet="EmpleadoDireccion" />
           </AssociationSet>
-          <AssociationSet Name="FK__Empleados__idCar__01142BA1" Association="Self.FK__Empleados__idCar__01142BA1">
+          <AssociationSet Name="FK__Empleados__idCar__04E4BC85" Association="Self.FK__Empleados__idCar__04E4BC85">
             <End Role="Cargos" EntitySet="Cargos" />
             <End Role="Empleados" EntitySet="Empleados" />
           </AssociationSet>
-          <AssociationSet Name="FK__Empleados__idCar__6B24EA82" Association="Self.FK__Empleados__idCar__6B24EA82">
+          <AssociationSet Name="FK__Empleados__idCar__05D8E0BE" Association="Self.FK__Empleados__idCar__05D8E0BE">
             <End Role="Cargos" EntitySet="Cargos" />
             <End Role="Empleados" EntitySet="Empleados" />
           </AssociationSet>
-          <AssociationSet Name="FK__Empleados__idCar__73BA3083" Association="Self.FK__Empleados__idCar__73BA3083">
+          <AssociationSet Name="FK__Empleados__idCar__06CD04F7" Association="Self.FK__Empleados__idCar__06CD04F7">
             <End Role="Cargos" EntitySet="Cargos" />
             <End Role="Empleados" EntitySet="Empleados" />
           </AssociationSet>
-          <AssociationSet Name="FK__Facturas__idclie__1332DBDC" Association="Self.FK__Facturas__idclie__1332DBDC">
+          <AssociationSet Name="FK__Facturas__idclie__07C12930" Association="Self.FK__Facturas__idclie__07C12930">
             <End Role="Clientes" EntitySet="Clientes" />
             <End Role="Facturas" EntitySet="Facturas" />
           </AssociationSet>
-          <AssociationSet Name="FK__Facturas__idempl__123EB7A3" Association="Self.FK__Facturas__idempl__123EB7A3">
+          <AssociationSet Name="FK__Facturas__idempl__08B54D69" Association="Self.FK__Facturas__idempl__08B54D69">
             <End Role="Empleados" EntitySet="Empleados" />
             <End Role="Facturas" EntitySet="Facturas" />
           </AssociationSet>
-          <AssociationSet Name="FK__Municipio__idDep__66603565" Association="Self.FK__Municipio__idDep__66603565">
+          <AssociationSet Name="FK__Municipio__idDep__09A971A2" Association="Self.FK__Municipio__idDep__09A971A2">
             <End Role="Departamentos" EntitySet="Departamentos" />
             <End Role="Municipios" EntitySet="Municipios" />
           </AssociationSet>
-          <AssociationSet Name="FK__Municipio__idDep__6EF57B66" Association="Self.FK__Municipio__idDep__6EF57B66">
+          <AssociationSet Name="FK__Municipio__idDep__0A9D95DB" Association="Self.FK__Municipio__idDep__0A9D95DB">
             <End Role="Departamentos" EntitySet="Departamentos" />
             <End Role="Municipios" EntitySet="Municipios" />
           </AssociationSet>
-          <AssociationSet Name="FK__Municipio__idDep__7C4F7684" Association="Self.FK__Municipio__idDep__7C4F7684">
+          <AssociationSet Name="FK__Municipio__idDep__0B91BA14" Association="Self.FK__Municipio__idDep__0B91BA14">
             <End Role="Departamentos" EntitySet="Departamentos" />
             <End Role="Municipios" EntitySet="Municipios" />
           </AssociationSet>
-          <AssociationSet Name="FK__Pedidos__idProve__0F624AF8" Association="Self.FK__Pedidos__idProve__0F624AF8">
+          <AssociationSet Name="FK__Pedidos__idProve__0C85DE4D" Association="Self.FK__Pedidos__idProve__0C85DE4D">
             <End Role="Proveedores" EntitySet="Proveedores" />
             <End Role="Pedidos" EntitySet="Pedidos" />
           </AssociationSet>
@@ -1046,27 +1046,27 @@
             <End Role="DetallesStok" EntitySet="DetallesStok" />
             <End Role="Productos" EntitySet="Productos" />
           </AssociationSet>
-          <AssociationSet Name="FK__Proveedor__idDir__0B91BA14" Association="Self.FK__Proveedor__idDir__0B91BA14">
+          <AssociationSet Name="FK__Proveedor__idDir__0F624AF8" Association="Self.FK__Proveedor__idDir__0F624AF8">
             <End Role="Direcciones" EntitySet="Direcciones" />
             <End Role="ProveedoresDireccion" EntitySet="ProveedoresDireccion" />
           </AssociationSet>
-          <AssociationSet Name="FK__Proveedor__idPro__0C85DE4D" Association="Self.FK__Proveedor__idPro__0C85DE4D">
+          <AssociationSet Name="FK__Proveedor__idPro__10566F31" Association="Self.FK__Proveedor__idPro__10566F31">
             <End Role="Proveedores" EntitySet="Proveedores" />
             <End Role="ProveedoresDireccion" EntitySet="ProveedoresDireccion" />
           </AssociationSet>
-          <AssociationSet Name="FK__Usuarios__idEmpl__06CD04F7" Association="Self.FK__Usuarios__idEmpl__06CD04F7">
+          <AssociationSet Name="FK__Usuarios__idEmpl__114A936A" Association="Self.FK__Usuarios__idEmpl__114A936A">
             <End Role="Empleados" EntitySet="Empleados" />
             <End Role="Usuarios" EntitySet="Usuarios" />
           </AssociationSet>
-          <AssociationSet Name="FK__Usuarios__idEmpl__797309D9" Association="Self.FK__Usuarios__idEmpl__797309D9">
+          <AssociationSet Name="FK__Usuarios__idEmpl__123EB7A3" Association="Self.FK__Usuarios__idEmpl__123EB7A3">
             <End Role="Empleados" EntitySet="Empleados" />
             <End Role="Usuarios" EntitySet="Usuarios" />
           </AssociationSet>
-          <AssociationSet Name="FK__Usuarios__idRol__05D8E0BE" Association="Self.FK__Usuarios__idRol__05D8E0BE">
+          <AssociationSet Name="FK__Usuarios__idRol__1332DBDC" Association="Self.FK__Usuarios__idRol__1332DBDC">
             <End Role="Roles" EntitySet="Roles" />
             <End Role="Usuarios" EntitySet="Usuarios" />
           </AssociationSet>
-          <AssociationSet Name="FK__Usuarios__idRol__787EE5A0" Association="Self.FK__Usuarios__idRol__787EE5A0">
+          <AssociationSet Name="FK__Usuarios__idRol__14270015" Association="Self.FK__Usuarios__idRol__14270015">
             <End Role="Roles" EntitySet="Roles" />
             <End Role="Usuarios" EntitySet="Usuarios" />
           </AssociationSet>
@@ -1083,10 +1083,10 @@
           <Property Name="idAsignacionRol" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="idRol" Type="Int32" Nullable="false" />
           <Property Name="idOpcion" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Opciones" Relationship="Self.FK__Asignacio__idOpc__04E4BC85" FromRole="AsignacionRolesOpciones" ToRole="Opciones" />
-          <NavigationProperty Name="Opciones1" Relationship="Self.FK__Asignacio__idOpc__778AC167" FromRole="AsignacionRolesOpciones" ToRole="Opciones" />
-          <NavigationProperty Name="Roles" Relationship="Self.FK__Asignacio__idRol__03F0984C" FromRole="AsignacionRolesOpciones" ToRole="Roles" />
-          <NavigationProperty Name="Roles1" Relationship="Self.FK__Asignacio__idRol__76969D2E" FromRole="AsignacionRolesOpciones" ToRole="Roles" />
+          <NavigationProperty Name="Opciones" Relationship="Self.FK__Asignacio__idOpc__656C112C" FromRole="AsignacionRolesOpciones" ToRole="Opciones" />
+          <NavigationProperty Name="Opciones1" Relationship="Self.FK__Asignacio__idOpc__66603565" FromRole="AsignacionRolesOpciones" ToRole="Opciones" />
+          <NavigationProperty Name="Roles" Relationship="Self.FK__Asignacio__idRol__6754599E" FromRole="AsignacionRolesOpciones" ToRole="Roles" />
+          <NavigationProperty Name="Roles1" Relationship="Self.FK__Asignacio__idRol__68487DD7" FromRole="AsignacionRolesOpciones" ToRole="Roles" />
         </EntityType>
         <EntityType Name="Cargos">
           <Key>
@@ -1094,9 +1094,9 @@
           </Key>
           <Property Name="idCargo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="cargo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Empleados" Relationship="Self.FK__Empleados__idCar__01142BA1" FromRole="Cargos" ToRole="Empleados" />
-          <NavigationProperty Name="Empleados1" Relationship="Self.FK__Empleados__idCar__6B24EA82" FromRole="Cargos" ToRole="Empleados" />
-          <NavigationProperty Name="Empleados2" Relationship="Self.FK__Empleados__idCar__73BA3083" FromRole="Cargos" ToRole="Empleados" />
+          <NavigationProperty Name="Empleados" Relationship="Self.FK__Empleados__idCar__04E4BC85" FromRole="Cargos" ToRole="Empleados" />
+          <NavigationProperty Name="Empleados1" Relationship="Self.FK__Empleados__idCar__05D8E0BE" FromRole="Cargos" ToRole="Empleados" />
+          <NavigationProperty Name="Empleados2" Relationship="Self.FK__Empleados__idCar__06CD04F7" FromRole="Cargos" ToRole="Empleados" />
         </EntityType>
         <EntityType Name="CategoriasProductos">
           <Key>
@@ -1116,12 +1116,12 @@
           <Property Name="Linea2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="idCliente" Type="Int32" />
           <Property Name="idDireccion" Type="Int32" />
-          <NavigationProperty Name="Clientes" Relationship="Self.FK__ClienteDi__idDir__00200768" FromRole="ClienteDireccion" ToRole="Clientes" />
-          <NavigationProperty Name="Direcciones" Relationship="Self.FK__ClienteDi__idDir__693CA210" FromRole="ClienteDireccion" ToRole="Direcciones" />
-          <NavigationProperty Name="Clientes1" Relationship="Self.FK__ClienteDi__idDir__6A30C649" FromRole="ClienteDireccion" ToRole="Clientes" />
-          <NavigationProperty Name="Direcciones1" Relationship="Self.FK__ClienteDi__idDir__71D1E811" FromRole="ClienteDireccion" ToRole="Direcciones" />
-          <NavigationProperty Name="Clientes2" Relationship="Self.FK__ClienteDi__idDir__72C60C4A" FromRole="ClienteDireccion" ToRole="Clientes" />
-          <NavigationProperty Name="Direcciones2" Relationship="Self.FK__ClienteDi__idDir__7F2BE32F" FromRole="ClienteDireccion" ToRole="Direcciones" />
+          <NavigationProperty Name="Clientes" Relationship="Self.FK__ClienteDi__idDir__693CA210" FromRole="ClienteDireccion" ToRole="Clientes" />
+          <NavigationProperty Name="Direcciones" Relationship="Self.FK__ClienteDi__idDir__6A30C649" FromRole="ClienteDireccion" ToRole="Direcciones" />
+          <NavigationProperty Name="Clientes1" Relationship="Self.FK__ClienteDi__idDir__6B24EA82" FromRole="ClienteDireccion" ToRole="Clientes" />
+          <NavigationProperty Name="Direcciones1" Relationship="Self.FK__ClienteDi__idDir__6C190EBB" FromRole="ClienteDireccion" ToRole="Direcciones" />
+          <NavigationProperty Name="Clientes2" Relationship="Self.FK__ClienteDi__idDir__6D0D32F4" FromRole="ClienteDireccion" ToRole="Clientes" />
+          <NavigationProperty Name="Direcciones2" Relationship="Self.FK__ClienteDi__idDir__6E01572D" FromRole="ClienteDireccion" ToRole="Direcciones" />
         </EntityType>
         <EntityType Name="Clientes">
           <Key>
@@ -1133,10 +1133,10 @@
           <Property Name="dui" Type="String" MaxLength="11" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="telefono" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
           <Property Name="eMail" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="ClienteDireccion" Relationship="Self.FK__ClienteDi__idDir__00200768" FromRole="Clientes" ToRole="ClienteDireccion" />
-          <NavigationProperty Name="ClienteDireccion1" Relationship="Self.FK__ClienteDi__idDir__6A30C649" FromRole="Clientes" ToRole="ClienteDireccion" />
-          <NavigationProperty Name="ClienteDireccion2" Relationship="Self.FK__ClienteDi__idDir__72C60C4A" FromRole="Clientes" ToRole="ClienteDireccion" />
-          <NavigationProperty Name="Facturas" Relationship="Self.FK__Facturas__idclie__1332DBDC" FromRole="Clientes" ToRole="Facturas" />
+          <NavigationProperty Name="ClienteDireccion" Relationship="Self.FK__ClienteDi__idDir__693CA210" FromRole="Clientes" ToRole="ClienteDireccion" />
+          <NavigationProperty Name="ClienteDireccion1" Relationship="Self.FK__ClienteDi__idDir__6B24EA82" FromRole="Clientes" ToRole="ClienteDireccion" />
+          <NavigationProperty Name="ClienteDireccion2" Relationship="Self.FK__ClienteDi__idDir__6D0D32F4" FromRole="Clientes" ToRole="ClienteDireccion" />
+          <NavigationProperty Name="Facturas" Relationship="Self.FK__Facturas__idclie__07C12930" FromRole="Clientes" ToRole="Facturas" />
         </EntityType>
         <EntityType Name="ContactosProveedor">
           <Key>
@@ -1150,25 +1150,25 @@
           <Property Name="eMailContacto" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="observacion" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Name="idProveedor" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Proveedores" Relationship="Self.FK__Contactos__idPro__07C12930" FromRole="ContactosProveedor" ToRole="Proveedores" />
-          <NavigationProperty Name="Proveedores1" Relationship="Self.FK__Contactos__idPro__08B54D69" FromRole="ContactosProveedor" ToRole="Proveedores" />
-          <NavigationProperty Name="Proveedores2" Relationship="Self.FK__Contactos__idPro__09A971A2" FromRole="ContactosProveedor" ToRole="Proveedores" />
-          <NavigationProperty Name="Proveedores3" Relationship="Self.FK__Contactos__idPro__0A9D95DB" FromRole="ContactosProveedor" ToRole="Proveedores" />
-          <NavigationProperty Name="Proveedores4" Relationship="Self.FK__Contactos__idPro__7A672E12" FromRole="ContactosProveedor" ToRole="Proveedores" />
+          <NavigationProperty Name="Proveedores" Relationship="Self.FK__Contactos__idPro__6EF57B66" FromRole="ContactosProveedor" ToRole="Proveedores" />
+          <NavigationProperty Name="Proveedores1" Relationship="Self.FK__Contactos__idPro__6FE99F9F" FromRole="ContactosProveedor" ToRole="Proveedores" />
+          <NavigationProperty Name="Proveedores2" Relationship="Self.FK__Contactos__idPro__70DDC3D8" FromRole="ContactosProveedor" ToRole="Proveedores" />
+          <NavigationProperty Name="Proveedores3" Relationship="Self.FK__Contactos__idPro__71D1E811" FromRole="ContactosProveedor" ToRole="Proveedores" />
+          <NavigationProperty Name="Proveedores4" Relationship="Self.FK__Contactos__idPro__72C60C4A" FromRole="ContactosProveedor" ToRole="Proveedores" />
         </EntityType>
         <EntityType Name="Departamentos">
           <Key>
             <PropertyRef Name="idDepartamento" />
           </Key>
-          <Property Name="idDepartamento" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="idDepartamento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Departamento" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="idPais" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Paises" Relationship="Self.FK__Departame__idPai__656C112C" FromRole="Departamentos" ToRole="Paises" />
-          <NavigationProperty Name="Paises1" Relationship="Self.FK__Departame__idPai__6E01572D" FromRole="Departamentos" ToRole="Paises" />
-          <NavigationProperty Name="Paises2" Relationship="Self.FK__Departame__idPai__7B5B524B" FromRole="Departamentos" ToRole="Paises" />
-          <NavigationProperty Name="Municipios" Relationship="Self.FK__Municipio__idDep__66603565" FromRole="Departamentos" ToRole="Municipios" />
-          <NavigationProperty Name="Municipios1" Relationship="Self.FK__Municipio__idDep__6EF57B66" FromRole="Departamentos" ToRole="Municipios" />
-          <NavigationProperty Name="Municipios2" Relationship="Self.FK__Municipio__idDep__7C4F7684" FromRole="Departamentos" ToRole="Municipios" />
+          <Property Name="idPais" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Paises" Relationship="Self.FK__Departame__idPai__73BA3083" FromRole="Departamentos" ToRole="Paises" />
+          <NavigationProperty Name="Paises1" Relationship="Self.FK__Departame__idPai__74AE54BC" FromRole="Departamentos" ToRole="Paises" />
+          <NavigationProperty Name="Paises2" Relationship="Self.FK__Departame__idPai__75A278F5" FromRole="Departamentos" ToRole="Paises" />
+          <NavigationProperty Name="Municipios" Relationship="Self.FK__Municipio__idDep__09A971A2" FromRole="Departamentos" ToRole="Municipios" />
+          <NavigationProperty Name="Municipios1" Relationship="Self.FK__Municipio__idDep__0A9D95DB" FromRole="Departamentos" ToRole="Municipios" />
+          <NavigationProperty Name="Municipios2" Relationship="Self.FK__Municipio__idDep__0B91BA14" FromRole="Departamentos" ToRole="Municipios" />
         </EntityType>
         <EntityType Name="DetallesFacturas">
           <Key>
@@ -1180,8 +1180,8 @@
           <Property Name="cantidad" Type="Int32" Nullable="false" />
           <Property Name="iva" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
           <Property Name="descuento" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
-          <NavigationProperty Name="Facturas" Relationship="Self.FK__DetallesF__idFac__151B244E" FromRole="DetallesFacturas" ToRole="Facturas" />
-          <NavigationProperty Name="Productos" Relationship="Self.FK__DetallesF__idPro__14270015" FromRole="DetallesFacturas" ToRole="Productos" />
+          <NavigationProperty Name="Facturas" Relationship="Self.FK__DetallesF__idFac__76969D2E" FromRole="DetallesFacturas" ToRole="Facturas" />
+          <NavigationProperty Name="Productos" Relationship="Self.FK__DetallesF__idPro__778AC167" FromRole="DetallesFacturas" ToRole="Productos" />
         </EntityType>
         <EntityType Name="DetallesPedidos">
           <Key>
@@ -1194,8 +1194,8 @@
           <Property Name="precioUnidad" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
           <Property Name="descuetoUnidad" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
           <Property Name="comentarios" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Pedidos" Relationship="Self.FK__DetallesP__idPed__114A936A" FromRole="DetallesPedidos" ToRole="Pedidos" />
-          <NavigationProperty Name="ProductosNuevos" Relationship="Self.FK__DetallesP__idPro__10566F31" FromRole="DetallesPedidos" ToRole="ProductosNuevos" />
+          <NavigationProperty Name="Pedidos" Relationship="Self.FK__DetallesP__idPed__787EE5A0" FromRole="DetallesPedidos" ToRole="Pedidos" />
+          <NavigationProperty Name="ProductosNuevos" Relationship="Self.FK__DetallesP__idPro__797309D9" FromRole="DetallesPedidos" ToRole="ProductosNuevos" />
         </EntityType>
         <EntityType Name="DetallesStok">
           <Key>
@@ -1211,32 +1211,32 @@
             <PropertyRef Name="idDireccion" />
           </Key>
           <Property Name="idDireccion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="idDistrito" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="idDistrito" Type="Int32" Nullable="false" />
           <Property Name="CodigoPostal" Type="Int32" />
-          <NavigationProperty Name="ClienteDireccion" Relationship="Self.FK__ClienteDi__idDir__693CA210" FromRole="Direcciones" ToRole="ClienteDireccion" />
-          <NavigationProperty Name="ClienteDireccion1" Relationship="Self.FK__ClienteDi__idDir__71D1E811" FromRole="Direcciones" ToRole="ClienteDireccion" />
-          <NavigationProperty Name="ClienteDireccion2" Relationship="Self.FK__ClienteDi__idDir__7F2BE32F" FromRole="Direcciones" ToRole="ClienteDireccion" />
-          <NavigationProperty Name="Distritos" Relationship="Self.FK__Direccion__idDis__68487DD7" FromRole="Direcciones" ToRole="Distritos" />
-          <NavigationProperty Name="Distritos1" Relationship="Self.FK__Direccion__idDis__70DDC3D8" FromRole="Direcciones" ToRole="Distritos" />
-          <NavigationProperty Name="Distritos2" Relationship="Self.FK__Direccion__idDis__7E37BEF6" FromRole="Direcciones" ToRole="Distritos" />
-          <NavigationProperty Name="EmpleadoDireccion" Relationship="Self.FK__EmpleadoD__idDir__02084FDA" FromRole="Direcciones" ToRole="EmpleadoDireccion" />
-          <NavigationProperty Name="EmpleadoDireccion1" Relationship="Self.FK__EmpleadoD__idDir__6C190EBB" FromRole="Direcciones" ToRole="EmpleadoDireccion" />
-          <NavigationProperty Name="EmpleadoDireccion2" Relationship="Self.FK__EmpleadoD__idDir__74AE54BC" FromRole="Direcciones" ToRole="EmpleadoDireccion" />
-          <NavigationProperty Name="ProveedoresDireccion" Relationship="Self.FK__Proveedor__idDir__0B91BA14" FromRole="Direcciones" ToRole="ProveedoresDireccion" />
+          <NavigationProperty Name="ClienteDireccion" Relationship="Self.FK__ClienteDi__idDir__6A30C649" FromRole="Direcciones" ToRole="ClienteDireccion" />
+          <NavigationProperty Name="ClienteDireccion1" Relationship="Self.FK__ClienteDi__idDir__6C190EBB" FromRole="Direcciones" ToRole="ClienteDireccion" />
+          <NavigationProperty Name="ClienteDireccion2" Relationship="Self.FK__ClienteDi__idDir__6E01572D" FromRole="Direcciones" ToRole="ClienteDireccion" />
+          <NavigationProperty Name="Distritos" Relationship="Self.FK__Direccion__idDis__7A672E12" FromRole="Direcciones" ToRole="Distritos" />
+          <NavigationProperty Name="Distritos1" Relationship="Self.FK__Direccion__idDis__7B5B524B" FromRole="Direcciones" ToRole="Distritos" />
+          <NavigationProperty Name="Distritos2" Relationship="Self.FK__Direccion__idDis__7C4F7684" FromRole="Direcciones" ToRole="Distritos" />
+          <NavigationProperty Name="EmpleadoDireccion" Relationship="Self.FK__EmpleadoD__idDir__00200768" FromRole="Direcciones" ToRole="EmpleadoDireccion" />
+          <NavigationProperty Name="EmpleadoDireccion1" Relationship="Self.FK__EmpleadoD__idDir__01142BA1" FromRole="Direcciones" ToRole="EmpleadoDireccion" />
+          <NavigationProperty Name="EmpleadoDireccion2" Relationship="Self.FK__EmpleadoD__idDir__02084FDA" FromRole="Direcciones" ToRole="EmpleadoDireccion" />
+          <NavigationProperty Name="ProveedoresDireccion" Relationship="Self.FK__Proveedor__idDir__0F624AF8" FromRole="Direcciones" ToRole="ProveedoresDireccion" />
         </EntityType>
         <EntityType Name="Distritos">
           <Key>
             <PropertyRef Name="idDistrito" />
           </Key>
-          <Property Name="idDistrito" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="idDistrito" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Distrito" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="idMunicipio" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Direcciones" Relationship="Self.FK__Direccion__idDis__68487DD7" FromRole="Distritos" ToRole="Direcciones" />
-          <NavigationProperty Name="Direcciones1" Relationship="Self.FK__Direccion__idDis__70DDC3D8" FromRole="Distritos" ToRole="Direcciones" />
-          <NavigationProperty Name="Direcciones2" Relationship="Self.FK__Direccion__idDis__7E37BEF6" FromRole="Distritos" ToRole="Direcciones" />
-          <NavigationProperty Name="Municipios" Relationship="Self.FK__Distritos__idMun__6754599E" FromRole="Distritos" ToRole="Municipios" />
-          <NavigationProperty Name="Municipios1" Relationship="Self.FK__Distritos__idMun__6FE99F9F" FromRole="Distritos" ToRole="Municipios" />
-          <NavigationProperty Name="Municipios2" Relationship="Self.FK__Distritos__idMun__7D439ABD" FromRole="Distritos" ToRole="Municipios" />
+          <Property Name="idMunicipio" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Direcciones" Relationship="Self.FK__Direccion__idDis__7A672E12" FromRole="Distritos" ToRole="Direcciones" />
+          <NavigationProperty Name="Direcciones1" Relationship="Self.FK__Direccion__idDis__7B5B524B" FromRole="Distritos" ToRole="Direcciones" />
+          <NavigationProperty Name="Direcciones2" Relationship="Self.FK__Direccion__idDis__7C4F7684" FromRole="Distritos" ToRole="Direcciones" />
+          <NavigationProperty Name="Municipios" Relationship="Self.FK__Distritos__idMun__7D439ABD" FromRole="Distritos" ToRole="Municipios" />
+          <NavigationProperty Name="Municipios1" Relationship="Self.FK__Distritos__idMun__7E37BEF6" FromRole="Distritos" ToRole="Municipios" />
+          <NavigationProperty Name="Municipios2" Relationship="Self.FK__Distritos__idMun__7F2BE32F" FromRole="Distritos" ToRole="Municipios" />
         </EntityType>
         <EntityType Name="EmpleadoDireccion">
           <Key>
@@ -1247,11 +1247,11 @@
           <Property Name="Linea2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="idEmpleado" Type="Int32" />
           <Property Name="idDireccion" Type="Int32" />
-          <NavigationProperty Name="Direcciones" Relationship="Self.FK__EmpleadoD__idDir__02084FDA" FromRole="EmpleadoDireccion" ToRole="Direcciones" />
-          <NavigationProperty Name="Direcciones1" Relationship="Self.FK__EmpleadoD__idDir__6C190EBB" FromRole="EmpleadoDireccion" ToRole="Direcciones" />
-          <NavigationProperty Name="Direcciones2" Relationship="Self.FK__EmpleadoD__idDir__74AE54BC" FromRole="EmpleadoDireccion" ToRole="Direcciones" />
+          <NavigationProperty Name="Direcciones" Relationship="Self.FK__EmpleadoD__idDir__00200768" FromRole="EmpleadoDireccion" ToRole="Direcciones" />
+          <NavigationProperty Name="Direcciones1" Relationship="Self.FK__EmpleadoD__idDir__01142BA1" FromRole="EmpleadoDireccion" ToRole="Direcciones" />
+          <NavigationProperty Name="Direcciones2" Relationship="Self.FK__EmpleadoD__idDir__02084FDA" FromRole="EmpleadoDireccion" ToRole="Direcciones" />
           <NavigationProperty Name="Empleados" Relationship="Self.FK__EmpleadoD__idEmp__02FC7413" FromRole="EmpleadoDireccion" ToRole="Empleados" />
-          <NavigationProperty Name="Empleados1" Relationship="Self.FK__EmpleadoD__idEmp__75A278F5" FromRole="EmpleadoDireccion" ToRole="Empleados" />
+          <NavigationProperty Name="Empleados1" Relationship="Self.FK__EmpleadoD__idEmp__03F0984C" FromRole="EmpleadoDireccion" ToRole="Empleados" />
         </EntityType>
         <EntityType Name="Empleados">
           <Key>
@@ -1266,14 +1266,14 @@
           <Property Name="telefono" Type="String" MaxLength="11" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="eMail" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
           <Property Name="idCargo" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Cargos" Relationship="Self.FK__Empleados__idCar__01142BA1" FromRole="Empleados" ToRole="Cargos" />
-          <NavigationProperty Name="Cargos1" Relationship="Self.FK__Empleados__idCar__6B24EA82" FromRole="Empleados" ToRole="Cargos" />
-          <NavigationProperty Name="Cargos2" Relationship="Self.FK__Empleados__idCar__73BA3083" FromRole="Empleados" ToRole="Cargos" />
+          <NavigationProperty Name="Cargos" Relationship="Self.FK__Empleados__idCar__04E4BC85" FromRole="Empleados" ToRole="Cargos" />
+          <NavigationProperty Name="Cargos1" Relationship="Self.FK__Empleados__idCar__05D8E0BE" FromRole="Empleados" ToRole="Cargos" />
+          <NavigationProperty Name="Cargos2" Relationship="Self.FK__Empleados__idCar__06CD04F7" FromRole="Empleados" ToRole="Cargos" />
           <NavigationProperty Name="EmpleadoDireccion" Relationship="Self.FK__EmpleadoD__idEmp__02FC7413" FromRole="Empleados" ToRole="EmpleadoDireccion" />
-          <NavigationProperty Name="EmpleadoDireccion1" Relationship="Self.FK__EmpleadoD__idEmp__75A278F5" FromRole="Empleados" ToRole="EmpleadoDireccion" />
-          <NavigationProperty Name="Facturas" Relationship="Self.FK__Facturas__idempl__123EB7A3" FromRole="Empleados" ToRole="Facturas" />
-          <NavigationProperty Name="Usuarios" Relationship="Self.FK__Usuarios__idEmpl__06CD04F7" FromRole="Empleados" ToRole="Usuarios" />
-          <NavigationProperty Name="Usuarios1" Relationship="Self.FK__Usuarios__idEmpl__797309D9" FromRole="Empleados" ToRole="Usuarios" />
+          <NavigationProperty Name="EmpleadoDireccion1" Relationship="Self.FK__EmpleadoD__idEmp__03F0984C" FromRole="Empleados" ToRole="EmpleadoDireccion" />
+          <NavigationProperty Name="Facturas" Relationship="Self.FK__Facturas__idempl__08B54D69" FromRole="Empleados" ToRole="Facturas" />
+          <NavigationProperty Name="Usuarios" Relationship="Self.FK__Usuarios__idEmpl__114A936A" FromRole="Empleados" ToRole="Usuarios" />
+          <NavigationProperty Name="Usuarios1" Relationship="Self.FK__Usuarios__idEmpl__123EB7A3" FromRole="Empleados" ToRole="Usuarios" />
         </EntityType>
         <EntityType Name="Facturas">
           <Key>
@@ -1284,23 +1284,23 @@
           <Property Name="comentario" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
           <Property Name="idcliente" Type="Int32" Nullable="false" />
           <Property Name="idempleado" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Clientes" Relationship="Self.FK__Facturas__idclie__1332DBDC" FromRole="Facturas" ToRole="Clientes" />
-          <NavigationProperty Name="DetallesFacturas" Relationship="Self.FK__DetallesF__idFac__151B244E" FromRole="Facturas" ToRole="DetallesFacturas" />
-          <NavigationProperty Name="Empleados" Relationship="Self.FK__Facturas__idempl__123EB7A3" FromRole="Facturas" ToRole="Empleados" />
+          <NavigationProperty Name="Clientes" Relationship="Self.FK__Facturas__idclie__07C12930" FromRole="Facturas" ToRole="Clientes" />
+          <NavigationProperty Name="DetallesFacturas" Relationship="Self.FK__DetallesF__idFac__76969D2E" FromRole="Facturas" ToRole="DetallesFacturas" />
+          <NavigationProperty Name="Empleados" Relationship="Self.FK__Facturas__idempl__08B54D69" FromRole="Facturas" ToRole="Empleados" />
         </EntityType>
         <EntityType Name="Municipios">
           <Key>
             <PropertyRef Name="idMunicipio" />
           </Key>
-          <Property Name="idMunicipio" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="idMunicipio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Municipio" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="idDepartamento" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Departamentos" Relationship="Self.FK__Municipio__idDep__66603565" FromRole="Municipios" ToRole="Departamentos" />
-          <NavigationProperty Name="Departamentos1" Relationship="Self.FK__Municipio__idDep__6EF57B66" FromRole="Municipios" ToRole="Departamentos" />
-          <NavigationProperty Name="Departamentos2" Relationship="Self.FK__Municipio__idDep__7C4F7684" FromRole="Municipios" ToRole="Departamentos" />
-          <NavigationProperty Name="Distritos" Relationship="Self.FK__Distritos__idMun__6754599E" FromRole="Municipios" ToRole="Distritos" />
-          <NavigationProperty Name="Distritos1" Relationship="Self.FK__Distritos__idMun__6FE99F9F" FromRole="Municipios" ToRole="Distritos" />
-          <NavigationProperty Name="Distritos2" Relationship="Self.FK__Distritos__idMun__7D439ABD" FromRole="Municipios" ToRole="Distritos" />
+          <Property Name="idDepartamento" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Departamentos" Relationship="Self.FK__Municipio__idDep__09A971A2" FromRole="Municipios" ToRole="Departamentos" />
+          <NavigationProperty Name="Departamentos1" Relationship="Self.FK__Municipio__idDep__0A9D95DB" FromRole="Municipios" ToRole="Departamentos" />
+          <NavigationProperty Name="Departamentos2" Relationship="Self.FK__Municipio__idDep__0B91BA14" FromRole="Municipios" ToRole="Departamentos" />
+          <NavigationProperty Name="Distritos" Relationship="Self.FK__Distritos__idMun__7D439ABD" FromRole="Municipios" ToRole="Distritos" />
+          <NavigationProperty Name="Distritos1" Relationship="Self.FK__Distritos__idMun__7E37BEF6" FromRole="Municipios" ToRole="Distritos" />
+          <NavigationProperty Name="Distritos2" Relationship="Self.FK__Distritos__idMun__7F2BE32F" FromRole="Municipios" ToRole="Distritos" />
         </EntityType>
         <EntityType Name="Opciones">
           <Key>
@@ -1308,18 +1308,18 @@
           </Key>
           <Property Name="idOpcion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="opcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="AsignacionRolesOpciones" Relationship="Self.FK__Asignacio__idOpc__04E4BC85" FromRole="Opciones" ToRole="AsignacionRolesOpciones" />
-          <NavigationProperty Name="AsignacionRolesOpciones1" Relationship="Self.FK__Asignacio__idOpc__778AC167" FromRole="Opciones" ToRole="AsignacionRolesOpciones" />
+          <NavigationProperty Name="AsignacionRolesOpciones" Relationship="Self.FK__Asignacio__idOpc__656C112C" FromRole="Opciones" ToRole="AsignacionRolesOpciones" />
+          <NavigationProperty Name="AsignacionRolesOpciones1" Relationship="Self.FK__Asignacio__idOpc__66603565" FromRole="Opciones" ToRole="AsignacionRolesOpciones" />
         </EntityType>
         <EntityType Name="Paises">
           <Key>
             <PropertyRef Name="idPais" />
           </Key>
-          <Property Name="idPais" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="idPais" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Pais" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Departamentos" Relationship="Self.FK__Departame__idPai__656C112C" FromRole="Paises" ToRole="Departamentos" />
-          <NavigationProperty Name="Departamentos1" Relationship="Self.FK__Departame__idPai__6E01572D" FromRole="Paises" ToRole="Departamentos" />
-          <NavigationProperty Name="Departamentos2" Relationship="Self.FK__Departame__idPai__7B5B524B" FromRole="Paises" ToRole="Departamentos" />
+          <NavigationProperty Name="Departamentos" Relationship="Self.FK__Departame__idPai__73BA3083" FromRole="Paises" ToRole="Departamentos" />
+          <NavigationProperty Name="Departamentos1" Relationship="Self.FK__Departame__idPai__74AE54BC" FromRole="Paises" ToRole="Departamentos" />
+          <NavigationProperty Name="Departamentos2" Relationship="Self.FK__Departame__idPai__75A278F5" FromRole="Paises" ToRole="Departamentos" />
         </EntityType>
         <EntityType Name="Pedidos">
           <Key>
@@ -1330,8 +1330,8 @@
           <Property Name="fechaPedido" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="fechaRecibido" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="comentario" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="DetallesPedidos" Relationship="Self.FK__DetallesP__idPed__114A936A" FromRole="Pedidos" ToRole="DetallesPedidos" />
-          <NavigationProperty Name="Proveedores" Relationship="Self.FK__Pedidos__idProve__0F624AF8" FromRole="Pedidos" ToRole="Proveedores" />
+          <NavigationProperty Name="DetallesPedidos" Relationship="Self.FK__DetallesP__idPed__787EE5A0" FromRole="Pedidos" ToRole="DetallesPedidos" />
+          <NavigationProperty Name="Proveedores" Relationship="Self.FK__Pedidos__idProve__0C85DE4D" FromRole="Pedidos" ToRole="Proveedores" />
         </EntityType>
         <EntityType Name="Productos">
           <Key>
@@ -1344,7 +1344,7 @@
           <Property Name="idCategoria" Type="Int32" Nullable="false" />
           <Property Name="idStok" Type="Int32" Nullable="false" />
           <NavigationProperty Name="CategoriasProductos" Relationship="Self.FK__Productos__idCat__0D7A0286" FromRole="Productos" ToRole="CategoriasProductos" />
-          <NavigationProperty Name="DetallesFacturas" Relationship="Self.FK__DetallesF__idPro__14270015" FromRole="Productos" ToRole="DetallesFacturas" />
+          <NavigationProperty Name="DetallesFacturas" Relationship="Self.FK__DetallesF__idPro__778AC167" FromRole="Productos" ToRole="DetallesFacturas" />
           <NavigationProperty Name="DetallesStok" Relationship="Self.FK__Productos__idSto__0E6E26BF" FromRole="Productos" ToRole="DetallesStok" />
         </EntityType>
         <EntityType Name="ProductosNuevos">
@@ -1357,7 +1357,7 @@
           <Property Name="precio" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
           <Property Name="idCategoria" Type="Int32" Nullable="false" />
           <Property Name="idStok" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="DetallesPedidos" Relationship="Self.FK__DetallesP__idPro__10566F31" FromRole="ProductosNuevos" ToRole="DetallesPedidos" />
+          <NavigationProperty Name="DetallesPedidos" Relationship="Self.FK__DetallesP__idPro__797309D9" FromRole="ProductosNuevos" ToRole="DetallesPedidos" />
         </EntityType>
         <EntityType Name="Proveedores">
           <Key>
@@ -1370,13 +1370,13 @@
           <Property Name="eMailProveedor" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="web" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="giro" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="ContactosProveedor" Relationship="Self.FK__Contactos__idPro__07C12930" FromRole="Proveedores" ToRole="ContactosProveedor" />
-          <NavigationProperty Name="ContactosProveedor1" Relationship="Self.FK__Contactos__idPro__08B54D69" FromRole="Proveedores" ToRole="ContactosProveedor" />
-          <NavigationProperty Name="ContactosProveedor2" Relationship="Self.FK__Contactos__idPro__09A971A2" FromRole="Proveedores" ToRole="ContactosProveedor" />
-          <NavigationProperty Name="ContactosProveedor3" Relationship="Self.FK__Contactos__idPro__0A9D95DB" FromRole="Proveedores" ToRole="ContactosProveedor" />
-          <NavigationProperty Name="ContactosProveedor4" Relationship="Self.FK__Contactos__idPro__7A672E12" FromRole="Proveedores" ToRole="ContactosProveedor" />
-          <NavigationProperty Name="Pedidos" Relationship="Self.FK__Pedidos__idProve__0F624AF8" FromRole="Proveedores" ToRole="Pedidos" />
-          <NavigationProperty Name="ProveedoresDireccion" Relationship="Self.FK__Proveedor__idPro__0C85DE4D" FromRole="Proveedores" ToRole="ProveedoresDireccion" />
+          <NavigationProperty Name="ContactosProveedor" Relationship="Self.FK__Contactos__idPro__6EF57B66" FromRole="Proveedores" ToRole="ContactosProveedor" />
+          <NavigationProperty Name="ContactosProveedor1" Relationship="Self.FK__Contactos__idPro__6FE99F9F" FromRole="Proveedores" ToRole="ContactosProveedor" />
+          <NavigationProperty Name="ContactosProveedor2" Relationship="Self.FK__Contactos__idPro__70DDC3D8" FromRole="Proveedores" ToRole="ContactosProveedor" />
+          <NavigationProperty Name="ContactosProveedor3" Relationship="Self.FK__Contactos__idPro__71D1E811" FromRole="Proveedores" ToRole="ContactosProveedor" />
+          <NavigationProperty Name="ContactosProveedor4" Relationship="Self.FK__Contactos__idPro__72C60C4A" FromRole="Proveedores" ToRole="ContactosProveedor" />
+          <NavigationProperty Name="Pedidos" Relationship="Self.FK__Pedidos__idProve__0C85DE4D" FromRole="Proveedores" ToRole="Pedidos" />
+          <NavigationProperty Name="ProveedoresDireccion" Relationship="Self.FK__Proveedor__idPro__10566F31" FromRole="Proveedores" ToRole="ProveedoresDireccion" />
         </EntityType>
         <EntityType Name="ProveedoresDireccion">
           <Key>
@@ -1387,8 +1387,8 @@
           <Property Name="Linea2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="idProveedor" Type="Int32" />
           <Property Name="idDireccion" Type="Int32" />
-          <NavigationProperty Name="Direcciones" Relationship="Self.FK__Proveedor__idDir__0B91BA14" FromRole="ProveedoresDireccion" ToRole="Direcciones" />
-          <NavigationProperty Name="Proveedores" Relationship="Self.FK__Proveedor__idPro__0C85DE4D" FromRole="ProveedoresDireccion" ToRole="Proveedores" />
+          <NavigationProperty Name="Direcciones" Relationship="Self.FK__Proveedor__idDir__0F624AF8" FromRole="ProveedoresDireccion" ToRole="Direcciones" />
+          <NavigationProperty Name="Proveedores" Relationship="Self.FK__Proveedor__idPro__10566F31" FromRole="ProveedoresDireccion" ToRole="Proveedores" />
         </EntityType>
         <EntityType Name="Roles">
           <Key>
@@ -1396,10 +1396,10 @@
           </Key>
           <Property Name="idRol" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="mombreRol" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="AsignacionRolesOpciones" Relationship="Self.FK__Asignacio__idRol__03F0984C" FromRole="Roles" ToRole="AsignacionRolesOpciones" />
-          <NavigationProperty Name="AsignacionRolesOpciones1" Relationship="Self.FK__Asignacio__idRol__76969D2E" FromRole="Roles" ToRole="AsignacionRolesOpciones" />
-          <NavigationProperty Name="Usuarios" Relationship="Self.FK__Usuarios__idRol__05D8E0BE" FromRole="Roles" ToRole="Usuarios" />
-          <NavigationProperty Name="Usuarios1" Relationship="Self.FK__Usuarios__idRol__787EE5A0" FromRole="Roles" ToRole="Usuarios" />
+          <NavigationProperty Name="AsignacionRolesOpciones" Relationship="Self.FK__Asignacio__idRol__6754599E" FromRole="Roles" ToRole="AsignacionRolesOpciones" />
+          <NavigationProperty Name="AsignacionRolesOpciones1" Relationship="Self.FK__Asignacio__idRol__68487DD7" FromRole="Roles" ToRole="AsignacionRolesOpciones" />
+          <NavigationProperty Name="Usuarios" Relationship="Self.FK__Usuarios__idRol__1332DBDC" FromRole="Roles" ToRole="Usuarios" />
+          <NavigationProperty Name="Usuarios1" Relationship="Self.FK__Usuarios__idRol__14270015" FromRole="Roles" ToRole="Usuarios" />
         </EntityType>
         <EntityType Name="Usuarios">
           <Key>
@@ -1410,12 +1410,12 @@
           <Property Name="idRol" Type="Int32" Nullable="false" />
           <Property Name="usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="clave" Type="String" MaxLength="40" FixedLength="true" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Empleados" Relationship="Self.FK__Usuarios__idEmpl__06CD04F7" FromRole="Usuarios" ToRole="Empleados" />
-          <NavigationProperty Name="Empleados1" Relationship="Self.FK__Usuarios__idEmpl__797309D9" FromRole="Usuarios" ToRole="Empleados" />
-          <NavigationProperty Name="Roles" Relationship="Self.FK__Usuarios__idRol__05D8E0BE" FromRole="Usuarios" ToRole="Roles" />
-          <NavigationProperty Name="Roles1" Relationship="Self.FK__Usuarios__idRol__787EE5A0" FromRole="Usuarios" ToRole="Roles" />
+          <NavigationProperty Name="Empleados" Relationship="Self.FK__Usuarios__idEmpl__114A936A" FromRole="Usuarios" ToRole="Empleados" />
+          <NavigationProperty Name="Empleados1" Relationship="Self.FK__Usuarios__idEmpl__123EB7A3" FromRole="Usuarios" ToRole="Empleados" />
+          <NavigationProperty Name="Roles" Relationship="Self.FK__Usuarios__idRol__1332DBDC" FromRole="Usuarios" ToRole="Roles" />
+          <NavigationProperty Name="Roles1" Relationship="Self.FK__Usuarios__idRol__14270015" FromRole="Usuarios" ToRole="Roles" />
         </EntityType>
-        <Association Name="FK__Asignacio__idOpc__04E4BC85">
+        <Association Name="FK__Asignacio__idOpc__656C112C">
           <End Role="Opciones" Type="Self.Opciones" Multiplicity="1" />
           <End Role="AsignacionRolesOpciones" Type="Self.AsignacionRolesOpciones" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1427,7 +1427,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Asignacio__idOpc__778AC167">
+        <Association Name="FK__Asignacio__idOpc__66603565">
           <End Role="Opciones" Type="Self.Opciones" Multiplicity="1" />
           <End Role="AsignacionRolesOpciones" Type="Self.AsignacionRolesOpciones" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1439,7 +1439,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Asignacio__idRol__03F0984C">
+        <Association Name="FK__Asignacio__idRol__6754599E">
           <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
           <End Role="AsignacionRolesOpciones" Type="Self.AsignacionRolesOpciones" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1451,7 +1451,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Asignacio__idRol__76969D2E">
+        <Association Name="FK__Asignacio__idRol__68487DD7">
           <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
           <End Role="AsignacionRolesOpciones" Type="Self.AsignacionRolesOpciones" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1463,7 +1463,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Empleados__idCar__01142BA1">
+        <Association Name="FK__Empleados__idCar__04E4BC85">
           <End Role="Cargos" Type="Self.Cargos" Multiplicity="1" />
           <End Role="Empleados" Type="Self.Empleados" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1475,7 +1475,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Empleados__idCar__6B24EA82">
+        <Association Name="FK__Empleados__idCar__05D8E0BE">
           <End Role="Cargos" Type="Self.Cargos" Multiplicity="1" />
           <End Role="Empleados" Type="Self.Empleados" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1487,7 +1487,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Empleados__idCar__73BA3083">
+        <Association Name="FK__Empleados__idCar__06CD04F7">
           <End Role="Cargos" Type="Self.Cargos" Multiplicity="1" />
           <End Role="Empleados" Type="Self.Empleados" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1511,24 +1511,12 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ClienteDi__idDir__00200768">
+        <Association Name="FK__ClienteDi__idDir__693CA210">
           <End Role="Clientes" Type="Self.Clientes" Multiplicity="0..1" />
           <End Role="ClienteDireccion" Type="Self.ClienteDireccion" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Clientes">
               <PropertyRef Name="IDCliente" />
-            </Principal>
-            <Dependent Role="ClienteDireccion">
-              <PropertyRef Name="idDireccion" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__ClienteDi__idDir__693CA210">
-          <End Role="Direcciones" Type="Self.Direcciones" Multiplicity="0..1" />
-          <End Role="ClienteDireccion" Type="Self.ClienteDireccion" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Direcciones">
-              <PropertyRef Name="idDireccion" />
             </Principal>
             <Dependent Role="ClienteDireccion">
               <PropertyRef Name="idDireccion" />
@@ -1536,18 +1524,6 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__ClienteDi__idDir__6A30C649">
-          <End Role="Clientes" Type="Self.Clientes" Multiplicity="0..1" />
-          <End Role="ClienteDireccion" Type="Self.ClienteDireccion" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Clientes">
-              <PropertyRef Name="IDCliente" />
-            </Principal>
-            <Dependent Role="ClienteDireccion">
-              <PropertyRef Name="idDireccion" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__ClienteDi__idDir__71D1E811">
           <End Role="Direcciones" Type="Self.Direcciones" Multiplicity="0..1" />
           <End Role="ClienteDireccion" Type="Self.ClienteDireccion" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1559,7 +1535,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ClienteDi__idDir__72C60C4A">
+        <Association Name="FK__ClienteDi__idDir__6B24EA82">
           <End Role="Clientes" Type="Self.Clientes" Multiplicity="0..1" />
           <End Role="ClienteDireccion" Type="Self.ClienteDireccion" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1571,7 +1547,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ClienteDi__idDir__7F2BE32F">
+        <Association Name="FK__ClienteDi__idDir__6C190EBB">
           <End Role="Direcciones" Type="Self.Direcciones" Multiplicity="0..1" />
           <End Role="ClienteDireccion" Type="Self.ClienteDireccion" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1583,7 +1559,31 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Facturas__idclie__1332DBDC">
+        <Association Name="FK__ClienteDi__idDir__6D0D32F4">
+          <End Role="Clientes" Type="Self.Clientes" Multiplicity="0..1" />
+          <End Role="ClienteDireccion" Type="Self.ClienteDireccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clientes">
+              <PropertyRef Name="IDCliente" />
+            </Principal>
+            <Dependent Role="ClienteDireccion">
+              <PropertyRef Name="idDireccion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ClienteDi__idDir__6E01572D">
+          <End Role="Direcciones" Type="Self.Direcciones" Multiplicity="0..1" />
+          <End Role="ClienteDireccion" Type="Self.ClienteDireccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Direcciones">
+              <PropertyRef Name="idDireccion" />
+            </Principal>
+            <Dependent Role="ClienteDireccion">
+              <PropertyRef Name="idDireccion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Facturas__idclie__07C12930">
           <End Role="Clientes" Type="Self.Clientes" Multiplicity="1" />
           <End Role="Facturas" Type="Self.Facturas" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1595,7 +1595,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Contactos__idPro__07C12930">
+        <Association Name="FK__Contactos__idPro__6EF57B66">
           <End Role="Proveedores" Type="Self.Proveedores" Multiplicity="1" />
           <End Role="ContactosProveedor" Type="Self.ContactosProveedor" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1607,7 +1607,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Contactos__idPro__08B54D69">
+        <Association Name="FK__Contactos__idPro__6FE99F9F">
           <End Role="Proveedores" Type="Self.Proveedores" Multiplicity="1" />
           <End Role="ContactosProveedor" Type="Self.ContactosProveedor" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1619,7 +1619,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Contactos__idPro__09A971A2">
+        <Association Name="FK__Contactos__idPro__70DDC3D8">
           <End Role="Proveedores" Type="Self.Proveedores" Multiplicity="1" />
           <End Role="ContactosProveedor" Type="Self.ContactosProveedor" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1631,7 +1631,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Contactos__idPro__0A9D95DB">
+        <Association Name="FK__Contactos__idPro__71D1E811">
           <End Role="Proveedores" Type="Self.Proveedores" Multiplicity="1" />
           <End Role="ContactosProveedor" Type="Self.ContactosProveedor" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1643,7 +1643,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Contactos__idPro__7A672E12">
+        <Association Name="FK__Contactos__idPro__72C60C4A">
           <End Role="Proveedores" Type="Self.Proveedores" Multiplicity="1" />
           <End Role="ContactosProveedor" Type="Self.ContactosProveedor" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1655,7 +1655,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Departame__idPai__656C112C">
+        <Association Name="FK__Departame__idPai__73BA3083">
           <End Role="Paises" Type="Self.Paises" Multiplicity="1" />
           <End Role="Departamentos" Type="Self.Departamentos" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1667,7 +1667,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Departame__idPai__6E01572D">
+        <Association Name="FK__Departame__idPai__74AE54BC">
           <End Role="Paises" Type="Self.Paises" Multiplicity="1" />
           <End Role="Departamentos" Type="Self.Departamentos" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1679,7 +1679,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Departame__idPai__7B5B524B">
+        <Association Name="FK__Departame__idPai__75A278F5">
           <End Role="Paises" Type="Self.Paises" Multiplicity="1" />
           <End Role="Departamentos" Type="Self.Departamentos" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1691,7 +1691,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Municipio__idDep__66603565">
+        <Association Name="FK__Municipio__idDep__09A971A2">
           <End Role="Departamentos" Type="Self.Departamentos" Multiplicity="1" />
           <End Role="Municipios" Type="Self.Municipios" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1703,7 +1703,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Municipio__idDep__6EF57B66">
+        <Association Name="FK__Municipio__idDep__0A9D95DB">
           <End Role="Departamentos" Type="Self.Departamentos" Multiplicity="1" />
           <End Role="Municipios" Type="Self.Municipios" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1715,7 +1715,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Municipio__idDep__7C4F7684">
+        <Association Name="FK__Municipio__idDep__0B91BA14">
           <End Role="Departamentos" Type="Self.Departamentos" Multiplicity="1" />
           <End Role="Municipios" Type="Self.Municipios" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1727,7 +1727,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DetallesF__idFac__151B244E">
+        <Association Name="FK__DetallesF__idFac__76969D2E">
           <End Role="Facturas" Type="Self.Facturas" Multiplicity="1" />
           <End Role="DetallesFacturas" Type="Self.DetallesFacturas" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1739,7 +1739,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DetallesF__idPro__14270015">
+        <Association Name="FK__DetallesF__idPro__778AC167">
           <End Role="Productos" Type="Self.Productos" Multiplicity="1" />
           <End Role="DetallesFacturas" Type="Self.DetallesFacturas" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1751,7 +1751,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DetallesP__idPed__114A936A">
+        <Association Name="FK__DetallesP__idPed__787EE5A0">
           <End Role="Pedidos" Type="Self.Pedidos" Multiplicity="1" />
           <End Role="DetallesPedidos" Type="Self.DetallesPedidos" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1763,7 +1763,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DetallesP__idPro__10566F31">
+        <Association Name="FK__DetallesP__idPro__797309D9">
           <End Role="ProductosNuevos" Type="Self.ProductosNuevos" Multiplicity="1" />
           <End Role="DetallesPedidos" Type="Self.DetallesPedidos" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1787,7 +1787,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Direccion__idDis__68487DD7">
+        <Association Name="FK__Direccion__idDis__7A672E12">
           <End Role="Distritos" Type="Self.Distritos" Multiplicity="1" />
           <End Role="Direcciones" Type="Self.Direcciones" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1799,7 +1799,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Direccion__idDis__70DDC3D8">
+        <Association Name="FK__Direccion__idDis__7B5B524B">
           <End Role="Distritos" Type="Self.Distritos" Multiplicity="1" />
           <End Role="Direcciones" Type="Self.Direcciones" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1811,7 +1811,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Direccion__idDis__7E37BEF6">
+        <Association Name="FK__Direccion__idDis__7C4F7684">
           <End Role="Distritos" Type="Self.Distritos" Multiplicity="1" />
           <End Role="Direcciones" Type="Self.Direcciones" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1820,6 +1820,30 @@
             </Principal>
             <Dependent Role="Direcciones">
               <PropertyRef Name="idDistrito" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EmpleadoD__idDir__00200768">
+          <End Role="Direcciones" Type="Self.Direcciones" Multiplicity="0..1" />
+          <End Role="EmpleadoDireccion" Type="Self.EmpleadoDireccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Direcciones">
+              <PropertyRef Name="idDireccion" />
+            </Principal>
+            <Dependent Role="EmpleadoDireccion">
+              <PropertyRef Name="idDireccion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EmpleadoD__idDir__01142BA1">
+          <End Role="Direcciones" Type="Self.Direcciones" Multiplicity="0..1" />
+          <End Role="EmpleadoDireccion" Type="Self.EmpleadoDireccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Direcciones">
+              <PropertyRef Name="idDireccion" />
+            </Principal>
+            <Dependent Role="EmpleadoDireccion">
+              <PropertyRef Name="idDireccion" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1835,31 +1859,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__EmpleadoD__idDir__6C190EBB">
-          <End Role="Direcciones" Type="Self.Direcciones" Multiplicity="0..1" />
-          <End Role="EmpleadoDireccion" Type="Self.EmpleadoDireccion" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Direcciones">
-              <PropertyRef Name="idDireccion" />
-            </Principal>
-            <Dependent Role="EmpleadoDireccion">
-              <PropertyRef Name="idDireccion" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__EmpleadoD__idDir__74AE54BC">
-          <End Role="Direcciones" Type="Self.Direcciones" Multiplicity="0..1" />
-          <End Role="EmpleadoDireccion" Type="Self.EmpleadoDireccion" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Direcciones">
-              <PropertyRef Name="idDireccion" />
-            </Principal>
-            <Dependent Role="EmpleadoDireccion">
-              <PropertyRef Name="idDireccion" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Proveedor__idDir__0B91BA14">
+        <Association Name="FK__Proveedor__idDir__0F624AF8">
           <End Role="Direcciones" Type="Self.Direcciones" Multiplicity="0..1" />
           <End Role="ProveedoresDireccion" Type="Self.ProveedoresDireccion" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1871,31 +1871,31 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Distritos__idMun__6754599E">
-          <End Role="Municipios" Type="Self.Municipios" Multiplicity="1" />
-          <End Role="Distritos" Type="Self.Distritos" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Municipios">
-              <PropertyRef Name="idMunicipio" />
-            </Principal>
-            <Dependent Role="Distritos">
-              <PropertyRef Name="idMunicipio" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Distritos__idMun__6FE99F9F">
-          <End Role="Municipios" Type="Self.Municipios" Multiplicity="1" />
-          <End Role="Distritos" Type="Self.Distritos" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Municipios">
-              <PropertyRef Name="idMunicipio" />
-            </Principal>
-            <Dependent Role="Distritos">
-              <PropertyRef Name="idMunicipio" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK__Distritos__idMun__7D439ABD">
+          <End Role="Municipios" Type="Self.Municipios" Multiplicity="1" />
+          <End Role="Distritos" Type="Self.Distritos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Municipios">
+              <PropertyRef Name="idMunicipio" />
+            </Principal>
+            <Dependent Role="Distritos">
+              <PropertyRef Name="idMunicipio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Distritos__idMun__7E37BEF6">
+          <End Role="Municipios" Type="Self.Municipios" Multiplicity="1" />
+          <End Role="Distritos" Type="Self.Distritos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Municipios">
+              <PropertyRef Name="idMunicipio" />
+            </Principal>
+            <Dependent Role="Distritos">
+              <PropertyRef Name="idMunicipio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Distritos__idMun__7F2BE32F">
           <End Role="Municipios" Type="Self.Municipios" Multiplicity="1" />
           <End Role="Distritos" Type="Self.Distritos" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1919,7 +1919,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__EmpleadoD__idEmp__75A278F5">
+        <Association Name="FK__EmpleadoD__idEmp__03F0984C">
           <End Role="Empleados" Type="Self.Empleados" Multiplicity="0..1" />
           <End Role="EmpleadoDireccion" Type="Self.EmpleadoDireccion" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1931,7 +1931,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Facturas__idempl__123EB7A3">
+        <Association Name="FK__Facturas__idempl__08B54D69">
           <End Role="Empleados" Type="Self.Empleados" Multiplicity="1" />
           <End Role="Facturas" Type="Self.Facturas" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1943,7 +1943,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Usuarios__idEmpl__06CD04F7">
+        <Association Name="FK__Usuarios__idEmpl__114A936A">
           <End Role="Empleados" Type="Self.Empleados" Multiplicity="1" />
           <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1955,7 +1955,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Usuarios__idEmpl__797309D9">
+        <Association Name="FK__Usuarios__idEmpl__123EB7A3">
           <End Role="Empleados" Type="Self.Empleados" Multiplicity="1" />
           <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1967,7 +1967,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Pedidos__idProve__0F624AF8">
+        <Association Name="FK__Pedidos__idProve__0C85DE4D">
           <End Role="Proveedores" Type="Self.Proveedores" Multiplicity="1" />
           <End Role="Pedidos" Type="Self.Pedidos" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1979,7 +1979,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Proveedor__idPro__0C85DE4D">
+        <Association Name="FK__Proveedor__idPro__10566F31">
           <End Role="Proveedores" Type="Self.Proveedores" Multiplicity="0..1" />
           <End Role="ProveedoresDireccion" Type="Self.ProveedoresDireccion" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1991,7 +1991,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Usuarios__idRol__05D8E0BE">
+        <Association Name="FK__Usuarios__idRol__1332DBDC">
           <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
           <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2003,7 +2003,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Usuarios__idRol__787EE5A0">
+        <Association Name="FK__Usuarios__idRol__14270015">
           <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
           <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2041,31 +2041,31 @@
           <EntitySet Name="ProveedoresDireccion" EntityType="Self.ProveedoresDireccion" />
           <EntitySet Name="Roles" EntityType="Self.Roles" />
           <EntitySet Name="Usuarios" EntityType="Self.Usuarios" />
-          <AssociationSet Name="FK__Asignacio__idOpc__04E4BC85" Association="Self.FK__Asignacio__idOpc__04E4BC85">
+          <AssociationSet Name="FK__Asignacio__idOpc__656C112C" Association="Self.FK__Asignacio__idOpc__656C112C">
             <End Role="Opciones" EntitySet="Opciones" />
             <End Role="AsignacionRolesOpciones" EntitySet="AsignacionRolesOpciones" />
           </AssociationSet>
-          <AssociationSet Name="FK__Asignacio__idOpc__778AC167" Association="Self.FK__Asignacio__idOpc__778AC167">
+          <AssociationSet Name="FK__Asignacio__idOpc__66603565" Association="Self.FK__Asignacio__idOpc__66603565">
             <End Role="Opciones" EntitySet="Opciones" />
             <End Role="AsignacionRolesOpciones" EntitySet="AsignacionRolesOpciones" />
           </AssociationSet>
-          <AssociationSet Name="FK__Asignacio__idRol__03F0984C" Association="Self.FK__Asignacio__idRol__03F0984C">
+          <AssociationSet Name="FK__Asignacio__idRol__6754599E" Association="Self.FK__Asignacio__idRol__6754599E">
             <End Role="Roles" EntitySet="Roles" />
             <End Role="AsignacionRolesOpciones" EntitySet="AsignacionRolesOpciones" />
           </AssociationSet>
-          <AssociationSet Name="FK__Asignacio__idRol__76969D2E" Association="Self.FK__Asignacio__idRol__76969D2E">
+          <AssociationSet Name="FK__Asignacio__idRol__68487DD7" Association="Self.FK__Asignacio__idRol__68487DD7">
             <End Role="Roles" EntitySet="Roles" />
             <End Role="AsignacionRolesOpciones" EntitySet="AsignacionRolesOpciones" />
           </AssociationSet>
-          <AssociationSet Name="FK__Empleados__idCar__01142BA1" Association="Self.FK__Empleados__idCar__01142BA1">
+          <AssociationSet Name="FK__Empleados__idCar__04E4BC85" Association="Self.FK__Empleados__idCar__04E4BC85">
             <End Role="Cargos" EntitySet="Cargos" />
             <End Role="Empleados" EntitySet="Empleados" />
           </AssociationSet>
-          <AssociationSet Name="FK__Empleados__idCar__6B24EA82" Association="Self.FK__Empleados__idCar__6B24EA82">
+          <AssociationSet Name="FK__Empleados__idCar__05D8E0BE" Association="Self.FK__Empleados__idCar__05D8E0BE">
             <End Role="Cargos" EntitySet="Cargos" />
             <End Role="Empleados" EntitySet="Empleados" />
           </AssociationSet>
-          <AssociationSet Name="FK__Empleados__idCar__73BA3083" Association="Self.FK__Empleados__idCar__73BA3083">
+          <AssociationSet Name="FK__Empleados__idCar__06CD04F7" Association="Self.FK__Empleados__idCar__06CD04F7">
             <End Role="Cargos" EntitySet="Cargos" />
             <End Role="Empleados" EntitySet="Empleados" />
           </AssociationSet>
@@ -2073,91 +2073,91 @@
             <End Role="CategoriasProductos" EntitySet="CategoriasProductos" />
             <End Role="Productos" EntitySet="Productos" />
           </AssociationSet>
-          <AssociationSet Name="FK__ClienteDi__idDir__00200768" Association="Self.FK__ClienteDi__idDir__00200768">
-            <End Role="Clientes" EntitySet="Clientes" />
-            <End Role="ClienteDireccion" EntitySet="ClienteDireccion" />
-          </AssociationSet>
           <AssociationSet Name="FK__ClienteDi__idDir__693CA210" Association="Self.FK__ClienteDi__idDir__693CA210">
-            <End Role="Direcciones" EntitySet="Direcciones" />
+            <End Role="Clientes" EntitySet="Clientes" />
             <End Role="ClienteDireccion" EntitySet="ClienteDireccion" />
           </AssociationSet>
           <AssociationSet Name="FK__ClienteDi__idDir__6A30C649" Association="Self.FK__ClienteDi__idDir__6A30C649">
-            <End Role="Clientes" EntitySet="Clientes" />
-            <End Role="ClienteDireccion" EntitySet="ClienteDireccion" />
-          </AssociationSet>
-          <AssociationSet Name="FK__ClienteDi__idDir__71D1E811" Association="Self.FK__ClienteDi__idDir__71D1E811">
             <End Role="Direcciones" EntitySet="Direcciones" />
             <End Role="ClienteDireccion" EntitySet="ClienteDireccion" />
           </AssociationSet>
-          <AssociationSet Name="FK__ClienteDi__idDir__72C60C4A" Association="Self.FK__ClienteDi__idDir__72C60C4A">
+          <AssociationSet Name="FK__ClienteDi__idDir__6B24EA82" Association="Self.FK__ClienteDi__idDir__6B24EA82">
             <End Role="Clientes" EntitySet="Clientes" />
             <End Role="ClienteDireccion" EntitySet="ClienteDireccion" />
           </AssociationSet>
-          <AssociationSet Name="FK__ClienteDi__idDir__7F2BE32F" Association="Self.FK__ClienteDi__idDir__7F2BE32F">
+          <AssociationSet Name="FK__ClienteDi__idDir__6C190EBB" Association="Self.FK__ClienteDi__idDir__6C190EBB">
             <End Role="Direcciones" EntitySet="Direcciones" />
             <End Role="ClienteDireccion" EntitySet="ClienteDireccion" />
           </AssociationSet>
-          <AssociationSet Name="FK__Facturas__idclie__1332DBDC" Association="Self.FK__Facturas__idclie__1332DBDC">
+          <AssociationSet Name="FK__ClienteDi__idDir__6D0D32F4" Association="Self.FK__ClienteDi__idDir__6D0D32F4">
+            <End Role="Clientes" EntitySet="Clientes" />
+            <End Role="ClienteDireccion" EntitySet="ClienteDireccion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ClienteDi__idDir__6E01572D" Association="Self.FK__ClienteDi__idDir__6E01572D">
+            <End Role="Direcciones" EntitySet="Direcciones" />
+            <End Role="ClienteDireccion" EntitySet="ClienteDireccion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Facturas__idclie__07C12930" Association="Self.FK__Facturas__idclie__07C12930">
             <End Role="Clientes" EntitySet="Clientes" />
             <End Role="Facturas" EntitySet="Facturas" />
           </AssociationSet>
-          <AssociationSet Name="FK__Contactos__idPro__07C12930" Association="Self.FK__Contactos__idPro__07C12930">
+          <AssociationSet Name="FK__Contactos__idPro__6EF57B66" Association="Self.FK__Contactos__idPro__6EF57B66">
             <End Role="Proveedores" EntitySet="Proveedores" />
             <End Role="ContactosProveedor" EntitySet="ContactosProveedor" />
           </AssociationSet>
-          <AssociationSet Name="FK__Contactos__idPro__08B54D69" Association="Self.FK__Contactos__idPro__08B54D69">
+          <AssociationSet Name="FK__Contactos__idPro__6FE99F9F" Association="Self.FK__Contactos__idPro__6FE99F9F">
             <End Role="Proveedores" EntitySet="Proveedores" />
             <End Role="ContactosProveedor" EntitySet="ContactosProveedor" />
           </AssociationSet>
-          <AssociationSet Name="FK__Contactos__idPro__09A971A2" Association="Self.FK__Contactos__idPro__09A971A2">
+          <AssociationSet Name="FK__Contactos__idPro__70DDC3D8" Association="Self.FK__Contactos__idPro__70DDC3D8">
             <End Role="Proveedores" EntitySet="Proveedores" />
             <End Role="ContactosProveedor" EntitySet="ContactosProveedor" />
           </AssociationSet>
-          <AssociationSet Name="FK__Contactos__idPro__0A9D95DB" Association="Self.FK__Contactos__idPro__0A9D95DB">
+          <AssociationSet Name="FK__Contactos__idPro__71D1E811" Association="Self.FK__Contactos__idPro__71D1E811">
             <End Role="Proveedores" EntitySet="Proveedores" />
             <End Role="ContactosProveedor" EntitySet="ContactosProveedor" />
           </AssociationSet>
-          <AssociationSet Name="FK__Contactos__idPro__7A672E12" Association="Self.FK__Contactos__idPro__7A672E12">
+          <AssociationSet Name="FK__Contactos__idPro__72C60C4A" Association="Self.FK__Contactos__idPro__72C60C4A">
             <End Role="Proveedores" EntitySet="Proveedores" />
             <End Role="ContactosProveedor" EntitySet="ContactosProveedor" />
           </AssociationSet>
-          <AssociationSet Name="FK__Departame__idPai__656C112C" Association="Self.FK__Departame__idPai__656C112C">
+          <AssociationSet Name="FK__Departame__idPai__73BA3083" Association="Self.FK__Departame__idPai__73BA3083">
             <End Role="Paises" EntitySet="Paises" />
             <End Role="Departamentos" EntitySet="Departamentos" />
           </AssociationSet>
-          <AssociationSet Name="FK__Departame__idPai__6E01572D" Association="Self.FK__Departame__idPai__6E01572D">
+          <AssociationSet Name="FK__Departame__idPai__74AE54BC" Association="Self.FK__Departame__idPai__74AE54BC">
             <End Role="Paises" EntitySet="Paises" />
             <End Role="Departamentos" EntitySet="Departamentos" />
           </AssociationSet>
-          <AssociationSet Name="FK__Departame__idPai__7B5B524B" Association="Self.FK__Departame__idPai__7B5B524B">
+          <AssociationSet Name="FK__Departame__idPai__75A278F5" Association="Self.FK__Departame__idPai__75A278F5">
             <End Role="Paises" EntitySet="Paises" />
             <End Role="Departamentos" EntitySet="Departamentos" />
           </AssociationSet>
-          <AssociationSet Name="FK__Municipio__idDep__66603565" Association="Self.FK__Municipio__idDep__66603565">
+          <AssociationSet Name="FK__Municipio__idDep__09A971A2" Association="Self.FK__Municipio__idDep__09A971A2">
             <End Role="Departamentos" EntitySet="Departamentos" />
             <End Role="Municipios" EntitySet="Municipios" />
           </AssociationSet>
-          <AssociationSet Name="FK__Municipio__idDep__6EF57B66" Association="Self.FK__Municipio__idDep__6EF57B66">
+          <AssociationSet Name="FK__Municipio__idDep__0A9D95DB" Association="Self.FK__Municipio__idDep__0A9D95DB">
             <End Role="Departamentos" EntitySet="Departamentos" />
             <End Role="Municipios" EntitySet="Municipios" />
           </AssociationSet>
-          <AssociationSet Name="FK__Municipio__idDep__7C4F7684" Association="Self.FK__Municipio__idDep__7C4F7684">
+          <AssociationSet Name="FK__Municipio__idDep__0B91BA14" Association="Self.FK__Municipio__idDep__0B91BA14">
             <End Role="Departamentos" EntitySet="Departamentos" />
             <End Role="Municipios" EntitySet="Municipios" />
           </AssociationSet>
-          <AssociationSet Name="FK__DetallesF__idFac__151B244E" Association="Self.FK__DetallesF__idFac__151B244E">
+          <AssociationSet Name="FK__DetallesF__idFac__76969D2E" Association="Self.FK__DetallesF__idFac__76969D2E">
             <End Role="Facturas" EntitySet="Facturas" />
             <End Role="DetallesFacturas" EntitySet="DetallesFacturas" />
           </AssociationSet>
-          <AssociationSet Name="FK__DetallesF__idPro__14270015" Association="Self.FK__DetallesF__idPro__14270015">
+          <AssociationSet Name="FK__DetallesF__idPro__778AC167" Association="Self.FK__DetallesF__idPro__778AC167">
             <End Role="Productos" EntitySet="Productos" />
             <End Role="DetallesFacturas" EntitySet="DetallesFacturas" />
           </AssociationSet>
-          <AssociationSet Name="FK__DetallesP__idPed__114A936A" Association="Self.FK__DetallesP__idPed__114A936A">
+          <AssociationSet Name="FK__DetallesP__idPed__787EE5A0" Association="Self.FK__DetallesP__idPed__787EE5A0">
             <End Role="Pedidos" EntitySet="Pedidos" />
             <End Role="DetallesPedidos" EntitySet="DetallesPedidos" />
           </AssociationSet>
-          <AssociationSet Name="FK__DetallesP__idPro__10566F31" Association="Self.FK__DetallesP__idPro__10566F31">
+          <AssociationSet Name="FK__DetallesP__idPro__797309D9" Association="Self.FK__DetallesP__idPro__797309D9">
             <End Role="ProductosNuevos" EntitySet="ProductosNuevos" />
             <End Role="DetallesPedidos" EntitySet="DetallesPedidos" />
           </AssociationSet>
@@ -2165,43 +2165,43 @@
             <End Role="DetallesStok" EntitySet="DetallesStok" />
             <End Role="Productos" EntitySet="Productos" />
           </AssociationSet>
-          <AssociationSet Name="FK__Direccion__idDis__68487DD7" Association="Self.FK__Direccion__idDis__68487DD7">
+          <AssociationSet Name="FK__Direccion__idDis__7A672E12" Association="Self.FK__Direccion__idDis__7A672E12">
             <End Role="Distritos" EntitySet="Distritos" />
             <End Role="Direcciones" EntitySet="Direcciones" />
           </AssociationSet>
-          <AssociationSet Name="FK__Direccion__idDis__70DDC3D8" Association="Self.FK__Direccion__idDis__70DDC3D8">
+          <AssociationSet Name="FK__Direccion__idDis__7B5B524B" Association="Self.FK__Direccion__idDis__7B5B524B">
             <End Role="Distritos" EntitySet="Distritos" />
             <End Role="Direcciones" EntitySet="Direcciones" />
           </AssociationSet>
-          <AssociationSet Name="FK__Direccion__idDis__7E37BEF6" Association="Self.FK__Direccion__idDis__7E37BEF6">
+          <AssociationSet Name="FK__Direccion__idDis__7C4F7684" Association="Self.FK__Direccion__idDis__7C4F7684">
             <End Role="Distritos" EntitySet="Distritos" />
             <End Role="Direcciones" EntitySet="Direcciones" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EmpleadoD__idDir__00200768" Association="Self.FK__EmpleadoD__idDir__00200768">
+            <End Role="Direcciones" EntitySet="Direcciones" />
+            <End Role="EmpleadoDireccion" EntitySet="EmpleadoDireccion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EmpleadoD__idDir__01142BA1" Association="Self.FK__EmpleadoD__idDir__01142BA1">
+            <End Role="Direcciones" EntitySet="Direcciones" />
+            <End Role="EmpleadoDireccion" EntitySet="EmpleadoDireccion" />
           </AssociationSet>
           <AssociationSet Name="FK__EmpleadoD__idDir__02084FDA" Association="Self.FK__EmpleadoD__idDir__02084FDA">
             <End Role="Direcciones" EntitySet="Direcciones" />
             <End Role="EmpleadoDireccion" EntitySet="EmpleadoDireccion" />
           </AssociationSet>
-          <AssociationSet Name="FK__EmpleadoD__idDir__6C190EBB" Association="Self.FK__EmpleadoD__idDir__6C190EBB">
-            <End Role="Direcciones" EntitySet="Direcciones" />
-            <End Role="EmpleadoDireccion" EntitySet="EmpleadoDireccion" />
-          </AssociationSet>
-          <AssociationSet Name="FK__EmpleadoD__idDir__74AE54BC" Association="Self.FK__EmpleadoD__idDir__74AE54BC">
-            <End Role="Direcciones" EntitySet="Direcciones" />
-            <End Role="EmpleadoDireccion" EntitySet="EmpleadoDireccion" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Proveedor__idDir__0B91BA14" Association="Self.FK__Proveedor__idDir__0B91BA14">
+          <AssociationSet Name="FK__Proveedor__idDir__0F624AF8" Association="Self.FK__Proveedor__idDir__0F624AF8">
             <End Role="Direcciones" EntitySet="Direcciones" />
             <End Role="ProveedoresDireccion" EntitySet="ProveedoresDireccion" />
           </AssociationSet>
-          <AssociationSet Name="FK__Distritos__idMun__6754599E" Association="Self.FK__Distritos__idMun__6754599E">
-            <End Role="Municipios" EntitySet="Municipios" />
-            <End Role="Distritos" EntitySet="Distritos" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Distritos__idMun__6FE99F9F" Association="Self.FK__Distritos__idMun__6FE99F9F">
-            <End Role="Municipios" EntitySet="Municipios" />
-            <End Role="Distritos" EntitySet="Distritos" />
-          </AssociationSet>
           <AssociationSet Name="FK__Distritos__idMun__7D439ABD" Association="Self.FK__Distritos__idMun__7D439ABD">
+            <End Role="Municipios" EntitySet="Municipios" />
+            <End Role="Distritos" EntitySet="Distritos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Distritos__idMun__7E37BEF6" Association="Self.FK__Distritos__idMun__7E37BEF6">
+            <End Role="Municipios" EntitySet="Municipios" />
+            <End Role="Distritos" EntitySet="Distritos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Distritos__idMun__7F2BE32F" Association="Self.FK__Distritos__idMun__7F2BE32F">
             <End Role="Municipios" EntitySet="Municipios" />
             <End Role="Distritos" EntitySet="Distritos" />
           </AssociationSet>
@@ -2209,35 +2209,35 @@
             <End Role="Empleados" EntitySet="Empleados" />
             <End Role="EmpleadoDireccion" EntitySet="EmpleadoDireccion" />
           </AssociationSet>
-          <AssociationSet Name="FK__EmpleadoD__idEmp__75A278F5" Association="Self.FK__EmpleadoD__idEmp__75A278F5">
+          <AssociationSet Name="FK__EmpleadoD__idEmp__03F0984C" Association="Self.FK__EmpleadoD__idEmp__03F0984C">
             <End Role="Empleados" EntitySet="Empleados" />
             <End Role="EmpleadoDireccion" EntitySet="EmpleadoDireccion" />
           </AssociationSet>
-          <AssociationSet Name="FK__Facturas__idempl__123EB7A3" Association="Self.FK__Facturas__idempl__123EB7A3">
+          <AssociationSet Name="FK__Facturas__idempl__08B54D69" Association="Self.FK__Facturas__idempl__08B54D69">
             <End Role="Empleados" EntitySet="Empleados" />
             <End Role="Facturas" EntitySet="Facturas" />
           </AssociationSet>
-          <AssociationSet Name="FK__Usuarios__idEmpl__06CD04F7" Association="Self.FK__Usuarios__idEmpl__06CD04F7">
+          <AssociationSet Name="FK__Usuarios__idEmpl__114A936A" Association="Self.FK__Usuarios__idEmpl__114A936A">
             <End Role="Empleados" EntitySet="Empleados" />
             <End Role="Usuarios" EntitySet="Usuarios" />
           </AssociationSet>
-          <AssociationSet Name="FK__Usuarios__idEmpl__797309D9" Association="Self.FK__Usuarios__idEmpl__797309D9">
+          <AssociationSet Name="FK__Usuarios__idEmpl__123EB7A3" Association="Self.FK__Usuarios__idEmpl__123EB7A3">
             <End Role="Empleados" EntitySet="Empleados" />
             <End Role="Usuarios" EntitySet="Usuarios" />
           </AssociationSet>
-          <AssociationSet Name="FK__Pedidos__idProve__0F624AF8" Association="Self.FK__Pedidos__idProve__0F624AF8">
+          <AssociationSet Name="FK__Pedidos__idProve__0C85DE4D" Association="Self.FK__Pedidos__idProve__0C85DE4D">
             <End Role="Proveedores" EntitySet="Proveedores" />
             <End Role="Pedidos" EntitySet="Pedidos" />
           </AssociationSet>
-          <AssociationSet Name="FK__Proveedor__idPro__0C85DE4D" Association="Self.FK__Proveedor__idPro__0C85DE4D">
+          <AssociationSet Name="FK__Proveedor__idPro__10566F31" Association="Self.FK__Proveedor__idPro__10566F31">
             <End Role="Proveedores" EntitySet="Proveedores" />
             <End Role="ProveedoresDireccion" EntitySet="ProveedoresDireccion" />
           </AssociationSet>
-          <AssociationSet Name="FK__Usuarios__idRol__05D8E0BE" Association="Self.FK__Usuarios__idRol__05D8E0BE">
+          <AssociationSet Name="FK__Usuarios__idRol__1332DBDC" Association="Self.FK__Usuarios__idRol__1332DBDC">
             <End Role="Roles" EntitySet="Roles" />
             <End Role="Usuarios" EntitySet="Usuarios" />
           </AssociationSet>
-          <AssociationSet Name="FK__Usuarios__idRol__787EE5A0" Association="Self.FK__Usuarios__idRol__787EE5A0">
+          <AssociationSet Name="FK__Usuarios__idRol__14270015" Association="Self.FK__Usuarios__idRol__14270015">
             <End Role="Roles" EntitySet="Roles" />
             <End Role="Usuarios" EntitySet="Usuarios" />
           </AssociationSet>

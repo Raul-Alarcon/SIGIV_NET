@@ -27,7 +27,7 @@ namespace SIGIV.DataLayer
         }
     
         public int idDireccion { get; set; }
-        public string idDistrito { get; set; }
+        public int idDistrito { get; set; }
         public Nullable<int> CodigoPostal { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

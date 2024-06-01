@@ -22,9 +22,9 @@ namespace SIGIV.DataLayer
             this.Direcciones2 = new HashSet<Direcciones>();
         }
     
-        public string idDistrito { get; set; }
+        public int idDistrito { get; set; }
         public string Distrito { get; set; }
-        public string idMunicipio { get; set; }
+        public int idMunicipio { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Direcciones> Direcciones { get; set; }
