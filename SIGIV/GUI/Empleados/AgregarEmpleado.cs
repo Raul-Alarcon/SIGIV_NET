@@ -51,7 +51,7 @@ namespace SIGIV.GUI.Empleados
 
         private async Task CargarCargos()
         {
-            var cargos = await new CLS.CargosCLS().GetAllCargos();
+            var cargos = await  CargosCLS.GetAllAsync();
             this.cmbCargos.DataSource = cargos;
             this.cmbCargos.DisplayMember = "Nombre";
             this.cmbCargos.ValueMember = "Id";

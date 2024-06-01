@@ -30,20 +30,20 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dtgDatos = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnEjecutar = new System.Windows.Forms.Button();
             this.rbEliminar = new System.Windows.Forms.RadioButton();
             this.rbModificar = new System.Windows.Forms.RadioButton();
             this.rbNuevo = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbPaises = new System.Windows.Forms.ComboBox();
             this.txbNombre = new System.Windows.Forms.TextBox();
-            this.tmbPaises = new System.Windows.Forms.ComboBox();
-            this.dtgDatos = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgDatos)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgDatos)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -69,6 +69,15 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Lista de Paises";
             // 
+            // dtgDatos
+            // 
+            this.dtgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgDatos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgDatos.Location = new System.Drawing.Point(3, 16);
+            this.dtgDatos.Name = "dtgDatos";
+            this.dtgDatos.Size = new System.Drawing.Size(405, 232);
+            this.dtgDatos.TabIndex = 0;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnEjecutar);
@@ -91,6 +100,7 @@
             this.btnEjecutar.TabIndex = 3;
             this.btnEjecutar.Text = "Ejecutar";
             this.btnEjecutar.UseVisualStyleBackColor = true;
+            this.btnEjecutar.Click += new System.EventHandler(this.btnEjecutar_Click);
             // 
             // rbEliminar
             // 
@@ -117,6 +127,7 @@
             // rbNuevo
             // 
             this.rbNuevo.AutoSize = true;
+            this.rbNuevo.Checked = true;
             this.rbNuevo.Location = new System.Drawing.Point(18, 37);
             this.rbNuevo.Name = "rbNuevo";
             this.rbNuevo.Size = new System.Drawing.Size(57, 17);
@@ -127,7 +138,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.tmbPaises);
+            this.groupBox1.Controls.Add(this.cbPaises);
             this.groupBox1.Controls.Add(this.txbNombre);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(15, 15);
@@ -137,6 +148,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Formulario";
             // 
+            // cbPaises
+            // 
+            this.cbPaises.FormattingEnabled = true;
+            this.cbPaises.Location = new System.Drawing.Point(18, 20);
+            this.cbPaises.Name = "cbPaises";
+            this.cbPaises.Size = new System.Drawing.Size(373, 21);
+            this.cbPaises.TabIndex = 2;
+            // 
             // txbNombre
             // 
             this.txbNombre.Location = new System.Drawing.Point(18, 57);
@@ -144,23 +163,6 @@
             this.txbNombre.Name = "txbNombre";
             this.txbNombre.Size = new System.Drawing.Size(373, 20);
             this.txbNombre.TabIndex = 1;
-            // 
-            // tmbPaises
-            // 
-            this.tmbPaises.FormattingEnabled = true;
-            this.tmbPaises.Location = new System.Drawing.Point(18, 20);
-            this.tmbPaises.Name = "tmbPaises";
-            this.tmbPaises.Size = new System.Drawing.Size(373, 21);
-            this.tmbPaises.TabIndex = 2;
-            // 
-            // dtgDatos
-            // 
-            this.dtgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgDatos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgDatos.Location = new System.Drawing.Point(3, 16);
-            this.dtgDatos.Name = "dtgDatos";
-            this.dtgDatos.Size = new System.Drawing.Size(405, 232);
-            this.dtgDatos.TabIndex = 0;
             // 
             // GestionDepartamentos
             // 
@@ -172,11 +174,11 @@
             this.Text = "GestionDepartamentos";
             this.panel1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgDatos)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgDatos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -192,7 +194,7 @@
         private System.Windows.Forms.RadioButton rbNuevo;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txbNombre;
-        private System.Windows.Forms.ComboBox tmbPaises;
+        private System.Windows.Forms.ComboBox cbPaises;
         private System.Windows.Forms.DataGridView dtgDatos;
     }
 }

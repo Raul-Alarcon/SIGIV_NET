@@ -13,7 +13,7 @@ namespace SIGIV.CLS
         public int id { get; set; }
         public string nombre { get; set; }
 
-        public async Task<List<PaisesCLS>> GetAllAsync()
+        public static async Task<List<PaisesCLS>> GetAllAsync()
         {
             List<PaisesCLS> paises = new List<PaisesCLS>();
             using (var db = new SIGIVEntities())
