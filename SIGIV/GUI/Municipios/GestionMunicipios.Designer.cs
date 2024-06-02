@@ -30,6 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dtgDatos = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnEjecutar = new System.Windows.Forms.Button();
             this.rbEliminar = new System.Windows.Forms.RadioButton();
@@ -38,12 +39,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tmbDepartamentos = new System.Windows.Forms.ComboBox();
             this.txbNombre = new System.Windows.Forms.TextBox();
-            this.dtgDatos = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgDatos)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgDatos)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -68,6 +68,15 @@
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Lista de Paises";
+            // 
+            // dtgDatos
+            // 
+            this.dtgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgDatos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgDatos.Location = new System.Drawing.Point(3, 16);
+            this.dtgDatos.Name = "dtgDatos";
+            this.dtgDatos.Size = new System.Drawing.Size(411, 227);
+            this.dtgDatos.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -99,7 +108,6 @@
             this.rbEliminar.Name = "rbEliminar";
             this.rbEliminar.Size = new System.Drawing.Size(61, 17);
             this.rbEliminar.TabIndex = 2;
-            this.rbEliminar.TabStop = true;
             this.rbEliminar.Text = "Eliminar";
             this.rbEliminar.UseVisualStyleBackColor = true;
             // 
@@ -110,13 +118,13 @@
             this.rbModificar.Name = "rbModificar";
             this.rbModificar.Size = new System.Drawing.Size(68, 17);
             this.rbModificar.TabIndex = 1;
-            this.rbModificar.TabStop = true;
             this.rbModificar.Text = "Modificar";
             this.rbModificar.UseVisualStyleBackColor = true;
             // 
             // rbNuevo
             // 
             this.rbNuevo.AutoSize = true;
+            this.rbNuevo.Checked = true;
             this.rbNuevo.Location = new System.Drawing.Point(18, 37);
             this.rbNuevo.Name = "rbNuevo";
             this.rbNuevo.Size = new System.Drawing.Size(57, 17);
@@ -153,15 +161,6 @@
             this.txbNombre.Size = new System.Drawing.Size(373, 20);
             this.txbNombre.TabIndex = 1;
             // 
-            // dtgDatos
-            // 
-            this.dtgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgDatos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgDatos.Location = new System.Drawing.Point(3, 16);
-            this.dtgDatos.Name = "dtgDatos";
-            this.dtgDatos.Size = new System.Drawing.Size(411, 227);
-            this.dtgDatos.TabIndex = 0;
-            // 
             // GestionMunicipios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -172,11 +171,11 @@
             this.Text = "GestionMunicipios";
             this.panel1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgDatos)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgDatos)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -16,7 +16,7 @@ namespace SIGIV.CLS
         public int idDepartamento { get; set; }
         public int idPais { get; set; }
 
-        public async static Task<List<MunicipiosDTO>> GetAllAsync()
+        public async static Task<List<MunicipiosDTO>> GetAllDTOAsync()
         {
             List<MunicipiosDTO> municipios = new List<MunicipiosDTO>();
             using (var db = new SIGIVEntities())
@@ -82,14 +82,8 @@ namespace SIGIV.CLS
 
         public void Validar()
         {
-            if (string.IsNullOrEmpty(Municipio))
-            {
-                throw new ArgumentException("El campo Municipio es requerido");
-            }
-            if (idDepartamento <= 0)
-            {
-                throw new ArgumentException("El campo Departamento es requerido");
-            }
+            if (string.IsNullOrEmpty(Municipio)) throw new ArgumentException("El campo Municipio es requerido");
+            if (idDepartamento <= 0) throw new ArgumentException("El campo Departamento es requerido");
         }
     }
 }
