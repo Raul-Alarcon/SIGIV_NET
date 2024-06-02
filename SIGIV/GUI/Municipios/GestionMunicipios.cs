@@ -123,7 +123,7 @@ namespace SIGIV.GUI.Municipios
             txbNombre.Text = string.Empty;
             rbNuevo.Checked = true;
         }
-
+        
         private async Task Actualizar()
         {
             bool success = false;

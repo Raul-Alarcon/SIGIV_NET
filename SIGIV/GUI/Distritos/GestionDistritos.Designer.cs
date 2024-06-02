@@ -37,7 +37,7 @@
             this.rbModificar = new System.Windows.Forms.RadioButton();
             this.rbNuevo = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tmbMunicipios = new System.Windows.Forms.ComboBox();
+            this.cbMunicipios = new System.Windows.Forms.ComboBox();
             this.txbNombre = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -100,6 +100,7 @@
             this.btnEjecutar.TabIndex = 3;
             this.btnEjecutar.Text = "Ejecutar";
             this.btnEjecutar.UseVisualStyleBackColor = true;
+            this.btnEjecutar.Click += new System.EventHandler(this.btnEjecutar_Click);
             // 
             // rbEliminar
             // 
@@ -108,7 +109,6 @@
             this.rbEliminar.Name = "rbEliminar";
             this.rbEliminar.Size = new System.Drawing.Size(61, 17);
             this.rbEliminar.TabIndex = 2;
-            this.rbEliminar.TabStop = true;
             this.rbEliminar.Text = "Eliminar";
             this.rbEliminar.UseVisualStyleBackColor = true;
             // 
@@ -119,13 +119,13 @@
             this.rbModificar.Name = "rbModificar";
             this.rbModificar.Size = new System.Drawing.Size(68, 17);
             this.rbModificar.TabIndex = 1;
-            this.rbModificar.TabStop = true;
             this.rbModificar.Text = "Modificar";
             this.rbModificar.UseVisualStyleBackColor = true;
             // 
             // rbNuevo
             // 
             this.rbNuevo.AutoSize = true;
+            this.rbNuevo.Checked = true;
             this.rbNuevo.Location = new System.Drawing.Point(18, 37);
             this.rbNuevo.Name = "rbNuevo";
             this.rbNuevo.Size = new System.Drawing.Size(57, 17);
@@ -136,7 +136,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.tmbMunicipios);
+            this.groupBox1.Controls.Add(this.cbMunicipios);
             this.groupBox1.Controls.Add(this.txbNombre);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(15, 15);
@@ -146,13 +146,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Formulario";
             // 
-            // tmbMunicipios
+            // cbMunicipios
             // 
-            this.tmbMunicipios.FormattingEnabled = true;
-            this.tmbMunicipios.Location = new System.Drawing.Point(18, 20);
-            this.tmbMunicipios.Name = "tmbMunicipios";
-            this.tmbMunicipios.Size = new System.Drawing.Size(373, 21);
-            this.tmbMunicipios.TabIndex = 2;
+            this.cbMunicipios.FormattingEnabled = true;
+            this.cbMunicipios.Location = new System.Drawing.Point(18, 20);
+            this.cbMunicipios.Name = "cbMunicipios";
+            this.cbMunicipios.Size = new System.Drawing.Size(373, 21);
+            this.cbMunicipios.TabIndex = 2;
             // 
             // txbNombre
             // 
@@ -192,7 +192,7 @@
         private System.Windows.Forms.RadioButton rbModificar;
         private System.Windows.Forms.RadioButton rbNuevo;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox tmbMunicipios;
+        private System.Windows.Forms.ComboBox cbMunicipios;
         private System.Windows.Forms.TextBox txbNombre;
     }
 }

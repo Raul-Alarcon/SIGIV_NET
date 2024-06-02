@@ -8,5 +8,10 @@ namespace SIGIV.CLS.DTO
 {
     internal class DistritosDTO
     {
+        public int ID { get; set; }
+        public string Distrito { get; set; }
+        public string Municipio { get; set; }
+        public string Departamento { get; set; }
+        public string Pais { get; set; }
     }
 }
