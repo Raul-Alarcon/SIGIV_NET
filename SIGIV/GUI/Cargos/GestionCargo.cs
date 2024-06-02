@@ -73,7 +73,7 @@ namespace SIGIV.GUI.Cargos
 
         private async Task CargarCargos()
         {
-            var cargos = await new CLS.CargosCLS().GetAllCargos();
+            var cargos = await CargosCLS.GetAllAsync();
             lbCargos.DataSource = cargos;
             lbCargos.DisplayMember = "Nombre";
             lbCargos.ValueMember = "Id";

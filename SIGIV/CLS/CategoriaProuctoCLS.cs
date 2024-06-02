@@ -14,7 +14,7 @@ namespace SIGIV.CLS
         public string Nombre { get; set; }
         public string detalles { get; set; }
 
-        public async Task<List<CategoriaProuctoCLS>> GetAllAsync()
+        public static async Task<List<CategoriaProuctoCLS>> GetAllAsync()
         {
             List<CategoriaProuctoCLS> categoriaProuctos;
             using (var db = new SIGIVEntities())

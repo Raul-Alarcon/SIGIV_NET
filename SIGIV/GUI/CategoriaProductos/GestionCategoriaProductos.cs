@@ -87,8 +87,7 @@ namespace SIGIV.GUI.CategoriaProductos
 
         private async Task CargarCategorias()
         {
-            CategoriaProuctoCLS categoriaProuctoCLS = new CategoriaProuctoCLS();
-            List<CategoriaProuctoCLS> categorias = await categoriaProuctoCLS.GetAllAsync();
+            List<CategoriaProuctoCLS> categorias = await CategoriaProuctoCLS.GetAllAsync();
             dgvCategorias.DataSource = categorias;
         }
 

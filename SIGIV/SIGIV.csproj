@@ -57,6 +57,8 @@
   <ItemGroup>
     <Compile Include="CLS\CargosCLS.cs" />
     <Compile Include="CLS\CategoriaProuctoCLS.cs" />
+    <Compile Include="CLS\DepartamentosCLS.cs" />
+    <Compile Include="CLS\DTO\DepartamentoDTO.cs" />
     <Compile Include="CLS\DTO\EmpleadoDTO.cs" />
     <Compile Include="CLS\DTO\MunicipiosDTO.cs" />
     <Compile Include="CLS\EmpleadoCLS.cs" />

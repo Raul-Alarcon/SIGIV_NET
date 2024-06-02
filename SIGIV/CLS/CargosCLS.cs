@@ -13,7 +13,7 @@ namespace SIGIV.CLS
         public int Id { get; set; }
         public string Nombre { get; set; }
 
-        public async Task<List<CargosCLS>> GetAllCargos()
+        public static async Task<List<CargosCLS>> GetAllAsync()
         {
             List<CargosCLS> cargos;
             using (var db = new SIGIVEntities())

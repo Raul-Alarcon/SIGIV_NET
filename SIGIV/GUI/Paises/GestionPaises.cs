@@ -85,8 +85,7 @@ namespace SIGIV.GUI.Paises
 
         private async Task CargarPais()
         {
-            PaisesCLS paises = new PaisesCLS();
-            List<PaisesCLS> listaPaises = await paises.GetAllAsync();
+            List<PaisesCLS> listaPaises = await PaisesCLS.GetAllAsync();
             lstDatos.DataSource = listaPaises;
             lstDatos.DisplayMember = "nombre";
             lstDatos.ValueMember = "id";
