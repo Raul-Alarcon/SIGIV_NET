@@ -35,6 +35,19 @@ namespace SIGIV.CLS
             return municipios;
         }
 
+        public static async Task<MunicipiosCLS> GetByIdAsync(int id)
+        {
+            MunicipiosCLS municipio = new MunicipiosCLS();
+            using (var db = new SIGIVEntities())
+            {
+                Municipios mun = await db.Municipios.Where(x => x.idMunicipio == id).FirstOrDefaultAsync();
+                municipio.id = mun.idMunicipio;
+                municipio.Municipio = mun.Municipio;
+                municipio.idDepartamento = mun.idDepartamento;
+            }
+            return municipio;
+        }
+
         public async Task<bool> SaveAsync()
         {
             bool success = false;

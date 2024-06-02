@@ -37,7 +37,7 @@
             this.rbModificar = new System.Windows.Forms.RadioButton();
             this.rbNuevo = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tmbDepartamentos = new System.Windows.Forms.ComboBox();
+            this.cbDepartamentos = new System.Windows.Forms.ComboBox();
             this.txbNombre = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -62,9 +62,9 @@
             // 
             this.groupBox3.Controls.Add(this.dtgDatos);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Location = new System.Drawing.Point(15, 189);
+            this.groupBox3.Location = new System.Drawing.Point(15, 178);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(417, 246);
+            this.groupBox3.Size = new System.Drawing.Size(417, 257);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Lista de Paises";
@@ -75,7 +75,7 @@
             this.dtgDatos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgDatos.Location = new System.Drawing.Point(3, 16);
             this.dtgDatos.Name = "dtgDatos";
-            this.dtgDatos.Size = new System.Drawing.Size(411, 227);
+            this.dtgDatos.Size = new System.Drawing.Size(411, 238);
             this.dtgDatos.TabIndex = 0;
             // 
             // groupBox2
@@ -85,7 +85,7 @@
             this.groupBox2.Controls.Add(this.rbModificar);
             this.groupBox2.Controls.Add(this.rbNuevo);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox2.Location = new System.Drawing.Point(15, 114);
+            this.groupBox2.Location = new System.Drawing.Point(15, 103);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(417, 75);
             this.groupBox2.TabIndex = 1;
@@ -100,6 +100,7 @@
             this.btnEjecutar.TabIndex = 3;
             this.btnEjecutar.Text = "Ejecutar";
             this.btnEjecutar.UseVisualStyleBackColor = true;
+            this.btnEjecutar.Click += new System.EventHandler(this.btnEjecutar_Click);
             // 
             // rbEliminar
             // 
@@ -135,27 +136,27 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.tmbDepartamentos);
+            this.groupBox1.Controls.Add(this.cbDepartamentos);
             this.groupBox1.Controls.Add(this.txbNombre);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(15, 15);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(417, 99);
+            this.groupBox1.Size = new System.Drawing.Size(417, 88);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Formulario";
             // 
-            // tmbDepartamentos
+            // cbDepartamentos
             // 
-            this.tmbDepartamentos.FormattingEnabled = true;
-            this.tmbDepartamentos.Location = new System.Drawing.Point(18, 20);
-            this.tmbDepartamentos.Name = "tmbDepartamentos";
-            this.tmbDepartamentos.Size = new System.Drawing.Size(373, 21);
-            this.tmbDepartamentos.TabIndex = 2;
+            this.cbDepartamentos.FormattingEnabled = true;
+            this.cbDepartamentos.Location = new System.Drawing.Point(18, 19);
+            this.cbDepartamentos.Name = "cbDepartamentos";
+            this.cbDepartamentos.Size = new System.Drawing.Size(373, 21);
+            this.cbDepartamentos.TabIndex = 2;
             // 
             // txbNombre
             // 
-            this.txbNombre.Location = new System.Drawing.Point(18, 57);
+            this.txbNombre.Location = new System.Drawing.Point(18, 62);
             this.txbNombre.Multiline = true;
             this.txbNombre.Name = "txbNombre";
             this.txbNombre.Size = new System.Drawing.Size(373, 20);
@@ -190,7 +191,7 @@
         private System.Windows.Forms.RadioButton rbModificar;
         private System.Windows.Forms.RadioButton rbNuevo;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox tmbDepartamentos;
+        private System.Windows.Forms.ComboBox cbDepartamentos;
         private System.Windows.Forms.TextBox txbNombre;
         private System.Windows.Forms.DataGridView dtgDatos;
     }

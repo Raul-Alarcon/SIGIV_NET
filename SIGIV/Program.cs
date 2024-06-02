@@ -23,9 +23,6 @@ namespace SIGIV
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new GestionMunicipios());
-=========
-            Application.Run(new GestionDepartamentos());
->>>>>>>>> Temporary merge branch 2
         }
     }
 }

@@ -97,8 +97,8 @@ namespace SIGIV.GUI.Departamentos
 
         private async Task Cargar()
         {
-            List<DepartamentoDTO> categorias = await DepartamentosCLS.GetAllDTOAsync();
-            dtgDatos.DataSource = categorias;
+            List<DepartamentoDTO> departamentos = await DepartamentosCLS.GetAllDTOAsync();
+            dtgDatos.DataSource = departamentos;
         }
 
         private async Task Guardar()
@@ -115,6 +115,7 @@ namespace SIGIV.GUI.Departamentos
             MessageBox.Show("Departamento guardado correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             await Cargar();
             txbNombre.Text = string.Empty;
+            rbNuevo.Checked = true;
         }
 
         private async Task Actualizar()

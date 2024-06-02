@@ -48,6 +48,7 @@ namespace SIGIV.CLS
             return departamentos;
         }
 
+
         public static async Task<DepartamentosCLS> GetByIdAsync(int id)
         {
             DepartamentosCLS departamento = new DepartamentosCLS();
