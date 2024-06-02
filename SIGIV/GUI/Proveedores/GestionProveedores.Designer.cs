@@ -31,48 +31,56 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionProveedores));
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txbCompania = new System.Windows.Forms.TextBox();
-            this.txbNIT = new System.Windows.Forms.TextBox();
-            this.txbTelefono = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txbCorreo = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txbWeb = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txbGiro = new System.Windows.Forms.TextBox();
+            this.btnAgregarDireccion = new System.Windows.Forms.Button();
+            this.btnAgregarContacto = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.Operaciones = new System.Windows.Forms.GroupBox();
-            this.rbnNuevo = new System.Windows.Forms.RadioButton();
+            this.rbnModificar = new System.Windows.Forms.RadioButton();
             this.rbnEliminar = new System.Windows.Forms.RadioButton();
+            this.rbnNuevo = new System.Windows.Forms.RadioButton();
+            this.txbGiro = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txbWeb = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txbCorreo = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txbTelefono = new System.Windows.Forms.TextBox();
+            this.txbNIT = new System.Windows.Forms.TextBox();
+            this.txbCompania = new System.Windows.Forms.TextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.txbBuscar = new System.Windows.Forms.ToolStripTextBox();
-            this.rbnModificar = new System.Windows.Forms.RadioButton();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnAgregarContacto = new System.Windows.Forms.Button();
-            this.btnAgregarDireccion = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.dtgDatos = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.Operaciones.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgDatos)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 25);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(15);
-            this.panel1.Size = new System.Drawing.Size(679, 425);
+            this.panel1.Size = new System.Drawing.Size(679, 460);
             this.panel1.TabIndex = 0;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btnAgregarDireccion);
             this.groupBox1.Controls.Add(this.btnAgregarContacto);
             this.groupBox1.Controls.Add(this.btnGuardar);
@@ -97,101 +105,34 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Formulario";
             // 
-            // txbCompania
+            // btnAgregarDireccion
             // 
-            this.txbCompania.Location = new System.Drawing.Point(38, 40);
-            this.txbCompania.Name = "txbCompania";
-            this.txbCompania.Size = new System.Drawing.Size(452, 20);
-            this.txbCompania.TabIndex = 0;
+            this.btnAgregarDireccion.Location = new System.Drawing.Point(266, 237);
+            this.btnAgregarDireccion.Name = "btnAgregarDireccion";
+            this.btnAgregarDireccion.Size = new System.Drawing.Size(100, 23);
+            this.btnAgregarDireccion.TabIndex = 15;
+            this.btnAgregarDireccion.Text = "Agregar Direccion";
+            this.btnAgregarDireccion.UseVisualStyleBackColor = true;
+            this.btnAgregarDireccion.Click += new System.EventHandler(this.btnAgregarDireccion_Click);
             // 
-            // txbNIT
+            // btnAgregarContacto
             // 
-            this.txbNIT.Location = new System.Drawing.Point(38, 91);
-            this.txbNIT.Name = "txbNIT";
-            this.txbNIT.Size = new System.Drawing.Size(167, 20);
-            this.txbNIT.TabIndex = 1;
+            this.btnAgregarContacto.Location = new System.Drawing.Point(160, 237);
+            this.btnAgregarContacto.Name = "btnAgregarContacto";
+            this.btnAgregarContacto.Size = new System.Drawing.Size(100, 23);
+            this.btnAgregarContacto.TabIndex = 14;
+            this.btnAgregarContacto.Text = "Agregar Contacto";
+            this.btnAgregarContacto.UseVisualStyleBackColor = true;
+            this.btnAgregarContacto.Click += new System.EventHandler(this.btnAgregarContacto_Click);
             // 
-            // txbTelefono
+            // btnGuardar
             // 
-            this.txbTelefono.Location = new System.Drawing.Point(219, 91);
-            this.txbTelefono.Name = "txbTelefono";
-            this.txbTelefono.Size = new System.Drawing.Size(271, 20);
-            this.txbTelefono.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "NombreCompañia";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 75);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "NIT Compañia";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(216, 75);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Telefono Compañia";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(35, 129);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Correo Electronico";
-            // 
-            // txbCorreo
-            // 
-            this.txbCorreo.Location = new System.Drawing.Point(38, 145);
-            this.txbCorreo.Name = "txbCorreo";
-            this.txbCorreo.Size = new System.Drawing.Size(452, 20);
-            this.txbCorreo.TabIndex = 7;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(35, 179);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Sitio Web";
-            // 
-            // txbWeb
-            // 
-            this.txbWeb.Location = new System.Drawing.Point(38, 195);
-            this.txbWeb.Name = "txbWeb";
-            this.txbWeb.Size = new System.Drawing.Size(258, 20);
-            this.txbWeb.TabIndex = 9;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(312, 179);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(26, 13);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Giro";
-            // 
-            // txbGiro
-            // 
-            this.txbGiro.Location = new System.Drawing.Point(315, 195);
-            this.txbGiro.Name = "txbGiro";
-            this.txbGiro.Size = new System.Drawing.Size(175, 20);
-            this.txbGiro.TabIndex = 11;
+            this.btnGuardar.Location = new System.Drawing.Point(38, 237);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(100, 23);
+            this.btnGuardar.TabIndex = 13;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
             // 
             // Operaciones
             // 
@@ -206,16 +147,16 @@
             this.Operaciones.TabStop = false;
             this.Operaciones.Text = "Operacciones";
             // 
-            // rbnNuevo
+            // rbnModificar
             // 
-            this.rbnNuevo.AutoSize = true;
-            this.rbnNuevo.Location = new System.Drawing.Point(21, 55);
-            this.rbnNuevo.Name = "rbnNuevo";
-            this.rbnNuevo.Size = new System.Drawing.Size(57, 17);
-            this.rbnNuevo.TabIndex = 0;
-            this.rbnNuevo.TabStop = true;
-            this.rbnNuevo.Text = "Nuevo";
-            this.rbnNuevo.UseVisualStyleBackColor = true;
+            this.rbnModificar.AutoSize = true;
+            this.rbnModificar.Location = new System.Drawing.Point(21, 94);
+            this.rbnModificar.Name = "rbnModificar";
+            this.rbnModificar.Size = new System.Drawing.Size(68, 17);
+            this.rbnModificar.TabIndex = 2;
+            this.rbnModificar.TabStop = true;
+            this.rbnModificar.Text = "Modificar";
+            this.rbnModificar.UseVisualStyleBackColor = true;
             // 
             // rbnEliminar
             // 
@@ -227,6 +168,113 @@
             this.rbnEliminar.TabStop = true;
             this.rbnEliminar.Text = "Eliminar";
             this.rbnEliminar.UseVisualStyleBackColor = true;
+            // 
+            // rbnNuevo
+            // 
+            this.rbnNuevo.AutoSize = true;
+            this.rbnNuevo.Location = new System.Drawing.Point(21, 55);
+            this.rbnNuevo.Name = "rbnNuevo";
+            this.rbnNuevo.Size = new System.Drawing.Size(57, 17);
+            this.rbnNuevo.TabIndex = 0;
+            this.rbnNuevo.TabStop = true;
+            this.rbnNuevo.Text = "Nuevo";
+            this.rbnNuevo.UseVisualStyleBackColor = true;
+            // 
+            // txbGiro
+            // 
+            this.txbGiro.Location = new System.Drawing.Point(315, 195);
+            this.txbGiro.Name = "txbGiro";
+            this.txbGiro.Size = new System.Drawing.Size(175, 20);
+            this.txbGiro.TabIndex = 11;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(312, 179);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(26, 13);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Giro";
+            // 
+            // txbWeb
+            // 
+            this.txbWeb.Location = new System.Drawing.Point(38, 195);
+            this.txbWeb.Name = "txbWeb";
+            this.txbWeb.Size = new System.Drawing.Size(258, 20);
+            this.txbWeb.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(35, 179);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Sitio Web";
+            // 
+            // txbCorreo
+            // 
+            this.txbCorreo.Location = new System.Drawing.Point(38, 145);
+            this.txbCorreo.Name = "txbCorreo";
+            this.txbCorreo.Size = new System.Drawing.Size(452, 20);
+            this.txbCorreo.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(35, 129);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(94, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Correo Electronico";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(216, 75);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(99, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Telefono Compañia";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(35, 75);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "NIT Compañia";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(35, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "NombreCompañia";
+            // 
+            // txbTelefono
+            // 
+            this.txbTelefono.Location = new System.Drawing.Point(219, 91);
+            this.txbTelefono.Name = "txbTelefono";
+            this.txbTelefono.Size = new System.Drawing.Size(271, 20);
+            this.txbTelefono.TabIndex = 2;
+            // 
+            // txbNIT
+            // 
+            this.txbNIT.Location = new System.Drawing.Point(38, 91);
+            this.txbNIT.Name = "txbNIT";
+            this.txbNIT.Size = new System.Drawing.Size(167, 20);
+            this.txbNIT.TabIndex = 1;
+            // 
+            // txbCompania
+            // 
+            this.txbCompania.Location = new System.Drawing.Point(38, 40);
+            this.txbCompania.Name = "txbCompania";
+            this.txbCompania.Size = new System.Drawing.Size(452, 20);
+            this.txbCompania.TabIndex = 0;
             // 
             // toolStrip1
             // 
@@ -246,11 +294,6 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
             // toolStripButton1
             // 
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
@@ -259,6 +302,11 @@
             this.toolStripButton1.Size = new System.Drawing.Size(148, 22);
             this.toolStripButton1.Text = "Gestion De Proveedores";
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
             // txbBuscar
             // 
             this.txbBuscar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
@@ -266,49 +314,40 @@
             this.txbBuscar.Name = "txbBuscar";
             this.txbBuscar.Size = new System.Drawing.Size(200, 25);
             // 
-            // rbnModificar
+            // groupBox2
             // 
-            this.rbnModificar.AutoSize = true;
-            this.rbnModificar.Location = new System.Drawing.Point(21, 94);
-            this.rbnModificar.Name = "rbnModificar";
-            this.rbnModificar.Size = new System.Drawing.Size(68, 17);
-            this.rbnModificar.TabIndex = 2;
-            this.rbnModificar.TabStop = true;
-            this.rbnModificar.Text = "Modificar";
-            this.rbnModificar.UseVisualStyleBackColor = true;
+            this.groupBox2.Controls.Add(this.dtgDatos);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Location = new System.Drawing.Point(15, 288);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(649, 157);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Listado de Compañia";
             // 
-            // btnGuardar
+            // dtgDatos
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(105, 237);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(100, 23);
-            this.btnGuardar.TabIndex = 13;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.dtgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgDatos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgDatos.Location = new System.Drawing.Point(3, 16);
+            this.dtgDatos.Name = "dtgDatos";
+            this.dtgDatos.Size = new System.Drawing.Size(643, 138);
+            this.dtgDatos.TabIndex = 0;
             // 
-            // btnAgregarContacto
+            // button1
             // 
-            this.btnAgregarContacto.Location = new System.Drawing.Point(209, 237);
-            this.btnAgregarContacto.Name = "btnAgregarContacto";
-            this.btnAgregarContacto.Size = new System.Drawing.Size(100, 23);
-            this.btnAgregarContacto.TabIndex = 14;
-            this.btnAgregarContacto.Text = "Agregar Contacto";
-            this.btnAgregarContacto.UseVisualStyleBackColor = true;
-            // 
-            // btnAgregarDireccion
-            // 
-            this.btnAgregarDireccion.Location = new System.Drawing.Point(315, 237);
-            this.btnAgregarDireccion.Name = "btnAgregarDireccion";
-            this.btnAgregarDireccion.Size = new System.Drawing.Size(100, 23);
-            this.btnAgregarDireccion.TabIndex = 15;
-            this.btnAgregarDireccion.Text = "Agregar Direccion";
-            this.btnAgregarDireccion.UseVisualStyleBackColor = true;
+            this.button1.Location = new System.Drawing.Point(390, 237);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 23);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Hacer Apedido";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // GestionProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(679, 450);
+            this.ClientSize = new System.Drawing.Size(679, 485);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "GestionProveedores";
@@ -320,6 +359,8 @@
             this.Operaciones.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgDatos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -353,5 +394,9 @@
         private System.Windows.Forms.Button btnAgregarContacto;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnAgregarDireccion;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DataGridView dtgDatos;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button button1;
     }
 }

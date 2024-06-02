@@ -214,6 +214,30 @@
     <Compile Include="GUI\Paises\GestionPaises.Designer.cs">
       <DependentUpon>GestionPaises.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Pedidos\GestionPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Pedidos\GestionPedidos.Designer.cs">
+      <DependentUpon>GestionPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Productos\GestionProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Productos\GestionProductos.Designer.cs">
+      <DependentUpon>GestionProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Proveedores\DireccionEdicionProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Proveedores\DireccionEdicionProveedor.Designer.cs">
+      <DependentUpon>DireccionEdicionProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Proveedores\EdicionContactoProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Proveedores\EdicionContactoProveedor.Designer.cs">
+      <DependentUpon>EdicionContactoProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Proveedores\GestionProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -245,6 +269,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Paises\GestionPaises.resx">
       <DependentUpon>GestionPaises.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Pedidos\GestionPedidos.resx">
+      <DependentUpon>GestionPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Productos\GestionProductos.resx">
+      <DependentUpon>GestionProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Proveedores\DireccionEdicionProveedor.resx">
+      <DependentUpon>DireccionEdicionProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Proveedores\EdicionContactoProveedor.resx">
+      <DependentUpon>EdicionContactoProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Proveedores\GestionProveedores.resx">
       <DependentUpon>GestionProveedores.cs</DependentUpon>

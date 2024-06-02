@@ -16,5 +16,17 @@ namespace SIGIV.GUI.Proveedores
         {
             InitializeComponent();
         }
+
+        private void btnAgregarContacto_Click(object sender, EventArgs e)
+        {
+            EdicionContactoProveedor FormularioProveedor = new EdicionContactoProveedor();
+            FormularioProveedor.ShowDialog();
+        }
+
+        private void btnAgregarDireccion_Click(object sender, EventArgs e)
+        {
+            DireccionEdicionProveedor FormularioDireccion = new DireccionEdicionProveedor();
+            FormularioDireccion.ShowDialog();
+        }
     }
 }
