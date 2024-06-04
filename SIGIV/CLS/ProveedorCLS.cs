@@ -102,5 +102,20 @@ namespace SIGIV.CLS
             }
             return success;
         }
+
+        public async Task<bool> DeleteAsync()
+        {
+            return await DeleteAsync(this.id);
+        }
+
+        public void validar()
+        {
+            if (string.IsNullOrEmpty(compania)) throw new ArgumentException("El nombre de la compañía no puede estar vacío");
+            if (string.IsNullOrEmpty(nit)) throw new ArgumentException("El NIT no puede estar vacío");
+            if (string.IsNullOrEmpty(telefono)) throw new ArgumentException("El teléfono no puede estar vacío");
+            if (string.IsNullOrEmpty(correo)) throw new ArgumentException("El correo no puede estar vacío");
+            if (string.IsNullOrEmpty(web)) throw new ArgumentException("El sitio web no puede estar vacío");
+            if (string.IsNullOrEmpty(giro)) throw new ArgumentException("El giro no puede estar vacío");
+        }
     }
 }

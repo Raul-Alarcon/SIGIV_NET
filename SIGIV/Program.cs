@@ -6,6 +6,8 @@ using SIGIV.GUI.Distritos;
 using SIGIV.GUI.Empleados;
 using SIGIV.GUI.Municipios;
 using SIGIV.GUI.Paises;
+using SIGIV.GUI.Productos;
+using SIGIV.GUI.Proveedores;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +26,7 @@ namespace SIGIV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GestionCliente());
+            Application.Run(new GestionProveedores());
         }
     }
 }

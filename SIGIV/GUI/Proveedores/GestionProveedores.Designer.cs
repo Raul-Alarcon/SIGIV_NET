@@ -131,7 +131,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 23);
             this.button1.TabIndex = 16;
-            this.button1.Text = "Hacer Apedido";
+            this.button1.Text = "Hacer Pedido";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // btnAgregarDireccion
@@ -162,6 +162,7 @@
             this.btnGuardar.TabIndex = 13;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // Operaciones
             // 

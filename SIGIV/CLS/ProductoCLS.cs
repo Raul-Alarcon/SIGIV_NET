@@ -17,6 +17,7 @@ namespace SIGIV.CLS
         public decimal precio { get; set; }
         public int idCategoria { get; set; }
         public int idStok { get; set; }
+        public int cantidadStok { get; set; }
 
         public static async Task<List<ProductoDTO>> GetAllAsync()
         {
@@ -33,7 +34,7 @@ namespace SIGIV.CLS
                                        Descripcion = pro.descripcion,
                                        Precio = pro.precio,
                                        Categoria = cat.categoria,
-                                       Stok = sto.idStok
+                                       Stok = sto.cantidadStok
                                    }).ToListAsync();
             }
             return productos;
@@ -51,6 +52,7 @@ namespace SIGIV.CLS
                 producto.precio = pro.precio;
                 producto.idCategoria = pro.idCategoria;
                 producto.idStok = pro.idStok;
+                producto.cantidadStok = pro.DetallesStok.cantidadStok;
             }
             return producto;
         }
@@ -90,7 +92,7 @@ namespace SIGIV.CLS
             return success;
         }
 
-        public async Task<bool> DeleteAsync(int idProducto)
+        public async static Task<bool> DeleteAsync(int idProducto)
         {
             bool success = false;
             using (SIGIVEntities db = new SIGIVEntities())
