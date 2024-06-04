@@ -30,7 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionProveedores));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dtgDatos = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnAgregarDireccion = new System.Windows.Forms.Button();
             this.btnAgregarContacto = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -55,16 +58,13 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.txbBuscar = new System.Windows.Forms.ToolStripTextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.dtgDatos = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgDatos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.Operaciones.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgDatos)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -77,6 +77,26 @@
             this.panel1.Padding = new System.Windows.Forms.Padding(15);
             this.panel1.Size = new System.Drawing.Size(679, 460);
             this.panel1.TabIndex = 0;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dtgDatos);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Location = new System.Drawing.Point(15, 288);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(649, 157);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Listado de Compañia";
+            // 
+            // dtgDatos
+            // 
+            this.dtgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgDatos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgDatos.Location = new System.Drawing.Point(3, 16);
+            this.dtgDatos.Name = "dtgDatos";
+            this.dtgDatos.Size = new System.Drawing.Size(643, 138);
+            this.dtgDatos.TabIndex = 0;
             // 
             // groupBox1
             // 
@@ -104,6 +124,15 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Formulario";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(390, 237);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 23);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Hacer Apedido";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // btnAgregarDireccion
             // 
@@ -154,7 +183,6 @@
             this.rbnModificar.Name = "rbnModificar";
             this.rbnModificar.Size = new System.Drawing.Size(68, 17);
             this.rbnModificar.TabIndex = 2;
-            this.rbnModificar.TabStop = true;
             this.rbnModificar.Text = "Modificar";
             this.rbnModificar.UseVisualStyleBackColor = true;
             // 
@@ -165,13 +193,13 @@
             this.rbnEliminar.Name = "rbnEliminar";
             this.rbnEliminar.Size = new System.Drawing.Size(61, 17);
             this.rbnEliminar.TabIndex = 1;
-            this.rbnEliminar.TabStop = true;
             this.rbnEliminar.Text = "Eliminar";
             this.rbnEliminar.UseVisualStyleBackColor = true;
             // 
             // rbnNuevo
             // 
             this.rbnNuevo.AutoSize = true;
+            this.rbnNuevo.Checked = true;
             this.rbnNuevo.Location = new System.Drawing.Point(21, 55);
             this.rbnNuevo.Name = "rbnNuevo";
             this.rbnNuevo.Size = new System.Drawing.Size(57, 17);
@@ -314,35 +342,6 @@
             this.txbBuscar.Name = "txbBuscar";
             this.txbBuscar.Size = new System.Drawing.Size(200, 25);
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.dtgDatos);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(15, 288);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(649, 157);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Listado de Compañia";
-            // 
-            // dtgDatos
-            // 
-            this.dtgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgDatos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgDatos.Location = new System.Drawing.Point(3, 16);
-            this.dtgDatos.Name = "dtgDatos";
-            this.dtgDatos.Size = new System.Drawing.Size(643, 138);
-            this.dtgDatos.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(390, 237);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 23);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Hacer Apedido";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // GestionProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -353,14 +352,14 @@
             this.Name = "GestionProveedores";
             this.Text = "GestionProveedores";
             this.panel1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgDatos)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.Operaciones.ResumeLayout(false);
             this.Operaciones.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgDatos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
