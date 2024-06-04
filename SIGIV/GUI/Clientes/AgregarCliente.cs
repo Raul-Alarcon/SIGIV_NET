@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SIGIV.CLS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,87 @@ namespace SIGIV.GUI.Clientes
 {
     public partial class AgregarCliente : Form
     {
-        public AgregarCliente()
+        private ClienteCLS cliente = null;
+
+        public AgregarCliente(ClienteCLS cliente = null)
         {
             InitializeComponent();
+            this.cliente = cliente;
+        }
+
+        override async protected void OnLoad(EventArgs e)
+        {
+            try
+            {
+                CargarDatosCliente();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error al cargar los datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            base.OnLoad(e);
+        }
+
+        private void CargarDatosCliente()
+        {
+            if (cliente == null) return;
+            this.txtNombre.Text = cliente.nombres;
+            this.txtApellidos.Text = cliente.apellidos;
+            this.txtDui.Text = cliente.dui;
+            this.txtTelefono.Text = cliente.telefono;
+            this.txtCorreo.Text = cliente.eMail;
+        }
+
+        private async void btnAceptar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cliente == null) await Guardar();
+
+                if (cliente != null) await Modificar();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private async Task Modificar()
+        {
+            ClienteCLS cliente = new ClienteCLS
+            {
+                id = this.cliente.id,
+                nombres = txtNombre.Text,
+                apellidos = txtApellidos.Text,
+                dui = txtDui.Text,
+                telefono = txtTelefono.Text,
+                eMail = txtCorreo.Text
+            };
+            cliente.Validar();
+            bool resultado = await cliente.UpdateAsync();
+            if (!resultado) throw new Exception("No se pudo modificar el cliente");
+            MessageBox.Show("Cliente modificado correctamente", "Cliente modificado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        private async Task Guardar()
+        {
+            ClienteCLS cliente = new ClienteCLS
+            {
+                nombres = txtNombre.Text,
+                apellidos = txtApellidos.Text,
+                dui = txtDui.Text,
+                telefono = txtTelefono.Text,
+                eMail = txtCorreo.Text
+            };
+            cliente.Validar();
+            bool resultado = await cliente.AddAsync();
+            if (!resultado)throw new Exception ("No se pudo guardar el cliente");
+            MessageBox.Show("Cliente guardado correctamente", "Cliente guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }

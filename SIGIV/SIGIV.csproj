@@ -57,8 +57,10 @@
   <ItemGroup>
     <Compile Include="CLS\CargosCLS.cs" />
     <Compile Include="CLS\CategoriaProuctoCLS.cs" />
+    <Compile Include="CLS\ClienteCLS.cs" />
     <Compile Include="CLS\DepartamentosCLS.cs" />
     <Compile Include="CLS\DistritosCLS.cs" />
+    <Compile Include="CLS\DTO\ClienteDTO.cs" />
     <Compile Include="CLS\DTO\DepartamentoDTO.cs" />
     <Compile Include="CLS\DTO\DistritosDTO.cs" />
     <Compile Include="CLS\DTO\EmpleadoDTO.cs" />
@@ -253,6 +255,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\CategoriaProductos\GestionCategoriaProductos.resx">
       <DependentUpon>GestionCategoriaProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Clientes\AgregarCliente.resx">
+      <DependentUpon>AgregarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Clientes\GestionCliente.resx">
+      <DependentUpon>GestionCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Departamentos\GestionDepartamentos.resx">
       <DependentUpon>GestionDepartamentos.cs</DependentUpon>

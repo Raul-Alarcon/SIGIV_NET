@@ -1,5 +1,6 @@
 ﻿using SIGIV.CLS;
 using SIGIV.DataLayer;
+using SIGIV.GUI.Clientes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

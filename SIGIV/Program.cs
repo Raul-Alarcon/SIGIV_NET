@@ -1,5 +1,6 @@
 ﻿using SIGIV.GUI.Cargos;
 using SIGIV.GUI.CategoriaProductos;
+using SIGIV.GUI.Clientes;
 using SIGIV.GUI.Departamentos;
 using SIGIV.GUI.Distritos;
 using SIGIV.GUI.Empleados;
@@ -23,7 +24,7 @@ namespace SIGIV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GestionDistritos());
+            Application.Run(new GestionCliente());
         }
     }
 }
