@@ -198,16 +198,37 @@ namespace SIGIV.GUI.Proveedores
             proveedorSeleccionado = null;
         }
 
-        private void btnAgregarContacto_Click(object sender, EventArgs e)
+        private async void btnAgregarContacto_Click(object sender, EventArgs e)
         {
-            EdicionContactoProveedor FormularioProveedor = new EdicionContactoProveedor();
-            FormularioProveedor.ShowDialog();
+            // pasamos el proveedor seleccionado a la otra vista
+            try
+            {
+                var dto = (ProveedorDTO)dtgDatos.CurrentRow.DataBoundItem;
+                proveedorSeleccionado = await ProveedorCLS.GetByIDAsync(dto.ID);
+                EdicionContactoProveedor FormularioProveedor = new EdicionContactoProveedor(proveedorSeleccionado);
+                FormularioProveedor.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void btnAgregarDireccion_Click(object sender, EventArgs e)
+        private async void btnAgregarDireccion_Click(object sender, EventArgs e)
         {
-            DireccionEdicionProveedor FormularioDireccion = new DireccionEdicionProveedor();
-            FormularioDireccion.ShowDialog();
+            try
+            {
+                var dto = (ProveedorDTO)dtgDatos.CurrentRow.DataBoundItem;
+                proveedorSeleccionado = await ProveedorCLS.GetByIDAsync(dto.ID);
+
+                // pasamos el proveedor seleccionado a la otra vista
+                DireccionEdicionProveedor FormularioDireccion = new DireccionEdicionProveedor(proveedorSeleccionado);
+                FormularioDireccion.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private async void btnGuardar_Click(object sender, EventArgs e)

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SIGIV.CLS.DTO
 {
-    internal class ProveedorDTO
+    public class ProveedorDTO
     {
         public int ID { get; set; }
         public string Proveedor { get; set; }
