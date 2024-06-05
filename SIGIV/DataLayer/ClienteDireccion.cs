@@ -17,14 +17,11 @@ namespace SIGIV.DataLayer
         public int idClienteDireccion { get; set; }
         public string Linea1 { get; set; }
         public string Linea2 { get; set; }
+        public string codigoPostal { get; set; }
         public Nullable<int> idCliente { get; set; }
-        public Nullable<int> idDireccion { get; set; }
+        public Nullable<int> idDistrito { get; set; }
     
+        public virtual Distritos Distritos { get; set; }
         public virtual Clientes Clientes { get; set; }
-        public virtual Direcciones Direcciones { get; set; }
-        public virtual Clientes Clientes1 { get; set; }
-        public virtual Direcciones Direcciones1 { get; set; }
-        public virtual Clientes Clientes2 { get; set; }
-        public virtual Direcciones Direcciones2 { get; set; }
     }
 }

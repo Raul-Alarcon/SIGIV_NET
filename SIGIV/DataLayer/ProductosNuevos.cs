@@ -23,9 +23,9 @@ namespace SIGIV.DataLayer
         public int idProductoNuevo { get; set; }
         public string nombreP { get; set; }
         public string descripcion { get; set; }
-        public decimal precio { get; set; }
-        public int idCategoria { get; set; }
-        public int idStok { get; set; }
+        public Nullable<decimal> precio { get; set; }
+        public Nullable<int> idCategoria { get; set; }
+        public Nullable<int> idStok { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DetallesPedidos> DetallesPedidos { get; set; }

@@ -4,82 +4,57 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="2f8af38aeff24baf88fcb5a5afff145d" Name="Diagram1">
-        <EntityTypeShape EntityType="SIGIVModel.AsignacionRolesOpciones" Width="1.5" PointX="3" PointY="10.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIGIVModel.Cargos" Width="1.5" PointX="10.5" PointY="16.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIGIVModel.CategoriasProductos" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIGIVModel.ClienteDireccion" Width="1.5" PointX="12" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIGIVModel.Clientes" Width="1.5" PointX="9.75" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIGIVModel.ContactosProveedor" Width="1.5" PointX="12" PointY="9.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIGIVModel.Departamentos" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIGIVModel.DetallesFacturas" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIGIVModel.DetallesPedidos" Width="1.5" PointX="14.25" PointY="20.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIGIVModel.DetallesStok" Width="1.5" PointX="0.75" PointY="14.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIGIVModel.Direcciones" Width="1.5" PointX="9.75" PointY="4.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIGIVModel.Distritos" Width="1.5" PointX="7.5" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIGIVModel.EmpleadoDireccion" Width="1.5" PointX="15" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIGIVModel.Empleados" Width="1.5" PointX="12.75" PointY="15.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIGIVModel.Facturas" Width="1.5" PointX="3" PointY="14" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIGIVModel.Municipios" Width="1.5" PointX="5.25" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIGIVModel.Opciones" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIGIVModel.Paises" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIGIVModel.Pedidos" Width="1.5" PointX="12" PointY="20.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIGIVModel.Productos" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIGIVModel.ProductosNuevos" Width="1.5" PointX="12" PointY="24.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIGIVModel.Proveedores" Width="1.5" PointX="9.75" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIGIVModel.ProveedoresDireccion" Width="1.5" PointX="12" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIGIVModel.Roles" Width="1.5" PointX="0.75" PointY="11" IsExpanded="true" />
-        <EntityTypeShape EntityType="SIGIVModel.Usuarios" Width="1.5" PointX="15" PointY="13.875" IsExpanded="true" />
-        <AssociationConnector Association="SIGIVModel.FK__Asignacio__idOpc__656C112C" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__Asignacio__idOpc__66603565" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__Asignacio__idRol__6754599E" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__Asignacio__idRol__68487DD7" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__Empleados__idCar__04E4BC85" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__Empleados__idCar__05D8E0BE" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__Empleados__idCar__06CD04F7" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__Productos__idCat__0D7A0286" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__ClienteDi__idDir__693CA210" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__ClienteDi__idDir__6A30C649" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__ClienteDi__idDir__6B24EA82" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__ClienteDi__idDir__6C190EBB" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__ClienteDi__idDir__6D0D32F4" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__ClienteDi__idDir__6E01572D" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__Facturas__idclie__07C12930" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__Contactos__idPro__6EF57B66" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__Contactos__idPro__6FE99F9F" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__Contactos__idPro__70DDC3D8" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__Contactos__idPro__71D1E811" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__Contactos__idPro__72C60C4A" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__Departame__idPai__73BA3083" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__Departame__idPai__74AE54BC" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__Departame__idPai__75A278F5" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__Municipio__idDep__09A971A2" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__Municipio__idDep__0A9D95DB" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__Municipio__idDep__0B91BA14" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__DetallesF__idFac__76969D2E" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__DetallesF__idPro__778AC167" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__DetallesP__idPed__787EE5A0" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__DetallesP__idPro__797309D9" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__Productos__idSto__0E6E26BF" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__Direccion__idDis__7A672E12" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__Direccion__idDis__7B5B524B" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__Direccion__idDis__7C4F7684" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__EmpleadoD__idDir__00200768" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__EmpleadoD__idDir__01142BA1" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__EmpleadoD__idDir__02084FDA" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__Proveedor__idDir__0F624AF8" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__Distritos__idMun__7D439ABD" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__Distritos__idMun__7E37BEF6" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__Distritos__idMun__7F2BE32F" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__EmpleadoD__idEmp__02FC7413" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__EmpleadoD__idEmp__03F0984C" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__Facturas__idempl__08B54D69" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__Usuarios__idEmpl__114A936A" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__Usuarios__idEmpl__123EB7A3" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__Pedidos__idProve__0C85DE4D" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__Proveedor__idPro__10566F31" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__Usuarios__idRol__1332DBDC" ManuallyRouted="false" />
-        <AssociationConnector Association="SIGIVModel.FK__Usuarios__idRol__14270015" ManuallyRouted="false" />
+      <Diagram DiagramId="2dbb697ac33b41d0ba016d82851d5840" Name="Diagram1">
+        <EntityTypeShape EntityType="SIGIVModel.AsignacionRolesOpciones" Width="1.5" PointX="8" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIGIVModel.Cargos" Width="1.5" PointX="1.5" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIGIVModel.CategoriasProductos" Width="1.5" PointX="3.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIGIVModel.ClienteDireccion" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIGIVModel.Clientes" Width="1.5" PointX="0.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIGIVModel.ContactosProveedor" Width="1.5" PointX="13" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIGIVModel.Departamentos" Width="1.5" PointX="1.5" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIGIVModel.DetallesFacturas" Width="1.5" PointX="8.25" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIGIVModel.DetallesPedidos" Width="1.5" PointX="15.25" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIGIVModel.DetallesStok" Width="1.5" PointX="3.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIGIVModel.Distritos" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIGIVModel.EmpleadoDireccion" Width="1.5" PointX="3" PointY="24.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIGIVModel.Empleados" Width="1.5" PointX="3.75" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIGIVModel.Facturas" Width="1.5" PointX="6" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIGIVModel.Municipios" Width="1.5" PointX="1.5" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIGIVModel.Opciones" Width="1.5" PointX="5.75" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIGIVModel.Paises" Width="1.5" PointX="1.5" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIGIVModel.Pedidos" Width="1.5" PointX="13" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIGIVModel.Productos" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIGIVModel.ProductosNuevos" Width="1.5" PointX="13" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIGIVModel.Proveedores" Width="1.5" PointX="10.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIGIVModel.ProveedoresDireccion" Width="1.5" PointX="3" PointY="27.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIGIVModel.Roles" Width="1.5" PointX="5.75" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIGIVModel.TiposPago" Width="1.5" PointX="9" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIGIVModel.TransaccionesPago" Width="1.5" PointX="11.25" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIGIVModel.Usuarios" Width="1.5" PointX="8" PointY="16.5" IsExpanded="true" />
+        <AssociationConnector Association="SIGIVModel.FK_AsignacionRolesOpciones_Opciones" ManuallyRouted="false" />
+        <AssociationConnector Association="SIGIVModel.FK_AsignacionRolesOpciones_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="SIGIVModel.FK_Empleados_Cargos" ManuallyRouted="false" />
+        <AssociationConnector Association="SIGIVModel.FK_Productos_CategoriasProductos" ManuallyRouted="false" />
+        <AssociationConnector Association="SIGIVModel.FK__ClienteDi__idDis__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="SIGIVModel.FK_ClienteDireccion_Clientes" ManuallyRouted="false" />
+        <AssociationConnector Association="SIGIVModel.FK_Facturas_Clientes" ManuallyRouted="false" />
+        <AssociationConnector Association="SIGIVModel.FK_ContactosProveedor_Proveedores" ManuallyRouted="false" />
+        <AssociationConnector Association="SIGIVModel.FK_Departamentos_Paises" ManuallyRouted="false" />
+        <AssociationConnector Association="SIGIVModel.FK_Municipios_Departamentos" ManuallyRouted="false" />
+        <AssociationConnector Association="SIGIVModel.FK_DetallesFacturas_Facturas" ManuallyRouted="false" />
+        <AssociationConnector Association="SIGIVModel.FK_DetallesFacturas_Productos" ManuallyRouted="false" />
+        <AssociationConnector Association="SIGIVModel.FK_DetallesPedidos_Pedidos" ManuallyRouted="false" />
+        <AssociationConnector Association="SIGIVModel.FK_DetallesPedidos_ProductosNuevos" ManuallyRouted="false" />
+        <AssociationConnector Association="SIGIVModel.FK_Productos_DetallesStok" ManuallyRouted="false" />
+        <AssociationConnector Association="SIGIVModel.FK__EmpleadoD__idDis__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="SIGIVModel.FK__Proveedor__idDis__656C112C" ManuallyRouted="false" />
+        <AssociationConnector Association="SIGIVModel.FK_Distritos_Municipios" ManuallyRouted="false" />
+        <AssociationConnector Association="SIGIVModel.FK_Facturas_Empleados" ManuallyRouted="false" />
+        <AssociationConnector Association="SIGIVModel.FK_Usuarios_Empleados" ManuallyRouted="false" />
+        <AssociationConnector Association="SIGIVModel.FK_TransaccionesPago_Facturas" ManuallyRouted="false" />
+        <AssociationConnector Association="SIGIVModel.FK_Pedidos_Proveedores" ManuallyRouted="false" />
+        <AssociationConnector Association="SIGIVModel.FK_Usuarios_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="SIGIVModel.FK_TransaccionesPago_TiposPago" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -27,9 +27,9 @@ namespace SIGIV.CLS
                                     select new MunicipiosDTO
                                     {
                                         id = municipio.idMunicipio,
-                                        Municipio = municipio.Municipio,
-                                        Departamento = departamento.Departamento,
-                                        Pais = pais.Pais
+                                        Municipio = municipio.municipio,
+                                        Departamento = departamento.departamento,
+                                        Pais = pais.pais
                                     }).ToListAsync();
             }
             return municipios;
@@ -42,8 +42,8 @@ namespace SIGIV.CLS
             {
                 Municipios mun = await db.Municipios.Where(x => x.idMunicipio == id).FirstOrDefaultAsync();
                 municipio.id = mun.idMunicipio;
-                municipio.Municipio = mun.Municipio;
-                municipio.idDepartamento = mun.idDepartamento;
+                municipio.Municipio = mun.municipio;
+                municipio.idDepartamento =(int) mun.idDepartamento;
             }
             return municipio;
         }
@@ -55,7 +55,7 @@ namespace SIGIV.CLS
             {
                 Municipios municipio = new Municipios
                 {
-                    Municipio = Municipio,
+                    municipio = Municipio,
                     idDepartamento = idDepartamento
                 };
                 db.Municipios.Add(municipio);
@@ -71,7 +71,7 @@ namespace SIGIV.CLS
             using (var db = new SIGIVEntities())
             {
                 Municipios municipio = db.Municipios.Where(x => x.idMunicipio == id).FirstOrDefault();
-                municipio.Municipio = Municipio;
+                municipio.municipio = Municipio;
                 municipio.idDepartamento = idDepartamento;
                 db.Entry(municipio).State = EntityState.Modified;
                 int result = await db.SaveChangesAsync();

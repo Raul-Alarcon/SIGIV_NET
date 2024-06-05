@@ -22,7 +22,7 @@ namespace SIGIV.CLS
                                 select new PaisesCLS
                                 {
                                     id = pais.idPais,
-                                    nombre = pais.Pais
+                                    nombre = pais.pais
                                 }).ToListAsync();
             }
             return paises;
@@ -35,7 +35,7 @@ namespace SIGIV.CLS
             {
                 Paises pais = new Paises
                 {
-                    Pais = nombre
+                    pais = nombre
                 };
                 db.Paises.Add(pais);
                 int result = await db.SaveChangesAsync();
@@ -50,7 +50,7 @@ namespace SIGIV.CLS
             using (var db = new SIGIVEntities())
             {
                 Paises pais = db.Paises.Where(x => x.idPais == id).FirstOrDefault();
-                pais.Pais = nombre;
+                pais.pais = nombre;
                 db.Entry(pais).State = EntityState.Modified;
                 int result = await db.SaveChangesAsync();
                 success = result > 0;

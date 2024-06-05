@@ -14,15 +14,13 @@ namespace SIGIV.DataLayer
     
     public partial class Usuarios
     {
-        public int IDUsuario { get; set; }
-        public int idEmpleado { get; set; }
-        public int idRol { get; set; }
+        public int idUsuario { get; set; }
+        public Nullable<int> idEmpleado { get; set; }
+        public Nullable<int> idRol { get; set; }
         public string usuario { get; set; }
         public string clave { get; set; }
     
         public virtual Empleados Empleados { get; set; }
-        public virtual Empleados Empleados1 { get; set; }
         public virtual Roles Roles { get; set; }
-        public virtual Roles Roles1 { get; set; }
     }
 }

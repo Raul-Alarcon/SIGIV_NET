@@ -18,8 +18,6 @@ namespace SIGIV.DataLayer
         public Clientes()
         {
             this.ClienteDireccion = new HashSet<ClienteDireccion>();
-            this.ClienteDireccion1 = new HashSet<ClienteDireccion>();
-            this.ClienteDireccion2 = new HashSet<ClienteDireccion>();
             this.Facturas = new HashSet<Facturas>();
         }
     
@@ -32,10 +30,6 @@ namespace SIGIV.DataLayer
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ClienteDireccion> ClienteDireccion { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ClienteDireccion> ClienteDireccion1 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ClienteDireccion> ClienteDireccion2 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Facturas> Facturas { get; set; }
     }

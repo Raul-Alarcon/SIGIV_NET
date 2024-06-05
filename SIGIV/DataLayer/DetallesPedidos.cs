@@ -15,11 +15,11 @@ namespace SIGIV.DataLayer
     public partial class DetallesPedidos
     {
         public int idDetallep { get; set; }
-        public int idProductoNuevo { get; set; }
-        public int idPedido { get; set; }
-        public int cantidad { get; set; }
-        public decimal precioUnidad { get; set; }
-        public decimal descuetoUnidad { get; set; }
+        public Nullable<int> idProductoNuevo { get; set; }
+        public Nullable<int> idPedido { get; set; }
+        public Nullable<int> cantidad { get; set; }
+        public Nullable<decimal> precioUnidad { get; set; }
+        public Nullable<decimal> descuetoUnidad { get; set; }
         public string comentarios { get; set; }
     
         public virtual Pedidos Pedidos { get; set; }

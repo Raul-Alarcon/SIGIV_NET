@@ -14,13 +14,13 @@ namespace SIGIV.DataLayer
     
     public partial class ProveedoresDireccion
     {
-        public int ProveedoresDireccion1 { get; set; }
+        public int idProveedoresDireccion { get; set; }
         public string Linea1 { get; set; }
         public string Linea2 { get; set; }
         public Nullable<int> idProveedor { get; set; }
-        public Nullable<int> idDireccion { get; set; }
+        public string codigoPostal { get; set; }
+        public Nullable<int> idDistrito { get; set; }
     
-        public virtual Direcciones Direcciones { get; set; }
-        public virtual Proveedores Proveedores { get; set; }
+        public virtual Distritos Distritos { get; set; }
     }
 }

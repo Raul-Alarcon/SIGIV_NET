@@ -35,7 +35,6 @@ namespace SIGIV.DataLayer
         public virtual DbSet<DetallesFacturas> DetallesFacturas { get; set; }
         public virtual DbSet<DetallesPedidos> DetallesPedidos { get; set; }
         public virtual DbSet<DetallesStok> DetallesStok { get; set; }
-        public virtual DbSet<Direcciones> Direcciones { get; set; }
         public virtual DbSet<Distritos> Distritos { get; set; }
         public virtual DbSet<EmpleadoDireccion> EmpleadoDireccion { get; set; }
         public virtual DbSet<Empleados> Empleados { get; set; }
@@ -49,6 +48,8 @@ namespace SIGIV.DataLayer
         public virtual DbSet<Proveedores> Proveedores { get; set; }
         public virtual DbSet<ProveedoresDireccion> ProveedoresDireccion { get; set; }
         public virtual DbSet<Roles> Roles { get; set; }
+        public virtual DbSet<TiposPago> TiposPago { get; set; }
+        public virtual DbSet<TransaccionesPago> TransaccionesPago { get; set; }
         public virtual DbSet<Usuarios> Usuarios { get; set; }
     }
 }

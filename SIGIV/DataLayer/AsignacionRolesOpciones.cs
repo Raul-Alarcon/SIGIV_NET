@@ -15,12 +15,10 @@ namespace SIGIV.DataLayer
     public partial class AsignacionRolesOpciones
     {
         public int idAsignacionRol { get; set; }
-        public int idRol { get; set; }
-        public int idOpcion { get; set; }
+        public Nullable<int> idRol { get; set; }
+        public Nullable<int> idOpcion { get; set; }
     
         public virtual Opciones Opciones { get; set; }
-        public virtual Opciones Opciones1 { get; set; }
         public virtual Roles Roles { get; set; }
-        public virtual Roles Roles1 { get; set; }
     }
 }

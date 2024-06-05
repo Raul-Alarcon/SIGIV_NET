@@ -18,12 +18,7 @@ namespace SIGIV.DataLayer
         public Proveedores()
         {
             this.ContactosProveedor = new HashSet<ContactosProveedor>();
-            this.ContactosProveedor1 = new HashSet<ContactosProveedor>();
-            this.ContactosProveedor2 = new HashSet<ContactosProveedor>();
-            this.ContactosProveedor3 = new HashSet<ContactosProveedor>();
-            this.ContactosProveedor4 = new HashSet<ContactosProveedor>();
             this.Pedidos = new HashSet<Pedidos>();
-            this.ProveedoresDireccion = new HashSet<ProveedoresDireccion>();
         }
     
         public int idProveedor { get; set; }
@@ -37,16 +32,6 @@ namespace SIGIV.DataLayer
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ContactosProveedor> ContactosProveedor { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ContactosProveedor> ContactosProveedor1 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ContactosProveedor> ContactosProveedor2 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ContactosProveedor> ContactosProveedor3 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ContactosProveedor> ContactosProveedor4 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Pedidos> Pedidos { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ProveedoresDireccion> ProveedoresDireccion { get; set; }
     }
 }

@@ -18,7 +18,6 @@ namespace SIGIV.DataLayer
         public Opciones()
         {
             this.AsignacionRolesOpciones = new HashSet<AsignacionRolesOpciones>();
-            this.AsignacionRolesOpciones1 = new HashSet<AsignacionRolesOpciones>();
         }
     
         public int idOpcion { get; set; }
@@ -26,7 +25,5 @@ namespace SIGIV.DataLayer
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AsignacionRolesOpciones> AsignacionRolesOpciones { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AsignacionRolesOpciones> AsignacionRolesOpciones1 { get; set; }
     }
 }

@@ -108,9 +108,6 @@
     <Compile Include="DataLayer\DetallesStok.cs">
       <DependentUpon>SIGIVModels.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataLayer\Direcciones.cs">
-      <DependentUpon>SIGIVModels.tt</DependentUpon>
-    </Compile>
     <Compile Include="DataLayer\Distritos.cs">
       <DependentUpon>SIGIVModels.tt</DependentUpon>
     </Compile>
@@ -164,6 +161,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SIGIVModels.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataLayer\TiposPago.cs">
+      <DependentUpon>SIGIVModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataLayer\TransaccionesPago.cs">
+      <DependentUpon>SIGIVModels.tt</DependentUpon>
     </Compile>
     <Compile Include="DataLayer\Usuarios.cs">
       <DependentUpon>SIGIVModels.tt</DependentUpon>

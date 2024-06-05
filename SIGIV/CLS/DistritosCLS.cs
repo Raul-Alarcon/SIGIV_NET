@@ -31,10 +31,10 @@ namespace SIGIV.CLS
                                    select new DistritosDTO
                                    {
                                        ID = distrito.idDistrito,
-                                       Distrito = distrito.Distrito,
-                                       Municipio = municipio.Municipio,
-                                       Departamento = departamento.Departamento,
-                                       Pais = pais.Pais
+                                       Distrito = distrito.distrito,
+                                       Municipio = municipio.municipio,
+                                       Departamento = departamento.departamento,
+                                       Pais = pais.pais
                                    }).ToListAsync();
             }
             return distritos;
@@ -47,8 +47,8 @@ namespace SIGIV.CLS
             {
                 Distritos dis = await db.Distritos.Where(x => x.idDistrito == id).FirstOrDefaultAsync();
                 distrito.id = dis.idDistrito;
-                distrito.nombre = dis.Distrito;
-                distrito.idMunicipio = dis.idMunicipio;
+                distrito.nombre = dis.distrito;
+                distrito.idMunicipio =(int)dis.idMunicipio;
             }
             return distrito;
         }
@@ -60,7 +60,7 @@ namespace SIGIV.CLS
             {
                 Distritos distrito = new Distritos
                 {
-                    Distrito = nombre,
+                    distrito = nombre,
                     idMunicipio = idMunicipio
                 };
                 db.Distritos.Add(distrito);
@@ -76,7 +76,7 @@ namespace SIGIV.CLS
             using (var db = new SIGIVEntities())
             {
                 Distritos distrito = await db.Distritos.Where(x => x.idDistrito == id).FirstOrDefaultAsync();
-                distrito.Distrito = nombre;
+                distrito.distrito = nombre;
                 distrito.idMunicipio = idMunicipio;
                 db.Entry(distrito).State = EntityState.Modified;
                 int result = await db.SaveChangesAsync();

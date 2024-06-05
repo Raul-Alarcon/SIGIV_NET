@@ -16,17 +16,13 @@ namespace SIGIV.DataLayer
     {
         public int idContacto { get; set; }
         public string nombresContacto { get; set; }
-        public string ApellidosContacto { get; set; }
+        public string apellidosContacto { get; set; }
         public string cargoContacto { get; set; }
         public string telefonoContacto { get; set; }
         public string eMailContacto { get; set; }
         public string observacion { get; set; }
-        public int idProveedor { get; set; }
+        public Nullable<int> idProveedor { get; set; }
     
         public virtual Proveedores Proveedores { get; set; }
-        public virtual Proveedores Proveedores1 { get; set; }
-        public virtual Proveedores Proveedores2 { get; set; }
-        public virtual Proveedores Proveedores3 { get; set; }
-        public virtual Proveedores Proveedores4 { get; set; }
     }
 }

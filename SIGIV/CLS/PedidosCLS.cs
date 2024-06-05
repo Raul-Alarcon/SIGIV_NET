@@ -26,9 +26,9 @@ namespace SIGIV.CLS
                                  select new PedidosDTO
                                  {
                                      ID = ped.idPedido,
-                                     Proveedor = ped.idProveedor,
-                                     Pedido = ped.fechaPedido,
-                                     Recibido = ped.fechaRecibido,
+                                     Proveedor = (int)ped.idProveedor,
+                                     Pedido = (DateTime)ped.fechaPedido,
+                                     Recibido = (DateTime)ped.fechaRecibido,
                                      comentario = ped.comentario
                                  }).ToListAsync();
             }
@@ -42,9 +42,9 @@ namespace SIGIV.CLS
             {
                 DataLayer.Pedidos ped = await db.Pedidos.Where(x => x.idPedido == idPedido).FirstOrDefaultAsync();
                 pedido.id = ped.idPedido;
-                pedido.proveedor = ped.idProveedor;
-                pedido.pedidoFecha = ped.fechaPedido;
-                pedido.fechaRecibido = ped.fechaRecibido;
+                pedido.proveedor = (int)ped.idProveedor;
+                pedido.pedidoFecha = (DateTime)ped.fechaPedido;
+                pedido.fechaRecibido = (DateTime)ped.fechaRecibido;
                 pedido.comentario = ped.comentario;
             }
             return pedido;

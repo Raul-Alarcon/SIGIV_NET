@@ -12,15 +12,15 @@ namespace SIGIV.DataLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class EmpleadoDireccion
+    public partial class TransaccionesPago
     {
-        public int idEmpleadoDireccion { get; set; }
-        public string Linea1 { get; set; }
-        public string Linea2 { get; set; }
-        public string codigoPostal { get; set; }
-        public Nullable<int> idEmpleado { get; set; }
-        public Nullable<int> idDistrito { get; set; }
+        public int idTransaccion { get; set; }
+        public Nullable<int> idFactura { get; set; }
+        public Nullable<int> idTipoPago { get; set; }
+        public Nullable<decimal> monto { get; set; }
+        public Nullable<System.DateTime> fechaTransaccion { get; set; }
     
-        public virtual Distritos Distritos { get; set; }
+        public virtual Facturas Facturas { get; set; }
+        public virtual TiposPago TiposPago { get; set; }
     }
 }

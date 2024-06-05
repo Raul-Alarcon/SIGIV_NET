@@ -18,22 +18,14 @@ namespace SIGIV.DataLayer
         public Municipios()
         {
             this.Distritos = new HashSet<Distritos>();
-            this.Distritos1 = new HashSet<Distritos>();
-            this.Distritos2 = new HashSet<Distritos>();
         }
     
         public int idMunicipio { get; set; }
-        public string Municipio { get; set; }
-        public int idDepartamento { get; set; }
+        public string municipio { get; set; }
+        public Nullable<int> idDepartamento { get; set; }
     
         public virtual Departamentos Departamentos { get; set; }
-        public virtual Departamentos Departamentos1 { get; set; }
-        public virtual Departamentos Departamentos2 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Distritos> Distritos { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Distritos> Distritos1 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Distritos> Distritos2 { get; set; }
     }
 }

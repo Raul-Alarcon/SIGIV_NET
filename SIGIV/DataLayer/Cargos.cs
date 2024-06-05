@@ -18,8 +18,6 @@ namespace SIGIV.DataLayer
         public Cargos()
         {
             this.Empleados = new HashSet<Empleados>();
-            this.Empleados1 = new HashSet<Empleados>();
-            this.Empleados2 = new HashSet<Empleados>();
         }
     
         public int idCargo { get; set; }
@@ -27,9 +25,5 @@ namespace SIGIV.DataLayer
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Empleados> Empleados { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Empleados> Empleados1 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Empleados> Empleados2 { get; set; }
     }
 }

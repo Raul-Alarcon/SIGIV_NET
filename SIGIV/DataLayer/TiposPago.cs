@@ -12,25 +12,17 @@ namespace SIGIV.DataLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class Facturas
+    public partial class TiposPago
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Facturas()
+        public TiposPago()
         {
-            this.DetallesFacturas = new HashSet<DetallesFacturas>();
             this.TransaccionesPago = new HashSet<TransaccionesPago>();
         }
     
-        public int idFactura { get; set; }
-        public Nullable<System.DateTime> fechaFactura { get; set; }
-        public string comentario { get; set; }
-        public Nullable<int> idCliente { get; set; }
-        public Nullable<int> idEmpleado { get; set; }
+        public int idTipoPago { get; set; }
+        public string tipo { get; set; }
     
-        public virtual Clientes Clientes { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DetallesFacturas> DetallesFacturas { get; set; }
-        public virtual Empleados Empleados { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TransaccionesPago> TransaccionesPago { get; set; }
     }

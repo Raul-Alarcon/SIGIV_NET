@@ -117,12 +117,11 @@ namespace SIGIV.CLS
                 var model = await db.ProveedoresDireccion.Where(x => x.idProveedor == this.id).FirstOrDefaultAsync();
                 if (model != null)
                 {
-                    direccion.id = model.ProveedoresDireccion1;
+                    direccion.id = model.idProveedoresDireccion;
                     direccion.idProveedor = (int)model.idProveedor;
                     direccion.Linea1 = model.Linea1;
-                    direccion.Linea2 = model.Linea2;
-                    direccion.idDireccion = (int)model.idDireccion; 
-                    direccion.codigoPostal = (int)model.Direcciones.CodigoPostal;
+                    direccion.Linea2 = model.Linea2; 
+                    direccion.codigoPostal = model.codigoPostal;
                 }
             }
             return direccion;

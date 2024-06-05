@@ -32,9 +32,9 @@ namespace SIGIV.CLS
                                        ID = pro.idProducto,
                                        Producto = pro.nombreP,
                                        Descripcion = pro.descripcion,
-                                       Precio = pro.precio,
+                                       Precio = (decimal)pro.precio,
                                        Categoria = cat.categoria,
-                                       Stok = sto.cantidadStok
+                                       Stok = (int)sto.cantidadStok
                                    }).ToListAsync();
             }
             return productos;
@@ -49,10 +49,10 @@ namespace SIGIV.CLS
                 producto.id = pro.idProducto;
                 producto.producto = pro.nombreP;
                 producto.descripcion = pro.descripcion;
-                producto.precio = pro.precio;
-                producto.idCategoria = pro.idCategoria;
-                producto.idStok = pro.idStok;
-                producto.cantidadStok = pro.DetallesStok.cantidadStok;
+                producto.precio = (decimal)pro.precio;
+                producto.idCategoria = (int)pro.idCategoria;
+                producto.idStok = (int)pro.idStok;
+                producto.cantidadStok = (int)pro.DetallesStok.cantidadStok;
             }
             return producto;
         }

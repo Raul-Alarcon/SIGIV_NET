@@ -24,8 +24,8 @@ namespace SIGIV.CLS
                                        select new DepartamentosCLS
                                        {
                                            id = departamento.idDepartamento,
-                                           nombre = departamento.Departamento,
-                                           idPais = departamento.idPais
+                                           nombre = departamento.departamento,
+                                           idPais = (int)departamento.idPais
                                        }).ToListAsync();
             }
             return departamentos;
@@ -41,8 +41,8 @@ namespace SIGIV.CLS
                                        select new DepartamentoDTO
                                        {
                                            ID = departamento.idDepartamento,
-                                           Departamento = departamento.Departamento,
-                                           Pais = pais.Pais
+                                           Departamento = departamento.departamento,
+                                           Pais = pais.pais
                                        }).ToListAsync();
             }
             return departamentos;
@@ -56,8 +56,8 @@ namespace SIGIV.CLS
             {
                 Departamentos dep = await db.Departamentos.Where(x => x.idDepartamento == id).FirstOrDefaultAsync();
                 departamento.id = dep.idDepartamento;
-                departamento.nombre = dep.Departamento;
-                departamento.idPais = dep.idPais;
+                departamento.nombre = dep.departamento;
+                departamento.idPais = (int)dep.idPais;
             }
             return departamento;
         }
@@ -69,7 +69,7 @@ namespace SIGIV.CLS
             {
                 Departamentos departamento = new Departamentos
                 {
-                    Departamento = nombre,
+                    departamento = nombre,
                     idPais = idPais
                 };
                 db.Departamentos.Add(departamento);
@@ -85,7 +85,7 @@ namespace SIGIV.CLS
             using(var db = new SIGIVEntities())
             {
                 Departamentos departamento = db.Departamentos.Where(x => x.idDepartamento == id).FirstOrDefault();
-                departamento.Departamento = nombre;
+                departamento.departamento = nombre;
                 departamento.idPais = idPais;
                 db.Entry(departamento).State = System.Data.Entity.EntityState.Modified;
                 int result = await db.SaveChangesAsync();

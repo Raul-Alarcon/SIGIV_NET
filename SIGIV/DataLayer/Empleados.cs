@@ -17,35 +17,24 @@ namespace SIGIV.DataLayer
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Empleados()
         {
-            this.EmpleadoDireccion = new HashSet<EmpleadoDireccion>();
-            this.EmpleadoDireccion1 = new HashSet<EmpleadoDireccion>();
             this.Facturas = new HashSet<Facturas>();
             this.Usuarios = new HashSet<Usuarios>();
-            this.Usuarios1 = new HashSet<Usuarios>();
         }
     
         public int idEmpleado { get; set; }
         public string nombresEmpleado { get; set; }
         public string apellidosEmpleado { get; set; }
-        public System.DateTime fechaNacimiento { get; set; }
+        public Nullable<System.DateTime> fechaNacimiento { get; set; }
         public string dui { get; set; }
         public string ISSS { get; set; }
         public string telefono { get; set; }
         public string eMail { get; set; }
-        public int idCargo { get; set; }
+        public Nullable<int> idCargo { get; set; }
     
         public virtual Cargos Cargos { get; set; }
-        public virtual Cargos Cargos1 { get; set; }
-        public virtual Cargos Cargos2 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<EmpleadoDireccion> EmpleadoDireccion { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<EmpleadoDireccion> EmpleadoDireccion1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Facturas> Facturas { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Usuarios> Usuarios { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Usuarios> Usuarios1 { get; set; }
     }
 }

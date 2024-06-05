@@ -36,7 +36,7 @@ namespace SIGIV.CLS
                                  Telefono = emp.telefono,
                                  Correo = emp.eMail,
                                  Cargo = car.cargo,
-                                 FechaNacimiento = emp.fechaNacimiento
+                                 FechaNacimiento =(DateTime)emp.fechaNacimiento
                              }).ToListAsync();
             }
             return empleados;
@@ -91,12 +91,12 @@ namespace SIGIV.CLS
                 empleado.idEmpleado = emp.idEmpleado;
                 empleado.nombresEmpleado = emp.nombresEmpleado;
                 empleado.apellidosEmpleado = emp.apellidosEmpleado;
-                empleado.fechaNacimiento = emp.fechaNacimiento;
+                empleado.fechaNacimiento = (DateTime)emp.fechaNacimiento;
                 empleado.dui = emp.dui;
                 empleado.ISSS = emp.ISSS;
                 empleado.telefono = emp.telefono;
                 empleado.eMail = emp.eMail;
-                empleado.idCargo = emp.idCargo;
+                empleado.idCargo =(int)emp.idCargo;
             }
             return empleado;
         }

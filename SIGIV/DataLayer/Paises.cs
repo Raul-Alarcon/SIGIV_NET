@@ -18,18 +18,12 @@ namespace SIGIV.DataLayer
         public Paises()
         {
             this.Departamentos = new HashSet<Departamentos>();
-            this.Departamentos1 = new HashSet<Departamentos>();
-            this.Departamentos2 = new HashSet<Departamentos>();
         }
     
         public int idPais { get; set; }
-        public string Pais { get; set; }
+        public string pais { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Departamentos> Departamentos { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Departamentos> Departamentos1 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Departamentos> Departamentos2 { get; set; }
     }
 }

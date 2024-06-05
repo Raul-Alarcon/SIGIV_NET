@@ -17,23 +17,21 @@ namespace SIGIV.DataLayer
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Distritos()
         {
-            this.Direcciones = new HashSet<Direcciones>();
-            this.Direcciones1 = new HashSet<Direcciones>();
-            this.Direcciones2 = new HashSet<Direcciones>();
+            this.ClienteDireccion = new HashSet<ClienteDireccion>();
+            this.EmpleadoDireccion = new HashSet<EmpleadoDireccion>();
+            this.ProveedoresDireccion = new HashSet<ProveedoresDireccion>();
         }
     
         public int idDistrito { get; set; }
-        public string Distrito { get; set; }
-        public int idMunicipio { get; set; }
+        public string distrito { get; set; }
+        public Nullable<int> idMunicipio { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Direcciones> Direcciones { get; set; }
+        public virtual ICollection<ClienteDireccion> ClienteDireccion { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Direcciones> Direcciones1 { get; set; }
+        public virtual ICollection<EmpleadoDireccion> EmpleadoDireccion { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Direcciones> Direcciones2 { get; set; }
+        public virtual ICollection<ProveedoresDireccion> ProveedoresDireccion { get; set; }
         public virtual Municipios Municipios { get; set; }
-        public virtual Municipios Municipios1 { get; set; }
-        public virtual Municipios Municipios2 { get; set; }
     }
 }

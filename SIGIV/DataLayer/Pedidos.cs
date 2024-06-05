@@ -21,9 +21,9 @@ namespace SIGIV.DataLayer
         }
     
         public int idPedido { get; set; }
-        public int idProveedor { get; set; }
-        public System.DateTime fechaPedido { get; set; }
-        public System.DateTime fechaRecibido { get; set; }
+        public Nullable<int> idProveedor { get; set; }
+        public Nullable<System.DateTime> fechaPedido { get; set; }
+        public Nullable<System.DateTime> fechaRecibido { get; set; }
         public string comentario { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
