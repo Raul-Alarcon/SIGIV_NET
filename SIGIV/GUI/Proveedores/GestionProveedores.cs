@@ -200,13 +200,18 @@ namespace SIGIV.GUI.Proveedores
 
         private void btnAgregarContacto_Click(object sender, EventArgs e)
         {
+            // pasamos el proveedor seleccionado a la otra vista
             EdicionContactoProveedor FormularioProveedor = new EdicionContactoProveedor();
             FormularioProveedor.ShowDialog();
         }
 
-        private void btnAgregarDireccion_Click(object sender, EventArgs e)
+        private async void btnAgregarDireccion_Click(object sender, EventArgs e)
         {
-            DireccionEdicionProveedor FormularioDireccion = new DireccionEdicionProveedor();
+            var dto = (ProveedorDTO)dtgDatos.CurrentRow.DataBoundItem;
+            proveedorSeleccionado = await ProveedorCLS.GetByIDAsync(dto.ID);
+
+            // pasamos el proveedor seleccionado a la otra vista
+            DireccionEdicionProveedor FormularioDireccion = new DireccionEdicionProveedor(proveedorSeleccionado);
             FormularioDireccion.ShowDialog();
         }
 
