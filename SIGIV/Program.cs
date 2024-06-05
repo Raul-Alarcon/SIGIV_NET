@@ -4,6 +4,7 @@ using SIGIV.GUI.Clientes;
 using SIGIV.GUI.Departamentos;
 using SIGIV.GUI.Distritos;
 using SIGIV.GUI.Empleados;
+using SIGIV.GUI.Facturas;
 using SIGIV.GUI.Municipios;
 using SIGIV.GUI.Paises;
 using SIGIV.GUI.Productos;
