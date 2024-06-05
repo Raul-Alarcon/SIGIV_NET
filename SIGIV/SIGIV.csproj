@@ -183,6 +183,12 @@
     <Compile Include="GUI\Clientes\AgregarCliente.Designer.cs">
       <DependentUpon>AgregarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Clientes\DireccionCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Clientes\DireccionCliente.Designer.cs">
+      <DependentUpon>DireccionCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Clientes\GestionCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +212,12 @@
     </Compile>
     <Compile Include="GUI\Empleados\AgregarEmpleado.Designer.cs">
       <DependentUpon>AgregarEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Empleados\DireccionEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Empleados\DireccionEmpleado.Designer.cs">
+      <DependentUpon>DireccionEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Empleados\GestionEmpleados.cs">
       <SubType>Form</SubType>
@@ -266,6 +278,9 @@
     <EmbeddedResource Include="GUI\Clientes\AgregarCliente.resx">
       <DependentUpon>AgregarCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Clientes\DireccionCliente.resx">
+      <DependentUpon>DireccionCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Clientes\GestionCliente.resx">
       <DependentUpon>GestionCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -277,6 +292,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Empleados\AgregarEmpleado.resx">
       <DependentUpon>AgregarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Empleados\DireccionEmpleado.resx">
+      <DependentUpon>DireccionEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Empleados\GestionEmpleados.resx">
       <DependentUpon>GestionEmpleados.cs</DependentUpon>
