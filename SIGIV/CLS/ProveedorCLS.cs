@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace SIGIV.CLS
 {
-    internal class ProveedorCLS
+    public class ProveedorCLS
     {
         public int id { get; set; }
         public string compania { get; set; }
@@ -108,6 +108,29 @@ namespace SIGIV.CLS
             return await DeleteAsync(this.id);
         }
 
+        // obtenes la direccion del provedor
+        public async Task<DireccionProveedorCLS> GetDireccionAsync()
+        {
+            DireccionProveedorCLS direccion = new DireccionProveedorCLS();
+            using (SIGIVEntities db = new SIGIVEntities())
+            {
+                var model = await db.ProveedoresDireccion.Where(x => x.idProveedor == this.id).FirstOrDefaultAsync();
+                if (model != null)
+                {
+                    direccion.id = model.ProveedoresDireccion1;
+                    direccion.idProveedor = (int)model.idProveedor;
+                    direccion.Linea1 = model.Linea1;
+                    direccion.Linea2 = model.Linea2;
+                    direccion.idDireccion = (int)model.idDireccion; 
+                    direccion.codigoPostal = (int)model.Direcciones.CodigoPostal;
+                }
+            }
+            return direccion;
+        }
+ 
+        // tareas de tipo Task
+        // obtienes el contacto del provedor
+        // returna un objeto de tipo ContactoProveedorCLS 
         public void validar()
         {
             if (string.IsNullOrEmpty(compania)) throw new ArgumentException("El nombre de la compañía no puede estar vacío");
