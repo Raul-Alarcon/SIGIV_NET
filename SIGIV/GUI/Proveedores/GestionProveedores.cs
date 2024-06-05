@@ -198,21 +198,37 @@ namespace SIGIV.GUI.Proveedores
             proveedorSeleccionado = null;
         }
 
-        private void btnAgregarContacto_Click(object sender, EventArgs e)
+        private async void btnAgregarContacto_Click(object sender, EventArgs e)
         {
             // pasamos el proveedor seleccionado a la otra vista
-            EdicionContactoProveedor FormularioProveedor = new EdicionContactoProveedor();
-            FormularioProveedor.ShowDialog();
+            try
+            {
+                var dto = (ProveedorDTO)dtgDatos.CurrentRow.DataBoundItem;
+                proveedorSeleccionado = await ProveedorCLS.GetByIDAsync(dto.ID);
+                EdicionContactoProveedor FormularioProveedor = new EdicionContactoProveedor(proveedorSeleccionado);
+                FormularioProveedor.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private async void btnAgregarDireccion_Click(object sender, EventArgs e)
         {
-            var dto = (ProveedorDTO)dtgDatos.CurrentRow.DataBoundItem;
-            proveedorSeleccionado = await ProveedorCLS.GetByIDAsync(dto.ID);
+            try
+            {
+                var dto = (ProveedorDTO)dtgDatos.CurrentRow.DataBoundItem;
+                proveedorSeleccionado = await ProveedorCLS.GetByIDAsync(dto.ID);
 
-            // pasamos el proveedor seleccionado a la otra vista
-            DireccionEdicionProveedor FormularioDireccion = new DireccionEdicionProveedor(proveedorSeleccionado);
-            FormularioDireccion.ShowDialog();
+                // pasamos el proveedor seleccionado a la otra vista
+                DireccionEdicionProveedor FormularioDireccion = new DireccionEdicionProveedor(proveedorSeleccionado);
+                FormularioDireccion.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private async void btnGuardar_Click(object sender, EventArgs e)

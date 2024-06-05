@@ -131,6 +131,27 @@ namespace SIGIV.CLS
         // tareas de tipo Task
         // obtienes el contacto del provedor
         // returna un objeto de tipo ContactoProveedorCLS 
+
+        public async Task<ContactoProveedorCLS> GetContactoAsync()
+        {
+            ContactoProveedorCLS contacto = new ContactoProveedorCLS();
+            using (SIGIVEntities db = new SIGIVEntities())
+            {
+                var model = await db.ContactosProveedor.Where(x => x.idProveedor == this.id).FirstOrDefaultAsync();
+                if (model != null)
+                {
+                    contacto.id = model.idContacto;
+                    contacto.idProveedor = (int)model.idProveedor;
+                    contacto.nombresContacto = model.nombresContacto;
+                    contacto.ApellidosContacto = model.ApellidosContacto;
+                    contacto.cargoContacto = model.cargoContacto;
+                    contacto.telefonoContacto = model.telefonoContacto;
+                    contacto.eMailContacto = model.eMailContacto;
+                    contacto.observacion = model.observacion;
+                }
+            }
+            return contacto;
+        }
         public void validar()
         {
             if (string.IsNullOrEmpty(compania)) throw new ArgumentException("El nombre de la compañía no puede estar vacío");
