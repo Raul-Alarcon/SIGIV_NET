@@ -4,6 +4,7 @@ using SIGIV.GUI.Clientes;
 using SIGIV.GUI.Departamentos;
 using SIGIV.GUI.Distritos;
 using SIGIV.GUI.Empleados;
+using SIGIV.GUI.Facturas;
 using SIGIV.GUI.Municipios;
 using SIGIV.GUI.Paises;
 using SIGIV.GUI.Productos;
@@ -26,7 +27,7 @@ namespace SIGIV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GestionProveedores());
+            Application.Run(new AgregarFacturas());
         }
     }
 }
