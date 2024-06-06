@@ -231,6 +231,12 @@
     <Compile Include="GUI\Empleados\GestionEmpleados.Designer.cs">
       <DependentUpon>GestionEmpleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Facturas\AgregarFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Facturas\AgregarFacturas.Designer.cs">
+      <DependentUpon>AgregarFacturas.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Municipios\GestionMunicipios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -322,6 +328,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Empleados\GestionEmpleados.resx">
       <DependentUpon>GestionEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Facturas\AgregarFacturas.resx">
+      <DependentUpon>AgregarFacturas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Municipios\GestionMunicipios.resx">
       <DependentUpon>GestionMunicipios.cs</DependentUpon>
