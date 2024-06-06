@@ -95,5 +95,10 @@ namespace SIGIV.GUI.Clientes
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
