@@ -327,11 +327,17 @@
     <Compile Include="GUI\Proveedores\GestionProveedores.Designer.cs">
       <DependentUpon>GestionProveedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Usuarios\GestionUsuarios.cs">
+    <Compile Include="GUI\Roles\AgregarRol.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Usuarios\GestionUsuarios.Designer.cs">
-      <DependentUpon>GestionUsuarios.cs</DependentUpon>
+    <Compile Include="GUI\Roles\AgregarRol.Designer.cs">
+      <DependentUpon>AgregarRol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Usuarios\AgregarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Usuarios\AgregarUsuarios.Designer.cs">
+      <DependentUpon>AgregarUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Login\Login.cs">
       <SubType>Form</SubType>
@@ -431,8 +437,11 @@
     <EmbeddedResource Include="GUI\Proveedores\GestionProveedores.resx">
       <DependentUpon>GestionProveedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Usuarios\GestionUsuarios.resx">
-      <DependentUpon>GestionUsuarios.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Roles\AgregarRol.resx">
+      <DependentUpon>AgregarRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Usuarios\AgregarUsuarios.resx">
+      <DependentUpon>AgregarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
