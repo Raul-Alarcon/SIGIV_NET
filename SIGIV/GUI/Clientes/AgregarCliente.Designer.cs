@@ -54,6 +54,7 @@
             this.btnAgregarDireccion.TabIndex = 35;
             this.btnAgregarDireccion.Text = "Agregar Dirección";
             this.btnAgregarDireccion.UseVisualStyleBackColor = true;
+            this.btnAgregarDireccion.Click += new System.EventHandler(this.btnAgregarDireccion_Click);
             // 
             // btnAceptar
             // 
@@ -135,7 +136,6 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(268, 20);
             this.txtNombre.TabIndex = 19;
-            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // label1
             // 

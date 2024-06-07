@@ -29,7 +29,7 @@ namespace SIGIV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GestionProductosNuevos());
+            Application.Run(new GestionEmpleados());
         }
     }
 }
