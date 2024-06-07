@@ -26,9 +26,9 @@ namespace SIGIV.CLS
             using (DataLayer.SIGIVEntities db = new DataLayer.SIGIVEntities())
             {
                 empleados = await (from emp in db.Empleados
-                                                                     join car in db.Cargos on emp.idCargo equals car.idCargo
-                                                                                                       select new EmpleadoDTO
-                                                                                                       {
+                                   join car in db.Cargos on emp.idCargo equals car.idCargo
+                                   select new EmpleadoDTO
+                                   {
                                        ID = emp.idEmpleado,
                                        Nombres = emp.nombresEmpleado,
                                        Apellidos = emp.apellidosEmpleado,
