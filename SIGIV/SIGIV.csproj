@@ -517,9 +517,19 @@
       <DependentUpon>SIGIVModels.edmx</DependentUpon>
       <LastGenOutput>SIGIVModels.cs</LastGenOutput>
     </Content>
+    <Content Include="Recursos\Clientes.png" />
+    <Content Include="Recursos\Empleados.png" />
+    <Content Include="Recursos\Facturas.png" />
+    <Content Include="Recursos\home.png" />
     <Content Include="Recursos\Intersect.png" />
+    <Content Include="Recursos\Pedidos.png" />
+    <Content Include="Recursos\Productos.png" />
+    <Content Include="Recursos\Proveedores.png" />
+    <Content Include="Recursos\Reportes.png" />
+    <Content Include="Recursos\settings.png" />
     <Content Include="Recursos\SIGIVLogo.jpeg" />
     <Content Include="Recursos\SIGIVLogo2.jpeg" />
+    <Content Include="Recursos\Usuarios.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
