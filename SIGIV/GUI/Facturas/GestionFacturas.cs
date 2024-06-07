@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace SIGIV.GUI.Facturas
 {
-    public partial class AgregarFacturas : Form
+    public partial class GestionFacturas : Form
     {
-        public AgregarFacturas()
+        public GestionFacturas()
         {
             InitializeComponent();
         }
-
     }
 }

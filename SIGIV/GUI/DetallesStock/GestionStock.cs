@@ -8,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SIGIV.GUI.Facturas
+namespace SIGIV.GUI.DetallesStock
 {
-    public partial class AgregarFacturas : Form
+    public partial class GestionStock : Form
     {
-        public AgregarFacturas()
+        public GestionStock()
         {
             InitializeComponent();
         }
-
     }
 }

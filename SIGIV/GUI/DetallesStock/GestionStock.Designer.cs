@@ -1,6 +1,6 @@
-﻿namespace SIGIV.GUI.CategoriaProductos
+﻿namespace SIGIV.GUI.DetallesStock
 {
-    partial class GestionCategoriaProductos
+    partial class GestionStock
     {
         /// <summary>
         /// Required designer variable.
@@ -30,22 +30,21 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dgvCategorias = new System.Windows.Forms.DataGridView();
+            this.dgvDatos = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnEjecutar = new System.Windows.Forms.Button();
             this.rbEliminar = new System.Windows.Forms.RadioButton();
             this.rbModificar = new System.Windows.Forms.RadioButton();
             this.rbNuevo = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txbDetalles = new System.Windows.Forms.TextBox();
-            this.txbNombre = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.nudCantidad = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -57,31 +56,28 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(15);
-            this.panel1.Size = new System.Drawing.Size(444, 450);
-            this.panel1.TabIndex = 1;
+            this.panel1.Size = new System.Drawing.Size(387, 450);
+            this.panel1.TabIndex = 2;
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.dgvCategorias);
+            this.groupBox3.Controls.Add(this.dgvDatos);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Location = new System.Drawing.Point(15, 261);
+            this.groupBox3.Location = new System.Drawing.Point(15, 204);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(414, 174);
+            this.groupBox3.Size = new System.Drawing.Size(357, 231);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Lista de Categorias";
+            this.groupBox3.Text = "Lista de Paises";
             // 
-            // dgvCategorias
+            // dgvDatos
             // 
-            this.dgvCategorias.AllowUserToAddRows = false;
-            this.dgvCategorias.AllowUserToDeleteRows = false;
-            this.dgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCategorias.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvCategorias.Location = new System.Drawing.Point(3, 16);
-            this.dgvCategorias.Name = "dgvCategorias";
-            this.dgvCategorias.ReadOnly = true;
-            this.dgvCategorias.Size = new System.Drawing.Size(408, 155);
-            this.dgvCategorias.TabIndex = 0;
+            this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDatos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDatos.Location = new System.Drawing.Point(3, 16);
+            this.dgvDatos.Name = "dgvDatos";
+            this.dgvDatos.Size = new System.Drawing.Size(351, 212);
+            this.dgvDatos.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -90,22 +86,21 @@
             this.groupBox2.Controls.Add(this.rbModificar);
             this.groupBox2.Controls.Add(this.rbNuevo);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox2.Location = new System.Drawing.Point(15, 178);
+            this.groupBox2.Location = new System.Drawing.Point(15, 129);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(414, 83);
+            this.groupBox2.Size = new System.Drawing.Size(357, 75);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Operaciones";
             // 
             // btnEjecutar
             // 
-            this.btnEjecutar.Location = new System.Drawing.Point(316, 34);
+            this.btnEjecutar.Location = new System.Drawing.Point(269, 34);
             this.btnEjecutar.Name = "btnEjecutar";
-            this.btnEjecutar.Size = new System.Drawing.Size(75, 23);
+            this.btnEjecutar.Size = new System.Drawing.Size(85, 23);
             this.btnEjecutar.TabIndex = 3;
             this.btnEjecutar.Text = "Ejecutar";
             this.btnEjecutar.UseVisualStyleBackColor = true;
-            this.btnEjecutar.Click += new System.EventHandler(this.btnEjecutar_Click);
             // 
             // rbEliminar
             // 
@@ -143,67 +138,47 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txbDetalles);
-            this.groupBox1.Controls.Add(this.txbNombre);
+            this.groupBox1.Controls.Add(this.nudCantidad);
+            this.groupBox1.Controls.Add(this.txtDescripcion);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(15, 15);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(414, 163);
+            this.groupBox1.Size = new System.Drawing.Size(357, 114);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Formulario";
             // 
-            // label2
+            // txtDescripcion
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 80);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Detalles";
+            this.txtDescripcion.Location = new System.Drawing.Point(18, 57);
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(333, 51);
+            this.txtDescripcion.TabIndex = 1;
             // 
-            // label1
+            // nudCantidad
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Categoria";
+            this.nudCantidad.Location = new System.Drawing.Point(18, 19);
+            this.nudCantidad.Name = "nudCantidad";
+            this.nudCantidad.Size = new System.Drawing.Size(333, 20);
+            this.nudCantidad.TabIndex = 3;
             // 
-            // txbDetalles
-            // 
-            this.txbDetalles.Location = new System.Drawing.Point(18, 96);
-            this.txbDetalles.Multiline = true;
-            this.txbDetalles.Name = "txbDetalles";
-            this.txbDetalles.Size = new System.Drawing.Size(373, 47);
-            this.txbDetalles.TabIndex = 2;
-            // 
-            // txbNombre
-            // 
-            this.txbNombre.Location = new System.Drawing.Point(18, 43);
-            this.txbNombre.Multiline = true;
-            this.txbNombre.Name = "txbNombre";
-            this.txbNombre.Size = new System.Drawing.Size(373, 20);
-            this.txbNombre.TabIndex = 1;
-            // 
-            // GestionCategoriaProductos
+            // GestionStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(444, 450);
+            this.ClientSize = new System.Drawing.Size(387, 450);
             this.Controls.Add(this.panel1);
-            this.Name = "GestionCategoriaProductos";
-            this.Text = "GestionCategoriaProductos";
+            this.Name = "GestionStock";
+            this.Text = "GestionStock";
             this.panel1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -212,16 +187,14 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.DataGridView dgvDatos;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnEjecutar;
         private System.Windows.Forms.RadioButton rbEliminar;
         private System.Windows.Forms.RadioButton rbModificar;
         private System.Windows.Forms.RadioButton rbNuevo;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txbDetalles;
-        private System.Windows.Forms.TextBox txbNombre;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvCategorias;
+        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.NumericUpDown nudCantidad;
     }
 }
