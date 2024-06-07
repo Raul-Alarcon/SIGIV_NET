@@ -43,7 +43,7 @@ namespace SIGIV
                         ShowContent(new GUI.Empleados.GestionEmpleados());
                         break;
                     case "settings":
-                        ShowContent(new GUI.Usuarios.GestionUsuarios());
+                        ShowContent(new GUI.Usuarios.AgregarUsuarios());
                         break;
                     default: break; 
                 }

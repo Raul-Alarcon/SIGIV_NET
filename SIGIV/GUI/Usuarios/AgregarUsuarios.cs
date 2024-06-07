@@ -8,13 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SIGIV.GUI.Pedidos
+namespace SIGIV.GUI.Usuarios
 {
-    public partial class GestionPedidos : Form
+    public partial class AgregarUsuarios : Form
     {
-        public GestionPedidos()
+        public AgregarUsuarios()
         {
             InitializeComponent();
         }
+
+  
     }
 }

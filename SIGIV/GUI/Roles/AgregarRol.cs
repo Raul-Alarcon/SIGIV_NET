@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SIGIV.GUI.Pedidos
+namespace SIGIV.GUI.Roles
 {
-    public partial class GestionPedidos : Form
+    public partial class AgregarRol : Form
     {
-        public GestionPedidos()
+        public AgregarRol()
         {
             InitializeComponent();
         }

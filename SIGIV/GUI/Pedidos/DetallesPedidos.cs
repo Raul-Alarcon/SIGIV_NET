@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SIGIV.GUI.Pedidos
 {
-    public partial class GestionPedidos : Form
+    public partial class DetallesPedidos : Form
     {
-        public GestionPedidos()
+        public DetallesPedidos()
         {
             InitializeComponent();
         }

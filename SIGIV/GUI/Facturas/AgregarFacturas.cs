@@ -16,5 +16,6 @@ namespace SIGIV.GUI.Facturas
         {
             InitializeComponent();
         }
+
     }
 }

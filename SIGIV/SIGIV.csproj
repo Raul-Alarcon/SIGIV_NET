@@ -68,11 +68,13 @@
     <Compile Include="CLS\ClienteCLS.cs" />
     <Compile Include="CLS\ContactoProveedorCLS.cs" />
     <Compile Include="CLS\DepartamentosCLS.cs" />
+    <Compile Include="CLS\DetallesStockCLS.cs" />
     <Compile Include="CLS\DireccionCLS.cs" />
     <Compile Include="CLS\DireccionProveedorCLS.cs" />
     <Compile Include="CLS\DistritosCLS.cs" />
     <Compile Include="CLS\DTO\ClienteDTO.cs" />
     <Compile Include="CLS\DTO\DepartamentoDTO.cs" />
+    <Compile Include="CLS\DTO\DestallesStockDTO.cs" />
     <Compile Include="CLS\DTO\DistritosDTO.cs" />
     <Compile Include="CLS\DTO\EmpleadoDTO.cs" />
     <Compile Include="CLS\DTO\MunicipiosDTO.cs" />
@@ -236,6 +238,12 @@
     <Compile Include="GUI\Departamentos\GestionDepartamentos.Designer.cs">
       <DependentUpon>GestionDepartamentos.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\DetallesStock\GestionStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DetallesStock\GestionStock.Designer.cs">
+      <DependentUpon>GestionStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Distritos\GestionDistritos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -266,6 +274,12 @@
     <Compile Include="GUI\Facturas\AgregarFacturas.Designer.cs">
       <DependentUpon>AgregarFacturas.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Facturas\GestionFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Facturas\GestionFacturas.Designer.cs">
+      <DependentUpon>GestionFacturas.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Municipios\GestionMunicipios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -277,6 +291,12 @@
     </Compile>
     <Compile Include="GUI\Paises\GestionPaises.Designer.cs">
       <DependentUpon>GestionPaises.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Pedidos\DetallesPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Pedidos\DetallesPedidos.Designer.cs">
+      <DependentUpon>DetallesPedidos.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Pedidos\GestionPedidos.cs">
       <SubType>Form</SubType>
@@ -308,11 +328,17 @@
     <Compile Include="GUI\Proveedores\GestionProveedores.Designer.cs">
       <DependentUpon>GestionProveedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Usuarios\GestionUsuarios.cs">
+    <Compile Include="GUI\Roles\AgregarRol.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Usuarios\GestionUsuarios.Designer.cs">
-      <DependentUpon>GestionUsuarios.cs</DependentUpon>
+    <Compile Include="GUI\Roles\AgregarRol.Designer.cs">
+      <DependentUpon>AgregarRol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Usuarios\AgregarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Usuarios\AgregarUsuarios.Designer.cs">
+      <DependentUpon>AgregarUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Login\Login.cs">
       <SubType>Form</SubType>
@@ -367,6 +393,9 @@
     <EmbeddedResource Include="GUI\Departamentos\GestionDepartamentos.resx">
       <DependentUpon>GestionDepartamentos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DetallesStock\GestionStock.resx">
+      <DependentUpon>GestionStock.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Distritos\GestionDistritos.resx">
       <DependentUpon>GestionDistritos.cs</DependentUpon>
     </EmbeddedResource>
@@ -382,11 +411,17 @@
     <EmbeddedResource Include="GUI\Facturas\AgregarFacturas.resx">
       <DependentUpon>AgregarFacturas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Facturas\GestionFacturas.resx">
+      <DependentUpon>GestionFacturas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Municipios\GestionMunicipios.resx">
       <DependentUpon>GestionMunicipios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Paises\GestionPaises.resx">
       <DependentUpon>GestionPaises.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Pedidos\DetallesPedidos.resx">
+      <DependentUpon>DetallesPedidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Pedidos\GestionPedidos.resx">
       <DependentUpon>GestionPedidos.cs</DependentUpon>
@@ -403,8 +438,11 @@
     <EmbeddedResource Include="GUI\Proveedores\GestionProveedores.resx">
       <DependentUpon>GestionProveedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Usuarios\GestionUsuarios.resx">
-      <DependentUpon>GestionUsuarios.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Roles\AgregarRol.resx">
+      <DependentUpon>AgregarRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Usuarios\AgregarUsuarios.resx">
+      <DependentUpon>AgregarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

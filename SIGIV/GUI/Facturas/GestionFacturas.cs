@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SIGIV.GUI.Usuarios
+namespace SIGIV.GUI.Facturas
 {
-    public partial class GestionUsuarios : Form
+    public partial class GestionFacturas : Form
     {
-        public GestionUsuarios()
+        public GestionFacturas()
         {
             InitializeComponent();
         }

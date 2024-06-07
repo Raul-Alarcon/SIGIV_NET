@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SIGIV.GUI.Pedidos
+namespace SIGIV.GUI.DetallesStock
 {
-    public partial class GestionPedidos : Form
+    public partial class GestionStock : Form
     {
-        public GestionPedidos()
+        public GestionStock()
         {
             InitializeComponent();
         }
