@@ -85,7 +85,19 @@
     <Compile Include="CLS\ProductoCLS.cs" />
     <Compile Include="CLS\ProveedorCLS.cs" />
     <Compile Include="CLS\StockCLS.cs" />
+    <Compile Include="Components\AccionBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\AccionBar.Designer.cs">
+      <DependentUpon>AccionBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\CustomPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Components\CustomTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\DragPanel.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="DashBoard.cs">
@@ -295,6 +307,12 @@
     <Compile Include="GUI\Proveedores\GestionProveedores.Designer.cs">
       <DependentUpon>GestionProveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Usuarios\GestionUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Usuarios\GestionUsuarios.Designer.cs">
+      <DependentUpon>GestionUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -321,6 +339,15 @@
       <DependentUpon>VentasMensualesProducto.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="Components\AccionBar.resx">
+      <DependentUpon>AccionBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\DragPanel.resx">
+      <DependentUpon>DragPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashBoard.resx">
+      <DependentUpon>DashBoard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Cargos\GestionCargo.resx">
       <DependentUpon>GestionCargo.cs</DependentUpon>
     </EmbeddedResource>
@@ -374,6 +401,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Proveedores\GestionProveedores.resx">
       <DependentUpon>GestionProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Usuarios\GestionUsuarios.resx">
+      <DependentUpon>GestionUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -436,6 +466,7 @@
       <DependentUpon>SIGIVModels.edmx</DependentUpon>
       <LastGenOutput>SIGIVModels.cs</LastGenOutput>
     </Content>
+    <Content Include="Recursos\Intersect.png" />
     <Content Include="Recursos\SIGIVLogo.jpeg" />
     <Content Include="Recursos\SIGIVLogo2.jpeg" />
   </ItemGroup>

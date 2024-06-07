@@ -18,6 +18,7 @@ namespace SIGIV
         {
             InitializeComponent();
             var materialSkinManager = MaterialSkinManager.Instance;
+            this.FormBorderStyle = FormBorderStyle.None;
             //materialSkinManager.AddFormToManage(this);
 
             //materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
@@ -27,6 +28,37 @@ namespace SIGIV
             //    Primary.Brown800, 
             //    Accent.Blue100, 
             //    TextShade.WHITE);
+        }
+
+        private void buttonSiderBard_Click(object sender, EventArgs e)
+        {
+            if(sender is Button button)
+            {
+                switch (button.Name)
+                {
+                    case "home":
+                        MessageBox.Show("Esta sera la navegacion");
+                        break;
+                    case "empleados":
+                        ShowContent(new GUI.Empleados.GestionEmpleados());
+                        break;
+                    case "settings":
+                        ShowContent(new GUI.Usuarios.GestionUsuarios());
+                        break;
+                    default: break;
+                }
+            }
+        }
+
+        private void ShowContent(Form content)
+        { 
+            content.TopLevel = false;
+            content.FormBorderStyle = FormBorderStyle.None;
+            content.Dock = DockStyle.Fill;
+            ContentLayout.Controls.Add(content);
+            ContentLayout.Tag = content;
+            content.BringToFront();
+            content.Show();
         }
     }
 }
