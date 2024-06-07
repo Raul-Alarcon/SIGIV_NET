@@ -88,38 +88,45 @@ namespace SIGIV.GUI.Proveedores
 
         private async Task RegistrarDireccion()
         {
-            DireccionCLS direccion = new DireccionCLS
+            DireccionProveedorCLS direccion = new DireccionProveedorCLS
             {
-                CodigoPostal = Convert.ToInt32(txbCodigoPostal.Text),
-                idDistrito = (int)cmbDirecciones.SelectedValue
+                Linea1 = txbLinea1.Text,
+                Linea2 = txbLinea2.Text,
+                codigoPostal = txbCodigoPostal.Text,
+                idProveedor = proveedorSeleccionado.id,
+                idDireccion = (int)cmbDirecciones.SelectedValue
             };
-
-            var direccionRegistrada = false;// await direccion.SaveAndReturnAsync();
-
-            if (direccionRegistrada  == null) throw new Exception("No se pudo registrar la direccion del proveedor");
-
-            direccionProveedor.idProveedor = proveedorSeleccionado.id;
-            direccionProveedor.Linea1 = txbLinea1.Text;
-            direccionProveedor.Linea2 = txbLinea2.Text; 
-
-            bool result = false; // await direccionProveedor.SaveAsync(); 
-            if (!result) throw new Exception("No se pudo registrar la direccion del proveedor");
-
-            MessageBox.Show("Direccion se registro correctamente", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close();
+            direccion.Validar();
+            var direccionRegistrada = await direccion.SaveAsync();
+            if(direccionRegistrada)
+            {
+                MessageBox.Show("Direccion registrada correctamente", "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Ocurrió un error al registrar la direccion", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private async Task ActualizarDireccion()
         {
+            direccionProveedor.idProveedor = proveedorSeleccionado.id;
             direccionProveedor.Linea1 = txbLinea1.Text;
             direccionProveedor.Linea2 = txbLinea2.Text;
-            // avaluar el id de la direccion con respecto al id de distritos
-            bool result = false; // await direccionProveedor.UpdateAsync();
-
-            if(!result) throw new Exception("No se pudo actualizar la direccion del proveedor");
-
-            MessageBox.Show("Direccion actualizada correctamente", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close();
+            direccionProveedor.codigoPostal = txbCodigoPostal.Text;
+            direccionProveedor.idDireccion = (int)cmbDirecciones.SelectedValue;
+            direccionProveedor.Validar();
+            var direccionActualizada = await direccionProveedor.UpdateAsync();
+            if(direccionActualizada)
+            {
+                MessageBox.Show("Direccion actualizada correctamente", "Actualización exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Ocurrió un error al actualizar la direccion", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

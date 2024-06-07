@@ -26,18 +26,19 @@ namespace SIGIV.CLS
             using (DataLayer.SIGIVEntities db = new DataLayer.SIGIVEntities())
             {
                 empleados = await (from emp in db.Empleados
-                             join car in db.Cargos on emp.idCargo equals car.idCargo
-                             select new EmpleadoDTO
-                             {
-                                 ID = emp.idEmpleado,
-                                 Nombres = emp.nombresEmpleado,
-                                 DUI = emp.dui,
-                                 ISSS = emp.ISSS,
-                                 Telefono = emp.telefono,
-                                 Correo = emp.eMail,
-                                 Cargo = car.cargo,
-                                 FechaNacimiento =(DateTime)emp.fechaNacimiento
-                             }).ToListAsync();
+                                                                     join car in db.Cargos on emp.idCargo equals car.idCargo
+                                                                                                       select new EmpleadoDTO
+                                                                                                       {
+                                       ID = emp.idEmpleado,
+                                       Nombres = emp.nombresEmpleado,
+                                       Apellidos = emp.apellidosEmpleado,
+                                       FechaNacimiento = (DateTime)emp.fechaNacimiento,
+                                       DUI = emp.dui,
+                                       ISSS = emp.ISSS,
+                                       Telefono = emp.telefono,
+                                       Correo = emp.eMail,
+                                       Cargo = car.cargo
+                                   }).ToListAsync();
             }
             return empleados;
         }
@@ -123,6 +124,24 @@ namespace SIGIV.CLS
                 success = await db.SaveChangesAsync() > 0;
             }
             return success;
+        }
+
+        public async Task<DireccionEmpleadoCLS> GetDireccionAsync()
+        {
+            DireccionEmpleadoCLS direccion = new DireccionEmpleadoCLS();
+            using (DataLayer.SIGIVEntities db = new DataLayer.SIGIVEntities())
+            {
+                var model = await db.EmpleadoDireccion.Where(x => x.idEmpleado == this.idEmpleado).FirstOrDefaultAsync();
+                if (model != null)
+                {
+                    direccion.id = model.idEmpleadoDireccion;
+                    direccion.idEmpleado = (int)model.idEmpleado;
+                    direccion.Linea1 = model.Linea1;
+                    direccion.Linea2 = model.Linea2;
+                    direccion.codigoPostal = model.codigoPostal;
+                }
+            }
+            return direccion;
         }
 
         public void validar()

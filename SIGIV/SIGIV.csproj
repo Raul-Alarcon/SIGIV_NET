@@ -68,7 +68,9 @@
     <Compile Include="CLS\ContactoProveedorCLS.cs" />
     <Compile Include="CLS\DepartamentosCLS.cs" />
     <Compile Include="CLS\DetallesStockCLS.cs" />
+    <Compile Include="CLS\DireccionClienteCLS.cs" />
     <Compile Include="CLS\DireccionCLS.cs" />
+    <Compile Include="CLS\DireccionEmpleadoCLS.cs" />
     <Compile Include="CLS\DireccionProveedorCLS.cs" />
     <Compile Include="CLS\DistritosCLS.cs" />
     <Compile Include="CLS\DTO\ClienteDTO.cs" />

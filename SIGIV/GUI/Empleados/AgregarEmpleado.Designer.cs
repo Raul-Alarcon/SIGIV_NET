@@ -98,6 +98,7 @@
             this.btnAgregarDireccion.TabIndex = 35;
             this.btnAgregarDireccion.Text = "Agregar Dirección";
             this.btnAgregarDireccion.UseVisualStyleBackColor = true;
+            this.btnAgregarDireccion.Click += new System.EventHandler(this.btnAgregarDireccion_Click);
             // 
             // btnAceptar
             // 
