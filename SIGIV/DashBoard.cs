@@ -45,7 +45,7 @@ namespace SIGIV
                     case "settings":
                         ShowContent(new GUI.Usuarios.GestionUsuarios());
                         break;
-                    default: break;
+                    default: break; 
                 }
             }
         }

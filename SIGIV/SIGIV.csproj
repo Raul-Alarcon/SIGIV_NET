@@ -62,6 +62,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CLS\Auth\UsuarioCLS.cs" />
     <Compile Include="CLS\CargosCLS.cs" />
     <Compile Include="CLS\CategoriaProuctoCLS.cs" />
     <Compile Include="CLS\ClienteCLS.cs" />
