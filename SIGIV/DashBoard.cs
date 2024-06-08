@@ -18,7 +18,7 @@ namespace SIGIV
         {
             InitializeComponent();
             var materialSkinManager = MaterialSkinManager.Instance;
-            this.FormBorderStyle = FormBorderStyle.None;
+            //this.FormBorderStyle = FormBorderStyle.None;
             //materialSkinManager.AddFormToManage(this);
 
             //materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
@@ -42,10 +42,31 @@ namespace SIGIV
                     case "empleados":
                         ShowContent(new GUI.Empleados.GestionEmpleados());
                         break;
+                    case "usuarios":
+                        ShowContent(new GUI.Usuarios.AgregarUsuarios());
+                        break;
+                    case "clientes":
+                        ShowContent(new GUI.Clientes.GestionCliente());
+                        break;
+                    case "proveedores":
+                        ShowContent(new GUI.Proveedores.GestionProveedores());
+                        break;
+                    case "productos":
+                        ShowContent(new GUI.Productos.GestionProductos());
+                        break;
+                    case "facturas":
+                        ShowContent(new GUI.Facturas.GestionFacturas());
+                        break;
+                    case "pedidos":
+                        ShowContent(new GUI.Pedidos.GestionPedidos());
+                        break;
+                    //case "reportes":
+                       // ShowContent(new GUI.Reportes.GestionReportes());
+                      //  break;
                     case "settings":
                         ShowContent(new GUI.Usuarios.AgregarUsuarios());
                         break;
-                    default: break;
+                    default: break; 
                 }
             }
         }

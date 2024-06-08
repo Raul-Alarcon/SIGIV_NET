@@ -1,4 +1,5 @@
 ﻿using SIGIV.CLS.DTO;
+using SIGIV.DataLayer;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -20,21 +21,31 @@ namespace SIGIV.CLS
         public static async Task<List<ClienteDTO>> GetAllDTOAsync()
         {
             List<ClienteDTO> clientes = new List<ClienteDTO>();
-            using (DataLayer.SIGIVEntities db = new DataLayer.SIGIVEntities())
+            using (SIGIVEntities db = new SIGIVEntities())
             {
-                clientes = await (from cli in db.Clientes
+                clientes = await (from cliente in db.Clientes
+                                  join direccion in db.ClienteDireccion on cliente.IDCliente equals direccion.idCliente
+                                  join distrito in db.Distritos on direccion.idDistrito equals distrito.idDistrito
+                                  join municipio in db.Municipios on distrito.idMunicipio equals municipio.idMunicipio
+                                  join departamento in db.Departamentos on municipio.idDepartamento equals departamento.idDepartamento
+                                  join pais in db.Paises on departamento.idPais equals pais.idPais
                                   select new ClienteDTO
                                   {
-                                 ID = cli.IDCliente,
-                                 Nombres = cli.nombresCliente,
-                                 DUI = cli.dui,
-                                 Telefono = cli.telefono,
-                                 Correo = cli.eMail
-                             }).ToListAsync();
+                                      ID = cliente.IDCliente,
+                                      Nombres = cliente.nombresCliente,
+                                      Apellidos = cliente.apellidosCliente,
+                                      DUI = cliente.dui,
+                                      Telefono = cliente.telefono,
+                                      Correo = cliente.eMail,
+                                      Direccion = direccion.Linea1,
+                                      Distrito = distrito.distrito,
+                                      Municipio = municipio.municipio,
+                                      Departamento = departamento.departamento,
+                                      Pais = pais.pais
+                                  }).ToListAsync();
             }
             return clientes;
         }
-
         public async Task<bool> AddAsync()
         {
             bool success = false;
@@ -105,6 +116,24 @@ namespace SIGIV.CLS
                 }
             }
             return cliente;
+        }
+
+        public async Task<DireccionClienteCLS> GetDireccionAsync()
+        {
+            DireccionClienteCLS direccion = new DireccionClienteCLS();
+            using (DataLayer.SIGIVEntities db = new DataLayer.SIGIVEntities())
+            {
+                var model = await db.ClienteDireccion.Where(x => x.idCliente == this.id).FirstOrDefaultAsync();
+                if (model != null)
+                {
+                    direccion.id = model.idClienteDireccion;
+                    direccion.idCliente = (int)model.idCliente;
+                    direccion.Linea1 = model.Linea1;
+                    direccion.Linea2 = model.Linea2;
+                    direccion.codigoPostal = model.codigoPostal;
+                }
+            }
+            return direccion;
         }
 
         public void Validar()

@@ -1,4 +1,5 @@
 ﻿using SIGIV.CLS;
+using SIGIV.GUI.Auth.Usuarios;
 using SIGIV.GUI.Cargos;
 using System;
 using System.Collections.Generic;
@@ -89,6 +90,28 @@ namespace SIGIV.GUI.Empleados
             catch (Exception ex)
             {
                 MessageBox.Show("Error al eliminar el empleado: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                GestionUsuarios form;
+                if (this.dgvEmpleados.SelectedRows.Count > 0)
+                {
+                    var dto = (CLS.DTO.EmpleadoDTO)dgvEmpleados.CurrentRow.DataBoundItem;
+                    form = new GestionUsuarios(dto.ID); 
+                }
+                else
+                {
+                    form = new GestionUsuarios(); 
+                } 
+                form.ShowDialog();
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);  
             }
         }
     }

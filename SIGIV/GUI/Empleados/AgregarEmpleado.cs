@@ -116,5 +116,15 @@ namespace SIGIV.GUI.Empleados
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
+
+        private void btnAgregarDireccion_Click(object sender, EventArgs e)
+        {
+            DireccionEmpleado agregarDireccion = new DireccionEmpleado(empleado);
+            var result = agregarDireccion.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                MessageBox.Show("Dirección agregada correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }

@@ -30,7 +30,7 @@ namespace SIGIV.CLS
                              select new EmpleadoDTO
                              {
                                  ID = emp.idEmpleado,
-                                 Nombres = emp.nombresEmpleado,
+                                 Nombres = emp.nombresEmpleado + " " + emp.apellidosEmpleado,
                                  DUI = emp.dui,
                                  ISSS = emp.ISSS,
                                  Telefono = emp.telefono,
@@ -123,6 +123,24 @@ namespace SIGIV.CLS
                 success = await db.SaveChangesAsync() > 0;
             }
             return success;
+        }
+
+        public async Task<DireccionEmpleadoCLS> GetDireccionAsync()
+        {
+            DireccionEmpleadoCLS direccion = new DireccionEmpleadoCLS();
+            using (DataLayer.SIGIVEntities db = new DataLayer.SIGIVEntities())
+            {
+                var model = await db.EmpleadoDireccion.Where(x => x.idEmpleado == this.idEmpleado).FirstOrDefaultAsync();
+                if (model != null)
+                {
+                    direccion.id = model.idEmpleadoDireccion;
+                    direccion.idEmpleado = (int)model.idEmpleado;
+                    direccion.Linea1 = model.Linea1;
+                    direccion.Linea2 = model.Linea2;
+                    direccion.codigoPostal = model.codigoPostal;
+                }
+            }
+            return direccion;
         }
 
         public void validar()
