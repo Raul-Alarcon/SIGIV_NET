@@ -60,9 +60,9 @@ namespace SIGIV
                     case "pedidos":
                         ShowContent(new GUI.Pedidos.GestionPedidos());
                         break;
-                    //case "reportes":
-                       // ShowContent(new GUI.Reportes.GestionReportes());
-                      //  break;
+                    case "reportes":
+                        ShowContent(new GUI.Reportes.ClienteFrecuente());
+                        break;
                     case "settings":
                         ShowContent(new GUI.Usuarios.AgregarUsuarios());
                         break;

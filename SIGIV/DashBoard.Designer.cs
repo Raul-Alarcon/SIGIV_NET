@@ -151,7 +151,7 @@
             this.reportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.reportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.reportes.Image = ((System.Drawing.Image)(resources.GetObject("reportes.Image")));
-            this.reportes.Location = new System.Drawing.Point(0, 580);
+            this.reportes.Location = new System.Drawing.Point(0, 585);
             this.reportes.Name = "reportes";
             this.reportes.Size = new System.Drawing.Size(64, 64);
             this.reportes.TabIndex = 10;
@@ -167,7 +167,7 @@
             this.pedidos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.pedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pedidos.Image = ((System.Drawing.Image)(resources.GetObject("pedidos.Image")));
-            this.pedidos.Location = new System.Drawing.Point(0, 516);
+            this.pedidos.Location = new System.Drawing.Point(0, 521);
             this.pedidos.Name = "pedidos";
             this.pedidos.Size = new System.Drawing.Size(64, 64);
             this.pedidos.TabIndex = 9;
@@ -183,7 +183,7 @@
             this.facturas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.facturas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.facturas.Image = ((System.Drawing.Image)(resources.GetObject("facturas.Image")));
-            this.facturas.Location = new System.Drawing.Point(0, 452);
+            this.facturas.Location = new System.Drawing.Point(0, 457);
             this.facturas.Name = "facturas";
             this.facturas.Size = new System.Drawing.Size(64, 64);
             this.facturas.TabIndex = 8;
@@ -199,7 +199,7 @@
             this.productos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.productos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.productos.Image = ((System.Drawing.Image)(resources.GetObject("productos.Image")));
-            this.productos.Location = new System.Drawing.Point(0, 388);
+            this.productos.Location = new System.Drawing.Point(0, 393);
             this.productos.Name = "productos";
             this.productos.Size = new System.Drawing.Size(64, 64);
             this.productos.TabIndex = 7;
@@ -215,7 +215,7 @@
             this.proveedores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.proveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.proveedores.Image = ((System.Drawing.Image)(resources.GetObject("proveedores.Image")));
-            this.proveedores.Location = new System.Drawing.Point(0, 324);
+            this.proveedores.Location = new System.Drawing.Point(0, 329);
             this.proveedores.Name = "proveedores";
             this.proveedores.Size = new System.Drawing.Size(64, 64);
             this.proveedores.TabIndex = 6;
@@ -231,7 +231,7 @@
             this.clientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.clientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clientes.Image = ((System.Drawing.Image)(resources.GetObject("clientes.Image")));
-            this.clientes.Location = new System.Drawing.Point(0, 260);
+            this.clientes.Location = new System.Drawing.Point(0, 265);
             this.clientes.Name = "clientes";
             this.clientes.Size = new System.Drawing.Size(64, 64);
             this.clientes.TabIndex = 5;
@@ -247,7 +247,7 @@
             this.usuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.usuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.usuarios.Image = ((System.Drawing.Image)(resources.GetObject("usuarios.Image")));
-            this.usuarios.Location = new System.Drawing.Point(0, 196);
+            this.usuarios.Location = new System.Drawing.Point(0, 201);
             this.usuarios.Name = "usuarios";
             this.usuarios.Size = new System.Drawing.Size(64, 64);
             this.usuarios.TabIndex = 4;
@@ -263,7 +263,7 @@
             this.empleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.empleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.empleados.Image = ((System.Drawing.Image)(resources.GetObject("empleados.Image")));
-            this.empleados.Location = new System.Drawing.Point(0, 132);
+            this.empleados.Location = new System.Drawing.Point(0, 137);
             this.empleados.Name = "empleados";
             this.empleados.Size = new System.Drawing.Size(64, 64);
             this.empleados.TabIndex = 3;
@@ -295,7 +295,7 @@
             this.home.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.home.Image = ((System.Drawing.Image)(resources.GetObject("home.Image")));
-            this.home.Location = new System.Drawing.Point(0, 68);
+            this.home.Location = new System.Drawing.Point(0, 73);
             this.home.Name = "home";
             this.home.Size = new System.Drawing.Size(64, 64);
             this.home.TabIndex = 1;
@@ -308,16 +308,17 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(64, 68);
+            this.panel2.Size = new System.Drawing.Size(64, 73);
             this.panel2.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Silver;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(55, 58);
+            this.pictureBox1.Size = new System.Drawing.Size(64, 73);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;

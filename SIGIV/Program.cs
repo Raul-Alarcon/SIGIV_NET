@@ -30,7 +30,7 @@ namespace SIGIV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GestionEmpleados());
+            Application.Run(new DashBoard());
         }
     }
 }
