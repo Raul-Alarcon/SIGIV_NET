@@ -9,6 +9,7 @@ using SIGIV.GUI.Municipios;
 using SIGIV.GUI.Paises;
 using SIGIV.GUI.Productos;
 using SIGIV.GUI.Proveedores;
+using SIGIV.GUI.Roles;
 using SIGIV.Login;
 using System;
 using System.Collections.Generic;

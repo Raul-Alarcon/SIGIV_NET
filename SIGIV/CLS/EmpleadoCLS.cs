@@ -30,7 +30,7 @@ namespace SIGIV.CLS
                              select new EmpleadoDTO
                              {
                                  ID = emp.idEmpleado,
-                                 Nombres = emp.nombresEmpleado,
+                                 Nombres = emp.nombresEmpleado + " " + emp.apellidosEmpleado,
                                  DUI = emp.dui,
                                  ISSS = emp.ISSS,
                                  Telefono = emp.telefono,

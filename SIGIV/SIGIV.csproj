@@ -62,6 +62,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CLS\Auth\RolCLS.cs" />
+    <Compile Include="CLS\Auth\UserManager.cs" />
     <Compile Include="CLS\Auth\UsuarioCLS.cs" />
     <Compile Include="CLS\CargosCLS.cs" />
     <Compile Include="CLS\CategoriaProuctoCLS.cs" />
@@ -88,6 +90,7 @@
     <Compile Include="CLS\ProductoCLS.cs" />
     <Compile Include="CLS\ProveedorCLS.cs" />
     <Compile Include="CLS\StockCLS.cs" />
+    <Compile Include="CLS\utils\Security.cs" />
     <Compile Include="Components\AccionBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -201,6 +204,12 @@
     </Compile>
     <Compile Include="DataLayer\Usuarios.cs">
       <DependentUpon>SIGIVModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Auth\Usuarios\GestionUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Auth\Usuarios\GestionUsuarios.Designer.cs">
+      <DependentUpon>GestionUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Cargos\GestionCargo.cs">
       <SubType>Form</SubType>
@@ -340,6 +349,12 @@
     <Compile Include="GUI\Usuarios\AgregarUsuarios.Designer.cs">
       <DependentUpon>AgregarUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\View\Configuraciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\View\Configuraciones.Designer.cs">
+      <DependentUpon>Configuraciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -374,6 +389,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DashBoard.resx">
       <DependentUpon>DashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Auth\Usuarios\GestionUsuarios.resx">
+      <DependentUpon>GestionUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Cargos\GestionCargo.resx">
       <DependentUpon>GestionCargo.cs</DependentUpon>
@@ -443,6 +461,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Usuarios\AgregarUsuarios.resx">
       <DependentUpon>AgregarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\View\Configuraciones.resx">
+      <DependentUpon>Configuraciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
