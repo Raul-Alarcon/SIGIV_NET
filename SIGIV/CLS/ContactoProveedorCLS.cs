@@ -60,26 +60,11 @@ namespace SIGIV.CLS
 
         public void validar()
         {
-            if (string.IsNullOrEmpty(nombresContacto))
-            {
-                throw new ArgumentException("El campo nombres es obligatorio");
-            }
-            if (string.IsNullOrEmpty(ApellidosContacto))
-            {
-                throw new ArgumentException("El campo apellidos es obligatorio");
-            }
-            if (string.IsNullOrEmpty(cargoContacto))
-            {
-                throw new ArgumentException("El campo cargo es obligatorio");
-            }
-            if (string.IsNullOrEmpty(telefonoContacto))
-            {
-                throw new ArgumentException("El campo telefono es obligatorio");
-            }
-            if (string.IsNullOrEmpty(eMailContacto))
-            {
-                throw new ArgumentException("El campo eMail es obligatorio");
-            }
+            if (string.IsNullOrEmpty(nombresContacto)) throw new ArgumentException("El campo nombres es obligatorio");
+            if (string.IsNullOrEmpty(ApellidosContacto)) throw new ArgumentException("El campo apellidos es obligatorio");
+            if (string.IsNullOrEmpty(cargoContacto)) throw new ArgumentException("El campo cargo es obligatorio");
+            if (string.IsNullOrEmpty(telefonoContacto)) throw new ArgumentException("El campo telefono es obligatorio");
+            if (string.IsNullOrEmpty(eMailContacto)) throw new ArgumentException("El campo eMail es obligatorio");
         }
     }
 }

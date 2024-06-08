@@ -30,6 +30,8 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txbCodigoPostal = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbDirecciones = new System.Windows.Forms.ComboBox();
@@ -37,8 +39,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txbLinea2 = new System.Windows.Forms.TextBox();
             this.txbLinea1 = new System.Windows.Forms.TextBox();
-            this.txbCodigoPostal = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -50,7 +50,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(15);
-            this.panel1.Size = new System.Drawing.Size(328, 292);
+            this.panel1.Size = new System.Drawing.Size(396, 292);
             this.panel1.TabIndex = 0;
             // 
             // groupBox1
@@ -67,16 +67,32 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(15, 15);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(298, 262);
+            this.groupBox1.Size = new System.Drawing.Size(366, 262);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Formulario";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(46, 208);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(72, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Codigo Postal";
+            // 
+            // txbCodigoPostal
+            // 
+            this.txbCodigoPostal.Location = new System.Drawing.Point(46, 221);
+            this.txbCodigoPostal.Name = "txbCodigoPostal";
+            this.txbCodigoPostal.Size = new System.Drawing.Size(177, 20);
+            this.txbCodigoPostal.TabIndex = 7;
+            // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(189, 218);
+            this.btnGuardar.Location = new System.Drawing.Point(229, 218);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.Size = new System.Drawing.Size(131, 23);
             this.btnGuardar.TabIndex = 6;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -96,7 +112,7 @@
             this.cmbDirecciones.FormattingEnabled = true;
             this.cmbDirecciones.Location = new System.Drawing.Point(46, 63);
             this.cmbDirecciones.Name = "cmbDirecciones";
-            this.cmbDirecciones.Size = new System.Drawing.Size(218, 21);
+            this.cmbDirecciones.Size = new System.Drawing.Size(314, 21);
             this.cmbDirecciones.TabIndex = 4;
             // 
             // label2
@@ -121,37 +137,21 @@
             // 
             this.txbLinea2.Location = new System.Drawing.Point(46, 181);
             this.txbLinea2.Name = "txbLinea2";
-            this.txbLinea2.Size = new System.Drawing.Size(218, 20);
+            this.txbLinea2.Size = new System.Drawing.Size(314, 20);
             this.txbLinea2.TabIndex = 1;
             // 
             // txbLinea1
             // 
             this.txbLinea1.Location = new System.Drawing.Point(46, 123);
             this.txbLinea1.Name = "txbLinea1";
-            this.txbLinea1.Size = new System.Drawing.Size(218, 20);
+            this.txbLinea1.Size = new System.Drawing.Size(314, 20);
             this.txbLinea1.TabIndex = 0;
-            // 
-            // txbCodigoPostal
-            // 
-            this.txbCodigoPostal.Location = new System.Drawing.Point(46, 221);
-            this.txbCodigoPostal.Name = "txbCodigoPostal";
-            this.txbCodigoPostal.Size = new System.Drawing.Size(86, 20);
-            this.txbCodigoPostal.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(46, 208);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 13);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Codigo Postal";
             // 
             // DireccionEdicionProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(328, 292);
+            this.ClientSize = new System.Drawing.Size(396, 292);
             this.Controls.Add(this.panel1);
             this.Name = "DireccionEdicionProveedor";
             this.Text = "Direccion Edicion Proveedor";

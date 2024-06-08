@@ -1,4 +1,7 @@
 ﻿using SIGIV.CLS;
+using SIGIV.CLS.DTO;
+using SIGIV.DataLayer;
+using SIGIV.GUI.Proveedores;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +17,6 @@ namespace SIGIV.GUI.Clientes
     public partial class AgregarCliente : Form
     {
         private ClienteCLS cliente = null;
-
         public AgregarCliente(ClienteCLS cliente = null)
         {
             InitializeComponent();
@@ -96,9 +98,14 @@ namespace SIGIV.GUI.Clientes
             this.Close();
         }
 
-        private void txtNombre_TextChanged(object sender, EventArgs e)
+        private void btnAgregarDireccion_Click(object sender, EventArgs e)
         {
-
+            DireccionCliente direccionCliente = new DireccionCliente(cliente);
+            var result = direccionCliente.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                MessageBox.Show("Dirección guardada correctamente", "Dirección guardada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

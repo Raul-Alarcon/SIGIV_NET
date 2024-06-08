@@ -7,40 +7,40 @@ using System.Threading.Tasks;
 
 namespace SIGIV.CLS
 {
-    public class DireccionProveedorCLS
+    public class DireccionClienteCLS
     {
         public int id { get; set; }
         public string Linea1 { get; set; }
         public string Linea2 { get; set; }
-        public int idProveedor { get; set; }
+        public int idCliente { get; set; }
         public int idDireccion { get; set; }
 
-        public string codigoPostal { get; set; }  
+        public string codigoPostal { get; set; }
 
         public async Task<bool> SaveAsync()
         {
             using (DataLayer.SIGIVEntities db = new DataLayer.SIGIVEntities())
             {
-                DataLayer.ProveedoresDireccion direccion = new DataLayer.ProveedoresDireccion();
-                direccion.idProveedor = idProveedor;
+                DataLayer.ClienteDireccion direccion = new DataLayer.ClienteDireccion();
+                direccion.idCliente = idCliente;
                 direccion.Linea1 = Linea1;
                 direccion.Linea2 = Linea2;
                 direccion.codigoPostal = codigoPostal;
-                db.ProveedoresDireccion.Add(direccion);
+                db.ClienteDireccion.Add(direccion);
                 await db.SaveChangesAsync();
             }
             return true;
-        } 
+        }
 
         public async Task<bool> UpdateAsync()
         {
             using (DataLayer.SIGIVEntities db = new DataLayer.SIGIVEntities())
             {
-                DataLayer.ProveedoresDireccion direccion = await db.ProveedoresDireccion
-                        .Where(x => x.idProveedor == id)
-                            .FirstOrDefaultAsync();
+                DataLayer.ClienteDireccion direccion = await db.ClienteDireccion
+                        .Where(x => x.idCliente == id)
+                        .FirstOrDefaultAsync();
 
-                direccion.idProveedor = idProveedor;
+                direccion.idCliente = idCliente;
                 direccion.Linea1 = Linea1;
                 direccion.Linea2 = Linea2;
                 direccion.codigoPostal = codigoPostal;

@@ -125,6 +125,24 @@ namespace SIGIV.CLS
             return success;
         }
 
+        public async Task<DireccionEmpleadoCLS> GetDireccionAsync()
+        {
+            DireccionEmpleadoCLS direccion = new DireccionEmpleadoCLS();
+            using (DataLayer.SIGIVEntities db = new DataLayer.SIGIVEntities())
+            {
+                var model = await db.EmpleadoDireccion.Where(x => x.idEmpleado == this.idEmpleado).FirstOrDefaultAsync();
+                if (model != null)
+                {
+                    direccion.id = model.idEmpleadoDireccion;
+                    direccion.idEmpleado = (int)model.idEmpleado;
+                    direccion.Linea1 = model.Linea1;
+                    direccion.Linea2 = model.Linea2;
+                    direccion.codigoPostal = model.codigoPostal;
+                }
+            }
+            return direccion;
+        }
+
         public void validar()
         {
             if (string.IsNullOrEmpty(this.nombresEmpleado)) throw new Exception("El campo Nombres es requerido");
