@@ -10,6 +10,7 @@ using SIGIV.GUI.Paises;
 using SIGIV.GUI.Productos;
 using SIGIV.GUI.ProductosNuevos;
 using SIGIV.GUI.Proveedores;
+using SIGIV.GUI.Roles;
 using SIGIV.GUI.Reportes;
 using SIGIV.Login;
 using System;

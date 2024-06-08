@@ -26,19 +26,18 @@ namespace SIGIV.CLS
             using (DataLayer.SIGIVEntities db = new DataLayer.SIGIVEntities())
             {
                 empleados = await (from emp in db.Empleados
-                                   join car in db.Cargos on emp.idCargo equals car.idCargo
-                                   select new EmpleadoDTO
-                                   {
-                                       ID = emp.idEmpleado,
-                                       Nombres = emp.nombresEmpleado,
-                                       Apellidos = emp.apellidosEmpleado,
-                                       FechaNacimiento = (DateTime)emp.fechaNacimiento,
-                                       DUI = emp.dui,
-                                       ISSS = emp.ISSS,
-                                       Telefono = emp.telefono,
-                                       Correo = emp.eMail,
-                                       Cargo = car.cargo
-                                   }).ToListAsync();
+                             join car in db.Cargos on emp.idCargo equals car.idCargo
+                             select new EmpleadoDTO
+                             {
+                                 ID = emp.idEmpleado,
+                                 Nombres = emp.nombresEmpleado + " " + emp.apellidosEmpleado,
+                                 DUI = emp.dui,
+                                 ISSS = emp.ISSS,
+                                 Telefono = emp.telefono,
+                                 Correo = emp.eMail,
+                                 Cargo = car.cargo,
+                                 FechaNacimiento =(DateTime)emp.fechaNacimiento
+                             }).ToListAsync();
             }
             return empleados;
         }

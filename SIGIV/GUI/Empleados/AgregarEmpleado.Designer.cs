@@ -117,6 +117,7 @@
             this.cmbCargos.Name = "cmbCargos";
             this.cmbCargos.Size = new System.Drawing.Size(268, 21);
             this.cmbCargos.TabIndex = 33;
+
             // 
             // label8
             // 

@@ -35,7 +35,6 @@
             this.materialDrawer3 = new MaterialSkin.Controls.MaterialDrawer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.ContentLayout = new System.Windows.Forms.Panel();
-            this.accionBar1 = new SIGIV.Components.AccionBar();
             this.sideBard = new SIGIV.Components.DragPanel();
             this.reportes = new System.Windows.Forms.Button();
             this.pedidos = new System.Windows.Forms.Button();
@@ -96,7 +95,6 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.ContentLayout);
-            this.panel1.Controls.Add(this.accionBar1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(64, 0);
             this.panel1.Name = "panel1";
@@ -106,19 +104,10 @@
             // ContentLayout
             // 
             this.ContentLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ContentLayout.Location = new System.Drawing.Point(0, 32);
+            this.ContentLayout.Location = new System.Drawing.Point(0, 0);
             this.ContentLayout.Name = "ContentLayout";
-            this.ContentLayout.Size = new System.Drawing.Size(843, 717);
+            this.ContentLayout.Size = new System.Drawing.Size(843, 749);
             this.ContentLayout.TabIndex = 10;
-            // 
-            // accionBar1
-            // 
-            this.accionBar1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.accionBar1.Location = new System.Drawing.Point(0, 0);
-            this.accionBar1.Name = "accionBar1";
-            this.accionBar1.Size = new System.Drawing.Size(843, 32);
-            this.accionBar1.TabIndex = 9;
-            this.accionBar1.Titulo = "DashBoard";
             // 
             // sideBard
             // 
@@ -346,7 +335,6 @@
         private MaterialSkin.Controls.MaterialDrawer materialDrawer1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
-        private Components.AccionBar accionBar1;
         private Components.DragPanel sideBard;
         private MaterialSkin.Controls.MaterialDrawer materialDrawer3;
         private System.Windows.Forms.PictureBox pictureBox1;
