@@ -10,6 +10,7 @@ using SIGIV.GUI.Paises;
 using SIGIV.GUI.Productos;
 using SIGIV.GUI.ProductosNuevos;
 using SIGIV.GUI.Proveedores;
+using SIGIV.GUI.Reportes;
 using SIGIV.Login;
 using System;
 using System.Collections.Generic;
@@ -29,7 +30,7 @@ namespace SIGIV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DashBoard());
+            Application.Run(new GestionEmpleados());
         }
     }
 }
