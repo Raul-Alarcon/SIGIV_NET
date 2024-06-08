@@ -84,6 +84,7 @@
     <Compile Include="CLS\DTO\MunicipiosDTO.cs" />
     <Compile Include="CLS\DTO\PedidosDTO.cs" />
     <Compile Include="CLS\DTO\ProductoDTO.cs" />
+    <Compile Include="CLS\DTO\ProductoNuevoDTO.cs" />
     <Compile Include="CLS\DTO\ProveedorDTO.cs" />
     <Compile Include="CLS\DTO\Reportes\ClientesFrecuentesReporte.cs" />
     <Compile Include="CLS\DTO\Reportes\InventarioActualReporte.cs" />
@@ -93,6 +94,7 @@
     <Compile Include="CLS\PaisesCLS.cs" />
     <Compile Include="CLS\PedidosCLS.cs" />
     <Compile Include="CLS\ProductoCLS.cs" />
+    <Compile Include="CLS\ProductoNuevoCLS.cs" />
     <Compile Include="CLS\ProveedorCLS.cs" />
     <Compile Include="CLS\StockCLS.cs" />
     <Compile Include="Components\AccionBar.cs">
@@ -311,6 +313,12 @@
     <Compile Include="GUI\Pedidos\GestionPedidos.Designer.cs">
       <DependentUpon>GestionPedidos.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ProductosNuevos\GestionProductosNuevos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ProductosNuevos\GestionProductosNuevos.Designer.cs">
+      <DependentUpon>GestionProductosNuevos.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Productos\GestionProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -451,6 +459,9 @@
     <EmbeddedResource Include="GUI\Pedidos\GestionPedidos.resx">
       <DependentUpon>GestionPedidos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ProductosNuevos\GestionProductosNuevos.resx">
+      <DependentUpon>GestionProductosNuevos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Productos\GestionProductos.resx">
       <DependentUpon>GestionProductos.cs</DependentUpon>
     </EmbeddedResource>
@@ -539,9 +550,19 @@
       <DependentUpon>SIGIVModels.edmx</DependentUpon>
       <LastGenOutput>SIGIVModels.cs</LastGenOutput>
     </Content>
+    <Content Include="Recursos\Clientes.png" />
+    <Content Include="Recursos\Empleados.png" />
+    <Content Include="Recursos\Facturas.png" />
+    <Content Include="Recursos\home.png" />
     <Content Include="Recursos\Intersect.png" />
+    <Content Include="Recursos\Pedidos.png" />
+    <Content Include="Recursos\Productos.png" />
+    <Content Include="Recursos\Proveedores.png" />
+    <Content Include="Recursos\Reportes.png" />
+    <Content Include="Recursos\settings.png" />
     <Content Include="Recursos\SIGIVLogo.jpeg" />
     <Content Include="Recursos\SIGIVLogo2.jpeg" />
+    <Content Include="Recursos\Usuarios.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
