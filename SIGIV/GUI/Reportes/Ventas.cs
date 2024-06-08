@@ -19,12 +19,6 @@ namespace SIGIV.GUI.Reportes
         {
             InitializeComponent();
         }
-
-        protected async override void OnLoad(EventArgs e)
-        {
-            base.OnLoad(e);
-        }
-
         private async void button1_Click(object sender, EventArgs e)
         {
 
@@ -33,9 +27,6 @@ namespace SIGIV.GUI.Reportes
                 var ventas = await VentasMensualesReporte.GetDataSourse(dtpInicio.Value, dtpInicio.Value);
                 VentasMensualesProducto ventasMensuales = new VentasMensualesProducto();
                 ventasMensuales.SetDataSource(ventas);
-
-                ventasMensuales.SetParameterValue("fechaInicio", dtpInicio.Value);
-                ventasMensuales.SetParameterValue("fechaFinal", dtpFinal.Value);
                 crvVentas.ReportSource = ventasMensuales;
             }
             catch (Exception ex)

@@ -55,12 +55,6 @@
             this.txtBuscarProducto = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.dgvEmpleados = new System.Windows.Forms.DataGridView();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtCliente = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -86,9 +80,6 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
@@ -134,11 +125,11 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(496, 19);
+            this.btnEliminar.Location = new System.Drawing.Point(442, 19);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.Size = new System.Drawing.Size(129, 23);
             this.btnEliminar.TabIndex = 2;
-            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.Text = "Eliminar Producto";
             this.btnEliminar.UseVisualStyleBackColor = true;
             // 
             // groupBox9
@@ -360,7 +351,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -371,66 +361,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Generales";
             // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.panel3);
-            this.groupBox4.Controls.Add(this.textBox3);
-            this.groupBox4.Controls.Add(this.textBox4);
-            this.groupBox4.Controls.Add(this.label4);
-            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox4.Location = new System.Drawing.Point(580, 16);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(15);
-            this.groupBox4.Size = new System.Drawing.Size(340, 199);
-            this.groupBox4.TabIndex = 8;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Empleado";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.dgvEmpleados);
-            this.panel3.Location = new System.Drawing.Point(24, 90);
-            this.panel3.Name = "panel3";
-            this.panel3.Padding = new System.Windows.Forms.Padding(5);
-            this.panel3.Size = new System.Drawing.Size(298, 100);
-            this.panel3.TabIndex = 7;
-            // 
-            // dgvEmpleados
-            // 
-            this.dgvEmpleados.AllowUserToAddRows = false;
-            this.dgvEmpleados.AllowUserToDeleteRows = false;
-            this.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEmpleados.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvEmpleados.Location = new System.Drawing.Point(5, 5);
-            this.dgvEmpleados.Name = "dgvEmpleados";
-            this.dgvEmpleados.ReadOnly = true;
-            this.dgvEmpleados.Size = new System.Drawing.Size(288, 90);
-            this.dgvEmpleados.TabIndex = 3;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(22, 42);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(293, 20);
-            this.textBox3.TabIndex = 6;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(22, 68);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(293, 20);
-            this.textBox4.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 26);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Empleado";
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.txtCliente);
@@ -438,10 +368,10 @@
             this.groupBox3.Controls.Add(this.txtBusquedaCliente);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox3.Location = new System.Drawing.Point(243, 16);
+            this.groupBox3.Location = new System.Drawing.Point(342, 16);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(15);
-            this.groupBox3.Size = new System.Drawing.Size(337, 199);
+            this.groupBox3.Size = new System.Drawing.Size(570, 199);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Cliente";
@@ -449,18 +379,18 @@
             // txtCliente
             // 
             this.txtCliente.Enabled = false;
-            this.txtCliente.Location = new System.Drawing.Point(21, 43);
+            this.txtCliente.Location = new System.Drawing.Point(49, 42);
             this.txtCliente.Name = "txtCliente";
-            this.txtCliente.Size = new System.Drawing.Size(293, 20);
+            this.txtCliente.Size = new System.Drawing.Size(457, 20);
             this.txtCliente.TabIndex = 3;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.dgvClientes);
-            this.panel2.Location = new System.Drawing.Point(21, 95);
+            this.panel2.Location = new System.Drawing.Point(49, 95);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(5);
-            this.panel2.Size = new System.Drawing.Size(298, 100);
+            this.panel2.Size = new System.Drawing.Size(465, 100);
             this.panel2.TabIndex = 2;
             // 
             // dgvClientes
@@ -472,20 +402,20 @@
             this.dgvClientes.Location = new System.Drawing.Point(5, 5);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ReadOnly = true;
-            this.dgvClientes.Size = new System.Drawing.Size(288, 90);
+            this.dgvClientes.Size = new System.Drawing.Size(455, 90);
             this.dgvClientes.TabIndex = 3;
             // 
             // txtBusquedaCliente
             // 
-            this.txtBusquedaCliente.Location = new System.Drawing.Point(21, 69);
+            this.txtBusquedaCliente.Location = new System.Drawing.Point(49, 69);
             this.txtBusquedaCliente.Name = "txtBusquedaCliente";
-            this.txtBusquedaCliente.Size = new System.Drawing.Size(293, 20);
+            this.txtBusquedaCliente.Size = new System.Drawing.Size(460, 20);
             this.txtBusquedaCliente.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 26);
+            this.label3.Location = new System.Drawing.Point(46, 26);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 13);
             this.label3.TabIndex = 0;
@@ -503,14 +433,14 @@
             this.groupBox2.Location = new System.Drawing.Point(3, 16);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(15);
-            this.groupBox2.Size = new System.Drawing.Size(240, 199);
+            this.groupBox2.Size = new System.Drawing.Size(339, 199);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Factura";
             // 
             // dtpFecha
             // 
-            this.dtpFecha.Location = new System.Drawing.Point(11, 140);
+            this.dtpFecha.Location = new System.Drawing.Point(28, 148);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(200, 20);
             this.dtpFecha.TabIndex = 11;
@@ -518,7 +448,7 @@
             // Fecha
             // 
             this.Fecha.AutoSize = true;
-            this.Fecha.Location = new System.Drawing.Point(11, 124);
+            this.Fecha.Location = new System.Drawing.Point(25, 132);
             this.Fecha.Name = "Fecha";
             this.Fecha.Size = new System.Drawing.Size(37, 13);
             this.Fecha.TabIndex = 10;
@@ -527,7 +457,7 @@
             // cbFormaPago
             // 
             this.cbFormaPago.FormattingEnabled = true;
-            this.cbFormaPago.Location = new System.Drawing.Point(11, 100);
+            this.cbFormaPago.Location = new System.Drawing.Point(28, 100);
             this.cbFormaPago.Name = "cbFormaPago";
             this.cbFormaPago.Size = new System.Drawing.Size(200, 21);
             this.cbFormaPago.TabIndex = 9;
@@ -535,7 +465,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 79);
+            this.label2.Location = new System.Drawing.Point(25, 76);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 13);
             this.label2.TabIndex = 8;
@@ -544,7 +474,7 @@
             // nFactura
             // 
             this.nFactura.AutoSize = true;
-            this.nFactura.Location = new System.Drawing.Point(18, 49);
+            this.nFactura.Location = new System.Drawing.Point(30, 50);
             this.nFactura.Name = "nFactura";
             this.nFactura.Size = new System.Drawing.Size(55, 13);
             this.nFactura.TabIndex = 7;
@@ -553,7 +483,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 36);
+            this.label1.Location = new System.Drawing.Point(25, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 13);
             this.label1.TabIndex = 6;
@@ -582,10 +512,6 @@
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -613,12 +539,6 @@
         private System.Windows.Forms.DataGridView dgvClientes;
         private System.Windows.Forms.TextBox txtBusquedaCliente;
         private System.Windows.Forms.TextBox txtCliente;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dgvEmpleados;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.GroupBox groupBox7;
