@@ -126,5 +126,7 @@ namespace SIGIV.GUI.Empleados
                 MessageBox.Show("Dirección agregada correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+    
     }
 }
