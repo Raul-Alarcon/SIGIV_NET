@@ -28,6 +28,7 @@ namespace SIGIV.DataLayer
         public Nullable<int> idStok { get; set; }
         public string codigo { get; set; }
         public string img { get; set; }
+        public string imgCodigo { get; set; }
     
         public virtual CategoriasProductos CategoriasProductos { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

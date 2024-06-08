@@ -52,11 +52,21 @@
             this.txbDescripcion = new System.Windows.Forms.TextBox();
             this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.txbNombre = new System.Windows.Forms.TextBox();
+            this.imgCodigoBarra = new System.Windows.Forms.PictureBox();
+            this.txbCodigoBarra = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnArchivarCodigo = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.imgProducto = new System.Windows.Forms.PictureBox();
+            this.btnSeleccionarImagen = new System.Windows.Forms.Button();
+            this.btnQuitarImagen = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDatos)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCodigoBarra)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgProducto)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -67,7 +77,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(15);
-            this.panel1.Size = new System.Drawing.Size(852, 406);
+            this.panel1.Size = new System.Drawing.Size(1008, 749);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -77,7 +87,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(337, 15);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(500, 376);
+            this.panel2.Size = new System.Drawing.Size(656, 719);
             this.panel2.TabIndex = 1;
             // 
             // dtgDatos
@@ -86,7 +96,7 @@
             this.dtgDatos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgDatos.Location = new System.Drawing.Point(0, 25);
             this.dtgDatos.Name = "dtgDatos";
-            this.dtgDatos.Size = new System.Drawing.Size(500, 351);
+            this.dtgDatos.Size = new System.Drawing.Size(656, 694);
             this.dtgDatos.TabIndex = 1;
             // 
             // toolStrip1
@@ -100,7 +110,7 @@
             this.tscBuscar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(500, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(656, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -145,6 +155,14 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnQuitarImagen);
+            this.groupBox1.Controls.Add(this.btnSeleccionarImagen);
+            this.groupBox1.Controls.Add(this.imgProducto);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.btnArchivarCodigo);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.txbCodigoBarra);
+            this.groupBox1.Controls.Add(this.imgCodigoBarra);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -160,7 +178,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox1.Location = new System.Drawing.Point(15, 15);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(322, 376);
+            this.groupBox1.Size = new System.Drawing.Size(322, 719);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Formulario";
@@ -168,7 +186,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(23, 192);
+            this.label5.Location = new System.Drawing.Point(12, 344);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 13);
             this.label5.TabIndex = 12;
@@ -177,7 +195,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 129);
+            this.label4.Location = new System.Drawing.Point(12, 243);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 11;
@@ -186,7 +204,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(212, 75);
+            this.label3.Location = new System.Drawing.Point(201, 189);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 10;
@@ -195,7 +213,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 25);
+            this.label2.Location = new System.Drawing.Point(12, 139);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 9;
@@ -204,7 +222,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 74);
+            this.label1.Location = new System.Drawing.Point(12, 188);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 13);
             this.label1.TabIndex = 8;
@@ -212,7 +230,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(224, 339);
+            this.btnGuardar.Location = new System.Drawing.Point(213, 666);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 7;
@@ -222,7 +240,7 @@
             // 
             // btnRegistrarStock
             // 
-            this.btnRegistrarStock.Location = new System.Drawing.Point(164, 145);
+            this.btnRegistrarStock.Location = new System.Drawing.Point(153, 259);
             this.btnRegistrarStock.Name = "btnRegistrarStock";
             this.btnRegistrarStock.Size = new System.Drawing.Size(135, 23);
             this.btnRegistrarStock.TabIndex = 6;
@@ -231,21 +249,21 @@
             // 
             // txbPrecio
             // 
-            this.txbPrecio.Location = new System.Drawing.Point(215, 91);
+            this.txbPrecio.Location = new System.Drawing.Point(204, 205);
             this.txbPrecio.Name = "txbPrecio";
             this.txbPrecio.Size = new System.Drawing.Size(84, 20);
             this.txbPrecio.TabIndex = 5;
             // 
             // txbStock
             // 
-            this.txbStock.Location = new System.Drawing.Point(26, 145);
+            this.txbStock.Location = new System.Drawing.Point(15, 259);
             this.txbStock.Name = "txbStock";
             this.txbStock.Size = new System.Drawing.Size(121, 20);
             this.txbStock.TabIndex = 4;
             // 
             // txbDescripcion
             // 
-            this.txbDescripcion.Location = new System.Drawing.Point(26, 217);
+            this.txbDescripcion.Location = new System.Drawing.Point(15, 369);
             this.txbDescripcion.Multiline = true;
             this.txbDescripcion.Name = "txbDescripcion";
             this.txbDescripcion.Size = new System.Drawing.Size(273, 100);
@@ -254,23 +272,95 @@
             // cmbCategoria
             // 
             this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Location = new System.Drawing.Point(26, 90);
+            this.cmbCategoria.Location = new System.Drawing.Point(15, 204);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(173, 21);
             this.cmbCategoria.TabIndex = 1;
             // 
             // txbNombre
             // 
-            this.txbNombre.Location = new System.Drawing.Point(26, 41);
+            this.txbNombre.Location = new System.Drawing.Point(15, 155);
             this.txbNombre.Name = "txbNombre";
             this.txbNombre.Size = new System.Drawing.Size(273, 20);
             this.txbNombre.TabIndex = 0;
+            // 
+            // imgCodigoBarra
+            // 
+            this.imgCodigoBarra.Location = new System.Drawing.Point(15, 524);
+            this.imgCodigoBarra.Name = "imgCodigoBarra";
+            this.imgCodigoBarra.Size = new System.Drawing.Size(273, 127);
+            this.imgCodigoBarra.TabIndex = 13;
+            this.imgCodigoBarra.TabStop = false;
+            // 
+            // txbCodigoBarra
+            // 
+            this.txbCodigoBarra.Location = new System.Drawing.Point(15, 310);
+            this.txbCodigoBarra.Name = "txbCodigoBarra";
+            this.txbCodigoBarra.Size = new System.Drawing.Size(273, 20);
+            this.txbCodigoBarra.TabIndex = 14;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(15, 486);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(273, 32);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Generar Codigo";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnArchivarCodigo
+            // 
+            this.btnArchivarCodigo.Location = new System.Drawing.Point(15, 666);
+            this.btnArchivarCodigo.Name = "btnArchivarCodigo";
+            this.btnArchivarCodigo.Size = new System.Drawing.Size(192, 23);
+            this.btnArchivarCodigo.TabIndex = 16;
+            this.btnArchivarCodigo.Text = "Archivar";
+            this.btnArchivarCodigo.UseVisualStyleBackColor = true;
+            this.btnArchivarCodigo.Click += new System.EventHandler(this.btnArchivarCodigo_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 294);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(31, 13);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Serie";
+            // 
+            // imgProducto
+            // 
+            this.imgProducto.Location = new System.Drawing.Point(15, 25);
+            this.imgProducto.Name = "imgProducto";
+            this.imgProducto.Size = new System.Drawing.Size(181, 95);
+            this.imgProducto.TabIndex = 18;
+            this.imgProducto.TabStop = false;
+            // 
+            // btnSeleccionarImagen
+            // 
+            this.btnSeleccionarImagen.Location = new System.Drawing.Point(213, 97);
+            this.btnSeleccionarImagen.Name = "btnSeleccionarImagen";
+            this.btnSeleccionarImagen.Size = new System.Drawing.Size(75, 23);
+            this.btnSeleccionarImagen.TabIndex = 19;
+            this.btnSeleccionarImagen.Text = "Agregar";
+            this.btnSeleccionarImagen.UseVisualStyleBackColor = true;
+            this.btnSeleccionarImagen.Click += new System.EventHandler(this.btnSeleccionarImagen_Click);
+            // 
+            // btnQuitarImagen
+            // 
+            this.btnQuitarImagen.Location = new System.Drawing.Point(213, 68);
+            this.btnQuitarImagen.Name = "btnQuitarImagen";
+            this.btnQuitarImagen.Size = new System.Drawing.Size(75, 23);
+            this.btnQuitarImagen.TabIndex = 20;
+            this.btnQuitarImagen.Text = "Quitar";
+            this.btnQuitarImagen.UseVisualStyleBackColor = true;
+            this.btnQuitarImagen.Click += new System.EventHandler(this.btnQuitarImagen_Click);
             // 
             // GestionProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(852, 406);
+            this.ClientSize = new System.Drawing.Size(1008, 749);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "GestionProductos";
@@ -283,6 +373,8 @@
             this.toolStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCodigoBarra)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgProducto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -312,5 +404,13 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripComboBox tscBuscar;
         private System.Windows.Forms.DataGridView dtgDatos;
+        private System.Windows.Forms.TextBox txbCodigoBarra;
+        private System.Windows.Forms.PictureBox imgCodigoBarra;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnArchivarCodigo;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnQuitarImagen;
+        private System.Windows.Forms.Button btnSeleccionarImagen;
+        private System.Windows.Forms.PictureBox imgProducto;
     }
 }
