@@ -36,6 +36,7 @@
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -51,6 +52,8 @@
     <Reference Include="System.Design" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -82,6 +85,9 @@
     <Compile Include="CLS\DTO\PedidosDTO.cs" />
     <Compile Include="CLS\DTO\ProductoDTO.cs" />
     <Compile Include="CLS\DTO\ProveedorDTO.cs" />
+    <Compile Include="CLS\DTO\Reportes\ClientesFrecuentesReporte.cs" />
+    <Compile Include="CLS\DTO\Reportes\InventarioActualReporte.cs" />
+    <Compile Include="CLS\DTO\Reportes\VentasMensualesReporte.cs" />
     <Compile Include="CLS\EmpleadoCLS.cs" />
     <Compile Include="CLS\MunicipiosCLS.cs" />
     <Compile Include="CLS\PaisesCLS.cs" />
@@ -329,6 +335,24 @@
     <Compile Include="GUI\Proveedores\GestionProveedores.Designer.cs">
       <DependentUpon>GestionProveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Reportes\ClienteFrecuente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Reportes\ClienteFrecuente.Designer.cs">
+      <DependentUpon>ClienteFrecuente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Reportes\InventarioActual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Reportes\InventarioActual.Designer.cs">
+      <DependentUpon>InventarioActual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Reportes\Ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Reportes\Ventas.Designer.cs">
+      <DependentUpon>Ventas.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Roles\AgregarRol.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -438,6 +462,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Proveedores\GestionProveedores.resx">
       <DependentUpon>GestionProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Reportes\ClienteFrecuente.resx">
+      <DependentUpon>ClienteFrecuente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Reportes\InventarioActual.resx">
+      <DependentUpon>InventarioActual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Reportes\Ventas.resx">
+      <DependentUpon>Ventas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Roles\AgregarRol.resx">
       <DependentUpon>AgregarRol.cs</DependentUpon>
