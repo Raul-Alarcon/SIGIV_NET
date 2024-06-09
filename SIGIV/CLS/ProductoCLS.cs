@@ -18,6 +18,12 @@ namespace SIGIV.CLS
         public int idCategoria { get; set; }
         public int idStok { get; set; }
         public int cantidadStok { get; set; }
+        public string codigo { get; set; }
+        public string imgCodigo { get; set; }
+        public string img { get; set; }
+
+
+
 
         public static async Task<List<ProductoDTO>> GetAllAsync()
         {
@@ -34,7 +40,8 @@ namespace SIGIV.CLS
                                        Descripcion = pro.descripcion,
                                        Precio = (decimal)pro.precio,
                                        Categoria = cat.categoria,
-                                       Stok = (int)sto.cantidadStok
+                                       Stok = (int)sto.cantidadStok,
+                                       Codigo = pro.codigo
                                    }).ToListAsync();
             }
             return productos;
@@ -53,6 +60,9 @@ namespace SIGIV.CLS
                 producto.idCategoria = (int)pro.idCategoria;
                 producto.idStok = (int)pro.idStok;
                 producto.cantidadStok = (int)pro.DetallesStok.cantidadStok;
+                producto.codigo = pro.codigo;
+                producto.imgCodigo = pro.imgCodigo;
+                producto.img = pro.img;
             }
             return producto;
         }
@@ -68,7 +78,10 @@ namespace SIGIV.CLS
                     descripcion = this.descripcion,
                     precio = this.precio,
                     idCategoria = this.idCategoria,
-                    idStok = this.idStok
+                    idStok = this.idStok, 
+                    codigo = this.codigo,
+                    imgCodigo = this.imgCodigo,
+                    img = this.img
                 };
                 db.Productos.Add(pro);
                 success = await db.SaveChangesAsync() > 0;
@@ -87,6 +100,9 @@ namespace SIGIV.CLS
                 pro.precio = this.precio;
                 pro.idCategoria = this.idCategoria;
                 pro.idStok = this.idStok;
+                pro.codigo = this.codigo;
+                pro.imgCodigo = this.imgCodigo;
+                pro.img = this.img;
                 success = await db.SaveChangesAsync() > 0;
             }
             return success;

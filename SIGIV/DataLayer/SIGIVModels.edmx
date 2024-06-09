@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="SIGIVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="SIGIVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="AsignacionRolesOpciones">
           <Key>
             <PropertyRef Name="idAsignacionRol" />
@@ -188,7 +188,8 @@
           <Property Name="idCategoria" Type="int" />
           <Property Name="idStok" Type="int" />
           <Property Name="codigo" Type="varchar" MaxLength="255" />
-          <Property Name="img" Type="varchar" MaxLength="255" />
+          <Property Name="img" Type="varchar(max)" />
+          <Property Name="imgCodigo" Type="varchar(max)" />
         </EntityType>
         <EntityType Name="ProductosNuevos">
           <Key>
@@ -256,7 +257,7 @@
           <Property Name="idEmpleado" Type="int" />
           <Property Name="idRol" Type="int" />
           <Property Name="usuario" Type="varchar" MaxLength="50" />
-          <Property Name="clave" Type="nchar" MaxLength="40" />
+          <Property Name="clave" Type="varchar(max)" />
         </EntityType>
         <Association Name="FK__ClienteDi__idDis__534D60F1">
           <End Role="Distritos" Type="Self.Distritos" Multiplicity="0..1" />
@@ -670,8 +671,7 @@
             <End Role="Usuarios" EntitySet="Usuarios" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SIGIVModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -892,10 +892,11 @@
           <Property Name="idCategoria" Type="Int32" />
           <Property Name="idStok" Type="Int32" />
           <Property Name="codigo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Name="img" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="img" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="CategoriasProductos" Relationship="Self.FK_Productos_CategoriasProductos" FromRole="Productos" ToRole="CategoriasProductos" />
           <NavigationProperty Name="DetallesFacturas" Relationship="Self.FK_DetallesFacturas_Productos" FromRole="Productos" ToRole="DetallesFacturas" />
           <NavigationProperty Name="DetallesStok" Relationship="Self.FK_Productos_DetallesStok" FromRole="Productos" ToRole="DetallesStok" />
+          <Property Name="imgCodigo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="ProductosNuevos">
           <Key>
@@ -972,7 +973,7 @@
           <Property Name="idEmpleado" Type="Int32" />
           <Property Name="idRol" Type="Int32" />
           <Property Name="usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="clave" Type="String" MaxLength="40" FixedLength="true" Unicode="true" />
+          <Property Name="clave" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Empleados" Relationship="Self.FK_Usuarios_Empleados" FromRole="Usuarios" ToRole="Empleados" />
           <NavigationProperty Name="Roles" Relationship="Self.FK_Usuarios_Roles" FromRole="Usuarios" ToRole="Roles" />
         </EntityType>
@@ -1587,6 +1588,7 @@
           <EntitySetMapping Name="Productos">
             <EntityTypeMapping TypeName="SIGIVModel.Productos">
               <MappingFragment StoreEntitySet="Productos">
+                <ScalarProperty Name="imgCodigo" ColumnName="imgCodigo" />
                 <ScalarProperty Name="idProducto" ColumnName="idProducto" />
                 <ScalarProperty Name="nombreP" ColumnName="nombreP" />
                 <ScalarProperty Name="descripcion" ColumnName="descripcion" />

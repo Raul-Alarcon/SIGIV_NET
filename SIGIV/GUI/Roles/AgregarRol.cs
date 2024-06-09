@@ -132,5 +132,10 @@ namespace SIGIV.GUI.Roles
                 MessageBox.Show("Ha ocurrido un error: " + exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void AgregarRol_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
