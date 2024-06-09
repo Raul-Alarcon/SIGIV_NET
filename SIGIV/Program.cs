@@ -6,8 +6,7 @@ using SIGIV.GUI.Distritos;
 using SIGIV.GUI.Empleados;
 using SIGIV.GUI.Facturas;
 using SIGIV.GUI.Municipios;
-using SIGIV.GUI.Paises;
-using SIGIV.GUI.Productos;
+using SIGIV.GUI.Paises; 
 using SIGIV.GUI.ProductosNuevos;
 using SIGIV.GUI.Proveedores;
 using SIGIV.GUI.Roles;
@@ -32,7 +31,7 @@ namespace SIGIV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GestonFormasPago());
+            Application.Run(new DashBoard());
         }
     }
 }

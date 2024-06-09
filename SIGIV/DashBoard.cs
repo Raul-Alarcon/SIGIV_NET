@@ -52,7 +52,7 @@ namespace SIGIV
                         ShowContent(new GUI.Proveedores.GestionProveedores());
                         break;
                     case "productos":
-                        ShowContent(new GUI.Productos.GestionProductos());
+                        //ShowContent(new GUI.Productos.GestionProductos());
                         break;
                     case "facturas":
                         ShowContent(new GUI.Facturas.GestionFacturas());
