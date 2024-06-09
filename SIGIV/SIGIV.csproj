@@ -431,6 +431,12 @@
     <Compile Include="GUI\Reportes\Ventas.Designer.cs">
       <DependentUpon>Ventas.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\RolesOpciones\GestionRolesOpciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RolesOpciones\GestionRolesOpciones.Designer.cs">
+      <DependentUpon>GestionRolesOpciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Roles\AgregarRol.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -571,6 +577,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Reportes\Ventas.resx">
       <DependentUpon>Ventas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RolesOpciones\GestionRolesOpciones.resx">
+      <DependentUpon>GestionRolesOpciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Roles\AgregarRol.resx">
       <DependentUpon>AgregarRol.cs</DependentUpon>

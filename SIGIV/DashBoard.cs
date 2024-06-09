@@ -1,12 +1,14 @@
 ﻿using MaterialSkin;
 using MaterialSkin.Controls;
 using SIGIV.CLS.Auth;
+using SIGIV.GUI.Auth.Usuarios;
 using SIGIV.GUI.Clientes;
 using SIGIV.GUI.Empleados;
 using SIGIV.GUI.Facturas;
 using SIGIV.GUI.Pedidos;
 using SIGIV.GUI.Productos;
 using SIGIV.GUI.Proveedores;
+using SIGIV.GUI.Reportes;
 using SIGIV.GUI.Usuarios;
 using System;
 using System.Collections.Generic;
@@ -40,38 +42,38 @@ namespace SIGIV
 
         }
 
-        //override protected void OnFormClosing(FormClosingEventArgs e)
-        //{
-        //    Login.Login.Instance.Close();
-        //}
+        override protected void OnFormClosing(FormClosingEventArgs e)
+        {
+            Login.Login.Instance.Close();
+        }
 
-        //public override void Refresh()
-        //{
-        //    try
-        //    {
-        //        var usuario = UserManager.GetSesion();
-        //        lnlUser.Text = usuario.usuario;
-        //    }
-        //    catch (Exception exc)
-        //    {
-        //        MessageBox.Show(exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //    base.Refresh();
-        //}
+        public override void Refresh()
+        {
+            try
+            {
+                var usuario = UserManager.GetSesion();
+                lnlUser.Text = usuario.usuario;
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            base.Refresh();
+        }
 
-        //protected override void OnLoad(EventArgs e)
-        //{
-        //    try
-        //    {
-        //        var usuario = UserManager.GetSesion(); 
-        //        lnlUser.Text = usuario.usuario;
-        //    }
-        //    catch (Exception exc)
-        //    {
-        //        MessageBox.Show(exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //    base.OnLoad(e); 
-        //}
+        protected override void OnLoad(EventArgs e)
+        {
+            try
+            {
+                var usuario = UserManager.GetSesion();
+                lnlUser.Text = usuario.usuario;
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            base.OnLoad(e);
+        }
 
 
         //private void buttonSiderBard_Click(object sender, EventArgs e)
@@ -180,7 +182,12 @@ namespace SIGIV
             }
             else if (materialTabControl1.SelectedIndex == 7)
             {
-                ShowContent(new GestionProveedores());
+                ShowContent(new ClienteFrecuente());
+            }
+            else if(materialTabControl1.SelectedIndex == 8)
+            {
+                ShowContent(new GestionUsuarios());
+                
             }
 
         }
