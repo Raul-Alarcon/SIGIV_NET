@@ -1,5 +1,6 @@
 ﻿using MaterialSkin;
 using MaterialSkin.Controls;
+using SIGIV.CLS.Auth;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,13 +8,13 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading.Tasks; 
 using System.Windows.Forms;
 
 namespace SIGIV
 {
     public partial class DashBoard : Form
-    {
+    { 
         public DashBoard()
         {
             InitializeComponent();
@@ -27,8 +28,44 @@ namespace SIGIV
             //    Primary.Brown800, 
             //    Primary.Brown800, 
             //    Accent.Blue100, 
-            //    TextShade.WHITE);
+            //    TextShade.WHITE); 
+
+           
         }
+
+        override protected void OnFormClosing(FormClosingEventArgs e)
+        {
+            Login.Login.Instance.Close();
+        }
+
+        public override void Refresh()
+        {
+            try
+            {
+                var usuario = UserManager.GetSesion();
+                lnlUser.Text = usuario.usuario;
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            base.Refresh();
+        }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            try
+            {
+                var usuario = UserManager.GetSesion(); 
+                lnlUser.Text = usuario.usuario;
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            base.OnLoad(e); 
+        }
+
 
         private void buttonSiderBard_Click(object sender, EventArgs e)
         {
@@ -80,6 +117,28 @@ namespace SIGIV
             ContentLayout.Tag = content;
             content.BringToFront();
             content.Show();
+        }
+
+        private void btnCerrarSession_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                var forms = Application.OpenForms;
+
+                
+               if (UserManager.CerrarSesion())
+               {
+                    Login.Login.dashBoard = this;
+                    Login.Login.dashBoard.Hide(); 
+
+                    Login.Login.Instance.Show(); 
+               }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
