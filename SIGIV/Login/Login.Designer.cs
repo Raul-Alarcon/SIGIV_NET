@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             System.Windows.Forms.Label label3;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -44,6 +44,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = System.Drawing.Color.Transparent;
+            label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label3.Location = new System.Drawing.Point(143, 31);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(71, 25);
+            label3.TabIndex = 5;
+            label3.Text = "LOGIN";
             // 
             // panel1
             // 
@@ -86,17 +97,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Visible = false;
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BackColor = System.Drawing.Color.Transparent;
-            label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label3.Location = new System.Drawing.Point(143, 31);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(71, 25);
-            label3.TabIndex = 5;
-            label3.Text = "LOGIN";
-            // 
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.SystemColors.ButtonShadow;
@@ -109,6 +109,7 @@
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txbPassword
             // 
@@ -169,6 +170,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Login";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

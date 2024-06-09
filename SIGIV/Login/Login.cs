@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SIGIV.CLS.Auth;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,6 +23,26 @@ namespace SIGIV.Login
 
         }
 
-    
+        private async void btnLogin_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(string.IsNullOrEmpty(txbUsername.Text) || string.IsNullOrEmpty(txbPassword.Text))
+                {
+                    throw new Exception("Debe ingresar un usuario y contraseña");
+                }
+                bool succes = await UserManager.IniciarSession(txbUsername.Text, txbPassword.Text);
+                if (succes)
+                {
+                    this.Hide();
+                    DashBoard dashBoard = new DashBoard();
+                    dashBoard.Show();
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

@@ -45,9 +45,18 @@ namespace SIGIV.CLS
                             iva = this.iva,
                         };
                         db.DetallesFacturas.Add(DetalleFactura);
+
+
+                        var ctualProduct = db.Productos.Find(producto.ID);
+                        ctualProduct.DetallesStok.cantidadStok -= producto.Cantidad;
+                        db.Entry(ctualProduct).State = System.Data.Entity.EntityState.Modified; 
+
                     });
 
                     result = await db.SaveChangesAsync();
+
+
+
                     success = result > 0;
                 }
             }

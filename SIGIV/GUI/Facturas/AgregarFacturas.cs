@@ -1,4 +1,5 @@
 ﻿using SIGIV.CLS;
+using SIGIV.CLS.Auth;
 using SIGIV.CLS.DTO;
 using System;
 using System.Collections.Generic;
@@ -191,7 +192,7 @@ namespace SIGIV.GUI.Facturas
 
         private async Task CargarProdutos()
         {
-            this.productos = await ProductoCLS.GetAllAsync();
+            this.productos = await ProductoCLS.GetAllAsync( producto => producto.DetallesStok.cantidadStok > 0);
             dgvProductos.DataSource = productos; 
         }
 
@@ -269,7 +270,7 @@ namespace SIGIV.GUI.Facturas
                 FacturaCLS factura = new FacturaCLS
                 {
                     idCliente = clienteSeleccionado.ID,
-                    idEmpleado = 1,// debe ser el empleado en session
+                    idEmpleado = UserManager.GetSesion().idEmpleado,// debe ser el empleado en session
                     iva = this.Iva,
                     fechaFactura = dtpFecha.Value,
                     productos = productosSeleccionados
@@ -286,6 +287,7 @@ namespace SIGIV.GUI.Facturas
                 productosSeleccionados.Clear();
                 dtgProductosSeleccionados.DataSource = null; 
                 dtgProductosSeleccionados.DataSource = productosSeleccionados;
+                await CargarProdutos();
             }
             catch (Exception exc)
             {
