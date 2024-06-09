@@ -265,7 +265,8 @@ namespace SIGIV.GUI.Facturas
             {
                 if (productosSeleccionados.Count <= 0) throw new Exception("Necesitas agragar productos para generar una factura");
                 if (clienteSeleccionado == null) throw new Exception("Necesitas seleccionar un cliente para generar una factura");
-                if (Convert.ToInt32(txtCambio.Text) < 0) throw new Exception("El efectivo recibido no puede ser menor al total de la factura");
+                if (string.IsNullOrEmpty(txtCambio.Text)) throw new Exception("Al parecer no as digitado el efectivo");
+                if (Convert.ToDecimal(txtCambio.Text) < 0) throw new Exception("El efectivo recibido no puede ser menor al total de la factura");
 
                 FacturaCLS factura = new FacturaCLS
                 {
@@ -276,8 +277,19 @@ namespace SIGIV.GUI.Facturas
                     productos = productosSeleccionados
                 };
 
-                bool success = await factura.SaveAsync();
-                if (!success) throw new Exception("Ocurrio un error interno al generar la factura, porfavor intentalo mas tarde");
+                factura = await factura.SaveAndReturnAsync();
+                if (factura.id <= 0) throw new Exception("Ocurrio un error interno al generar la factura, porfavor intentalo mas tarde");
+
+                TransaccionCLS transaccion = new TransaccionCLS
+                {
+                    idFactura = factura.id,
+                    monto = Convert.ToDecimal(this.txtTotal.Text),
+                    fechaTransaccion = factura.fechaFactura,
+                    idTipoPago = Convert.ToInt32(cbFormaPago.SelectedValue)
+                };
+
+                bool succes = await transaccion.SaveAsync(); 
+                if (!succes) throw new Exception("No se pudo completar el pago, porfavor intentelo otra vez");
                 MessageBox.Show("La factura fue guardada con exito");
                 txtCambio.Text = string.Empty;
                 txtEfectivoRecibido.Text = string.Empty;

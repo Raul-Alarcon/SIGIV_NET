@@ -104,5 +104,55 @@ namespace SIGIV.CLS
 
             return success;
         }
+
+        public async Task<FacturaCLS> SaveAndReturnAsync()
+        {
+            FacturaCLS facturaCLS = new FacturaCLS();
+            using (var db = new SIGIVEntities())
+            {
+                var factura = new Facturas
+                {
+                    fechaFactura = this.fechaFactura,
+                    comentario = this.comentario,
+                    idCliente = this.idCliente,
+                    idEmpleado = this.idEmpleado,
+                };
+
+                db.Facturas.Add(factura);
+                int result = await db.SaveChangesAsync();
+                if (result > 0)
+                {
+                    productos.ForEach(producto => {
+                        var DetalleFactura = new DetallesFacturas
+                        {
+                            idFactura = factura.idFactura,
+                            idProducto = producto.ID,
+                            cantidad = producto.Cantidad,
+                            iva = this.iva,
+                        };
+                        db.DetallesFacturas.Add(DetalleFactura);
+
+
+                        var ctualProduct = db.Productos.Find(producto.ID);
+                        ctualProduct.DetallesStok.cantidadStok -= producto.Cantidad;
+                        db.Entry(ctualProduct).State = System.Data.Entity.EntityState.Modified;
+
+                    });
+
+                    result = await db.SaveChangesAsync();
+
+                    if(result > 0)
+                    {
+                        facturaCLS.id = factura.idFactura;
+                        facturaCLS.idCliente = idCliente;
+                        facturaCLS.fechaFactura = fechaFactura;
+                        facturaCLS.idEmpleado = idEmpleado;
+                        facturaCLS.iva = iva;
+                    }
+                }
+            }
+
+            return facturaCLS;
+        }
     }
 }
