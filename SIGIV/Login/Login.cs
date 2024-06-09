@@ -13,6 +13,8 @@ namespace SIGIV.Login
 {
     public partial class Login : Form
     {
+        public static Login Instance =  null;
+        public static DashBoard dashBoard =  null;
         public Login()
         {
             InitializeComponent();
@@ -34,9 +36,15 @@ namespace SIGIV.Login
                 bool succes = await UserManager.IniciarSession(txbUsername.Text, txbPassword.Text);
                 if (succes)
                 {
-                    this.Hide();
-                    DashBoard dashBoard = new DashBoard();
+                    txbPassword.Text = "";
+                    txbUsername.Text = "";
+
+                    Instance = Instance ?? this;
+                    Instance.Hide(); 
+
+                    dashBoard = dashBoard ?? new DashBoard(); 
                     dashBoard.Show();
+                    dashBoard.Refresh();
                 }
             }
             catch (Exception exc)

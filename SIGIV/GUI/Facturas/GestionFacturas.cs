@@ -54,6 +54,7 @@ namespace SIGIV.GUI.Facturas
         {
             try
             {
+                if (facturaSeleccionada == null) throw new Exception("Debe seleccionar una factura");
                 if(dgvProductos.Rows.Count > 0)
                 {
                     var produtos = dgvProductos.DataSource as List<ProductoFacturaDTO>;

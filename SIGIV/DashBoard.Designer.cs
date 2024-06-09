@@ -35,6 +35,9 @@
             this.materialDrawer3 = new MaterialSkin.Controls.MaterialDrawer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.ContentLayout = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnCerrarSession = new System.Windows.Forms.Button();
+            this.lnlUser = new System.Windows.Forms.Label();
             this.sideBard = new SIGIV.Components.DragPanel();
             this.reportes = new System.Windows.Forms.Button();
             this.pedidos = new System.Windows.Forms.Button();
@@ -49,6 +52,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.sideBard.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -95,6 +99,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.ContentLayout);
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(64, 0);
             this.panel1.Name = "panel1";
@@ -104,10 +109,41 @@
             // ContentLayout
             // 
             this.ContentLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ContentLayout.Location = new System.Drawing.Point(0, 0);
+            this.ContentLayout.Location = new System.Drawing.Point(0, 46);
             this.ContentLayout.Name = "ContentLayout";
-            this.ContentLayout.Size = new System.Drawing.Size(843, 749);
+            this.ContentLayout.Size = new System.Drawing.Size(843, 703);
             this.ContentLayout.TabIndex = 10;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnCerrarSession);
+            this.panel3.Controls.Add(this.lnlUser);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(843, 46);
+            this.panel3.TabIndex = 11;
+            // 
+            // btnCerrarSession
+            // 
+            this.btnCerrarSession.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrarSession.Location = new System.Drawing.Point(712, 12);
+            this.btnCerrarSession.Name = "btnCerrarSession";
+            this.btnCerrarSession.Size = new System.Drawing.Size(107, 23);
+            this.btnCerrarSession.TabIndex = 1;
+            this.btnCerrarSession.Text = "Cerrar Session";
+            this.btnCerrarSession.UseVisualStyleBackColor = true;
+            this.btnCerrarSession.Click += new System.EventHandler(this.btnCerrarSession_Click);
+            // 
+            // lnlUser
+            // 
+            this.lnlUser.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lnlUser.AutoSize = true;
+            this.lnlUser.Location = new System.Drawing.Point(608, 17);
+            this.lnlUser.Name = "lnlUser";
+            this.lnlUser.Size = new System.Drawing.Size(35, 13);
+            this.lnlUser.TabIndex = 0;
+            this.lnlUser.Text = "label1";
             // 
             // sideBard
             // 
@@ -324,6 +360,8 @@
             this.Name = "DashBoard";
             this.Text = " ";
             this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.sideBard.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -351,5 +389,8 @@
         private System.Windows.Forms.Button proveedores;
         private System.Windows.Forms.Button reportes;
         private System.Windows.Forms.Button pedidos;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnCerrarSession;
+        private System.Windows.Forms.Label lnlUser;
     }
 }
