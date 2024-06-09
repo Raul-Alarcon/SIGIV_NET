@@ -114,5 +114,6 @@ namespace SIGIV.GUI.Empleados
                 MessageBox.Show(exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);  
             }
         }
+         
     }
 }

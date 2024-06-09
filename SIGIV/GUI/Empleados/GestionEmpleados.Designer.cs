@@ -143,6 +143,7 @@
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(110, 22);
             this.btnUsuarios.Text = "Asignar Usuario";
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // toolStripSeparator4
             // 

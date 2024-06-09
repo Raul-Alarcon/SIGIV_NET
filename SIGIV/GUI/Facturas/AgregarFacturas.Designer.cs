@@ -68,6 +68,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.nFactura = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnGenerarFactura = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -94,7 +95,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(15);
-            this.panel1.Size = new System.Drawing.Size(956, 670);
+            this.panel1.Size = new System.Drawing.Size(1097, 670);
             this.panel1.TabIndex = 0;
             // 
             // groupBox5
@@ -106,31 +107,33 @@
             this.groupBox5.Location = new System.Drawing.Point(15, 233);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox5.Size = new System.Drawing.Size(926, 422);
+            this.groupBox5.Size = new System.Drawing.Size(1067, 422);
             this.groupBox5.TabIndex = 1;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Datos Facturas";
             // 
             // groupBox8
             // 
+            this.groupBox8.Controls.Add(this.btnGenerarFactura);
             this.groupBox8.Controls.Add(this.btnEliminar);
             this.groupBox8.Controls.Add(this.groupBox9);
             this.groupBox8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox8.Location = new System.Drawing.Point(342, 18);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(579, 286);
+            this.groupBox8.Size = new System.Drawing.Size(720, 286);
             this.groupBox8.TabIndex = 13;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Detalles Factura";
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(442, 19);
+            this.btnEliminar.Location = new System.Drawing.Point(416, 19);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(129, 23);
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.Text = "Eliminar Producto";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // groupBox9
             // 
@@ -139,21 +142,18 @@
             this.groupBox9.Location = new System.Drawing.Point(3, 43);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox9.Size = new System.Drawing.Size(573, 240);
+            this.groupBox9.Size = new System.Drawing.Size(714, 240);
             this.groupBox9.TabIndex = 0;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Productos";
             // 
             // dtgProductosSeleccionados
             // 
-            this.dtgProductosSeleccionados.AllowUserToAddRows = false;
-            this.dtgProductosSeleccionados.AllowUserToDeleteRows = false;
             this.dtgProductosSeleccionados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgProductosSeleccionados.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgProductosSeleccionados.Location = new System.Drawing.Point(5, 18);
             this.dtgProductosSeleccionados.Name = "dtgProductosSeleccionados";
-            this.dtgProductosSeleccionados.ReadOnly = true;
-            this.dtgProductosSeleccionados.Size = new System.Drawing.Size(563, 217);
+            this.dtgProductosSeleccionados.Size = new System.Drawing.Size(704, 217);
             this.dtgProductosSeleccionados.TabIndex = 0;
             // 
             // groupBox7
@@ -168,7 +168,7 @@
             this.groupBox7.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox7.Location = new System.Drawing.Point(342, 304);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(579, 113);
+            this.groupBox7.Size = new System.Drawing.Size(720, 113);
             this.groupBox7.TabIndex = 12;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Efectivo";
@@ -197,7 +197,7 @@
             this.groupBox10.Controls.Add(this.txtEfectivoRecibido);
             this.groupBox10.Controls.Add(this.label9);
             this.groupBox10.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox10.Location = new System.Drawing.Point(285, 16);
+            this.groupBox10.Location = new System.Drawing.Point(426, 16);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(291, 94);
             this.groupBox10.TabIndex = 4;
@@ -303,6 +303,7 @@
             this.btnAgregarProducto.TabIndex = 4;
             this.btnAgregarProducto.Text = "Agregar";
             this.btnAgregarProducto.UseVisualStyleBackColor = true;
+            this.btnAgregarProducto.Click += new System.EventHandler(this.btnAgregarProducto_Click);
             // 
             // txtProducto
             // 
@@ -356,7 +357,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(15, 15);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(926, 218);
+            this.groupBox1.Size = new System.Drawing.Size(1067, 218);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Generales";
@@ -490,11 +491,21 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Numero de Factura";
             // 
+            // btnGenerarFactura
+            // 
+            this.btnGenerarFactura.Location = new System.Drawing.Point(565, 19);
+            this.btnGenerarFactura.Name = "btnGenerarFactura";
+            this.btnGenerarFactura.Size = new System.Drawing.Size(144, 23);
+            this.btnGenerarFactura.TabIndex = 3;
+            this.btnGenerarFactura.Text = "Generar Factura";
+            this.btnGenerarFactura.UseVisualStyleBackColor = true;
+            this.btnGenerarFactura.Click += new System.EventHandler(this.btnGenerarFactura_Click);
+            // 
             // AgregarFacturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(956, 670);
+            this.ClientSize = new System.Drawing.Size(1097, 670);
             this.Controls.Add(this.panel1);
             this.Name = "AgregarFacturas";
             this.Text = "AgregarFacturas";
@@ -552,7 +563,6 @@
         private System.Windows.Forms.TextBox txtBuscarProducto;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.DataGridView dtgProductosSeleccionados;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label label7;
@@ -565,5 +575,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtEfectivoRecibido;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DataGridView dtgProductosSeleccionados;
+        private System.Windows.Forms.Button btnGenerarFactura;
     }
 }

@@ -19,6 +19,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SIGIV.GUI.FormasPago;
 using SIGIV.GUI.Productos;
+using System.Web.UI.WebControls;
 
 namespace SIGIV
 {
@@ -32,7 +33,7 @@ namespace SIGIV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GestionProductos());
+            Application.Run(new Login.Login());
         }
     }
 }
