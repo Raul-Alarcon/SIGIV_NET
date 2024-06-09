@@ -33,7 +33,8 @@ namespace SIGIV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login.Login());
+            //Application.Run(new Login.Login()); Descomente para el login
+            Application.Run(new GestionFacturas());
         }
     }
 }

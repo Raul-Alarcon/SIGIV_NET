@@ -127,6 +127,7 @@
     <Compile Include="CLS\DTO\DestallesStockDTO.cs" />
     <Compile Include="CLS\DTO\DistritosDTO.cs" />
     <Compile Include="CLS\DTO\EmpleadoDTO.cs" />
+    <Compile Include="CLS\DTO\FacturaDTO.cs" />
     <Compile Include="CLS\DTO\MunicipiosDTO.cs" />
     <Compile Include="CLS\DTO\PedidosDTO.cs" />
     <Compile Include="CLS\DTO\ProductoDTO.cs" />

@@ -2,6 +2,7 @@
 using SIGIV.DataLayer;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,46 @@ namespace SIGIV.CLS
         public decimal iva { get; set; }
       
         public List<ProductoFacturaDTO> productos { get; set; }
+
+        public async static Task<List<FacturaDTO>> GetAsync()
+        {
+            List<FacturaDTO> facturas = new List<FacturaDTO>();
+            using (var db = new SIGIVEntities())
+            {
+                facturas = await (from factura in db.Facturas
+                            join cliente in db.Clientes on factura.idCliente equals cliente.IDCliente
+                            join empleado in db.Empleados on factura.idEmpleado equals empleado.idEmpleado
+                            select new FacturaDTO
+                            {
+                                Id = factura.idFactura,
+                                Fecha = (DateTime)factura.fechaFactura,
+                                Cliente = cliente.nombresCliente + " " + cliente.apellidosCliente,
+                                Empleado = empleado.nombresEmpleado + " " + empleado.apellidosEmpleado
+                            }).ToListAsync();
+            }
+
+            return facturas;
+        }
+
+        public async Task<List<ProductoFacturaDTO>> GetAllProductosAsync()
+        {
+            List<ProductoFacturaDTO> productos = new List<ProductoFacturaDTO>();
+            using (var db = new SIGIVEntities())
+            {
+                productos = await (from detalle in db.DetallesFacturas
+                                   join producto in db.Productos on detalle.idProducto equals producto.idProducto
+                                   where detalle.idFactura == this.id
+                                   select new ProductoFacturaDTO
+                                   {
+                                       ID = producto.idProducto,
+                                       Producto = producto.nombreP,
+                                       Precio = (decimal)producto.precio,
+                                       Cantidad = (int)detalle.cantidad,
+                                   }).ToListAsync();
+            }
+
+            return productos;
+        }
 
         public async Task<bool> SaveAsync()
         {
