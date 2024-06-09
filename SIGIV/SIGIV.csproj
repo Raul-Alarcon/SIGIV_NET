@@ -148,6 +148,7 @@
     <Compile Include="CLS\ProductoNuevoCLS.cs" />
     <Compile Include="CLS\ProveedorCLS.cs" />
     <Compile Include="CLS\StockCLS.cs" />
+    <Compile Include="CLS\TransaccionCLS.cs" />
     <Compile Include="CLS\utils\ImgConvert.cs" />
     <Compile Include="CLS\utils\Security.cs" />
     <Compile Include="Components\AccionBar.cs">

@@ -55,7 +55,7 @@ namespace SIGIV.CLS
                 productos = await (from pro in db.Productos
                                    join cat in db.CategoriasProductos on pro.idCategoria equals cat.idCategoria
                                    join sto in db.DetallesStok on pro.idStok equals sto.idStok
-                                   where query(pro)
+                                   where pro.DetallesStok.cantidadStok > 0
                                    select new ProductoDTO
                                    {
                                        ID = pro.idProducto,
