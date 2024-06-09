@@ -32,7 +32,7 @@ namespace SIGIV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GestionProductos());
+            Application.Run(new Compras());
         }
     }
 }

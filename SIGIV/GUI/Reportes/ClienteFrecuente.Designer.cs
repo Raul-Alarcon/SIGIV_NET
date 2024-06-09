@@ -35,16 +35,18 @@
             this.dtpFinal = new System.Windows.Forms.DateTimePicker();
             this.dtpInicio = new System.Windows.Forms.DateTimePicker();
             this.crvReporteClienteFrecuente = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Location = new System.Drawing.Point(3, 16);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -58,8 +60,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.crvReporteClienteFrecuente);
-            this.splitContainer1.Size = new System.Drawing.Size(912, 505);
-            this.splitContainer1.SplitterDistance = 272;
+            this.splitContainer1.Size = new System.Drawing.Size(906, 486);
+            this.splitContainer1.SplitterDistance = 270;
             this.splitContainer1.TabIndex = 0;
             // 
             // btnGenerar
@@ -112,16 +114,27 @@
             this.crvReporteClienteFrecuente.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crvReporteClienteFrecuente.Location = new System.Drawing.Point(0, 0);
             this.crvReporteClienteFrecuente.Name = "crvReporteClienteFrecuente";
-            this.crvReporteClienteFrecuente.Size = new System.Drawing.Size(636, 505);
+            this.crvReporteClienteFrecuente.Size = new System.Drawing.Size(632, 486);
             this.crvReporteClienteFrecuente.TabIndex = 0;
             this.crvReporteClienteFrecuente.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.splitContainer1);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(912, 505);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Reporte Clientes Frecuentes";
             // 
             // ClienteFrecuente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(912, 505);
-            this.Controls.Add(this.splitContainer1);
+            this.Controls.Add(this.groupBox1);
             this.Name = "ClienteFrecuente";
             this.Text = "ClienteFrecuente";
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -129,6 +142,7 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -142,5 +156,6 @@
         private System.Windows.Forms.DateTimePicker dtpFinal;
         private System.Windows.Forms.DateTimePicker dtpInicio;
         private System.Windows.Forms.Button btnGenerar;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

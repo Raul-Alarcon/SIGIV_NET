@@ -132,6 +132,7 @@
     <Compile Include="CLS\DTO\ProductoNuevoDTO.cs" />
     <Compile Include="CLS\DTO\ProveedorDTO.cs" />
     <Compile Include="CLS\DTO\Reportes\ClientesFrecuentesReporte.cs" />
+    <Compile Include="CLS\DTO\Reportes\ComprasReporte.cs" />
     <Compile Include="CLS\DTO\Reportes\InventarioActualReporte.cs" />
     <Compile Include="CLS\DTO\Reportes\VentasMensualesReporte.cs" />
     <Compile Include="CLS\EmpleadoCLS.cs" />
@@ -407,6 +408,12 @@
     <Compile Include="GUI\Reportes\ClienteFrecuente.Designer.cs">
       <DependentUpon>ClienteFrecuente.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Reportes\Compras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Reportes\Compras.Designer.cs">
+      <DependentUpon>Compras.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Reportes\InventarioActual.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -455,6 +462,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>InformeInventarioActual.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteCompra.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteCompra.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reportes\VentasMensualesProducto.cs">
@@ -545,6 +558,9 @@
     <EmbeddedResource Include="GUI\Reportes\ClienteFrecuente.resx">
       <DependentUpon>ClienteFrecuente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Reportes\Compras.resx">
+      <DependentUpon>Compras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Reportes\InventarioActual.resx">
       <DependentUpon>InventarioActual.cs</DependentUpon>
     </EmbeddedResource>
@@ -579,6 +595,10 @@
     <EmbeddedResource Include="Reportes\InformeInventarioActual.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>InformeInventarioActual.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteCompra.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteCompra.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\VentasMensualesProducto.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
