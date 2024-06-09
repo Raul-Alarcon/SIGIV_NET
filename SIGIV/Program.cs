@@ -19,6 +19,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SIGIV.GUI.FormasPago;
 using SIGIV.GUI.Productos;
+using System.Web.UI.WebControls;
 
 namespace SIGIV
 {

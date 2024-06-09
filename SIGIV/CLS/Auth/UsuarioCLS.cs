@@ -25,7 +25,7 @@ namespace SIGIV.CLS.Auth
             {
                 DataLayer.Usuarios usu = new DataLayer.Usuarios();
                 usu.usuario = this.usuario;
-                usu.clave = this.clave;
+                usu.clave = Security.GenerateSHA256Hash(this.clave);
                 usu.idRol = this.idRol;
                 usu.idEmpleado = this.idEmpleado;
                 db.Usuarios.Add(usu);
@@ -71,7 +71,7 @@ namespace SIGIV.CLS.Auth
                 if(usu != null)
                 {
                     usu.usuario = this.usuario;
-                    usu.clave = this.clave;
+                    usu.clave = Security.GenerateSHA256Hash(this.clave);
                     usu.idRol = this.idRol;
                     usu.idEmpleado = this.idEmpleado;
                     await db.SaveChangesAsync();
@@ -79,9 +79,6 @@ namespace SIGIV.CLS.Auth
                 }
             }
             return result;
-        }
-
-         
-
+        } 
     }
 }
