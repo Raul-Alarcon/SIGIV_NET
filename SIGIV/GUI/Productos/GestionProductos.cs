@@ -204,5 +204,16 @@ namespace SIGIV.GUI.Productos
                 MessageBox.Show("Error al eliminar el producto: " + ex.Message);
             }
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            txbNombre.Text = String.Empty;
+            txbDescripcion.Text = String.Empty;
+            txbPrecio.Text = String.Empty;
+            txbStock.Text = String.Empty;
+            idProductoSeleccionado = 0;
+            dtgDatos.ClearSelection();
+            idStockSeleccionado = 0;
+        }
     }
 }

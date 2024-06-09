@@ -1,5 +1,6 @@
 ﻿using SIGIV.CLS;
 using SIGIV.CLS.DTO;
+using SIGIV.GUI.Pedidos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -252,6 +253,12 @@ namespace SIGIV.GUI.Proveedores
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            GestionPedidos pedidos = new GestionPedidos();
+            pedidos.ShowDialog();
         }
     }
 }
