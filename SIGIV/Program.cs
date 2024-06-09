@@ -18,6 +18,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SIGIV.GUI.FormasPago;
+using SIGIV.GUI.Productos;
 
 namespace SIGIV
 {
@@ -31,7 +32,7 @@ namespace SIGIV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DashBoard());
+            Application.Run(new GestionProductos());
         }
     }
 }

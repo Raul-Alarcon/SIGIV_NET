@@ -379,6 +379,10 @@
     <Compile Include="GUI\ProductosNuevos\GestionProductosNuevos.Designer.cs">
       <DependentUpon>GestionProductosNuevos.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Productos\GestionProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Productos\GestionProductos.Designer.cs" />
     <Compile Include="GUI\Proveedores\DireccionEdicionProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -528,6 +532,7 @@
     <EmbeddedResource Include="GUI\ProductosNuevos\GestionProductosNuevos.resx">
       <DependentUpon>GestionProductosNuevos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Productos\GestionProductos.resx" />
     <EmbeddedResource Include="GUI\Proveedores\DireccionEdicionProveedor.resx">
       <DependentUpon>DireccionEdicionProveedor.cs</DependentUpon>
     </EmbeddedResource>
@@ -604,9 +609,7 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="GUI\Productos\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="DataLayer\SIGIVModels.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
