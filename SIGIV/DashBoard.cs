@@ -18,7 +18,7 @@ namespace SIGIV
         {
             InitializeComponent();
             var materialSkinManager = MaterialSkinManager.Instance;
-            this.FormBorderStyle = FormBorderStyle.None;
+            //this.FormBorderStyle = FormBorderStyle.None;
             //materialSkinManager.AddFormToManage(this);
 
             //materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
@@ -52,7 +52,7 @@ namespace SIGIV
                         ShowContent(new GUI.Proveedores.GestionProveedores());
                         break;
                     case "productos":
-                        ShowContent(new GUI.Productos.GestionProductos());
+                        //ShowContent(new GUI.Productos.GestionProductos());
                         break;
                     case "facturas":
                         ShowContent(new GUI.Facturas.GestionFacturas());
@@ -66,7 +66,7 @@ namespace SIGIV
                     case "settings":
                         ShowContent(new GUI.Usuarios.AgregarUsuarios());
                         break;
-                    default: break;
+                    default: break; 
                 }
             }
         }

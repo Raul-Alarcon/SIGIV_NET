@@ -6,10 +6,10 @@ using SIGIV.GUI.Distritos;
 using SIGIV.GUI.Empleados;
 using SIGIV.GUI.Facturas;
 using SIGIV.GUI.Municipios;
-using SIGIV.GUI.Paises;
-using SIGIV.GUI.Productos;
+using SIGIV.GUI.Paises; 
 using SIGIV.GUI.ProductosNuevos;
 using SIGIV.GUI.Proveedores;
+using SIGIV.GUI.Roles;
 using SIGIV.GUI.Reportes;
 using SIGIV.Login;
 using System;
@@ -17,6 +17,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SIGIV.GUI.FormasPago;
+using SIGIV.GUI.Productos;
 
 namespace SIGIV
 {

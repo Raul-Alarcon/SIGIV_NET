@@ -1,10 +1,15 @@
-﻿using SIGIV.CLS;
+﻿using BarcodeLib;
+using BarcodeStandard;
+using SIGIV.CLS;
 using SIGIV.CLS.DTO;
+using SIGIV.CLS.utils;
+using SkiaSharp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +21,7 @@ namespace SIGIV.GUI.Productos
     {
         int idProductoSeleccionado = 0;
         int idStockSeleccionado = 0;
+        Image imgCode = null;
         public GestionProductos()
         {
             InitializeComponent();
@@ -92,6 +98,11 @@ namespace SIGIV.GUI.Productos
             bool resultStock = await stock.UpdateAsync();
             if (resultStock)
             {
+                if(string.IsNullOrEmpty(txbCodigoBarra.Text)) throw new Exception(Name + "El campo de código de barras no puede estar vacío");
+                if (this.imgCode == null)
+                {
+                    GenerarCodigo();
+                }
                 ProductoCLS producto = new ProductoCLS
                 {
                     id = idProductoSeleccionado,
@@ -99,7 +110,11 @@ namespace SIGIV.GUI.Productos
                     descripcion = txbDescripcion.Text,
                     precio = decimal.Parse(txbPrecio.Text),
                     idCategoria = (int)cmbCategoria.SelectedValue,
-                    idStok = stock.idStok
+                    idStok = stock.idStok,
+                    codigo = txbCodigoBarra.Text,
+                    imgCodigo = ImgConvert.ImageToBase64(imgCodigoBarra.Image, System.Drawing.Imaging.ImageFormat.Png),
+                    img = imgProducto.Image != null ? 
+                        ImgConvert.ImageToBase64(imgProducto.Image, System.Drawing.Imaging.ImageFormat.Png) : null
                 };
                 bool result = await producto.UpdateAsync();
                 if (result)
@@ -111,6 +126,9 @@ namespace SIGIV.GUI.Productos
                     txbPrecio.Text = String.Empty;
                     txbDescripcion.Text = String.Empty;
                     txbNombre.Text = String.Empty;
+                    txbCodigoBarra.Text = String.Empty;
+                    imgCodigoBarra.Image = null;
+                    imgProducto.Image = null;
                     await CargarProductos();
                 }
                 else
@@ -131,30 +149,35 @@ namespace SIGIV.GUI.Productos
             StockCLS stockResult = await stock.AddAsync();
             if (stockResult.idStok > 0)
             {
+                if (string.IsNullOrEmpty(txbCodigoBarra.Text)) throw new Exception(Name + "El campo de código de barras no puede estar vacío");
+                if (this.imgCode == null)
+                {
+                    GenerarCodigo();
+                }
+
                 ProductoCLS producto = new ProductoCLS
                 {
                     producto = txbNombre.Text,
                     descripcion = txbDescripcion.Text,
                     precio = decimal.Parse(txbPrecio.Text),
                     idCategoria = (int)cmbCategoria.SelectedValue,
-                    idStok = stockResult.idStok
+                    idStok = stockResult.idStok,
+                    codigo = txbCodigoBarra.Text,
+                    imgCodigo = ImgConvert.ImageToBase64(imgCode, System.Drawing.Imaging.ImageFormat.Png),
+                    img = ImgConvert.ImageToBase64(imgProducto.Image, System.Drawing.Imaging.ImageFormat.Png)
                 };
                 bool result = await producto.AddAsync();
-                if (result)
-                {
-                    MessageBox.Show("Producto guardado correctamente");
-                    idStockSeleccionado = 0;
-                    idProductoSeleccionado = 0;
-                    txbStock.Text = String.Empty;
-                    txbPrecio.Text = String.Empty;
-                    txbDescripcion.Text = String.Empty;
-                    txbNombre.Text = String.Empty;
-                    await CargarProductos();
-                }
-                else
-                {
-                    MessageBox.Show("Error al guardar el producto");
-                }
+                if (!result) throw new Exception("Error al guardar el producto");
+
+                MessageBox.Show("Producto guardado correctamente");
+                idStockSeleccionado = 0;
+                idProductoSeleccionado = 0;
+                txbStock.Text = String.Empty;
+                txbPrecio.Text = String.Empty;
+                txbDescripcion.Text = String.Empty;
+                txbNombre.Text = String.Empty;
+                txbCodigoBarra.Text = String.Empty;
+                await CargarProductos();
             }
         }
 
@@ -162,6 +185,9 @@ namespace SIGIV.GUI.Productos
         {
             try
             {
+                
+                if(idProductoSeleccionado <= 0) throw new Exception("Debe seleccionar un producto");
+
                 ProductoCLS producto = await ProductoCLS.GetByIDAsync(idProductoSeleccionado);
                 txbNombre.Text = producto.producto;
                 txbDescripcion.Text = producto.descripcion;
@@ -169,6 +195,12 @@ namespace SIGIV.GUI.Productos
                 txbStock.Text = producto.cantidadStok.ToString();
                 cmbCategoria.SelectedValue = producto.idCategoria;
                 idStockSeleccionado = producto.idStok;
+                txbCodigoBarra.Text = producto.codigo;
+                imgCodigoBarra.Image = producto.imgCodigo != null ?
+                        ImgConvert.Base64ToImage(producto.imgCodigo) : null;
+
+                imgProducto.Image = producto.img != null ? 
+                    ImgConvert.Base64ToImage(producto.img) : null;
             }
             catch (Exception ex)
             {
@@ -203,6 +235,64 @@ namespace SIGIV.GUI.Productos
             {
                 MessageBox.Show("Error al eliminar el producto: " + ex.Message);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                GenerarCodigo();
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show("Error al generar el código de barras: " + exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void GenerarCodigo()
+        {
+            if (string.IsNullOrEmpty(txbCodigoBarra.Text)) throw new Exception(Name + "El campo de código de barras no puede estar vacío");
+            Barcode code = new Barcode();
+            code.IncludeLabel = true;
+            code.LabelPosition = LabelPositions.BOTTOMCENTER;
+            string stringToCode = $"{txbCodigoBarra.Text}";
+            imgCode = code.Encode(TYPE.CODE128, stringToCode, Color.Black, Color.White, 290, 120);
+            this.imgCodigoBarra.Image = imgCode;
+
+            
+        }
+
+        private void btnArchivarCodigo_Click(object sender, EventArgs e)
+        { 
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.FileName = $"{txbCodigoBarra.Text}.png";
+            saveFileDialog.Filter = "Imagen PNG|*.png";
+            saveFileDialog.Title = "Guardar código de barras";
+            
+            var result = saveFileDialog.ShowDialog();  
+            if (result == DialogResult.OK)
+            {
+                imgCode.Save(saveFileDialog.FileName, System.Drawing.Imaging.ImageFormat.Png);
+            }
+        }
+
+        private void btnSeleccionarImagen_Click(object sender, EventArgs e)
+        {
+            Image imgProd = null;
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Imagen PNG|*.png";
+            openFileDialog.Title = "Seleccionar imagen";
+            var result = openFileDialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                imgProd = Image.FromFile(openFileDialog.FileName);
+                this.imgProducto.Image = ImgConvert.RedimencionarImagen(imgProd, 181, 95);
+            }
+        }
+
+        private void btnQuitarImagen_Click(object sender, EventArgs e)
+        {
+            this.imgProducto.Image = null;
         }
     }
 }

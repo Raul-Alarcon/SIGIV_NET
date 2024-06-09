@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SIGIV.GUI.Productos_Nuevos
+namespace SIGIV.GUI.View
 {
-    public partial class GestionProductosNuevos : Form
+    public partial class Configuraciones : Form
     {
-        public GestionProductosNuevos()
+        public Configuraciones()
         {
             InitializeComponent();
         }
+         
     }
 }
