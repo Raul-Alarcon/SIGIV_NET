@@ -17,5 +17,23 @@ namespace SIGIV.GUI.Facturas
             InitializeComponent();
         }
 
+
+        protected override async void OnLoad(EventArgs e)
+        {
+            try
+            {
+                await CargarFormasDePago();
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show("Error: " + exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            base.OnLoad(e); 
+        }
+
+        private async Task CargarFormasDePago()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
