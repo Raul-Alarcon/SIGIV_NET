@@ -33,7 +33,7 @@
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgProductosSeleccionados = new System.Windows.Forms.DataGridView();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.txtIva = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -72,7 +72,7 @@
             this.groupBox5.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgProductosSeleccionados)).BeginInit();
             this.groupBox7.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -134,7 +134,7 @@
             // 
             // groupBox9
             // 
-            this.groupBox9.Controls.Add(this.dataGridView1);
+            this.groupBox9.Controls.Add(this.dtgProductosSeleccionados);
             this.groupBox9.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox9.Location = new System.Drawing.Point(3, 43);
             this.groupBox9.Name = "groupBox9";
@@ -144,17 +144,17 @@
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Productos";
             // 
-            // dataGridView1
+            // dtgProductosSeleccionados
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(5, 18);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(563, 217);
-            this.dataGridView1.TabIndex = 0;
+            this.dtgProductosSeleccionados.AllowUserToAddRows = false;
+            this.dtgProductosSeleccionados.AllowUserToDeleteRows = false;
+            this.dtgProductosSeleccionados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgProductosSeleccionados.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgProductosSeleccionados.Location = new System.Drawing.Point(5, 18);
+            this.dtgProductosSeleccionados.Name = "dtgProductosSeleccionados";
+            this.dtgProductosSeleccionados.ReadOnly = true;
+            this.dtgProductosSeleccionados.Size = new System.Drawing.Size(563, 217);
+            this.dtgProductosSeleccionados.TabIndex = 0;
             // 
             // groupBox7
             // 
@@ -440,6 +440,7 @@
             // 
             // dtpFecha
             // 
+            this.dtpFecha.Enabled = false;
             this.dtpFecha.Location = new System.Drawing.Point(28, 148);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(200, 20);
@@ -501,7 +502,7 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
             this.groupBox9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgProductosSeleccionados)).EndInit();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.groupBox10.ResumeLayout(false);
@@ -551,7 +552,7 @@
         private System.Windows.Forms.TextBox txtBuscarProducto;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgProductosSeleccionados;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label label7;
