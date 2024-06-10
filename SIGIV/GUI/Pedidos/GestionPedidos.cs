@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Infrastructure;
 using System.Drawing;
 using System.Linq;
 using System.Net;
@@ -200,6 +201,113 @@ namespace SIGIV.GUI.Pedidos
                     productosPedidos.Remove(productoFacturaDTO);
                     dgvProductosPedidos.DataSource = null;
                     dgvProductosPedidos.DataSource = productosPedidos;
+                    dgvProductosPedidos.Refresh();
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private async void btnHacerPedido_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (productosPedidos.Count == 0) throw new Exception("Debe agregar productos al pedido");
+                if (cmbProveedores.SelectedValue == null) throw new Exception("Debe seleccionar un proveedor");
+
+                PedidoCLS pedido = new PedidoCLS
+                {
+                    idProveedor = (int)cmbProveedores.SelectedValue,
+                    fechaPedido = dtpFechaPedido.Value, 
+                    comentario = txbComentario.Text,
+                    productos = productosPedidos 
+                };
+
+                bool succes = await pedido.HacerPedidoAsync();
+                if (!succes) throw new Exception("Ocurrio un error al realizar el pedido");
+
+                MessageBox.Show("Pedido realizado correctamente", "Pedido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                await CargarPedidos();
+                productosPedidos.Clear();
+                dgvProductosPedidos.DataSource = null;
+                dgvProductosPedidos.Refresh();
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private async void btnProcesarPedido_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(dgvPedidos.CurrentRow == null) throw new Exception("Debe seleccionar un pedido");
+                if (dgvPedidos.CurrentRow.DataBoundItem is PedidoDTO pedidoDTO)
+                { 
+
+                    if (pedidoDTO.Estado == "Procesada") throw new Exception("El pedido ya fue procesado");
+                    PedidoCLS pedido = new PedidoCLS
+                    {
+                        idPedido = pedidoDTO.Id, 
+                    };
+
+                    bool result = await pedido.RecibirPedidoAsync();
+                    if (!result) throw new Exception("Ocurrio un error al procesar el pedido");
+                    await pedido.GetProductosAsync();
+
+                    if(pedido.productos.Count <= 0 ) throw new Exception("No se encontraron productos en el pedido");
+
+                    result  = await  pedido.ProcesarProductos();
+
+                    if(!result) throw new Exception("Ocurrio un error al procesar los productos");
+                    MessageBox.Show("Pedido procesado correctamente", "Pedido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    await CargarPedidos();
+                    await CargarProductos();
+                }
+            }
+            catch (Exception exc)
+            { 
+                MessageBox.Show(exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private async void btnElimiarPedido_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgvPedidos.CurrentRow == null) throw new Exception("Debe seleccionar un pedido");
+                if (dgvPedidos.CurrentRow.DataBoundItem is PedidoDTO pedidoDTO)
+                {
+                    if(MessageBox.Show("¿Está seguro de eliminar el pedido?", "Eliminar Pedido", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        bool result = await PedidoCLS.DeleteAsync(pedidoDTO.Id);
+                        if (!result) throw new Exception("Ocurrio un error al eliminar el pedido");
+                        MessageBox.Show("Pedido eliminado correctamente", "Pedido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        await CargarPedidos();
+                    
+                    }
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private async void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgvPedidos.CurrentRow == null) throw new Exception("Debe seleccionar un pedido");
+                if (dgvPedidos.CurrentRow.DataBoundItem is PedidoDTO pedidoDTO)
+                {
+                    var productos = await PedidoCLS.GetProductosAsync(pedidoDTO.Id);
+                    productosPedidos = productos;
+                    dgvProductosPedidos.DataSource = null;
+                    dgvProductosPedidos.DataSource = productos;
                     dgvProductosPedidos.Refresh();
                 }
             }
