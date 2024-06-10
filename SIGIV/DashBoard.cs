@@ -31,12 +31,11 @@ namespace SIGIV
             this.FormBorderStyle = FormBorderStyle.None;
             materialSkinManager.AddFormToManage(this);
 
-            materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
-            materialSkinManager.ColorScheme = new ColorScheme(
-                Primary.Green800,
-                Primary.Purple800,
-                Primary.Purple800,
-                Accent.Blue100,
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, 
+                Primary.BlueGrey900, 
+                Primary.BlueGrey500, 
+                Accent.LightBlue200, 
                 TextShade.WHITE);
 
 
@@ -178,11 +177,11 @@ namespace SIGIV
             }
             else if (materialTabControl1.SelectedIndex == 6)
             {
-                ShowContent(new GestionProductos());
+                ShowContent(new GestionPedidos());
             }
             else if (materialTabControl1.SelectedIndex == 7)
             {
-                ShowContent(new ClienteFrecuente());
+                ShowContent(new GestionProductos());
             }
             else if(materialTabControl1.SelectedIndex == 8)
             {
