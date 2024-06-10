@@ -48,6 +48,8 @@
             this.Pedidos = new System.Windows.Forms.TabPage();
             this.Productos = new System.Windows.Forms.TabPage();
             this.Reportes = new System.Windows.Forms.TabPage();
+            this.r2 = new System.Windows.Forms.TabPage();
+            this.r3 = new System.Windows.Forms.TabPage();
             this.Configuraciones = new System.Windows.Forms.TabPage();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -62,7 +64,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 129);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1036, 656);
+            this.panel1.Size = new System.Drawing.Size(1100, 812);
             this.panel1.TabIndex = 13;
             // 
             // ContentLayout
@@ -71,7 +73,7 @@
             this.ContentLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ContentLayout.Location = new System.Drawing.Point(0, 0);
             this.ContentLayout.Name = "ContentLayout";
-            this.ContentLayout.Size = new System.Drawing.Size(1036, 656);
+            this.ContentLayout.Size = new System.Drawing.Size(1100, 812);
             this.ContentLayout.TabIndex = 11;
             // 
             // panel3
@@ -81,13 +83,13 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 30);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1036, 35);
+            this.panel3.Size = new System.Drawing.Size(1100, 35);
             this.panel3.TabIndex = 11;
             // 
             // btnCerrarSession
             // 
             this.btnCerrarSession.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrarSession.Location = new System.Drawing.Point(894, 5);
+            this.btnCerrarSession.Location = new System.Drawing.Point(958, 5);
             this.btnCerrarSession.Name = "btnCerrarSession";
             this.btnCerrarSession.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnCerrarSession.Size = new System.Drawing.Size(40, 38);
@@ -99,7 +101,7 @@
             // 
             this.lnlUser.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lnlUser.AutoSize = true;
-            this.lnlUser.Location = new System.Drawing.Point(807, 15);
+            this.lnlUser.Location = new System.Drawing.Point(871, 15);
             this.lnlUser.Name = "lnlUser";
             this.lnlUser.Size = new System.Drawing.Size(35, 13);
             this.lnlUser.TabIndex = 0;
@@ -129,7 +131,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(3, 64);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1036, 65);
+            this.panel2.Size = new System.Drawing.Size(1100, 65);
             this.panel2.TabIndex = 2;
             // 
             // panel4
@@ -138,7 +140,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1036, 30);
+            this.panel4.Size = new System.Drawing.Size(1100, 30);
             this.panel4.TabIndex = 0;
             // 
             // materialTabControl1
@@ -152,6 +154,8 @@
             this.materialTabControl1.Controls.Add(this.Pedidos);
             this.materialTabControl1.Controls.Add(this.Productos);
             this.materialTabControl1.Controls.Add(this.Reportes);
+            this.materialTabControl1.Controls.Add(this.r2);
+            this.materialTabControl1.Controls.Add(this.r3);
             this.materialTabControl1.Controls.Add(this.Configuraciones);
             this.materialTabControl1.Depth = 0;
             this.materialTabControl1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -161,17 +165,17 @@
             this.materialTabControl1.Multiline = true;
             this.materialTabControl1.Name = "materialTabControl1";
             this.materialTabControl1.SelectedIndex = 0;
-            this.materialTabControl1.Size = new System.Drawing.Size(1036, 33);
+            this.materialTabControl1.Size = new System.Drawing.Size(1100, 33);
             this.materialTabControl1.TabIndex = 0;
             this.materialTabControl1.SelectedIndexChanged += new System.EventHandler(this.materialTabControl1_SelectedIndexChanged_1);
             // 
             // Home
             // 
             this.Home.ImageKey = "Home1.png";
-            this.Home.Location = new System.Drawing.Point(4, 39);
+            this.Home.Location = new System.Drawing.Point(4, 74);
             this.Home.Name = "Home";
             this.Home.Padding = new System.Windows.Forms.Padding(3);
-            this.Home.Size = new System.Drawing.Size(1028, 0);
+            this.Home.Size = new System.Drawing.Size(1092, 0);
             this.Home.TabIndex = 0;
             this.Home.Text = "Home";
             this.Home.UseVisualStyleBackColor = true;
@@ -179,10 +183,10 @@
             // Empleados
             // 
             this.Empleados.ImageKey = "Empleados1.png";
-            this.Empleados.Location = new System.Drawing.Point(4, 39);
+            this.Empleados.Location = new System.Drawing.Point(4, 74);
             this.Empleados.Name = "Empleados";
             this.Empleados.Padding = new System.Windows.Forms.Padding(3);
-            this.Empleados.Size = new System.Drawing.Size(1012, 0);
+            this.Empleados.Size = new System.Drawing.Size(1076, 0);
             this.Empleados.TabIndex = 1;
             this.Empleados.Text = "Empleados";
             this.Empleados.UseVisualStyleBackColor = true;
@@ -190,9 +194,9 @@
             // Usuarios
             // 
             this.Usuarios.ImageKey = "Usuarios1.png";
-            this.Usuarios.Location = new System.Drawing.Point(4, 39);
+            this.Usuarios.Location = new System.Drawing.Point(4, 74);
             this.Usuarios.Name = "Usuarios";
-            this.Usuarios.Size = new System.Drawing.Size(1012, 0);
+            this.Usuarios.Size = new System.Drawing.Size(1076, 0);
             this.Usuarios.TabIndex = 2;
             this.Usuarios.Text = "Usuarios";
             this.Usuarios.UseVisualStyleBackColor = true;
@@ -200,9 +204,9 @@
             // Clientes
             // 
             this.Clientes.ImageKey = "Clientes1.png";
-            this.Clientes.Location = new System.Drawing.Point(4, 39);
+            this.Clientes.Location = new System.Drawing.Point(4, 74);
             this.Clientes.Name = "Clientes";
-            this.Clientes.Size = new System.Drawing.Size(1012, 0);
+            this.Clientes.Size = new System.Drawing.Size(1076, 0);
             this.Clientes.TabIndex = 3;
             this.Clientes.Text = "Clientes";
             this.Clientes.UseVisualStyleBackColor = true;
@@ -210,9 +214,9 @@
             // Facturas
             // 
             this.Facturas.ImageKey = "Factura1.png";
-            this.Facturas.Location = new System.Drawing.Point(4, 39);
+            this.Facturas.Location = new System.Drawing.Point(4, 74);
             this.Facturas.Name = "Facturas";
-            this.Facturas.Size = new System.Drawing.Size(1012, 0);
+            this.Facturas.Size = new System.Drawing.Size(1076, 0);
             this.Facturas.TabIndex = 4;
             this.Facturas.Text = "Facturas";
             this.Facturas.UseVisualStyleBackColor = true;
@@ -220,9 +224,9 @@
             // Proveedores
             // 
             this.Proveedores.ImageKey = "Proveedores1.png";
-            this.Proveedores.Location = new System.Drawing.Point(4, 39);
+            this.Proveedores.Location = new System.Drawing.Point(4, 74);
             this.Proveedores.Name = "Proveedores";
-            this.Proveedores.Size = new System.Drawing.Size(1012, 0);
+            this.Proveedores.Size = new System.Drawing.Size(1076, 0);
             this.Proveedores.TabIndex = 5;
             this.Proveedores.Text = "Proveedores";
             this.Proveedores.UseVisualStyleBackColor = true;
@@ -230,9 +234,9 @@
             // Pedidos
             // 
             this.Pedidos.ImageKey = "Pedidos1.png";
-            this.Pedidos.Location = new System.Drawing.Point(4, 39);
+            this.Pedidos.Location = new System.Drawing.Point(4, 74);
             this.Pedidos.Name = "Pedidos";
-            this.Pedidos.Size = new System.Drawing.Size(1012, 0);
+            this.Pedidos.Size = new System.Drawing.Size(1076, 0);
             this.Pedidos.TabIndex = 6;
             this.Pedidos.Text = "Pedidos";
             this.Pedidos.UseVisualStyleBackColor = true;
@@ -240,9 +244,9 @@
             // Productos
             // 
             this.Productos.ImageKey = "Productos.png";
-            this.Productos.Location = new System.Drawing.Point(4, 39);
+            this.Productos.Location = new System.Drawing.Point(4, 74);
             this.Productos.Name = "Productos";
-            this.Productos.Size = new System.Drawing.Size(1012, 0);
+            this.Productos.Size = new System.Drawing.Size(1076, 0);
             this.Productos.TabIndex = 7;
             this.Productos.Text = "Productos";
             this.Productos.UseVisualStyleBackColor = true;
@@ -250,20 +254,40 @@
             // Reportes
             // 
             this.Reportes.ImageKey = "Reportes.png";
-            this.Reportes.Location = new System.Drawing.Point(4, 39);
+            this.Reportes.Location = new System.Drawing.Point(4, 74);
             this.Reportes.Name = "Reportes";
-            this.Reportes.Size = new System.Drawing.Size(1012, 0);
+            this.Reportes.Size = new System.Drawing.Size(1076, 0);
             this.Reportes.TabIndex = 8;
-            this.Reportes.Text = "Reportes";
+            this.Reportes.Text = "Reportes Clientes";
             this.Reportes.UseVisualStyleBackColor = true;
+            // 
+            // r2
+            // 
+            this.r2.ImageIndex = 7;
+            this.r2.Location = new System.Drawing.Point(4, 74);
+            this.r2.Name = "r2";
+            this.r2.Size = new System.Drawing.Size(1076, 0);
+            this.r2.TabIndex = 10;
+            this.r2.Text = "Reporte Productos";
+            this.r2.UseVisualStyleBackColor = true;
+            // 
+            // r3
+            // 
+            this.r3.ImageIndex = 7;
+            this.r3.Location = new System.Drawing.Point(4, 74);
+            this.r3.Name = "r3";
+            this.r3.Size = new System.Drawing.Size(1076, 0);
+            this.r3.TabIndex = 11;
+            this.r3.Text = "Reporte Inventario";
+            this.r3.UseVisualStyleBackColor = true;
             // 
             // Configuraciones
             // 
             this.Configuraciones.ImageKey = "Configuraciones.png";
-            this.Configuraciones.Location = new System.Drawing.Point(4, 39);
+            this.Configuraciones.Location = new System.Drawing.Point(4, 74);
             this.Configuraciones.Name = "Configuraciones";
             this.Configuraciones.Padding = new System.Windows.Forms.Padding(3);
-            this.Configuraciones.Size = new System.Drawing.Size(1012, 0);
+            this.Configuraciones.Size = new System.Drawing.Size(1076, 0);
             this.Configuraciones.TabIndex = 9;
             this.Configuraciones.Text = "Configuraciones";
             this.Configuraciones.UseVisualStyleBackColor = true;
@@ -272,7 +296,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1042, 788);
+            this.ClientSize = new System.Drawing.Size(1106, 944);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.DrawerAutoHide = false;
@@ -312,5 +336,7 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Button btnCerrarSession;
         private System.Windows.Forms.TabPage Configuraciones;
+        private System.Windows.Forms.TabPage r2;
+        private System.Windows.Forms.TabPage r3;
     }
 }

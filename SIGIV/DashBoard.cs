@@ -9,7 +9,9 @@ using SIGIV.GUI.Pedidos;
 using SIGIV.GUI.Productos;
 using SIGIV.GUI.Proveedores;
 using SIGIV.GUI.Reportes;
+using SIGIV.GUI.RolesOpciones;
 using SIGIV.GUI.Usuarios;
+using SIGIV.GUI.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -161,7 +163,7 @@ namespace SIGIV
             }
             else if (materialTabControl1.SelectedIndex == 2)
             {
-                ShowContent(new AgregarUsuarios());
+                ShowContent(new GestionRolesOpciones());
             }
             else if (materialTabControl1.SelectedIndex == 3)
             {
@@ -185,8 +187,23 @@ namespace SIGIV
             }
             else if(materialTabControl1.SelectedIndex == 8)
             {
-                ShowContent(new GestionUsuarios());
+                ShowContent(new ClienteFrecuente());
                 
+            }
+            else if (materialTabControl1.SelectedIndex == 9)
+            {
+                ShowContent(new Ventas());
+
+            }
+            else if (materialTabControl1.SelectedIndex == 10)
+            {
+                ShowContent(new InventarioActual());
+
+            }
+            else if (materialTabControl1.SelectedIndex == 11)
+            {
+                ShowContent(new Configuraciones());
+
             }
 
         }
