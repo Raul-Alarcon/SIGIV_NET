@@ -89,7 +89,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(15);
-            this.panel1.Size = new System.Drawing.Size(1290, 669);
+            this.panel1.Size = new System.Drawing.Size(1015, 669);
             this.panel1.TabIndex = 3;
             // 
             // groupBox3
@@ -98,10 +98,10 @@
             this.groupBox3.Controls.Add(this.groupBox4);
             this.groupBox3.Controls.Add(this.groupBox5);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Location = new System.Drawing.Point(397, 146);
+            this.groupBox3.Location = new System.Drawing.Point(325, 146);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(10);
-            this.groupBox3.Size = new System.Drawing.Size(878, 508);
+            this.groupBox3.Size = new System.Drawing.Size(675, 508);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos";
@@ -110,10 +110,10 @@
             // 
             this.groupBox6.Controls.Add(this.dgvProductosPedidos);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox6.Location = new System.Drawing.Point(390, 172);
+            this.groupBox6.Location = new System.Drawing.Point(350, 172);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(10);
-            this.groupBox6.Size = new System.Drawing.Size(478, 326);
+            this.groupBox6.Size = new System.Drawing.Size(315, 326);
             this.groupBox6.TabIndex = 3;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Productos Pedidos";
@@ -124,7 +124,7 @@
             this.dgvProductosPedidos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvProductosPedidos.Location = new System.Drawing.Point(10, 23);
             this.dgvProductosPedidos.Name = "dgvProductosPedidos";
-            this.dgvProductosPedidos.Size = new System.Drawing.Size(458, 293);
+            this.dgvProductosPedidos.Size = new System.Drawing.Size(295, 293);
             this.dgvProductosPedidos.TabIndex = 0;
             // 
             // groupBox4
@@ -134,7 +134,7 @@
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox4.Location = new System.Drawing.Point(10, 172);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(380, 326);
+            this.groupBox4.Size = new System.Drawing.Size(340, 326);
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Productos";
@@ -145,7 +145,7 @@
             this.dgvProductosEnStock.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvProductosEnStock.Location = new System.Drawing.Point(3, 120);
             this.dgvProductosEnStock.Name = "dgvProductosEnStock";
-            this.dgvProductosEnStock.Size = new System.Drawing.Size(374, 203);
+            this.dgvProductosEnStock.Size = new System.Drawing.Size(334, 203);
             this.dgvProductosEnStock.TabIndex = 1;
             // 
             // panel3
@@ -158,7 +158,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(3, 16);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(374, 104);
+            this.panel3.Size = new System.Drawing.Size(334, 104);
             this.panel3.TabIndex = 0;
             // 
             // label5
@@ -182,12 +182,12 @@
             this.txtbProductoSeleccionado.Enabled = false;
             this.txtbProductoSeleccionado.Location = new System.Drawing.Point(23, 11);
             this.txtbProductoSeleccionado.Name = "txtbProductoSeleccionado";
-            this.txtbProductoSeleccionado.Size = new System.Drawing.Size(337, 20);
+            this.txtbProductoSeleccionado.Size = new System.Drawing.Size(282, 20);
             this.txtbProductoSeleccionado.TabIndex = 17;
             // 
             // txbAgregarAlPedido
             // 
-            this.txbAgregarAlPedido.Location = new System.Drawing.Point(285, 63);
+            this.txbAgregarAlPedido.Location = new System.Drawing.Point(230, 63);
             this.txbAgregarAlPedido.Name = "txbAgregarAlPedido";
             this.txbAgregarAlPedido.Size = new System.Drawing.Size(75, 23);
             this.txbAgregarAlPedido.TabIndex = 0;
@@ -199,7 +199,7 @@
             // 
             this.txbBuscarProducto.Location = new System.Drawing.Point(23, 37);
             this.txbBuscarProducto.Name = "txbBuscarProducto";
-            this.txbBuscarProducto.Size = new System.Drawing.Size(337, 20);
+            this.txbBuscarProducto.Size = new System.Drawing.Size(282, 20);
             this.txbBuscarProducto.TabIndex = 4;
             // 
             // groupBox5
@@ -221,14 +221,14 @@
             this.groupBox5.Location = new System.Drawing.Point(10, 23);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox5.Size = new System.Drawing.Size(858, 149);
+            this.groupBox5.Size = new System.Drawing.Size(655, 149);
             this.groupBox5.TabIndex = 1;
             this.groupBox5.TabStop = false;
             // 
             // btnProductoNuevo
             // 
             this.btnProductoNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnProductoNuevo.Location = new System.Drawing.Point(515, 120);
+            this.btnProductoNuevo.Location = new System.Drawing.Point(381, 118);
             this.btnProductoNuevo.Name = "btnProductoNuevo";
             this.btnProductoNuevo.Size = new System.Drawing.Size(119, 23);
             this.btnProductoNuevo.TabIndex = 28;
@@ -239,7 +239,7 @@
             // 
             this.txtIva.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtIva.Enabled = false;
-            this.txtIva.Location = new System.Drawing.Point(748, 35);
+            this.txtIva.Location = new System.Drawing.Point(545, 32);
             this.txtIva.Name = "txtIva";
             this.txtIva.Size = new System.Drawing.Size(100, 20);
             this.txtIva.TabIndex = 27;
@@ -248,7 +248,7 @@
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(749, 21);
+            this.label8.Location = new System.Drawing.Point(546, 18);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(30, 13);
             this.label8.TabIndex = 26;
@@ -258,16 +258,16 @@
             // 
             this.txtTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTotal.Enabled = false;
-            this.txtTotal.Location = new System.Drawing.Point(515, 76);
+            this.txtTotal.Location = new System.Drawing.Point(381, 74);
             this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(333, 20);
+            this.txtTotal.Size = new System.Drawing.Size(264, 20);
             this.txtTotal.TabIndex = 25;
             // 
             // label7
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(514, 62);
+            this.label7.Location = new System.Drawing.Point(380, 60);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(31, 13);
             this.label7.TabIndex = 24;
@@ -277,16 +277,16 @@
             // 
             this.txtSubTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSubTotal.Enabled = false;
-            this.txtSubTotal.Location = new System.Drawing.Point(514, 34);
+            this.txtSubTotal.Location = new System.Drawing.Point(380, 32);
             this.txtSubTotal.Name = "txtSubTotal";
-            this.txtSubTotal.Size = new System.Drawing.Size(216, 20);
+            this.txtSubTotal.Size = new System.Drawing.Size(154, 20);
             this.txtSubTotal.TabIndex = 23;
             // 
             // label6
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(513, 20);
+            this.label6.Location = new System.Drawing.Point(379, 18);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 13);
             this.label6.TabIndex = 22;
@@ -295,7 +295,7 @@
             // btnQuitarProducto
             // 
             this.btnQuitarProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnQuitarProducto.Location = new System.Drawing.Point(640, 120);
+            this.btnQuitarProducto.Location = new System.Drawing.Point(506, 118);
             this.btnQuitarProducto.Name = "btnQuitarProducto";
             this.btnQuitarProducto.Size = new System.Drawing.Size(70, 23);
             this.btnQuitarProducto.TabIndex = 18;
@@ -306,9 +306,9 @@
             // btnHacerPedido
             // 
             this.btnHacerPedido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHacerPedido.Location = new System.Drawing.Point(716, 118);
+            this.btnHacerPedido.Location = new System.Drawing.Point(582, 116);
             this.btnHacerPedido.Name = "btnHacerPedido";
-            this.btnHacerPedido.Size = new System.Drawing.Size(132, 23);
+            this.btnHacerPedido.Size = new System.Drawing.Size(63, 23);
             this.btnHacerPedido.TabIndex = 17;
             this.btnHacerPedido.Text = "Pedir";
             this.btnHacerPedido.UseVisualStyleBackColor = true;
@@ -318,7 +318,7 @@
             this.txbComentario.Location = new System.Drawing.Point(15, 76);
             this.txbComentario.Multiline = true;
             this.txbComentario.Name = "txbComentario";
-            this.txbComentario.Size = new System.Drawing.Size(434, 51);
+            this.txbComentario.Size = new System.Drawing.Size(348, 51);
             this.txbComentario.TabIndex = 15;
             // 
             // label3
@@ -336,7 +336,7 @@
             this.cmbProveedores.IntegralHeight = false;
             this.cmbProveedores.Location = new System.Drawing.Point(13, 32);
             this.cmbProveedores.Name = "cmbProveedores";
-            this.cmbProveedores.Size = new System.Drawing.Size(436, 21);
+            this.cmbProveedores.Size = new System.Drawing.Size(350, 21);
             this.cmbProveedores.TabIndex = 9;
             // 
             // label4
@@ -355,7 +355,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox2.Location = new System.Drawing.Point(15, 146);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(382, 508);
+            this.groupBox2.Size = new System.Drawing.Size(310, 508);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Pedidos";
@@ -366,7 +366,7 @@
             this.dgvPedidos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPedidos.Location = new System.Drawing.Point(3, 99);
             this.dgvPedidos.Name = "dgvPedidos";
-            this.dgvPedidos.Size = new System.Drawing.Size(376, 406);
+            this.dgvPedidos.Size = new System.Drawing.Size(304, 406);
             this.dgvPedidos.TabIndex = 1;
             // 
             // panel2
@@ -378,21 +378,21 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(3, 16);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(376, 83);
+            this.panel2.Size = new System.Drawing.Size(304, 83);
             this.panel2.TabIndex = 0;
             // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(18, 40);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(175, 23);
+            this.button3.Size = new System.Drawing.Size(98, 23);
             this.button3.TabIndex = 3;
             this.button3.Text = "Detalle";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // btnElimiarPedido
             // 
-            this.btnElimiarPedido.Location = new System.Drawing.Point(199, 40);
+            this.btnElimiarPedido.Location = new System.Drawing.Point(126, 41);
             this.btnElimiarPedido.Name = "btnElimiarPedido";
             this.btnElimiarPedido.Size = new System.Drawing.Size(75, 23);
             this.btnElimiarPedido.TabIndex = 2;
@@ -401,7 +401,7 @@
             // 
             // btnProcesarPedido
             // 
-            this.btnProcesarPedido.Location = new System.Drawing.Point(280, 40);
+            this.btnProcesarPedido.Location = new System.Drawing.Point(207, 39);
             this.btnProcesarPedido.Name = "btnProcesarPedido";
             this.btnProcesarPedido.Size = new System.Drawing.Size(75, 23);
             this.btnProcesarPedido.TabIndex = 1;
@@ -412,7 +412,7 @@
             // 
             this.txbBuscarPedidos.Location = new System.Drawing.Point(18, 14);
             this.txbBuscarPedidos.Name = "txbBuscarPedidos";
-            this.txbBuscarPedidos.Size = new System.Drawing.Size(337, 20);
+            this.txbBuscarPedidos.Size = new System.Drawing.Size(264, 20);
             this.txbBuscarPedidos.TabIndex = 0;
             // 
             // groupBox1
@@ -423,7 +423,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(15, 15);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1260, 131);
+            this.groupBox1.Size = new System.Drawing.Size(985, 131);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -439,7 +439,7 @@
             // 
             this.label2.Location = new System.Drawing.Point(22, 74);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1164, 46);
+            this.label2.Size = new System.Drawing.Size(799, 46);
             this.label2.TabIndex = 1;
             this.label2.Text = resources.GetString("label2.Text");
             // 
@@ -457,7 +457,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1290, 669);
+            this.ClientSize = new System.Drawing.Size(1015, 669);
             this.Controls.Add(this.panel1);
             this.Name = "GestionPedidos";
             this.Text = "GestionPedidos";
