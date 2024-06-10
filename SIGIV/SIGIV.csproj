@@ -123,12 +123,14 @@
     <Compile Include="CLS\DireccionProveedorCLS.cs" />
     <Compile Include="CLS\DistritosCLS.cs" />
     <Compile Include="CLS\DTO\ClienteDTO.cs" />
+    <Compile Include="CLS\DTO\ContactoProveedorDTO.cs" />
     <Compile Include="CLS\DTO\DepartamentoDTO.cs" />
     <Compile Include="CLS\DTO\DestallesStockDTO.cs" />
     <Compile Include="CLS\DTO\DistritosDTO.cs" />
     <Compile Include="CLS\DTO\EmpleadoDTO.cs" />
     <Compile Include="CLS\DTO\FacturaDTO.cs" />
     <Compile Include="CLS\DTO\MunicipiosDTO.cs" />
+    <Compile Include="CLS\DTO\PedidoDTO.cs" />
     <Compile Include="CLS\DTO\PedidosDTO.cs" />
     <Compile Include="CLS\DTO\ProductoDTO.cs" />
     <Compile Include="CLS\DTO\ProductoFacturaDTO.cs" />
@@ -143,6 +145,7 @@
     <Compile Include="CLS\FormasDePagoCLS.cs" />
     <Compile Include="CLS\MunicipiosCLS.cs" />
     <Compile Include="CLS\PaisesCLS.cs" />
+    <Compile Include="CLS\PedidoCLS.cs" />
     <Compile Include="CLS\PedidosCLS.cs" />
     <Compile Include="CLS\ProductoCLS.cs" />
     <Compile Include="CLS\ProductoNuevoCLS.cs" />

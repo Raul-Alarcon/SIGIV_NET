@@ -9,7 +9,7 @@ namespace SIGIV.CLS.DTO
     public class ProveedorDTO
     {
         public int ID { get; set; }
-        public string Proveedor { get; set; }
+        public string Proveedor { get; set; } 
         public string NIT { get; set; }
         public string Telefono { get; set; }
         public string Correo { get; set; }
