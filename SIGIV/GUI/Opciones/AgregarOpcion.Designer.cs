@@ -1,6 +1,6 @@
-﻿namespace SIGIV.GUI.Roles
+﻿namespace SIGIV.GUI.Opciones
 {
-    partial class AgregarRol
+    partial class AgregarOpcion
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,15 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lbRoles = new System.Windows.Forms.ListBox();
+            this.lbOpciones = new System.Windows.Forms.ListBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.rbActualizar = new System.Windows.Forms.RadioButton();
             this.rbAgregar = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtRoles = new System.Windows.Forms.TextBox();
+            this.txtOpciones = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.rbEliminar = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -53,45 +54,46 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(15);
-            this.panel1.Size = new System.Drawing.Size(357, 450);
-            this.panel1.TabIndex = 1;
+            this.panel1.Size = new System.Drawing.Size(440, 450);
+            this.panel1.TabIndex = 2;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.lbRoles);
+            this.groupBox2.Controls.Add(this.lbOpciones);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(15, 143);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(327, 292);
+            this.groupBox2.Size = new System.Drawing.Size(410, 292);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Lista Roles";
+            this.groupBox2.Text = "Lista Opciones";
             // 
-            // lbRoles
+            // lbOpciones
             // 
-            this.lbRoles.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbRoles.FormattingEnabled = true;
-            this.lbRoles.Location = new System.Drawing.Point(3, 16);
-            this.lbRoles.Name = "lbRoles";
-            this.lbRoles.Size = new System.Drawing.Size(321, 273);
-            this.lbRoles.TabIndex = 0;
+            this.lbOpciones.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbOpciones.FormattingEnabled = true;
+            this.lbOpciones.Location = new System.Drawing.Point(3, 16);
+            this.lbOpciones.Name = "lbOpciones";
+            this.lbOpciones.Size = new System.Drawing.Size(404, 273);
+            this.lbOpciones.TabIndex = 0;
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.rbEliminar);
             this.groupBox3.Controls.Add(this.btnAceptar);
             this.groupBox3.Controls.Add(this.rbActualizar);
             this.groupBox3.Controls.Add(this.rbAgregar);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox3.Location = new System.Drawing.Point(15, 90);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(327, 53);
+            this.groupBox3.Size = new System.Drawing.Size(410, 53);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Operaciones";
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(165, 16);
+            this.btnAceptar.Location = new System.Drawing.Point(249, 19);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(154, 23);
             this.btnAceptar.TabIndex = 2;
@@ -123,43 +125,50 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtRoles);
+            this.groupBox1.Controls.Add(this.txtOpciones);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(15, 15);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(327, 75);
+            this.groupBox1.Size = new System.Drawing.Size(410, 75);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Agregar Rol";
+            this.groupBox1.Text = "Agregar Opciones";
             // 
-            // txtRoles
+            // txtOpciones
             // 
-            this.txtRoles.Location = new System.Drawing.Point(9, 41);
-            this.txtRoles.Name = "txtRoles";
-            this.txtRoles.Size = new System.Drawing.Size(310, 20);
-            this.txtRoles.TabIndex = 4;
+            this.txtOpciones.Location = new System.Drawing.Point(9, 41);
+            this.txtOpciones.Name = "txtOpciones";
+            this.txtOpciones.Size = new System.Drawing.Size(310, 20);
+            this.txtOpciones.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(6, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 13);
+            this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Rol:";
+            this.label1.Text = "Opcion:";
             // 
-            // AgregarRol
+            // rbEliminar
+            // 
+            this.rbEliminar.AutoSize = true;
+            this.rbEliminar.Location = new System.Drawing.Point(165, 19);
+            this.rbEliminar.Name = "rbEliminar";
+            this.rbEliminar.Size = new System.Drawing.Size(61, 17);
+            this.rbEliminar.TabIndex = 3;
+            this.rbEliminar.Text = "Eliminar";
+            this.rbEliminar.UseVisualStyleBackColor = true;
+            // 
+            // AgregarOpcion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(357, 450);
+            this.ClientSize = new System.Drawing.Size(440, 450);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "AgregarRol";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AgregarRol";
-            this.Load += new System.EventHandler(this.AgregarRol_Load);
+            this.Name = "AgregarOpcion";
+            this.Text = "AgregarOpcion";
             this.panel1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
@@ -174,13 +183,14 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ListBox lbRoles;
+        private System.Windows.Forms.ListBox lbOpciones;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.RadioButton rbActualizar;
         private System.Windows.Forms.RadioButton rbAgregar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtRoles;
-        private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.TextBox txtOpciones;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RadioButton rbEliminar;
     }
 }

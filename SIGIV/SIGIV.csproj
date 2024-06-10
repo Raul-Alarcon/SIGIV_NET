@@ -144,6 +144,7 @@
     <Compile Include="CLS\FacturaCLS.cs" />
     <Compile Include="CLS\FormasDePagoCLS.cs" />
     <Compile Include="CLS\MunicipiosCLS.cs" />
+    <Compile Include="CLS\OpcionCLS.cs" />
     <Compile Include="CLS\PaisesCLS.cs" />
     <Compile Include="CLS\PedidoCLS.cs" />
     <Compile Include="CLS\PedidosCLS.cs" />
@@ -364,6 +365,12 @@
     <Compile Include="GUI\Municipios\GestionMunicipios.Designer.cs">
       <DependentUpon>GestionMunicipios.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Opciones\AgregarOpcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Opciones\AgregarOpcion.Designer.cs">
+      <DependentUpon>AgregarOpcion.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Paises\GestionPaises.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -433,6 +440,12 @@
     </Compile>
     <Compile Include="GUI\Reportes\Ventas.Designer.cs">
       <DependentUpon>Ventas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RolesOpciones\GestionRolesOpciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RolesOpciones\GestionRolesOpciones.Designer.cs">
+      <DependentUpon>GestionRolesOpciones.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Roles\AgregarRol.cs">
       <SubType>Form</SubType>
@@ -541,6 +554,9 @@
     <EmbeddedResource Include="GUI\Municipios\GestionMunicipios.resx">
       <DependentUpon>GestionMunicipios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Opciones\AgregarOpcion.resx">
+      <DependentUpon>AgregarOpcion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Paises\GestionPaises.resx">
       <DependentUpon>GestionPaises.cs</DependentUpon>
     </EmbeddedResource>
@@ -574,6 +590,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Reportes\Ventas.resx">
       <DependentUpon>Ventas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RolesOpciones\GestionRolesOpciones.resx">
+      <DependentUpon>GestionRolesOpciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Roles\AgregarRol.resx">
       <DependentUpon>AgregarRol.cs</DependentUpon>

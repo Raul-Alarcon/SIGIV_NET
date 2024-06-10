@@ -20,7 +20,8 @@ using System.Windows.Forms;
 using SIGIV.GUI.FormasPago;
 using SIGIV.GUI.Productos;
 using System.Web.UI.WebControls;
-using SIGIV.GUI.Pedidos;
+using SIGIV.GUI.Opciones;
+using SIGIV.GUI.RolesOpciones;
 
 namespace SIGIV
 {
@@ -34,8 +35,7 @@ namespace SIGIV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Login.Login()); // Descomente para el login
-            Application.Run(new GestionPedidos());
+            Application.Run(new DashBoard());
         }
     }
 }
