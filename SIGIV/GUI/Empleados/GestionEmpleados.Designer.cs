@@ -96,6 +96,7 @@
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(69, 22);
             this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnEditar
             // 
@@ -104,6 +105,7 @@
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(57, 22);
             this.btnEditar.Text = "Editar";
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // toolStripSeparator
             // 
@@ -117,6 +119,7 @@
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(70, 22);
             this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // toolStripSeparator1
             // 
@@ -130,6 +133,7 @@
             this.btnAgregarCargo.Name = "btnAgregarCargo";
             this.btnAgregarCargo.Size = new System.Drawing.Size(104, 22);
             this.btnAgregarCargo.Text = "Agregar Cargo";
+            this.btnAgregarCargo.Click += new System.EventHandler(this.btnAgregarCargo_Click);
             // 
             // toolStripSeparator2
             // 

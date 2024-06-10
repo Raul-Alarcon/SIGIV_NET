@@ -26,6 +26,13 @@ namespace SIGIV.GUI.Productos
         {
             InitializeComponent();
             dtgDatos.SelectionChanged += DtgDatos_SelectionChanged;
+            btnArchivarCodigo.Click += btnArchivarCodigo_Click;
+            btnGuardar.Click += btnGuardar_Click;
+            btnQuitarImagen.Click += btnQuitarImagen_Click;
+            btnSeleccionarImagen.Click += btnSeleccionarImagen_Click;
+            button1.Click += button1_Click;
+            tsbEliminar.Click += tsbEliminar_Click;
+            tsbModificar.Click += tsbModificar_Click;
         }
 
         private void DtgDatos_SelectionChanged(object sender, EventArgs e)
