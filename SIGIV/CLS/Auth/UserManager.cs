@@ -13,7 +13,7 @@ namespace SIGIV.CLS.Auth
     {
         private static List<UsuarioCLS> usuarios = new List<UsuarioCLS>(); 
 
-        public async Task<bool> IniciarSession(string usuario, string password)
+        public async static Task<bool> IniciarSession(string usuario, string password)
         {
             bool succes = false;
 

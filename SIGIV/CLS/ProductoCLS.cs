@@ -47,6 +47,29 @@ namespace SIGIV.CLS
             return productos;
         }
 
+        public static async Task<List<ProductoDTO>> GetAllAsync(Func<Productos, bool> query)
+        {
+            List<ProductoDTO> productos = new List<ProductoDTO>();
+            using (SIGIVEntities db = new SIGIVEntities())
+            {
+                productos = await (from pro in db.Productos
+                                   join cat in db.CategoriasProductos on pro.idCategoria equals cat.idCategoria
+                                   join sto in db.DetallesStok on pro.idStok equals sto.idStok
+                                   where pro.DetallesStok.cantidadStok > 0
+                                   select new ProductoDTO
+                                   {
+                                       ID = pro.idProducto,
+                                       Producto = pro.nombreP,
+                                       Descripcion = pro.descripcion,
+                                       Precio = (decimal)pro.precio,
+                                       Categoria = cat.categoria,
+                                       Stok = (int)sto.cantidadStok,
+                                       Codigo = pro.codigo
+                                   }).ToListAsync();
+            }
+            return productos;
+        }
+
         public static async Task<ProductoCLS> GetByIDAsync(int idProducto)
         {
             ProductoCLS producto = new ProductoCLS();

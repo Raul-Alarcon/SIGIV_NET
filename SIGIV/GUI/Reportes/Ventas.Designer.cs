@@ -29,20 +29,23 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.dtpInicio = new System.Windows.Forms.DateTimePicker();
+            this.dtpFinal = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.crvVentas = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.dtpFinal = new System.Windows.Forms.DateTimePicker();
-            this.dtpInicio = new System.Windows.Forms.DateTimePicker();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Location = new System.Drawing.Point(3, 16);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -54,9 +57,23 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.crvVentas);
-            this.splitContainer1.Size = new System.Drawing.Size(800, 450);
-            this.splitContainer1.SplitterDistance = 239;
+            this.splitContainer1.Size = new System.Drawing.Size(794, 431);
+            this.splitContainer1.SplitterDistance = 237;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // dtpInicio
+            // 
+            this.dtpInicio.Location = new System.Drawing.Point(11, 152);
+            this.dtpInicio.Name = "dtpInicio";
+            this.dtpInicio.Size = new System.Drawing.Size(200, 20);
+            this.dtpInicio.TabIndex = 3;
+            // 
+            // dtpFinal
+            // 
+            this.dtpFinal.Location = new System.Drawing.Point(11, 206);
+            this.dtpFinal.Name = "dtpFinal";
+            this.dtpFinal.Size = new System.Drawing.Size(200, 20);
+            this.dtpFinal.TabIndex = 2;
             // 
             // button1
             // 
@@ -76,36 +93,34 @@
             this.crvVentas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crvVentas.Location = new System.Drawing.Point(0, 0);
             this.crvVentas.Name = "crvVentas";
-            this.crvVentas.Size = new System.Drawing.Size(557, 450);
+            this.crvVentas.Size = new System.Drawing.Size(553, 431);
             this.crvVentas.TabIndex = 1;
             this.crvVentas.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
-            // dtpFinal
+            // groupBox1
             // 
-            this.dtpFinal.Location = new System.Drawing.Point(11, 206);
-            this.dtpFinal.Name = "dtpFinal";
-            this.dtpFinal.Size = new System.Drawing.Size(200, 20);
-            this.dtpFinal.TabIndex = 2;
-            // 
-            // dtpInicio
-            // 
-            this.dtpInicio.Location = new System.Drawing.Point(11, 152);
-            this.dtpInicio.Name = "dtpInicio";
-            this.dtpInicio.Size = new System.Drawing.Size(200, 20);
-            this.dtpInicio.TabIndex = 3;
+            this.groupBox1.Controls.Add(this.splitContainer1);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(800, 450);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Reporte de Productos mas vendidos";
             // 
             // Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.splitContainer1);
+            this.Controls.Add(this.groupBox1);
             this.Name = "Ventas";
             this.Text = "Ventas";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -117,5 +132,7 @@
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crvVentas;
         private System.Windows.Forms.DateTimePicker dtpInicio;
         private System.Windows.Forms.DateTimePicker dtpFinal;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

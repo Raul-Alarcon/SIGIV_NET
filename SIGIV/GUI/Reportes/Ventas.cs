@@ -24,7 +24,7 @@ namespace SIGIV.GUI.Reportes
 
             try
             {
-                var ventas = await VentasMensualesReporte.GetDataSourse(dtpInicio.Value, dtpInicio.Value);
+                var ventas = await VentasMensualesReporte.GetDataSourse(dtpInicio.Value, dtpFinal.Value);
                 VentasMensualesProducto ventasMensuales = new VentasMensualesProducto();
                 ventasMensuales.SetDataSource(ventas);
                 crvVentas.ReportSource = ventasMensuales;

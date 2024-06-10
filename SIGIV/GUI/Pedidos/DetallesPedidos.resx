@@ -117,4 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Desde aquí, puedes ver una lista detallada de todos los pedidos, su estado actual, y realizar acciones rápidas como añadir nuevos pedidos, editar los existentes o eliminarlos. Además, la vista permite filtrar, buscar y ordenar los pedidos para facilitar la gestión y el seguimiento. Mantente al día con la información más reciente utilizando la función de actualización en tiempo real y exporta los datos para análisis externos cuando sea necesario.</value>
+  </data>
 </root>

@@ -28,328 +28,289 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashBoard));
-            this.materialDrawer1 = new MaterialSkin.Controls.MaterialDrawer();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
-            this.materialDrawer3 = new MaterialSkin.Controls.MaterialDrawer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.ContentLayout = new System.Windows.Forms.Panel();
-            this.sideBard = new SIGIV.Components.DragPanel();
-            this.reportes = new System.Windows.Forms.Button();
-            this.pedidos = new System.Windows.Forms.Button();
-            this.facturas = new System.Windows.Forms.Button();
-            this.productos = new System.Windows.Forms.Button();
-            this.proveedores = new System.Windows.Forms.Button();
-            this.clientes = new System.Windows.Forms.Button();
-            this.usuarios = new System.Windows.Forms.Button();
-            this.empleados = new System.Windows.Forms.Button();
-            this.settings = new System.Windows.Forms.Button();
-            this.home = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnCerrarSession = new System.Windows.Forms.Button();
+            this.lnlUser = new System.Windows.Forms.Label();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
+            this.Home = new System.Windows.Forms.TabPage();
+            this.Empleados = new System.Windows.Forms.TabPage();
+            this.Usuarios = new System.Windows.Forms.TabPage();
+            this.Clientes = new System.Windows.Forms.TabPage();
+            this.Facturas = new System.Windows.Forms.TabPage();
+            this.Proveedores = new System.Windows.Forms.TabPage();
+            this.Pedidos = new System.Windows.Forms.TabPage();
+            this.Productos = new System.Windows.Forms.TabPage();
+            this.Reportes = new System.Windows.Forms.TabPage();
+            this.Configuraciones = new System.Windows.Forms.TabPage();
             this.panel1.SuspendLayout();
-            this.sideBard.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel4.SuspendLayout();
+            this.materialTabControl1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // materialDrawer1
-            // 
-            this.materialDrawer1.AutoHide = false;
-            this.materialDrawer1.AutoShow = false;
-            this.materialDrawer1.BackgroundWithAccent = false;
-            this.materialDrawer1.BaseTabControl = null;
-            this.materialDrawer1.Depth = 0;
-            this.materialDrawer1.HighlightWithAccent = true;
-            this.materialDrawer1.IndicatorWidth = 0;
-            this.materialDrawer1.IsOpen = false;
-            this.materialDrawer1.Location = new System.Drawing.Point(-250, 206);
-            this.materialDrawer1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialDrawer1.Name = "materialDrawer1";
-            this.materialDrawer1.ShowIconsWhenHidden = false;
-            this.materialDrawer1.Size = new System.Drawing.Size(250, 120);
-            this.materialDrawer1.TabIndex = 8;
-            this.materialDrawer1.Text = "materialDrawer1";
-            this.materialDrawer1.UseColors = false;
-            // 
-            // materialDrawer3
-            // 
-            this.materialDrawer3.AutoHide = false;
-            this.materialDrawer3.AutoShow = false;
-            this.materialDrawer3.BackgroundWithAccent = false;
-            this.materialDrawer3.BaseTabControl = null;
-            this.materialDrawer3.Depth = 0;
-            this.materialDrawer3.HighlightWithAccent = true;
-            this.materialDrawer3.IndicatorWidth = 0;
-            this.materialDrawer3.IsOpen = false;
-            this.materialDrawer3.Location = new System.Drawing.Point(-283, 144);
-            this.materialDrawer3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialDrawer3.Name = "materialDrawer3";
-            this.materialDrawer3.ShowIconsWhenHidden = false;
-            this.materialDrawer3.Size = new System.Drawing.Size(283, 162);
-            this.materialDrawer3.TabIndex = 12;
-            this.materialDrawer3.Text = "materialDrawer3";
-            this.materialDrawer3.UseColors = false;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.ContentLayout);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(64, 0);
+            this.panel1.Location = new System.Drawing.Point(3, 129);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(843, 749);
+            this.panel1.Size = new System.Drawing.Size(1036, 656);
             this.panel1.TabIndex = 13;
             // 
             // ContentLayout
             // 
+            this.ContentLayout.AutoScroll = true;
             this.ContentLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ContentLayout.Location = new System.Drawing.Point(0, 0);
             this.ContentLayout.Name = "ContentLayout";
-            this.ContentLayout.Size = new System.Drawing.Size(843, 749);
-            this.ContentLayout.TabIndex = 10;
+            this.ContentLayout.Size = new System.Drawing.Size(1036, 656);
+            this.ContentLayout.TabIndex = 11;
             // 
-            // sideBard
+            // panel3
             // 
-            this.sideBard.BackColor = System.Drawing.Color.White;
-            this.sideBard.BorderRadius = 1;
-            this.sideBard.Controls.Add(this.reportes);
-            this.sideBard.Controls.Add(this.pedidos);
-            this.sideBard.Controls.Add(this.facturas);
-            this.sideBard.Controls.Add(this.productos);
-            this.sideBard.Controls.Add(this.proveedores);
-            this.sideBard.Controls.Add(this.clientes);
-            this.sideBard.Controls.Add(this.usuarios);
-            this.sideBard.Controls.Add(this.empleados);
-            this.sideBard.Controls.Add(this.settings);
-            this.sideBard.Controls.Add(this.home);
-            this.sideBard.Controls.Add(this.panel2);
-            this.sideBard.Dock = System.Windows.Forms.DockStyle.Left;
-            this.sideBard.Location = new System.Drawing.Point(0, 0);
-            this.sideBard.Name = "sideBard";
-            this.sideBard.Shadow = 10;
-            this.sideBard.Size = new System.Drawing.Size(64, 749);
-            this.sideBard.TabIndex = 10;
+            this.panel3.Controls.Add(this.btnCerrarSession);
+            this.panel3.Controls.Add(this.lnlUser);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 30);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1036, 35);
+            this.panel3.TabIndex = 11;
             // 
-            // reportes
+            // btnCerrarSession
             // 
-            this.reportes.BackColor = System.Drawing.Color.Transparent;
-            this.reportes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.reportes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.reportes.FlatAppearance.BorderSize = 0;
-            this.reportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.reportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.reportes.Image = ((System.Drawing.Image)(resources.GetObject("reportes.Image")));
-            this.reportes.Location = new System.Drawing.Point(0, 580);
-            this.reportes.Name = "reportes";
-            this.reportes.Size = new System.Drawing.Size(64, 64);
-            this.reportes.TabIndex = 10;
-            this.reportes.UseVisualStyleBackColor = false;
-            this.reportes.Click += new System.EventHandler(this.buttonSiderBard_Click);
+            this.btnCerrarSession.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrarSession.Location = new System.Drawing.Point(894, 5);
+            this.btnCerrarSession.Name = "btnCerrarSession";
+            this.btnCerrarSession.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnCerrarSession.Size = new System.Drawing.Size(40, 38);
+            this.btnCerrarSession.TabIndex = 1;
+            this.btnCerrarSession.UseVisualStyleBackColor = true;
+            this.btnCerrarSession.Click += new System.EventHandler(this.btnCerrarSession_Click);
             // 
-            // pedidos
+            // lnlUser
             // 
-            this.pedidos.BackColor = System.Drawing.Color.Transparent;
-            this.pedidos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pedidos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pedidos.FlatAppearance.BorderSize = 0;
-            this.pedidos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.pedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pedidos.Image = ((System.Drawing.Image)(resources.GetObject("pedidos.Image")));
-            this.pedidos.Location = new System.Drawing.Point(0, 516);
-            this.pedidos.Name = "pedidos";
-            this.pedidos.Size = new System.Drawing.Size(64, 64);
-            this.pedidos.TabIndex = 9;
-            this.pedidos.UseVisualStyleBackColor = false;
-            this.pedidos.Click += new System.EventHandler(this.buttonSiderBard_Click);
+            this.lnlUser.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lnlUser.AutoSize = true;
+            this.lnlUser.Location = new System.Drawing.Point(807, 15);
+            this.lnlUser.Name = "lnlUser";
+            this.lnlUser.Size = new System.Drawing.Size(35, 13);
+            this.lnlUser.TabIndex = 0;
+            this.lnlUser.Text = "label1";
             // 
-            // facturas
+            // imageList1
             // 
-            this.facturas.BackColor = System.Drawing.Color.Transparent;
-            this.facturas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.facturas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.facturas.FlatAppearance.BorderSize = 0;
-            this.facturas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.facturas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.facturas.Image = ((System.Drawing.Image)(resources.GetObject("facturas.Image")));
-            this.facturas.Location = new System.Drawing.Point(0, 452);
-            this.facturas.Name = "facturas";
-            this.facturas.Size = new System.Drawing.Size(64, 64);
-            this.facturas.TabIndex = 8;
-            this.facturas.UseVisualStyleBackColor = false;
-            this.facturas.Click += new System.EventHandler(this.buttonSiderBard_Click);
-            // 
-            // productos
-            // 
-            this.productos.BackColor = System.Drawing.Color.Transparent;
-            this.productos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.productos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.productos.FlatAppearance.BorderSize = 0;
-            this.productos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.productos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.productos.Image = ((System.Drawing.Image)(resources.GetObject("productos.Image")));
-            this.productos.Location = new System.Drawing.Point(0, 388);
-            this.productos.Name = "productos";
-            this.productos.Size = new System.Drawing.Size(64, 64);
-            this.productos.TabIndex = 7;
-            this.productos.UseVisualStyleBackColor = false;
-            this.productos.Click += new System.EventHandler(this.buttonSiderBard_Click);
-            // 
-            // proveedores
-            // 
-            this.proveedores.BackColor = System.Drawing.Color.Transparent;
-            this.proveedores.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.proveedores.Dock = System.Windows.Forms.DockStyle.Top;
-            this.proveedores.FlatAppearance.BorderSize = 0;
-            this.proveedores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.proveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.proveedores.Image = ((System.Drawing.Image)(resources.GetObject("proveedores.Image")));
-            this.proveedores.Location = new System.Drawing.Point(0, 324);
-            this.proveedores.Name = "proveedores";
-            this.proveedores.Size = new System.Drawing.Size(64, 64);
-            this.proveedores.TabIndex = 6;
-            this.proveedores.UseVisualStyleBackColor = false;
-            this.proveedores.Click += new System.EventHandler(this.buttonSiderBard_Click);
-            // 
-            // clientes
-            // 
-            this.clientes.BackColor = System.Drawing.Color.Transparent;
-            this.clientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.clientes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.clientes.FlatAppearance.BorderSize = 0;
-            this.clientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.clientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clientes.Image = ((System.Drawing.Image)(resources.GetObject("clientes.Image")));
-            this.clientes.Location = new System.Drawing.Point(0, 260);
-            this.clientes.Name = "clientes";
-            this.clientes.Size = new System.Drawing.Size(64, 64);
-            this.clientes.TabIndex = 5;
-            this.clientes.UseVisualStyleBackColor = false;
-            this.clientes.Click += new System.EventHandler(this.buttonSiderBard_Click);
-            // 
-            // usuarios
-            // 
-            this.usuarios.BackColor = System.Drawing.Color.Transparent;
-            this.usuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.usuarios.Dock = System.Windows.Forms.DockStyle.Top;
-            this.usuarios.FlatAppearance.BorderSize = 0;
-            this.usuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.usuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.usuarios.Image = ((System.Drawing.Image)(resources.GetObject("usuarios.Image")));
-            this.usuarios.Location = new System.Drawing.Point(0, 196);
-            this.usuarios.Name = "usuarios";
-            this.usuarios.Size = new System.Drawing.Size(64, 64);
-            this.usuarios.TabIndex = 4;
-            this.usuarios.UseVisualStyleBackColor = false;
-            this.usuarios.Click += new System.EventHandler(this.buttonSiderBard_Click);
-            // 
-            // empleados
-            // 
-            this.empleados.BackColor = System.Drawing.Color.Transparent;
-            this.empleados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.empleados.Dock = System.Windows.Forms.DockStyle.Top;
-            this.empleados.FlatAppearance.BorderSize = 0;
-            this.empleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.empleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.empleados.Image = ((System.Drawing.Image)(resources.GetObject("empleados.Image")));
-            this.empleados.Location = new System.Drawing.Point(0, 132);
-            this.empleados.Name = "empleados";
-            this.empleados.Size = new System.Drawing.Size(64, 64);
-            this.empleados.TabIndex = 3;
-            this.empleados.UseVisualStyleBackColor = false;
-            this.empleados.Click += new System.EventHandler(this.buttonSiderBard_Click);
-            // 
-            // settings
-            // 
-            this.settings.BackColor = System.Drawing.Color.Transparent;
-            this.settings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.settings.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.settings.FlatAppearance.BorderSize = 0;
-            this.settings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.settings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.settings.Image = ((System.Drawing.Image)(resources.GetObject("settings.Image")));
-            this.settings.Location = new System.Drawing.Point(0, 685);
-            this.settings.Name = "settings";
-            this.settings.Size = new System.Drawing.Size(64, 64);
-            this.settings.TabIndex = 2;
-            this.settings.UseVisualStyleBackColor = false;
-            this.settings.Click += new System.EventHandler(this.buttonSiderBard_Click);
-            // 
-            // home
-            // 
-            this.home.BackColor = System.Drawing.Color.Transparent;
-            this.home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.home.Dock = System.Windows.Forms.DockStyle.Top;
-            this.home.FlatAppearance.BorderSize = 0;
-            this.home.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.home.Image = ((System.Drawing.Image)(resources.GetObject("home.Image")));
-            this.home.Location = new System.Drawing.Point(0, 68);
-            this.home.Name = "home";
-            this.home.Size = new System.Drawing.Size(64, 64);
-            this.home.TabIndex = 1;
-            this.home.UseVisualStyleBackColor = false;
-            this.home.Click += new System.EventHandler(this.buttonSiderBard_Click);
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "Clientes1.png");
+            this.imageList1.Images.SetKeyName(1, "Empleados1.png");
+            this.imageList1.Images.SetKeyName(2, "Factura1.png");
+            this.imageList1.Images.SetKeyName(3, "Home1.png");
+            this.imageList1.Images.SetKeyName(4, "Pedidos1.png");
+            this.imageList1.Images.SetKeyName(5, "Productos.png");
+            this.imageList1.Images.SetKeyName(6, "Proveedores1.png");
+            this.imageList1.Images.SetKeyName(7, "Reportes.png");
+            this.imageList1.Images.SetKeyName(8, "Usuarios1.png");
+            this.imageList1.Images.SetKeyName(9, "Cerrarsesion.png");
+            this.imageList1.Images.SetKeyName(10, "Configuraciones.png");
+            this.imageList1.Images.SetKeyName(11, "Cerrarsesion2.png");
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.panel4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Location = new System.Drawing.Point(3, 64);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(64, 68);
-            this.panel2.TabIndex = 0;
+            this.panel2.Size = new System.Drawing.Size(1036, 65);
+            this.panel2.TabIndex = 2;
             // 
-            // pictureBox1
+            // panel4
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Silver;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(55, 58);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.panel4.Controls.Add(this.materialTabControl1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1036, 30);
+            this.panel4.TabIndex = 0;
+            // 
+            // materialTabControl1
+            // 
+            this.materialTabControl1.Controls.Add(this.Home);
+            this.materialTabControl1.Controls.Add(this.Empleados);
+            this.materialTabControl1.Controls.Add(this.Usuarios);
+            this.materialTabControl1.Controls.Add(this.Clientes);
+            this.materialTabControl1.Controls.Add(this.Facturas);
+            this.materialTabControl1.Controls.Add(this.Proveedores);
+            this.materialTabControl1.Controls.Add(this.Pedidos);
+            this.materialTabControl1.Controls.Add(this.Productos);
+            this.materialTabControl1.Controls.Add(this.Reportes);
+            this.materialTabControl1.Controls.Add(this.Configuraciones);
+            this.materialTabControl1.Depth = 0;
+            this.materialTabControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.materialTabControl1.ImageList = this.imageList1;
+            this.materialTabControl1.Location = new System.Drawing.Point(0, 0);
+            this.materialTabControl1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialTabControl1.Multiline = true;
+            this.materialTabControl1.Name = "materialTabControl1";
+            this.materialTabControl1.SelectedIndex = 0;
+            this.materialTabControl1.Size = new System.Drawing.Size(1036, 33);
+            this.materialTabControl1.TabIndex = 0;
+            this.materialTabControl1.SelectedIndexChanged += new System.EventHandler(this.materialTabControl1_SelectedIndexChanged_1);
+            // 
+            // Home
+            // 
+            this.Home.ImageKey = "Home1.png";
+            this.Home.Location = new System.Drawing.Point(4, 39);
+            this.Home.Name = "Home";
+            this.Home.Padding = new System.Windows.Forms.Padding(3);
+            this.Home.Size = new System.Drawing.Size(1028, 0);
+            this.Home.TabIndex = 0;
+            this.Home.Text = "Home";
+            this.Home.UseVisualStyleBackColor = true;
+            // 
+            // Empleados
+            // 
+            this.Empleados.ImageKey = "Empleados1.png";
+            this.Empleados.Location = new System.Drawing.Point(4, 39);
+            this.Empleados.Name = "Empleados";
+            this.Empleados.Padding = new System.Windows.Forms.Padding(3);
+            this.Empleados.Size = new System.Drawing.Size(1012, 0);
+            this.Empleados.TabIndex = 1;
+            this.Empleados.Text = "Empleados";
+            this.Empleados.UseVisualStyleBackColor = true;
+            // 
+            // Usuarios
+            // 
+            this.Usuarios.ImageKey = "Usuarios1.png";
+            this.Usuarios.Location = new System.Drawing.Point(4, 39);
+            this.Usuarios.Name = "Usuarios";
+            this.Usuarios.Size = new System.Drawing.Size(1012, 0);
+            this.Usuarios.TabIndex = 2;
+            this.Usuarios.Text = "Usuarios";
+            this.Usuarios.UseVisualStyleBackColor = true;
+            // 
+            // Clientes
+            // 
+            this.Clientes.ImageKey = "Clientes1.png";
+            this.Clientes.Location = new System.Drawing.Point(4, 39);
+            this.Clientes.Name = "Clientes";
+            this.Clientes.Size = new System.Drawing.Size(1012, 0);
+            this.Clientes.TabIndex = 3;
+            this.Clientes.Text = "Clientes";
+            this.Clientes.UseVisualStyleBackColor = true;
+            // 
+            // Facturas
+            // 
+            this.Facturas.ImageKey = "Factura1.png";
+            this.Facturas.Location = new System.Drawing.Point(4, 39);
+            this.Facturas.Name = "Facturas";
+            this.Facturas.Size = new System.Drawing.Size(1012, 0);
+            this.Facturas.TabIndex = 4;
+            this.Facturas.Text = "Facturas";
+            this.Facturas.UseVisualStyleBackColor = true;
+            // 
+            // Proveedores
+            // 
+            this.Proveedores.ImageKey = "Proveedores1.png";
+            this.Proveedores.Location = new System.Drawing.Point(4, 39);
+            this.Proveedores.Name = "Proveedores";
+            this.Proveedores.Size = new System.Drawing.Size(1012, 0);
+            this.Proveedores.TabIndex = 5;
+            this.Proveedores.Text = "Proveedores";
+            this.Proveedores.UseVisualStyleBackColor = true;
+            // 
+            // Pedidos
+            // 
+            this.Pedidos.ImageKey = "Pedidos1.png";
+            this.Pedidos.Location = new System.Drawing.Point(4, 39);
+            this.Pedidos.Name = "Pedidos";
+            this.Pedidos.Size = new System.Drawing.Size(1012, 0);
+            this.Pedidos.TabIndex = 6;
+            this.Pedidos.Text = "Pedidos";
+            this.Pedidos.UseVisualStyleBackColor = true;
+            // 
+            // Productos
+            // 
+            this.Productos.ImageKey = "Productos.png";
+            this.Productos.Location = new System.Drawing.Point(4, 39);
+            this.Productos.Name = "Productos";
+            this.Productos.Size = new System.Drawing.Size(1012, 0);
+            this.Productos.TabIndex = 7;
+            this.Productos.Text = "Productos";
+            this.Productos.UseVisualStyleBackColor = true;
+            // 
+            // Reportes
+            // 
+            this.Reportes.ImageKey = "Reportes.png";
+            this.Reportes.Location = new System.Drawing.Point(4, 39);
+            this.Reportes.Name = "Reportes";
+            this.Reportes.Size = new System.Drawing.Size(1012, 0);
+            this.Reportes.TabIndex = 8;
+            this.Reportes.Text = "Reportes";
+            this.Reportes.UseVisualStyleBackColor = true;
+            // 
+            // Configuraciones
+            // 
+            this.Configuraciones.ImageKey = "Configuraciones.png";
+            this.Configuraciones.Location = new System.Drawing.Point(4, 39);
+            this.Configuraciones.Name = "Configuraciones";
+            this.Configuraciones.Padding = new System.Windows.Forms.Padding(3);
+            this.Configuraciones.Size = new System.Drawing.Size(1012, 0);
+            this.Configuraciones.TabIndex = 9;
+            this.Configuraciones.Text = "Configuraciones";
+            this.Configuraciones.UseVisualStyleBackColor = true;
             // 
             // DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(907, 749);
+            this.ClientSize = new System.Drawing.Size(1042, 788);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.materialDrawer3);
-            this.Controls.Add(this.sideBard);
-            this.Controls.Add(this.materialDrawer1);
+            this.Controls.Add(this.panel2);
+            this.DrawerAutoHide = false;
+            this.DrawerAutoShow = true;
+            this.DrawerShowIconsWhenHidden = true;
+            this.DrawerTabControl = this.materialTabControl1;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "DashBoard";
-            this.Text = " ";
+            this.Text = " SIGIV";
             this.panel1.ResumeLayout(false);
-            this.sideBard.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.materialTabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private MaterialSkin.Controls.MaterialDrawer materialDrawer1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker2;
-        private Components.DragPanel sideBard;
-        private MaterialSkin.Controls.MaterialDrawer materialDrawer3;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button home;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label lnlUser;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button settings;
+        private MaterialSkin.Controls.MaterialTabControl materialTabControl1;
+        private System.Windows.Forms.TabPage Home;
+        private System.Windows.Forms.TabPage Empleados;
+        private System.Windows.Forms.TabPage Usuarios;
+        private System.Windows.Forms.TabPage Clientes;
+        private System.Windows.Forms.TabPage Facturas;
+        private System.Windows.Forms.TabPage Proveedores;
+        private System.Windows.Forms.TabPage Pedidos;
+        private System.Windows.Forms.TabPage Productos;
+        private System.Windows.Forms.TabPage Reportes;
         private System.Windows.Forms.Panel ContentLayout;
-        private System.Windows.Forms.Button empleados;
-        private System.Windows.Forms.Button usuarios;
-        private System.Windows.Forms.Button clientes;
-        private System.Windows.Forms.Button facturas;
-        private System.Windows.Forms.Button productos;
-        private System.Windows.Forms.Button proveedores;
-        private System.Windows.Forms.Button reportes;
-        private System.Windows.Forms.Button pedidos;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Button btnCerrarSession;
+        private System.Windows.Forms.TabPage Configuraciones;
     }
 }

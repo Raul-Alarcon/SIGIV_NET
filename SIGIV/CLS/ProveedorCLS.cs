@@ -33,10 +33,26 @@ namespace SIGIV.CLS
                                          Telefono = prov.telefonoProveedor,
                                          Correo = prov.eMailProveedor,
                                          Sitio = prov.web,
-                                         Giro = prov.giro
+                                         Giro = prov.giro,  
                                      }).ToListAsync();
             }
             return proveedores;
+        }
+
+        public async static Task<List<ContactoProveedorDTO>> GetAllContactosAsync()
+        {
+            List<ContactoProveedorDTO> contactos = new List<ContactoProveedorDTO>();
+            using (SIGIVEntities db = new SIGIVEntities())
+            {
+                contactos = await (from cont in db.ContactosProveedor
+                                   select new ContactoProveedorDTO
+                                   {
+                                       ID = cont.idContacto,
+                                       Nombre = cont.nombresContacto + " " + cont.apellidosContacto,
+                                       Compania = cont.Proveedores.compania
+                                   }).ToListAsync();
+            }
+            return contactos;
         }
 
         public static async Task<ProveedorCLS> GetByIDAsync(int idProveedor)
