@@ -44,6 +44,7 @@ namespace SIGIV.CLS
                 direccion.Linea1 = Linea1;
                 direccion.Linea2 = Linea2;
                 direccion.codigoPostal = codigoPostal;
+                direccion.idDistrito = idDireccion;
                 await db.SaveChangesAsync();
             }
             return true;
