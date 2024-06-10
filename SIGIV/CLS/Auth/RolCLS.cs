@@ -82,5 +82,23 @@ namespace SIGIV.CLS.Auth
             }
             return result;
         }
+
+
+        public async Task<bool> AsignaUsuario(int idUusuario)
+        {
+            bool result = false;
+            using (var db = new SIGIVEntities())
+            {
+                var usuario = await db.Usuarios.Where(usu => usu.idUsuario == idUusuario)
+                        .FirstOrDefaultAsync();
+                if (usuario != null)
+                {
+                    usuario.idRol = this.id;
+                    await db.SaveChangesAsync();
+                    result = true;
+                }
+            }
+            return result;
+        }
     }
 }

@@ -40,8 +40,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.btnRecargar = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAsignarRolUsuario = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -92,13 +93,14 @@
             this.button1.TabIndex = 13;
             this.button1.Text = "Asignar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // cmbRoles
             // 
             this.cmbRoles.FormattingEnabled = true;
             this.cmbRoles.Location = new System.Drawing.Point(16, 80);
             this.cmbRoles.Name = "cmbRoles";
-            this.cmbRoles.Size = new System.Drawing.Size(230, 21);
+            this.cmbRoles.Size = new System.Drawing.Size(159, 21);
             this.cmbRoles.TabIndex = 4;
             // 
             // label2
@@ -134,9 +136,11 @@
             this.button2.TabIndex = 16;
             this.button2.Text = "Eliminar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnAsignarRolUsuario);
             this.groupBox1.Controls.Add(this.btnAgregarUsuario);
             this.groupBox1.Controls.Add(this.btnAgregarOpciones);
             this.groupBox1.Controls.Add(this.cmbRoles);
@@ -164,6 +168,16 @@
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
             // 
+            // btnRecargar
+            // 
+            this.btnRecargar.Location = new System.Drawing.Point(189, 136);
+            this.btnRecargar.Name = "btnRecargar";
+            this.btnRecargar.Size = new System.Drawing.Size(89, 23);
+            this.btnRecargar.TabIndex = 17;
+            this.btnRecargar.Text = "Recargar";
+            this.btnRecargar.UseVisualStyleBackColor = true;
+            this.btnRecargar.Click += new System.EventHandler(this.btnRecargar_Click);
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.groupBox2);
@@ -175,15 +189,15 @@
             this.panel1.Size = new System.Drawing.Size(498, 504);
             this.panel1.TabIndex = 19;
             // 
-            // btnRecargar
+            // btnAsignarRolUsuario
             // 
-            this.btnRecargar.Location = new System.Drawing.Point(189, 136);
-            this.btnRecargar.Name = "btnRecargar";
-            this.btnRecargar.Size = new System.Drawing.Size(89, 23);
-            this.btnRecargar.TabIndex = 17;
-            this.btnRecargar.Text = "Recargar";
-            this.btnRecargar.UseVisualStyleBackColor = true;
-            this.btnRecargar.Click += new System.EventHandler(this.btnRecargar_Click);
+            this.btnAsignarRolUsuario.Location = new System.Drawing.Point(181, 80);
+            this.btnAsignarRolUsuario.Name = "btnAsignarRolUsuario";
+            this.btnAsignarRolUsuario.Size = new System.Drawing.Size(80, 23);
+            this.btnAsignarRolUsuario.TabIndex = 13;
+            this.btnAsignarRolUsuario.Text = "Asignar";
+            this.btnAsignarRolUsuario.UseVisualStyleBackColor = true;
+            this.btnAsignarRolUsuario.Click += new System.EventHandler(this.btnAsignarRolUsuario_Click);
             // 
             // GestionRolesOpciones
             // 
@@ -217,5 +231,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnRecargar;
+        private System.Windows.Forms.Button btnAsignarRolUsuario;
     }
 }

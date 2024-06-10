@@ -28,22 +28,34 @@ namespace SIGIV.CLS
             return opciones;
         }
 
-        public async static Task<List<OpcionCLS>> GetOpcionesByRol(int idRol)
+        public async static Task<List<OpcionCLS>> GetOpcionesAsignadasByRol(int idRol)
         {
             List<OpcionCLS> opcion = new List<OpcionCLS>();
             using (var db = new SIGIVEntities())
             {
-                opcion = await (from op in db.Opciones
-                                join rolOpcion in db.AsignacionRolesOpciones
-                                on op.idOpcion equals rolOpcion.idOpcion
+                opcion = await (from rolOpcion in db.AsignacionRolesOpciones
+                                join opciones in db.Opciones on rolOpcion.idOpcion equals opciones.idOpcion
                                 where rolOpcion.idRol == idRol
                                 select new OpcionCLS
                                 {
-                                    id = op.idOpcion,
-                                    opcion = op.opcion
+                                    id = opciones.idOpcion,
+                                    opcion = opciones.opcion
                                 }).ToListAsync();
             }
             return opcion;
+        }
+
+        public async Task<bool> QuitarOpcionAsignadoByIdRol(int idRol)
+        {
+            bool success = false;
+            using (var db = new SIGIVEntities())
+            {
+                AsignacionRolesOpciones asignacion = db.AsignacionRolesOpciones.Where(x => x.idRol == idRol && x.idOpcion == id).FirstOrDefault();
+                db.AsignacionRolesOpciones.Remove(asignacion);
+                int result = await db.SaveChangesAsync();
+                success = result > 0;
+            }
+            return success;
         }
 
 
@@ -84,6 +96,23 @@ namespace SIGIV.CLS
             {
                 Opciones opciones = db.Opciones.Where(x => x.idOpcion == id).FirstOrDefault();
                 db.Opciones.Remove(opciones);
+                int result = await db.SaveChangesAsync();
+                success = result > 0;
+            }
+            return success;
+        }
+
+        public async Task<bool> AsignarARol(int idRol)
+        {
+            bool success = false;
+            using (var db = new SIGIVEntities())
+            {
+                AsignacionRolesOpciones asignacion = new AsignacionRolesOpciones
+                {
+                    idRol = idRol,
+                    idOpcion = id
+                };
+                db.AsignacionRolesOpciones.Add(asignacion);
                 int result = await db.SaveChangesAsync();
                 success = result > 0;
             }
