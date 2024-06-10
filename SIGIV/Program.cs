@@ -37,7 +37,7 @@ namespace SIGIV
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Login.Login());
-            Application.Run(new GestionPedidos());
+            Application.Run(new ClienteFrecuente());
         }
     }
 }
