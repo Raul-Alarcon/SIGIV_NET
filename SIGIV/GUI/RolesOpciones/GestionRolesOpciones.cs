@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SIGIV.GUI.Opciones;
+using SIGIV.GUI.Usuarios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,18 @@ namespace SIGIV.GUI.RolesOpciones
         public GestionRolesOpciones()
         {
             InitializeComponent();
+        }
+
+        private void btnAgregarUsuario_Click(object sender, EventArgs e)
+        {
+            AgregarUsuarios agregarUsuarios = new AgregarUsuarios();
+            agregarUsuarios.ShowDialog();
+        }
+
+        private void btnAgregarOpciones_Click(object sender, EventArgs e)
+        {
+            AgregarOpcion agregarOpcion = new AgregarOpcion();
+            agregarOpcion.ShowDialog();
         }
     }
 }

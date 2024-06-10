@@ -31,11 +31,11 @@ namespace SIGIV
             this.FormBorderStyle = FormBorderStyle.None;
             materialSkinManager.AddFormToManage(this);
 
-            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
             materialSkinManager.ColorScheme = new ColorScheme(
-                Primary.Brown800,
-                Primary.Brown800,
-                Primary.Brown800,
+                Primary.Green800,
+                Primary.Purple800,
+                Primary.Purple800,
                 Accent.Blue100,
                 TextShade.WHITE);
 

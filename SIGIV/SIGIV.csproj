@@ -142,6 +142,7 @@
     <Compile Include="CLS\FacturaCLS.cs" />
     <Compile Include="CLS\FormasDePagoCLS.cs" />
     <Compile Include="CLS\MunicipiosCLS.cs" />
+    <Compile Include="CLS\OpcionCLS.cs" />
     <Compile Include="CLS\PaisesCLS.cs" />
     <Compile Include="CLS\PedidosCLS.cs" />
     <Compile Include="CLS\ProductoCLS.cs" />
@@ -361,6 +362,12 @@
     <Compile Include="GUI\Municipios\GestionMunicipios.Designer.cs">
       <DependentUpon>GestionMunicipios.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Opciones\AgregarOpcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Opciones\AgregarOpcion.Designer.cs">
+      <DependentUpon>AgregarOpcion.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Paises\GestionPaises.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -543,6 +550,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Municipios\GestionMunicipios.resx">
       <DependentUpon>GestionMunicipios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Opciones\AgregarOpcion.resx">
+      <DependentUpon>AgregarOpcion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Paises\GestionPaises.resx">
       <DependentUpon>GestionPaises.cs</DependentUpon>

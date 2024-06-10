@@ -28,143 +28,178 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.lstDatos = new System.Windows.Forms.ListBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnEjecutar = new System.Windows.Forms.Button();
-            this.rbEliminar = new System.Windows.Forms.RadioButton();
-            this.rbModificar = new System.Windows.Forms.RadioButton();
-            this.rbNuevo = new System.Windows.Forms.RadioButton();
+            this.btnAgregarUsuario = new System.Windows.Forms.Button();
+            this.btnAgregarOpciones = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.listRoles = new System.Windows.Forms.ListBox();
+            this.listOpciones = new System.Windows.Forms.ListBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txbNombre = new System.Windows.Forms.TextBox();
-            this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox3
+            // btnAgregarUsuario
             // 
-            this.groupBox3.Controls.Add(this.lstDatos);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Location = new System.Drawing.Point(0, 146);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(669, 304);
-            this.groupBox3.TabIndex = 5;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Lista de Opciones Roles";
+            this.btnAgregarUsuario.Location = new System.Drawing.Point(6, 19);
+            this.btnAgregarUsuario.Name = "btnAgregarUsuario";
+            this.btnAgregarUsuario.Size = new System.Drawing.Size(119, 23);
+            this.btnAgregarUsuario.TabIndex = 0;
+            this.btnAgregarUsuario.Text = "Agregar Usuario";
+            this.btnAgregarUsuario.UseVisualStyleBackColor = true;
+            this.btnAgregarUsuario.Click += new System.EventHandler(this.btnAgregarUsuario_Click);
             // 
-            // lstDatos
+            // btnAgregarOpciones
             // 
-            this.lstDatos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lstDatos.FormattingEnabled = true;
-            this.lstDatos.Location = new System.Drawing.Point(3, 16);
-            this.lstDatos.Name = "lstDatos";
-            this.lstDatos.Size = new System.Drawing.Size(663, 285);
-            this.lstDatos.TabIndex = 0;
+            this.btnAgregarOpciones.Location = new System.Drawing.Point(249, 19);
+            this.btnAgregarOpciones.Name = "btnAgregarOpciones";
+            this.btnAgregarOpciones.Size = new System.Drawing.Size(114, 23);
+            this.btnAgregarOpciones.TabIndex = 1;
+            this.btnAgregarOpciones.Text = "Agregar Opciones";
+            this.btnAgregarOpciones.UseVisualStyleBackColor = true;
+            this.btnAgregarOpciones.Click += new System.EventHandler(this.btnAgregarOpciones_Click);
             // 
-            // groupBox2
+            // label3
             // 
-            this.groupBox2.Controls.Add(this.btnEjecutar);
-            this.groupBox2.Controls.Add(this.rbEliminar);
-            this.groupBox2.Controls.Add(this.rbModificar);
-            this.groupBox2.Controls.Add(this.rbNuevo);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox2.Location = new System.Drawing.Point(0, 63);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(669, 83);
-            this.groupBox2.TabIndex = 4;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Operaciones";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(41, 67);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(48, 13);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Usuarios";
             // 
-            // btnEjecutar
+            // comboBox3
             // 
-            this.btnEjecutar.Location = new System.Drawing.Point(316, 34);
-            this.btnEjecutar.Name = "btnEjecutar";
-            this.btnEjecutar.Size = new System.Drawing.Size(75, 23);
-            this.btnEjecutar.TabIndex = 3;
-            this.btnEjecutar.Text = "Ejecutar";
-            this.btnEjecutar.UseVisualStyleBackColor = true;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(6, 83);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(121, 21);
+            this.comboBox3.TabIndex = 11;
             // 
-            // rbEliminar
+            // button1
             // 
-            this.rbEliminar.AutoSize = true;
-            this.rbEliminar.Location = new System.Drawing.Point(197, 37);
-            this.rbEliminar.Name = "rbEliminar";
-            this.rbEliminar.Size = new System.Drawing.Size(61, 17);
-            this.rbEliminar.TabIndex = 2;
-            this.rbEliminar.Text = "Eliminar";
-            this.rbEliminar.UseVisualStyleBackColor = true;
+            this.button1.Location = new System.Drawing.Point(35, 19);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(89, 23);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Asignar";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // rbModificar
+            // comboBox2
             // 
-            this.rbModificar.AutoSize = true;
-            this.rbModificar.Location = new System.Drawing.Point(98, 37);
-            this.rbModificar.Name = "rbModificar";
-            this.rbModificar.Size = new System.Drawing.Size(68, 17);
-            this.rbModificar.TabIndex = 1;
-            this.rbModificar.Text = "Modificar";
-            this.rbModificar.UseVisualStyleBackColor = true;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(249, 83);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.TabIndex = 4;
             // 
-            // rbNuevo
+            // label2
             // 
-            this.rbNuevo.AutoSize = true;
-            this.rbNuevo.Checked = true;
-            this.rbNuevo.Location = new System.Drawing.Point(18, 37);
-            this.rbNuevo.Name = "rbNuevo";
-            this.rbNuevo.Size = new System.Drawing.Size(57, 17);
-            this.rbNuevo.TabIndex = 0;
-            this.rbNuevo.TabStop = true;
-            this.rbNuevo.Text = "Nuevo";
-            this.rbNuevo.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(295, 67);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(23, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Rol";
+            // 
+            // listRoles
+            // 
+            this.listRoles.FormattingEnabled = true;
+            this.listRoles.Location = new System.Drawing.Point(6, 67);
+            this.listRoles.Name = "listRoles";
+            this.listRoles.Size = new System.Drawing.Size(162, 212);
+            this.listRoles.TabIndex = 14;
+            // 
+            // listOpciones
+            // 
+            this.listOpciones.FormattingEnabled = true;
+            this.listOpciones.Location = new System.Drawing.Point(201, 67);
+            this.listOpciones.Name = "listOpciones";
+            this.listOpciones.Size = new System.Drawing.Size(162, 212);
+            this.listOpciones.TabIndex = 15;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(238, 19);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(89, 23);
+            this.button2.TabIndex = 16;
+            this.button2.Text = "Eliminar";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txbNombre);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Controls.Add(this.btnAgregarUsuario);
+            this.groupBox1.Controls.Add(this.btnAgregarOpciones);
+            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.comboBox3);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Location = new System.Drawing.Point(18, 18);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(669, 63);
-            this.groupBox1.TabIndex = 3;
+            this.groupBox1.Size = new System.Drawing.Size(377, 137);
+            this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Formulario";
             // 
-            // txbNombre
+            // groupBox2
             // 
-            this.txbNombre.Location = new System.Drawing.Point(18, 29);
-            this.txbNombre.Multiline = true;
-            this.txbNombre.Name = "txbNombre";
-            this.txbNombre.Size = new System.Drawing.Size(373, 20);
-            this.txbNombre.TabIndex = 1;
+            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.listOpciones);
+            this.groupBox2.Controls.Add(this.listRoles);
+            this.groupBox2.Location = new System.Drawing.Point(18, 172);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(377, 290);
+            this.groupBox2.TabIndex = 18;
+            this.groupBox2.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Controls.Add(this.groupBox2);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Padding = new System.Windows.Forms.Padding(15);
+            this.panel1.Size = new System.Drawing.Size(412, 480);
+            this.panel1.TabIndex = 19;
             // 
             // GestionRolesOpciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(669, 450);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(431, 504);
+            this.Controls.Add(this.panel1);
             this.Name = "GestionRolesOpciones";
             this.Text = "GestionRolesOpciones";
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ListBox lstDatos;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btnEjecutar;
-        private System.Windows.Forms.RadioButton rbEliminar;
-        private System.Windows.Forms.RadioButton rbModificar;
-        private System.Windows.Forms.RadioButton rbNuevo;
+        private System.Windows.Forms.Button btnAgregarUsuario;
+        private System.Windows.Forms.Button btnAgregarOpciones;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ListBox listRoles;
+        private System.Windows.Forms.ListBox listOpciones;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txbNombre;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Panel panel1;
     }
 }

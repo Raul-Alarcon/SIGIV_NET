@@ -62,7 +62,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 129);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(988, 656);
+            this.panel1.Size = new System.Drawing.Size(1004, 656);
             this.panel1.TabIndex = 13;
             // 
             // ContentLayout
@@ -70,7 +70,7 @@
             this.ContentLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ContentLayout.Location = new System.Drawing.Point(0, 0);
             this.ContentLayout.Name = "ContentLayout";
-            this.ContentLayout.Size = new System.Drawing.Size(988, 656);
+            this.ContentLayout.Size = new System.Drawing.Size(1004, 656);
             this.ContentLayout.TabIndex = 11;
             // 
             // panel3
@@ -80,7 +80,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 30);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(988, 35);
+            this.panel3.Size = new System.Drawing.Size(1004, 35);
             this.panel3.TabIndex = 11;
             // 
             // btnCerrarSession
@@ -90,7 +90,7 @@
             this.btnCerrarSession.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCerrarSession.ImageKey = "Cerrarsesion2.png";
             this.btnCerrarSession.ImageList = this.imageList1;
-            this.btnCerrarSession.Location = new System.Drawing.Point(913, -1);
+            this.btnCerrarSession.Location = new System.Drawing.Point(929, -1);
             this.btnCerrarSession.Name = "btnCerrarSession";
             this.btnCerrarSession.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnCerrarSession.Size = new System.Drawing.Size(40, 38);
@@ -119,7 +119,7 @@
             // 
             this.lnlUser.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lnlUser.AutoSize = true;
-            this.lnlUser.Location = new System.Drawing.Point(764, 10);
+            this.lnlUser.Location = new System.Drawing.Point(780, 10);
             this.lnlUser.Name = "lnlUser";
             this.lnlUser.Size = new System.Drawing.Size(35, 13);
             this.lnlUser.TabIndex = 0;
@@ -132,7 +132,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(3, 64);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(988, 65);
+            this.panel2.Size = new System.Drawing.Size(1004, 65);
             this.panel2.TabIndex = 2;
             // 
             // panel4
@@ -141,7 +141,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(988, 30);
+            this.panel4.Size = new System.Drawing.Size(1004, 30);
             this.panel4.TabIndex = 0;
             // 
             // materialTabControl1
@@ -164,7 +164,7 @@
             this.materialTabControl1.Multiline = true;
             this.materialTabControl1.Name = "materialTabControl1";
             this.materialTabControl1.SelectedIndex = 0;
-            this.materialTabControl1.Size = new System.Drawing.Size(988, 33);
+            this.materialTabControl1.Size = new System.Drawing.Size(1004, 33);
             this.materialTabControl1.TabIndex = 0;
             this.materialTabControl1.SelectedIndexChanged += new System.EventHandler(this.materialTabControl1_SelectedIndexChanged_1);
             // 
@@ -174,7 +174,7 @@
             this.Home.Location = new System.Drawing.Point(4, 39);
             this.Home.Name = "Home";
             this.Home.Padding = new System.Windows.Forms.Padding(3);
-            this.Home.Size = new System.Drawing.Size(980, 0);
+            this.Home.Size = new System.Drawing.Size(996, 0);
             this.Home.TabIndex = 0;
             this.Home.Text = "Home";
             this.Home.UseVisualStyleBackColor = true;
@@ -275,7 +275,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(994, 788);
+            this.ClientSize = new System.Drawing.Size(1010, 788);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.DrawerAutoHide = false;
