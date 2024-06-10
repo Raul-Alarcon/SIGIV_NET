@@ -266,6 +266,10 @@ namespace SIGIV.GUI.Pedidos
                     MessageBox.Show("Pedido procesado correctamente", "Pedido", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     await CargarPedidos();
                     await CargarProductos();
+
+                    productosPedidos.Clear();
+                    dgvProductosPedidos.DataSource = null;
+                    dgvProductosPedidos.Refresh();
                 }
             }
             catch (Exception exc)

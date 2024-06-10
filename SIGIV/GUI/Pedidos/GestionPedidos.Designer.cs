@@ -42,7 +42,6 @@
             this.txbAgregarAlPedido = new System.Windows.Forms.Button();
             this.txbBuscarProducto = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.btnProductoNuevo = new System.Windows.Forms.Button();
             this.txtIva = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
@@ -204,7 +203,6 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.btnProductoNuevo);
             this.groupBox5.Controls.Add(this.txtIva);
             this.groupBox5.Controls.Add(this.label8);
             this.groupBox5.Controls.Add(this.txtTotal);
@@ -224,16 +222,6 @@
             this.groupBox5.Size = new System.Drawing.Size(655, 149);
             this.groupBox5.TabIndex = 1;
             this.groupBox5.TabStop = false;
-            // 
-            // btnProductoNuevo
-            // 
-            this.btnProductoNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnProductoNuevo.Location = new System.Drawing.Point(381, 118);
-            this.btnProductoNuevo.Name = "btnProductoNuevo";
-            this.btnProductoNuevo.Size = new System.Drawing.Size(119, 23);
-            this.btnProductoNuevo.TabIndex = 28;
-            this.btnProductoNuevo.Text = "Producto Nuevo";
-            this.btnProductoNuevo.UseVisualStyleBackColor = true;
             // 
             // txtIva
             // 
@@ -517,7 +505,6 @@
         private System.Windows.Forms.TextBox txtbProductoSeleccionado;
         private System.Windows.Forms.Button btnQuitarProducto;
         private System.Windows.Forms.Button btnHacerPedido;
-        private System.Windows.Forms.Button btnProductoNuevo;
         private System.Windows.Forms.TextBox txtIva;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtTotal;
