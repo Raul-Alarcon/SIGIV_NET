@@ -13,17 +13,17 @@ namespace SIGIV.GUI.Reportes
 {
     public partial class Compras : Form
     {
-        public int nf = 1;
+        public int nf = 12;
         public Compras()
         {
             InitializeComponent();
         }
 
-        override protected void OnLoad(EventArgs e)
+        override protected async void OnLoad(EventArgs e)
         {
             try
             {
-                var compras = CLS.DTO.Reportes.ComprasReporte.GetDataSource(nf);
+                var compras = await CLS.DTO.Reportes.ComprasReporte.GetDataSource(nf);
                 ReporteCompra reporteCompra = new ReporteCompra();
                 reporteCompra.SetDataSource(compras);
                 crvFactura.ReportSource = reporteCompra;

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,15 +23,15 @@ namespace SIGIV.CLS.DTO.Reportes
             DataTable reporte = new DataTable();
             reporte.Columns.Add("nombreProducto", typeof(string));
             reporte.Columns.Add("cantidad", typeof(int));
-            reporte.Columns.Add("precio", typeof(string));
+            reporte.Columns.Add("precio1", typeof(string));
             reporte.Columns.Add("subTotal", typeof(string));
 
             using(DataLayer.SIGIVEntities db = new DataLayer.SIGIVEntities())
             {
-                var facturas = db.Facturas.Where(x => x.idFactura == n).ToList();
+                var facturas = await db.Facturas.Where(x => x.idFactura == n).ToListAsync();
                 foreach (var factura in facturas)
                 {
-                    var detalles = db.DetallesFacturas.Where(x => x.idFactura == n).ToList();
+                    var detalles = await db.DetallesFacturas.Where(x => x.idFactura == n).ToListAsync();
                     foreach (var detalle in detalles)// si trae los detalles
                     {
                         var producto = db.Productos.Find(detalle.idProducto);
