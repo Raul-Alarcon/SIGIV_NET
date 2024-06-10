@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using SIGIV.CLS.utils;
 using System.Runtime.InteropServices;
 using System.Data.Entity;
+using SIGIV.CLS.DTO;
 
 namespace SIGIV.CLS.Auth
 {
@@ -17,6 +18,28 @@ namespace SIGIV.CLS.Auth
         public int idRol { get; set; }
         public string usuario { get; set; }
         public string clave { get; set; } 
+
+        public async static Task<List<UsuarioDTO>> GetUsuarioDTOsAsync()
+        {
+            List<UsuarioDTO> usuarios = new List<UsuarioDTO>();
+            using (SIGIVEntities db = new SIGIVEntities())
+            {
+                usuarios = await (from usuario in db.Usuarios
+                                  join empleado in db.Empleados
+                                  on usuario.idEmpleado equals empleado.idEmpleado
+                                  join rol in db.Roles
+                                  on usuario.idRol equals rol.idRol
+                                  select new UsuarioDTO
+                                  {
+                                      id = usuario.idUsuario,
+                                      idEmpleado = (int)usuario.idEmpleado,
+                                      idRol = (int)usuario.idRol,
+                                      usuario = usuario.usuario,
+                                      Empleado = empleado.nombresEmpleado + " " + empleado.apellidosEmpleado
+                                  }).ToListAsync();
+            }
+            return usuarios;
+        }
 
         public async Task<UsuarioCLS> SaveAsync()
         {

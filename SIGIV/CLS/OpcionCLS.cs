@@ -28,7 +28,23 @@ namespace SIGIV.CLS
             return opciones;
         }
 
-
+        public async static Task<List<OpcionCLS>> GetOpcionesByRol(int idRol)
+        {
+            List<OpcionCLS> opcion = new List<OpcionCLS>();
+            using (var db = new SIGIVEntities())
+            {
+                opcion = await (from op in db.Opciones
+                                join rolOpcion in db.AsignacionRolesOpciones
+                                on op.idOpcion equals rolOpcion.idOpcion
+                                where rolOpcion.idRol == idRol
+                                select new OpcionCLS
+                                {
+                                    id = op.idOpcion,
+                                    opcion = op.opcion
+                                }).ToListAsync();
+            }
+            return opcion;
+        }
 
 
         public async Task<bool> SaveAsync()
