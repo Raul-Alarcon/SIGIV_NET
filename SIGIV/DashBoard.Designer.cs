@@ -34,8 +34,8 @@
             this.ContentLayout = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnCerrarSession = new System.Windows.Forms.Button();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.lnlUser = new System.Windows.Forms.Label();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
@@ -60,7 +60,7 @@
             // 
             this.panel1.Controls.Add(this.ContentLayout);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 129);
+            this.panel1.Location = new System.Drawing.Point(3, 138);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1020, 656);
             this.panel1.TabIndex = 13;
@@ -86,17 +86,23 @@
             // btnCerrarSession
             // 
             this.btnCerrarSession.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrarSession.AutoSize = true;
-            this.btnCerrarSession.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSession.ImageKey = "Cerrarsesion2.png";
-            this.btnCerrarSession.ImageList = this.imageList1;
-            this.btnCerrarSession.Location = new System.Drawing.Point(945, -1);
+            this.btnCerrarSession.Location = new System.Drawing.Point(878, 5);
             this.btnCerrarSession.Name = "btnCerrarSession";
             this.btnCerrarSession.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnCerrarSession.Size = new System.Drawing.Size(40, 38);
             this.btnCerrarSession.TabIndex = 1;
             this.btnCerrarSession.UseVisualStyleBackColor = true;
             this.btnCerrarSession.Click += new System.EventHandler(this.btnCerrarSession_Click);
+            // 
+            // lnlUser
+            // 
+            this.lnlUser.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lnlUser.AutoSize = true;
+            this.lnlUser.Location = new System.Drawing.Point(791, 15);
+            this.lnlUser.Name = "lnlUser";
+            this.lnlUser.Size = new System.Drawing.Size(35, 13);
+            this.lnlUser.TabIndex = 0;
+            this.lnlUser.Text = "label1";
             // 
             // imageList1
             // 
@@ -114,16 +120,6 @@
             this.imageList1.Images.SetKeyName(9, "Cerrarsesion.png");
             this.imageList1.Images.SetKeyName(10, "Configuraciones.png");
             this.imageList1.Images.SetKeyName(11, "Cerrarsesion2.png");
-            // 
-            // lnlUser
-            // 
-            this.lnlUser.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lnlUser.AutoSize = true;
-            this.lnlUser.Location = new System.Drawing.Point(796, 10);
-            this.lnlUser.Name = "lnlUser";
-            this.lnlUser.Size = new System.Drawing.Size(35, 13);
-            this.lnlUser.TabIndex = 0;
-            this.lnlUser.Text = "label1";
             // 
             // panel2
             // 
