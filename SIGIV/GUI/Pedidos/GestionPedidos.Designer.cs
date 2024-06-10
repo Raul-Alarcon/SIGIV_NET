@@ -42,7 +42,6 @@
             this.txbAgregarAlPedido = new System.Windows.Forms.Button();
             this.txbBuscarProducto = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.btnProductoNuevo = new System.Windows.Forms.Button();
             this.txtIva = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
@@ -63,7 +62,7 @@
             this.btnProcesarPedido = new System.Windows.Forms.Button();
             this.txbBuscarPedidos = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaPedido = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -204,7 +203,6 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.btnProductoNuevo);
             this.groupBox5.Controls.Add(this.txtIva);
             this.groupBox5.Controls.Add(this.label8);
             this.groupBox5.Controls.Add(this.txtTotal);
@@ -224,16 +222,6 @@
             this.groupBox5.Size = new System.Drawing.Size(655, 149);
             this.groupBox5.TabIndex = 1;
             this.groupBox5.TabStop = false;
-            // 
-            // btnProductoNuevo
-            // 
-            this.btnProductoNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnProductoNuevo.Location = new System.Drawing.Point(381, 118);
-            this.btnProductoNuevo.Name = "btnProductoNuevo";
-            this.btnProductoNuevo.Size = new System.Drawing.Size(119, 23);
-            this.btnProductoNuevo.TabIndex = 28;
-            this.btnProductoNuevo.Text = "Producto Nuevo";
-            this.btnProductoNuevo.UseVisualStyleBackColor = true;
             // 
             // txtIva
             // 
@@ -312,6 +300,7 @@
             this.btnHacerPedido.TabIndex = 17;
             this.btnHacerPedido.Text = "Pedir";
             this.btnHacerPedido.UseVisualStyleBackColor = true;
+            this.btnHacerPedido.Click += new System.EventHandler(this.btnHacerPedido_Click);
             // 
             // txbComentario
             // 
@@ -389,6 +378,7 @@
             this.button3.TabIndex = 3;
             this.button3.Text = "Detalle";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnElimiarPedido
             // 
@@ -398,6 +388,7 @@
             this.btnElimiarPedido.TabIndex = 2;
             this.btnElimiarPedido.Text = "Eliminar";
             this.btnElimiarPedido.UseVisualStyleBackColor = true;
+            this.btnElimiarPedido.Click += new System.EventHandler(this.btnElimiarPedido_Click);
             // 
             // btnProcesarPedido
             // 
@@ -407,6 +398,7 @@
             this.btnProcesarPedido.TabIndex = 1;
             this.btnProcesarPedido.Text = "Procesar";
             this.btnProcesarPedido.UseVisualStyleBackColor = true;
+            this.btnProcesarPedido.Click += new System.EventHandler(this.btnProcesarPedido_Click);
             // 
             // txbBuscarPedidos
             // 
@@ -417,7 +409,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.dtpFechaPedido);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -427,13 +419,13 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // dateTimePicker1
+            // dtpFechaPedido
             // 
-            this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Location = new System.Drawing.Point(25, 44);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 2;
+            this.dtpFechaPedido.Enabled = false;
+            this.dtpFechaPedido.Location = new System.Drawing.Point(25, 44);
+            this.dtpFechaPedido.Name = "dtpFechaPedido";
+            this.dtpFechaPedido.Size = new System.Drawing.Size(200, 20);
+            this.dtpFechaPedido.TabIndex = 2;
             // 
             // label2
             // 
@@ -498,7 +490,7 @@
         private System.Windows.Forms.Button btnProcesarPedido;
         private System.Windows.Forms.TextBox txbBuscarPedidos;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpFechaPedido;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox4;
@@ -513,7 +505,6 @@
         private System.Windows.Forms.TextBox txtbProductoSeleccionado;
         private System.Windows.Forms.Button btnQuitarProducto;
         private System.Windows.Forms.Button btnHacerPedido;
-        private System.Windows.Forms.Button btnProductoNuevo;
         private System.Windows.Forms.TextBox txtIva;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtTotal;

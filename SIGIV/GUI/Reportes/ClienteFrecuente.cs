@@ -27,9 +27,11 @@ namespace SIGIV.GUI.Reportes
                 var clientes = await ClientesFrecuentesReporte.GetDataSource(dtpInicio.Value, dtpFinal.Value);
                 InformeClienteFrecuente clienteFrecuente = new InformeClienteFrecuente();
                 clienteFrecuente.SetDataSource(clientes);
+                
+                crvReporteClienteFrecuente.ReportSource = clienteFrecuente;
+
                 clienteFrecuente.SetParameterValue("fechaInicio", dtpInicio.Value);
                 clienteFrecuente.SetParameterValue("fechaFinal", dtpFinal.Value);
-                crvReporteClienteFrecuente.ReportSource = clienteFrecuente;
             }
             catch (Exception ex)
             {

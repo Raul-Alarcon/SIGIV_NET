@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Entity;
 using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
 using System.Text;
@@ -22,10 +23,9 @@ namespace SIGIV.CLS.DTO.Reportes
             dt.Columns.Add("Total_Gastado", typeof(decimal));
             dt.Columns.Add("Numero_De_Compras", typeof(int));
             dt.Columns.Add("Producto_Comprado_Con_Frecuencia", typeof(string));
-
-            using (DataLayer.SIGIVEntities db = new DataLayer.SIGIVEntities())
+            using(DataLayer.SIGIVEntities db = new DataLayer.SIGIVEntities())
             {
-                var clientes = db.Facturas
+                var clientes = await db.Facturas
                     .Where(f => f.fechaFactura >= fInicio && f.fechaFactura <= fFinal)
                     .GroupBy(f => f.idCliente)
                     .Select(f => new
@@ -42,16 +42,34 @@ namespace SIGIV.CLS.DTO.Reportes
                     })
                     .OrderByDescending(f => f.Total_Gastado)
                     .Take(10)
-                    .ToList();
+                    .ToListAsync();
 
-                foreach (var c in clientes)
+
+                foreach (var cliente in clientes)
                 {
-                    string producto = "";
-                    if (c.Producto_Comprado_Con_Frecuencia != 0)
+                    var clienteFrecuente = await db.Clientes
+                        .FindAsync(cliente.idCliente);
+
+                    var productoFrecuente = await db.Facturas
+                        .Where(x => x.idCliente == cliente.idCliente)
+                        .GroupBy(x => x.DetallesFacturas.FirstOrDefault().idProducto)
+                        .Select(x => new 
+                            { 
+                                idProducto = x.Key, 
+                                Cantidad = x.Sum(y => y.DetallesFacturas.Sum(z => z.cantidad)) 
+                            })
+                        .OrderByDescending(x => x.Cantidad)
+                        .FirstOrDefaultAsync();
+
+                    if(productoFrecuente.idProducto > 0)
                     {
-                        producto = db.Productos.Find(c.Producto_Comprado_Con_Frecuencia)?.nombreP;
+                        var producto = await db.Productos
+                            .FindAsync(productoFrecuente.idProducto);
+
+                        dt.Rows.Add(clienteFrecuente.nombresCliente, $"{cliente.Total_Gastado}", cliente.Numero_De_Compras, producto.nombreP);
                     }
-                    dt.Rows.Add(c.Nombre, c.Total_Gastado, c.Numero_De_Compras, producto);
+                     
+
                 }
             }
             return dt;

@@ -135,11 +135,13 @@
     <Compile Include="CLS\DTO\ProductoDTO.cs" />
     <Compile Include="CLS\DTO\ProductoFacturaDTO.cs" />
     <Compile Include="CLS\DTO\ProductoNuevoDTO.cs" />
+    <Compile Include="CLS\DTO\ProductoPedidoDTO.cs" />
     <Compile Include="CLS\DTO\ProveedorDTO.cs" />
     <Compile Include="CLS\DTO\Reportes\ClientesFrecuentesReporte.cs" />
     <Compile Include="CLS\DTO\Reportes\ComprasReporte.cs" />
     <Compile Include="CLS\DTO\Reportes\InventarioActualReporte.cs" />
     <Compile Include="CLS\DTO\Reportes\VentasMensualesReporte.cs" />
+    <Compile Include="CLS\DTO\UsuarioDTO.cs" />
     <Compile Include="CLS\EmpleadoCLS.cs" />
     <Compile Include="CLS\FacturaCLS.cs" />
     <Compile Include="CLS\FormasDePagoCLS.cs" />
