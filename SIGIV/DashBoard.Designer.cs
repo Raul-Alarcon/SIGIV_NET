@@ -44,6 +44,7 @@
             this.Usuarios = new System.Windows.Forms.TabPage();
             this.Clientes = new System.Windows.Forms.TabPage();
             this.Facturas = new System.Windows.Forms.TabPage();
+            this.rf = new System.Windows.Forms.TabPage();
             this.Proveedores = new System.Windows.Forms.TabPage();
             this.Pedidos = new System.Windows.Forms.TabPage();
             this.Productos = new System.Windows.Forms.TabPage();
@@ -51,7 +52,6 @@
             this.r2 = new System.Windows.Forms.TabPage();
             this.r3 = new System.Windows.Forms.TabPage();
             this.Configuraciones = new System.Windows.Forms.TabPage();
-            this.rf = new System.Windows.Forms.TabPage();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -63,9 +63,9 @@
             // 
             this.panel1.Controls.Add(this.ContentLayout);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 129);
+            this.panel1.Location = new System.Drawing.Point(3, 139);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1116, 851);
+            this.panel1.Size = new System.Drawing.Size(1132, 880);
             this.panel1.TabIndex = 13;
             // 
             // ContentLayout
@@ -74,7 +74,7 @@
             this.ContentLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ContentLayout.Location = new System.Drawing.Point(0, 0);
             this.ContentLayout.Name = "ContentLayout";
-            this.ContentLayout.Size = new System.Drawing.Size(1116, 851);
+            this.ContentLayout.Size = new System.Drawing.Size(1132, 880);
             this.ContentLayout.TabIndex = 11;
             // 
             // panel3
@@ -84,13 +84,15 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 30);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1116, 35);
+            this.panel3.Size = new System.Drawing.Size(1132, 44);
             this.panel3.TabIndex = 11;
             // 
             // btnCerrarSession
             // 
             this.btnCerrarSession.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrarSession.Location = new System.Drawing.Point(974, 5);
+            this.btnCerrarSession.ImageKey = "Cerrarsesion2.png";
+            this.btnCerrarSession.ImageList = this.imageList1;
+            this.btnCerrarSession.Location = new System.Drawing.Point(990, 5);
             this.btnCerrarSession.Name = "btnCerrarSession";
             this.btnCerrarSession.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnCerrarSession.Size = new System.Drawing.Size(40, 38);
@@ -102,7 +104,7 @@
             // 
             this.lnlUser.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lnlUser.AutoSize = true;
-            this.lnlUser.Location = new System.Drawing.Point(887, 15);
+            this.lnlUser.Location = new System.Drawing.Point(903, 20);
             this.lnlUser.Name = "lnlUser";
             this.lnlUser.Size = new System.Drawing.Size(35, 13);
             this.lnlUser.TabIndex = 0;
@@ -124,6 +126,7 @@
             this.imageList1.Images.SetKeyName(9, "Cerrarsesion.png");
             this.imageList1.Images.SetKeyName(10, "Configuraciones.png");
             this.imageList1.Images.SetKeyName(11, "Cerrarsesion2.png");
+            this.imageList1.Images.SetKeyName(12, "user-profile-left.png");
             // 
             // panel2
             // 
@@ -132,7 +135,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(3, 64);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1116, 65);
+            this.panel2.Size = new System.Drawing.Size(1132, 75);
             this.panel2.TabIndex = 2;
             // 
             // panel4
@@ -141,7 +144,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1116, 30);
+            this.panel4.Size = new System.Drawing.Size(1132, 30);
             this.panel4.TabIndex = 0;
             // 
             // materialTabControl1
@@ -167,7 +170,7 @@
             this.materialTabControl1.Multiline = true;
             this.materialTabControl1.Name = "materialTabControl1";
             this.materialTabControl1.SelectedIndex = 0;
-            this.materialTabControl1.Size = new System.Drawing.Size(1116, 33);
+            this.materialTabControl1.Size = new System.Drawing.Size(1132, 33);
             this.materialTabControl1.TabIndex = 0;
             this.materialTabControl1.SelectedIndexChanged += new System.EventHandler(this.materialTabControl1_SelectedIndexChanged_1);
             // 
@@ -177,7 +180,7 @@
             this.Home.Location = new System.Drawing.Point(4, 74);
             this.Home.Name = "Home";
             this.Home.Padding = new System.Windows.Forms.Padding(3);
-            this.Home.Size = new System.Drawing.Size(1108, 0);
+            this.Home.Size = new System.Drawing.Size(1124, 0);
             this.Home.TabIndex = 0;
             this.Home.Text = "Home";
             this.Home.UseVisualStyleBackColor = true;
@@ -185,7 +188,7 @@
             // Empleados
             // 
             this.Empleados.ImageKey = "Empleados1.png";
-            this.Empleados.Location = new System.Drawing.Point(4, 39);
+            this.Empleados.Location = new System.Drawing.Point(4, 74);
             this.Empleados.Name = "Empleados";
             this.Empleados.Padding = new System.Windows.Forms.Padding(3);
             this.Empleados.Size = new System.Drawing.Size(1108, 0);
@@ -196,7 +199,7 @@
             // Usuarios
             // 
             this.Usuarios.ImageKey = "Usuarios1.png";
-            this.Usuarios.Location = new System.Drawing.Point(4, 39);
+            this.Usuarios.Location = new System.Drawing.Point(4, 74);
             this.Usuarios.Name = "Usuarios";
             this.Usuarios.Size = new System.Drawing.Size(1108, 0);
             this.Usuarios.TabIndex = 2;
@@ -206,7 +209,7 @@
             // Clientes
             // 
             this.Clientes.ImageKey = "Clientes1.png";
-            this.Clientes.Location = new System.Drawing.Point(4, 39);
+            this.Clientes.Location = new System.Drawing.Point(4, 74);
             this.Clientes.Name = "Clientes";
             this.Clientes.Size = new System.Drawing.Size(1108, 0);
             this.Clientes.TabIndex = 3;
@@ -216,17 +219,26 @@
             // Facturas
             // 
             this.Facturas.ImageKey = "Factura1.png";
-            this.Facturas.Location = new System.Drawing.Point(4, 39);
+            this.Facturas.Location = new System.Drawing.Point(4, 74);
             this.Facturas.Name = "Facturas";
             this.Facturas.Size = new System.Drawing.Size(1108, 0);
             this.Facturas.TabIndex = 4;
             this.Facturas.Text = "Facturas";
             this.Facturas.UseVisualStyleBackColor = true;
             // 
+            // rf
+            // 
+            this.rf.Location = new System.Drawing.Point(4, 74);
+            this.rf.Name = "rf";
+            this.rf.Size = new System.Drawing.Size(1108, 0);
+            this.rf.TabIndex = 12;
+            this.rf.Text = "Registro Facturas";
+            this.rf.UseVisualStyleBackColor = true;
+            // 
             // Proveedores
             // 
             this.Proveedores.ImageKey = "Proveedores1.png";
-            this.Proveedores.Location = new System.Drawing.Point(4, 39);
+            this.Proveedores.Location = new System.Drawing.Point(4, 74);
             this.Proveedores.Name = "Proveedores";
             this.Proveedores.Size = new System.Drawing.Size(1108, 0);
             this.Proveedores.TabIndex = 5;
@@ -236,7 +248,7 @@
             // Pedidos
             // 
             this.Pedidos.ImageKey = "Pedidos1.png";
-            this.Pedidos.Location = new System.Drawing.Point(4, 39);
+            this.Pedidos.Location = new System.Drawing.Point(4, 74);
             this.Pedidos.Name = "Pedidos";
             this.Pedidos.Size = new System.Drawing.Size(1108, 0);
             this.Pedidos.TabIndex = 6;
@@ -246,7 +258,7 @@
             // Productos
             // 
             this.Productos.ImageKey = "Productos.png";
-            this.Productos.Location = new System.Drawing.Point(4, 39);
+            this.Productos.Location = new System.Drawing.Point(4, 74);
             this.Productos.Name = "Productos";
             this.Productos.Size = new System.Drawing.Size(1108, 0);
             this.Productos.TabIndex = 7;
@@ -256,7 +268,7 @@
             // Reportes
             // 
             this.Reportes.ImageKey = "Reportes.png";
-            this.Reportes.Location = new System.Drawing.Point(4, 39);
+            this.Reportes.Location = new System.Drawing.Point(4, 74);
             this.Reportes.Name = "Reportes";
             this.Reportes.Size = new System.Drawing.Size(1108, 0);
             this.Reportes.TabIndex = 8;
@@ -294,20 +306,11 @@
             this.Configuraciones.Text = "Configuraciones";
             this.Configuraciones.UseVisualStyleBackColor = true;
             // 
-            // rf
-            // 
-            this.rf.Location = new System.Drawing.Point(4, 74);
-            this.rf.Name = "rf";
-            this.rf.Size = new System.Drawing.Size(1108, 0);
-            this.rf.TabIndex = 12;
-            this.rf.Text = "Registro Facturas";
-            this.rf.UseVisualStyleBackColor = true;
-            // 
             // DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1122, 983);
+            this.ClientSize = new System.Drawing.Size(1138, 1022);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.DrawerAutoHide = false;

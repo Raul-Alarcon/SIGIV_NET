@@ -27,7 +27,7 @@ namespace SIGIV.GUI.Clientes
         {
             try
             {
-                CargarDatosCliente();
+                await CargarDatosCliente();
             }
             catch (Exception ex)
             {
@@ -36,7 +36,7 @@ namespace SIGIV.GUI.Clientes
             base.OnLoad(e);
         }
 
-        private void CargarDatosCliente()
+        private async Task CargarDatosCliente()
         {
             if (cliente == null) return;
             this.txtNombre.Text = cliente.nombres;
@@ -92,8 +92,8 @@ namespace SIGIV.GUI.Clientes
             };
             cliente.Validar();
             bool resultado = await cliente.AddAsync();
-            if (!resultado)throw new Exception ("No se pudo guardar el cliente");
-            MessageBox.Show("Cliente guardado correctamente", "Cliente guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (!resultado)throw new Exception ("No s<e pudo guardar el cliente");
+            //MessageBox.Show("Cliente guardado correctamente", "Cliente guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.DialogResult = DialogResult.OK;
             this.Close();
         }

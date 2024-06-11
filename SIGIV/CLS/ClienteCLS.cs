@@ -23,12 +23,7 @@ namespace SIGIV.CLS
             List<ClienteDTO> clientes = new List<ClienteDTO>();
             using (SIGIVEntities db = new SIGIVEntities())
             {
-                clientes = await (from cliente in db.Clientes
-                                  join direccion in db.ClienteDireccion on cliente.IDCliente equals direccion.idCliente
-                                  join distrito in db.Distritos on direccion.idDistrito equals distrito.idDistrito
-                                  join municipio in db.Municipios on distrito.idMunicipio equals municipio.idMunicipio
-                                  join departamento in db.Departamentos on municipio.idDepartamento equals departamento.idDepartamento
-                                  join pais in db.Paises on departamento.idPais equals pais.idPais
+                clientes = await (from cliente in db.Clientes 
                                   select new ClienteDTO
                                   {
                                       ID = cliente.IDCliente,
@@ -36,12 +31,7 @@ namespace SIGIV.CLS
                                       Apellidos = cliente.apellidosCliente,
                                       DUI = cliente.dui,
                                       Telefono = cliente.telefono,
-                                      Correo = cliente.eMail,
-                                      Direccion = direccion.Linea1,
-                                      Distrito = distrito.distrito,
-                                      Municipio = municipio.municipio,
-                                      Departamento = departamento.departamento,
-                                      Pais = pais.pais
+                                      Correo = cliente.eMail
                                   }).ToListAsync();
             }
             return clientes;
