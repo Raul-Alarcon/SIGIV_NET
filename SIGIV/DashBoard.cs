@@ -173,37 +173,40 @@ namespace SIGIV
             {
                 ShowContent(new AgregarFacturas());
             }
-            else if (materialTabControl1.SelectedIndex == 5)
+            else if(materialTabControl1.SelectedIndex == 5)
             {
-                ShowContent(new GestionProveedores());
+                ShowContent(new GestionFacturas());
             }
             else if (materialTabControl1.SelectedIndex == 6)
             {
-                ShowContent(new GestionPedidos());
+                ShowContent(new GestionProveedores());
             }
             else if (materialTabControl1.SelectedIndex == 7)
             {
+                ShowContent(new GestionPedidos());
+            }
+            else if (materialTabControl1.SelectedIndex == 8)
+            {
                 ShowContent(new GestionProductos());
             }
-            else if(materialTabControl1.SelectedIndex == 8)
+            else if(materialTabControl1.SelectedIndex == 9)
             {
                 ShowContent(new ClienteFrecuente());
                 
             }
-            else if (materialTabControl1.SelectedIndex == 9)
+            else if (materialTabControl1.SelectedIndex == 10)
             {
                 ShowContent(new Ventas());
 
             }
-            else if (materialTabControl1.SelectedIndex == 10)
+            else if (materialTabControl1.SelectedIndex == 11)
             {
                 ShowContent(new InventarioActual());
 
             }
-            else if (materialTabControl1.SelectedIndex == 11)
+            else if (materialTabControl1.SelectedIndex == 12)
             {
                 ShowContent(new Configuraciones());
-
             }
 
         }
