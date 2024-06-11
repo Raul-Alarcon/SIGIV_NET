@@ -1,6 +1,7 @@
 ﻿using CrystalDecisions.CrystalReports.Engine;
 using SIGIV.CLS;
 using SIGIV.CLS.DTO;
+using SIGIV.GUI.Reportes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -141,6 +142,23 @@ namespace SIGIV.GUI.Facturas
             catch (Exception exc)
             {
                 MessageBox.Show("Error: " + exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgvFacturas.CurrentRow == null) throw new Exception(Name = "Debe seleccionar una factura");
+                if (dgvFacturas.CurrentRow.DataBoundItem is FacturaDTO dto)
+                {
+                    Compras compras = new Compras(dto.Id);
+                    compras.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

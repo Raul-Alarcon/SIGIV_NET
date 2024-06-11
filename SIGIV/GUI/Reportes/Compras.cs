@@ -13,10 +13,11 @@ namespace SIGIV.GUI.Reportes
 {
     public partial class Compras : Form
     {
-        public int nf = 12;
-        public Compras()
+        public int nf = 0;
+        public Compras(int ifFactura)
         {
             InitializeComponent();
+            this.nf = ifFactura;   
         }
 
         override protected async void OnLoad(EventArgs e)

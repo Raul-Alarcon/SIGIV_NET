@@ -53,11 +53,12 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvFacturas = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnFiltrar = new System.Windows.Forms.Button();
             this.btnMostar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
-            this.btnFiltrar = new System.Windows.Forms.Button();
+            this.btnReporte = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -320,6 +321,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnReporte);
             this.groupBox2.Controls.Add(this.btnFiltrar);
             this.groupBox2.Controls.Add(this.btnMostar);
             this.groupBox2.Controls.Add(this.label1);
@@ -332,6 +334,16 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Filtlar";
+            // 
+            // btnFiltrar
+            // 
+            this.btnFiltrar.Location = new System.Drawing.Point(10, 58);
+            this.btnFiltrar.Name = "btnFiltrar";
+            this.btnFiltrar.Size = new System.Drawing.Size(75, 23);
+            this.btnFiltrar.TabIndex = 4;
+            this.btnFiltrar.Text = "Fltrar";
+            this.btnFiltrar.UseVisualStyleBackColor = true;
+            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
             // 
             // btnMostar
             // 
@@ -366,15 +378,15 @@
             this.dtpFecha.Size = new System.Drawing.Size(200, 20);
             this.dtpFecha.TabIndex = 2;
             // 
-            // btnFiltrar
+            // btnReporte
             // 
-            this.btnFiltrar.Location = new System.Drawing.Point(125, 58);
-            this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(75, 23);
-            this.btnFiltrar.TabIndex = 4;
-            this.btnFiltrar.Text = "Fltrar";
-            this.btnFiltrar.UseVisualStyleBackColor = true;
-            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
+            this.btnReporte.Location = new System.Drawing.Point(92, 59);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(75, 23);
+            this.btnReporte.TabIndex = 5;
+            this.btnReporte.Text = "Generar Reporte";
+            this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
             // GestionFacturas
             // 
@@ -431,5 +443,6 @@
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.DataGridView dgvProductos;
         private System.Windows.Forms.Button btnFiltrar;
+        private System.Windows.Forms.Button btnReporte;
     }
 }
